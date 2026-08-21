@@ -1,0 +1,39 @@
+dataset,class,image_count
+Chilli,cerocospora,899
+Chilli,healthy,329
+Chilli,murda complex,275
+Chilli,nutritional deficiency,267
+Chilli,powdery mildew,162
+Grape_2024,Black rot,808
+Grape_2024,esca,888
+Grape_2024,healthy,1109
+Grape_2024,leaf blight,672
+Grape_Niphad,Bacterial Leaf Spot,100
+Grape_Niphad,Downy Mildew,966
+Grape_Niphad,Healthy Leaves,1254
+Grape_Niphad,Powdery Mildew,406
+Sugarcane_Large,Banded Chlorosis,471
+Sugarcane_Large,Brown Spot,1722
+Sugarcane_Large,BrownRust,314
+Sugarcane_Large,Grassy shoot,346
+Sugarcane_Large,Healthy Leaves,430
+Sugarcane_Large,Pokkah Boeng,297
+Sugarcane_Large,Sett Rot,652
+Sugarcane_Large,Viral Disease,663
+Sugarcane_Large,Yellow Leaf,1194
+Sugarcane_Large,smut,316
+Sugarcane_Maharashtra,Healthy,522
+Sugarcane_Maharashtra,Mosaic,462
+Sugarcane_Maharashtra,RedRot,518
+Sugarcane_Maharashtra,Rust,514
+Sugarcane_Maharashtra,Yellow,505
+Tomato,Tomato___Bacterial_spot,1702
+Tomato,Tomato___Early_blight,800
+Tomato,Tomato___Late_blight,1527
+Tomato,Tomato___Leaf_Mold,761
+Tomato,Tomato___Septoria_leaf_spot,1417
+Tomato,Tomato___Spider_mites Two-spotted_spider_mite,1341
+Tomato,Tomato___Target_Spot,1123
+Tomato,Tomato___Tomato_Yellow_Leaf_Curl_Virus,4286
+Tomato,Tomato___Tomato_mosaic_virus,299
+Tomato,Tomato___healthy,1273
