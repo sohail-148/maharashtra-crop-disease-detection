@@ -113,3 +113,8 @@ config_local.py
 
 # NOTE: splits/*.csv ARE intentionally tracked (small metadata,
 # no images). If a specific CSV becomes too large, add it here.
+
+# ------------------------------------------------------------
+# Local-only files (never commit)
+# ------------------------------------------------------------
+1NPDPRO5.DOC

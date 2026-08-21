@@ -1,17 +1,17 @@
 """
-Phase 6 — Dataset Preparation: Tomato (T1)
+Phase 6 — Dataset Preparation: All Six Experiments
 
-Creates a stratified 70/15/15 train/validation/test split
-for the Tomato PlantVillage dataset.
+Creates stratified 70/15/15 train/validation/test splits
+for every crop dataset.
 
 Rules:
   - No images are copied, moved, or modified.
   - No augmented images are written to disk.
-  - Output is three CSV files under splits/tomato/:
-        train.csv
-        val.csv
-        test.csv
-  Each CSV has columns: file_path, class_label, class_index
+  - Output is four CSV files per dataset under splits/<name>/:
+        train.csv, val.csv, test.csv, class_index.csv
+  - Each CSV has columns: file_path, class_label, class_index
+  - Datasets are kept strictly separate (no merging).
+  - Source class folder names are used as-is (no renaming).
 
 Reproducible via RANDOM_SEED = 42.
 """
@@ -26,44 +26,64 @@ from sklearn.model_selection import train_test_split
 # Configuration
 # ---------------------------------------------------------------------------
 
-ROOT        = Path(__file__).resolve().parent
-DATASET_DIR = ROOT / "tomato_plantvillage"
-SPLITS_DIR  = ROOT / "splits" / "tomato"
+ROOT = Path(__file__).resolve().parent
 
 TRAIN_RATIO = 0.70
 VAL_RATIO   = 0.15
-TEST_RATIO  = 0.15   # remainder after train+val
+TEST_RATIO  = 0.15
 
 RANDOM_SEED = 42
 
 IMAGE_EXTENSIONS = {".jpg", ".jpeg", ".png", ".bmp", ".webp"}
 
 # ---------------------------------------------------------------------------
+# Dataset registry
+#
+# Each entry: (experiment_id, dataset_folder, output_name, nested)
+#   nested=False  → class folders are direct children of dataset_folder
+#   nested=True   → class folders may be one level deeper (sugarcane_large)
+# ---------------------------------------------------------------------------
+
+DATASETS = [
+    ("T1",  "tomato_plantvillage",   "tomato",               False),
+    ("G1",  "grape_niphad",          "grape_niphad",          False),
+    ("G2",  "grape_2024",            "grape_2024",            False),
+    ("C1",  "chilli_cold",           "chilli_cold",           False),
+    ("S1",  "sugarcane_maharashtra", "sugarcane_maharashtra", False),
+    ("S2",  "sugarcane_large",       "sugarcane_large",       True),
+]
+
+# ---------------------------------------------------------------------------
 # Step 1 — Discover images and classes
 # ---------------------------------------------------------------------------
 
-def discover_dataset(dataset_dir: Path) -> pd.DataFrame:
+def discover_dataset(dataset_dir: Path, nested: bool) -> pd.DataFrame:
     """
-    Walk each immediate sub-directory of dataset_dir.
-    Each sub-directory name is the class label.
-    Returns a DataFrame with columns: file_path, class_label
+    Collect all images organised by class.
+
+    nested=False: class folders are immediate children of dataset_dir.
+    nested=True:  walk up to two levels to find folders that contain images
+                  (handles sugarcane_large's Diseases/ sub-group).
     """
     if not dataset_dir.exists():
-        print(f"ERROR: Dataset directory not found:\n  {dataset_dir}")
+        print(f"  ERROR: directory not found: {dataset_dir}")
         sys.exit(1)
 
-    class_dirs = sorted([d for d in dataset_dir.iterdir() if d.is_dir()])
-
-    if not class_dirs:
-        print(f"ERROR: No class sub-directories found in:\n  {dataset_dir}")
-        sys.exit(1)
+    if nested:
+        # Collect every directory that directly contains image files
+        class_dirs = sorted([
+            d for d in dataset_dir.rglob("*")
+            if d.is_dir() and any(
+                f.suffix.lower() in IMAGE_EXTENSIONS
+                for f in d.iterdir() if f.is_file()
+            )
+        ], key=lambda d: d.name)
+    else:
+        class_dirs = sorted([d for d in dataset_dir.iterdir() if d.is_dir()])
 
     rows = []
-    print("\n" + "=" * 60)
-    print("TOMATO DATASET — CLASS INVENTORY")
-    print("=" * 60)
-    print(f"{'Class':<50} {'Images':>7}")
-    print("-" * 60)
+    print(f"\n  {'Class':<50} {'Images':>7}")
+    print(f"  {'-'*58}")
 
     for class_dir in class_dirs:
         images = [
@@ -71,11 +91,10 @@ def discover_dataset(dataset_dir: Path) -> pd.DataFrame:
             if f.is_file() and f.suffix.lower() in IMAGE_EXTENSIONS
         ]
         if not images:
-            print(f"  WARNING: No images in {class_dir.name}, skipping.")
+            print(f"  WARNING: no images in '{class_dir.name}', skipping.")
             continue
 
-        print(f"{class_dir.name:<50} {len(images):>7,}")
-
+        print(f"  {class_dir.name:<50} {len(images):>7,}")
         for img_path in images:
             rows.append({
                 "file_path":   str(img_path),
@@ -83,206 +102,212 @@ def discover_dataset(dataset_dir: Path) -> pd.DataFrame:
             })
 
     df = pd.DataFrame(rows)
-
-    print("-" * 60)
-    print(f"{'TOTAL':<50} {len(df):>7,}")
-    print(f"{'Classes found':<50} {df['class_label'].nunique():>7}")
-    print("=" * 60)
-
+    print(f"  {'-'*58}")
+    print(f"  {'TOTAL':<50} {len(df):>7,}")
+    print(f"  {'Classes':<50} {df['class_label'].nunique():>7}")
     return df
 
+
 # ---------------------------------------------------------------------------
-# Step 2 — Build class index mapping
+# Step 2 — Class index mapping (alphabetical)
 # ---------------------------------------------------------------------------
 
 def build_class_index(df: pd.DataFrame) -> dict:
-    """Map each class label to an integer index (sorted alphabetically)."""
-    classes = sorted(df["class_label"].unique())
-    return {label: idx for idx, label in enumerate(classes)}
+    return {label: idx for idx, label in enumerate(sorted(df["class_label"].unique()))}
+
 
 # ---------------------------------------------------------------------------
-# Step 3 — Stratified split
+# Step 3 — Stratified 70/15/15 split
 # ---------------------------------------------------------------------------
 
-def stratified_split(df: pd.DataFrame) -> tuple[pd.DataFrame, pd.DataFrame, pd.DataFrame]:
-    """
-    Split df into train / val / test using stratified sampling.
-    Ratios: 70% / 15% / 15%
-    """
-    # First cut: train vs (val + test)
+def stratified_split(df: pd.DataFrame):
     train_df, temp_df = train_test_split(
         df,
-        test_size=(VAL_RATIO + TEST_RATIO),   # 0.30
+        test_size=(VAL_RATIO + TEST_RATIO),
         stratify=df["class_label"],
         random_state=RANDOM_SEED,
     )
-
-    # Second cut: val vs test  (equal halves of the 30%)
     val_df, test_df = train_test_split(
         temp_df,
-        test_size=TEST_RATIO / (VAL_RATIO + TEST_RATIO),   # 0.50 of the 30%
+        test_size=TEST_RATIO / (VAL_RATIO + TEST_RATIO),
         stratify=temp_df["class_label"],
         random_state=RANDOM_SEED,
     )
+    return (
+        train_df.reset_index(drop=True),
+        val_df.reset_index(drop=True),
+        test_df.reset_index(drop=True),
+    )
 
-    return train_df.reset_index(drop=True), val_df.reset_index(drop=True), test_df.reset_index(drop=True)
 
 # ---------------------------------------------------------------------------
-# Step 4 — Verify split integrity
+# Step 4 — Integrity verification
 # ---------------------------------------------------------------------------
 
-def verify_splits(
-    full_df: pd.DataFrame,
-    train_df: pd.DataFrame,
-    val_df:   pd.DataFrame,
-    test_df:  pd.DataFrame,
-) -> None:
-    """
-    Checks:
-      1. No image appears in more than one split.
-      2. Total image count is preserved.
-      3. Class proportions are roughly maintained in each split.
-    """
-    print("\n" + "=" * 60)
-    print("SPLIT INTEGRITY CHECKS")
-    print("=" * 60)
+def verify_splits(full_df, train_df, val_df, test_df, experiment_id):
+    errors = []
 
-    # Check 1 — no duplicates across splits
-    train_files = set(train_df["file_path"])
-    val_files   = set(val_df["file_path"])
-    test_files  = set(test_df["file_path"])
+    # No cross-split overlap
+    train_f = set(train_df["file_path"])
+    val_f   = set(val_df["file_path"])
+    test_f  = set(test_df["file_path"])
+    if train_f & val_f:  errors.append(f"Train∩Val overlap: {len(train_f & val_f)} files")
+    if train_f & test_f: errors.append(f"Train∩Test overlap: {len(train_f & test_f)} files")
+    if val_f   & test_f: errors.append(f"Val∩Test overlap: {len(val_f & test_f)} files")
 
-    overlap_tv = train_files & val_files
-    overlap_tt = train_files & test_files
-    overlap_vt = val_files   & test_files
-
-    if overlap_tv or overlap_tt or overlap_vt:
-        print("FAIL — overlapping files detected:")
-        if overlap_tv: print(f"  Train ∩ Val  : {len(overlap_tv)} files")
-        if overlap_tt: print(f"  Train ∩ Test : {len(overlap_tt)} files")
-        if overlap_vt: print(f"  Val   ∩ Test : {len(overlap_vt)} files")
-        sys.exit(1)
-    else:
-        print("PASS — no image appears in more than one split")
-
-    # Check 2 — total count preserved
+    # Total count preserved
     combined = len(train_df) + len(val_df) + len(test_df)
     if combined != len(full_df):
-        print(f"FAIL — image count mismatch: {combined} vs {len(full_df)}")
+        errors.append(f"Count mismatch: {combined} vs {len(full_df)}")
+
+    # All classes present in every split
+    all_classes = set(full_df["class_label"].unique())
+    for name, sdf in [("train", train_df), ("val", val_df), ("test", test_df)]:
+        missing = all_classes - set(sdf["class_label"].unique())
+        if missing:
+            errors.append(f"{name} missing classes: {missing}")
+
+    if errors:
+        print(f"\n  INTEGRITY FAILURES ({experiment_id}):")
+        for e in errors:
+            print(f"    ✗ {e}")
         sys.exit(1)
     else:
-        print(f"PASS — total image count preserved ({combined:,})")
+        print(f"  PASS — no overlap | count preserved ({combined:,}) | all classes in all splits")
 
-    # Check 3 — class coverage
-    for split_name, split_df in [("train", train_df), ("val", val_df), ("test", test_df)]:
-        missing = set(full_df["class_label"].unique()) - set(split_df["class_label"].unique())
-        if missing:
-            print(f"WARN  — {split_name} is missing classes: {missing}")
-        else:
-            print(f"PASS — all 10 classes present in {split_name}")
-
-    print("=" * 60)
 
 # ---------------------------------------------------------------------------
-# Step 5 — Print per-class distribution table
+# Step 5 — Per-class distribution table
 # ---------------------------------------------------------------------------
 
-def print_distribution(
-    full_df:  pd.DataFrame,
-    train_df: pd.DataFrame,
-    val_df:   pd.DataFrame,
-    test_df:  pd.DataFrame,
-) -> None:
-    """Print a per-class breakdown across all three splits."""
-    print("\n" + "=" * 78)
-    print("PER-CLASS SPLIT DISTRIBUTION")
-    print("=" * 78)
-    header = f"{'Class':<50} {'Total':>6}  {'Train':>6}  {'Val':>5}  {'Test':>5}"
-    print(header)
-    print("-" * 78)
-
+def print_distribution(full_df, train_df, val_df, test_df):
+    print(f"\n  {'Class':<50} {'Total':>6}  {'Train':>6}  {'Val':>5}  {'Test':>5}")
+    print(f"  {'-'*76}")
     for cls in sorted(full_df["class_label"].unique()):
         total = (full_df["class_label"]  == cls).sum()
         trn   = (train_df["class_label"] == cls).sum()
         val   = (val_df["class_label"]   == cls).sum()
         tst   = (test_df["class_label"]  == cls).sum()
-        print(f"{cls:<50} {total:>6,}  {trn:>6,}  {val:>5,}  {tst:>5,}")
-
-    print("-" * 78)
+        print(f"  {cls:<50} {total:>6,}  {trn:>6,}  {val:>5,}  {tst:>5,}")
+    print(f"  {'-'*76}")
     print(
-        f"{'TOTAL':<50} {len(full_df):>6,}  "
+        f"  {'TOTAL':<50} {len(full_df):>6,}  "
         f"{len(train_df):>6,}  {len(val_df):>5,}  {len(test_df):>5,}"
     )
-    print("=" * 78)
+    print(
+        f"\n  Ratios →  Train: {len(train_df)/len(full_df)*100:.1f}%  "
+        f"Val: {len(val_df)/len(full_df)*100:.1f}%  "
+        f"Test: {len(test_df)/len(full_df)*100:.1f}%"
+    )
 
-    # Percentage check
-    print(f"\n  Train : {len(train_df)/len(full_df)*100:.1f}%  "
-          f"Val : {len(val_df)/len(full_df)*100:.1f}%  "
-          f"Test : {len(test_df)/len(full_df)*100:.1f}%")
 
 # ---------------------------------------------------------------------------
 # Step 6 — Save CSVs
 # ---------------------------------------------------------------------------
 
-def save_splits(
-    train_df:     pd.DataFrame,
-    val_df:       pd.DataFrame,
-    test_df:      pd.DataFrame,
-    class_index:  dict,
-) -> None:
-    """Add class_index column and write the three CSV files."""
-    SPLITS_DIR.mkdir(parents=True, exist_ok=True)
+def save_splits(train_df, val_df, test_df, class_index, out_dir: Path):
+    out_dir.mkdir(parents=True, exist_ok=True)
 
     for split_name, split_df in [("train", train_df), ("val", val_df), ("test", test_df)]:
         out_df = split_df.copy()
         out_df["class_index"] = out_df["class_label"].map(class_index)
-
-        # Column order
         out_df = out_df[["file_path", "class_label", "class_index"]]
-
-        out_path = SPLITS_DIR / f"{split_name}.csv"
+        out_path = out_dir / f"{split_name}.csv"
         out_df.to_csv(out_path, index=False)
-        print(f"  Saved: {out_path}  ({len(out_df):,} rows)")
+        print(f"  Saved: {out_path.relative_to(ROOT)}  ({len(out_df):,} rows)")
 
-    # Also save class index mapping
-    mapping_path = SPLITS_DIR / "class_index.csv"
     mapping_df = pd.DataFrame(
         [{"class_label": k, "class_index": v} for k, v in class_index.items()]
     ).sort_values("class_index")
+    mapping_path = out_dir / "class_index.csv"
     mapping_df.to_csv(mapping_path, index=False)
-    print(f"  Saved: {mapping_path}  ({len(mapping_df)} classes)")
+    print(f"  Saved: {mapping_path.relative_to(ROOT)}  ({len(mapping_df)} classes)")
+
 
 # ---------------------------------------------------------------------------
 # Main
 # ---------------------------------------------------------------------------
 
-def main():
-    print("\nPhase 6 — Dataset Preparation: Tomato (T1)")
-    print(f"Dataset : {DATASET_DIR}")
-    print(f"Output  : {SPLITS_DIR}")
-    print(f"Split   : {int(TRAIN_RATIO*100)}/{int(VAL_RATIO*100)}/{int(TEST_RATIO*100)}")
-    print(f"Seed    : {RANDOM_SEED}")
+def process_dataset(experiment_id, folder_name, output_name, nested, skip_if_exists=False):
+    dataset_dir = ROOT / folder_name
+    out_dir     = ROOT / "splits" / output_name
 
-    # 1. Discover
-    full_df = discover_dataset(DATASET_DIR)
+    # Optional skip for already-completed datasets
+    if skip_if_exists and (out_dir / "train.csv").exists():
+        print(f"\n[{experiment_id}] {output_name} — already split, skipping.")
+        return None
 
-    # 2. Class index
+    print(f"\n{'='*70}")
+    print(f"[{experiment_id}]  {output_name}")
+    print(f"{'='*70}")
+
+    full_df     = discover_dataset(dataset_dir, nested)
     class_index = build_class_index(full_df)
-
-    # 3. Split
     train_df, val_df, test_df = stratified_split(full_df)
 
-    # 4. Verify
-    verify_splits(full_df, train_df, val_df, test_df)
+    print(f"\n  Integrity checks:")
+    verify_splits(full_df, train_df, val_df, test_df, experiment_id)
 
-    # 5. Print distribution
     print_distribution(full_df, train_df, val_df, test_df)
 
-    # 6. Save
-    print("\nSaving split CSVs...")
-    save_splits(train_df, val_df, test_df, class_index)
+    print(f"\n  Saving CSVs to splits/{output_name}/")
+    save_splits(train_df, val_df, test_df, class_index, out_dir)
 
-    print("\nDone. No images were copied or modified.")
+    return {
+        "experiment": experiment_id,
+        "dataset":    output_name,
+        "classes":    full_df["class_label"].nunique(),
+        "total":      len(full_df),
+        "train":      len(train_df),
+        "val":        len(val_df),
+        "test":       len(test_df),
+    }
+
+
+def main():
+    import argparse
+    parser = argparse.ArgumentParser()
+    parser.add_argument(
+        "--experiment", "-e",
+        help="Run only this experiment ID (e.g. T1, G1). Omit to run all.",
+        default=None,
+    )
+    args = parser.parse_args()
+
+    print("\nPhase 6 — Dataset Preparation: All Experiments")
+    print(f"Split: 70/15/15  |  Seed: {RANDOM_SEED}  |  No images copied.")
+
+    summaries = []
+    for (exp_id, folder, output, nested) in DATASETS:
+        if args.experiment and exp_id != args.experiment:
+            continue
+        result = process_dataset(exp_id, folder, output, nested, skip_if_exists=False)
+        if result:
+            summaries.append(result)
+
+    if summaries:
+        print(f"\n\n{'='*70}")
+        print("PHASE 6 — COMPLETE SUMMARY")
+        print(f"{'='*70}")
+        print(f"  {'Exp':<4}  {'Dataset':<25} {'Classes':>7}  {'Total':>7}  {'Train':>7}  {'Val':>5}  {'Test':>5}")
+        print(f"  {'-'*66}")
+        grand_total = grand_train = grand_val = grand_test = 0
+        for s in summaries:
+            print(
+                f"  {s['experiment']:<4}  {s['dataset']:<25} {s['classes']:>7}  "
+                f"{s['total']:>7,}  {s['train']:>7,}  {s['val']:>5,}  {s['test']:>5,}"
+            )
+            grand_total += s["total"]
+            grand_train += s["train"]
+            grand_val   += s["val"]
+            grand_test  += s["test"]
+        print(f"  {'-'*66}")
+        print(
+            f"  {'TOTAL':<30} {grand_total:>7,}  "
+            f"{grand_train:>7,}  {grand_val:>5,}  {grand_test:>5,}"
+        )
+        print(f"{'='*70}")
+        print("\nDone. No images were copied or modified.")
 
 
 if __name__ == "__main__":

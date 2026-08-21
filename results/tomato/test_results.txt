@@ -1,0 +1,30 @@
+T1 Tomato — MobileNetV2 Baseline: Test Set Results
+============================================================
+
+Accuracy  : 90.23%
+Precision : 90.40%  (weighted)
+Recall    : 90.23%  (weighted)
+F1-score  : 90.18%  (weighted)
+
+Epochs trained : 30
+Training time  : 207.5 min
+Total params   : 2,275,914
+Trainable      : 15,370
+
+Per-class report:
+                                      precision    recall  f1-score   support
+
+                      Bacterial spot     0.9105    0.9141    0.9123       256
+                        Early blight     0.8242    0.6250    0.7109       120
+                         Late blight     0.8932    0.9127    0.9028       229
+                           Leaf Mold     0.8962    0.8333    0.8636       114
+                  Septoria leaf spot     0.8591    0.8873    0.8730       213
+Spider mites Two-spotted spider mite     0.8473    0.8557    0.8515       201
+                         Target Spot     0.7358    0.8452    0.7867       168
+       Tomato Yellow Leaf Curl Virus     0.9904    0.9658    0.9780       643
+                 Tomato mosaic virus     0.9767    0.9333    0.9545        45
+                             healthy     0.9126    0.9843    0.9471       191
+
+                            accuracy                         0.9023      2180
+                           macro avg     0.8846    0.8757    0.8780      2180
+                        weighted avg     0.9040    0.9023    0.9018      2180
