@@ -33,6 +33,7 @@ import sys
 import time
 import random
 import argparse
+from typing import Optional
 
 os.environ["TF_CPP_MIN_LOG_LEVEL"] = "3"
 
@@ -206,7 +207,8 @@ def build_model(num_classes: int):
 # Main experiment runner
 # ---------------------------------------------------------------------------
 
-def run_experiment(exp_id: str, dataset_root: str | None = None):
+def run_experiment(exp_id, dataset_root=None, batch_size=BATCH_SIZE):
+    # type: (str, Optional[str], int) -> dict
     # --- Reproducibility ---
     os.environ["PYTHONHASHSEED"] = str(SEED)
     random.seed(SEED)
@@ -247,7 +249,7 @@ def run_experiment(exp_id: str, dataset_root: str | None = None):
     # --- Rewrite paths if running on AWS ---
     effective_root = dataset_root or os.environ.get("DATASET_ROOT")
     if effective_root:
-        print(f"  Rewriting file paths → root: {effective_root}")
+        print(f"  Rewriting file paths -> root: {effective_root}")
         train_df = rewrite_paths(train_df, effective_root)
         val_df   = rewrite_paths(val_df,   effective_root)
         test_df  = rewrite_paths(test_df,  effective_root)
@@ -258,7 +260,8 @@ def run_experiment(exp_id: str, dataset_root: str | None = None):
     print(f"\n  Train : {len(train_df):,} images")
     print(f"  Val   : {len(val_df):,} images")
     print(f"  Test  : {len(test_df):,} images")
-    print(f"  Classes: {num_classes}  →  {class_names}")
+    print(f"  Classes: {num_classes}  ->  {class_names}")
+    print(f"  Batch size: {batch_size}")
 
     # --- Verify first path is readable (fast sanity check) ---
     sample_path = train_df["file_path"].iloc[0]
@@ -268,9 +271,9 @@ def run_experiment(exp_id: str, dataset_root: str | None = None):
 
     # --- tf.data ---
     print("\n  Building tf.data pipelines ...")
-    train_ds = make_dataset(train_df, training=True)
-    val_ds   = make_dataset(val_df,   training=False)
-    test_ds  = make_dataset(test_df,  training=False)
+    train_ds = make_dataset(train_df, training=True,  batch_size=batch_size)
+    val_ds   = make_dataset(val_df,   training=False, batch_size=batch_size)
+    test_ds  = make_dataset(test_df,  training=False, batch_size=batch_size)
 
     # --- Model ---
     print("  Building model ...")
@@ -486,8 +489,8 @@ def parse_args():
 
 if __name__ == "__main__":
     args = parse_args()
-    # Allow batch size override from CLI
-    if args.batch_size != BATCH_SIZE:
-        BATCH_SIZE = args.batch_size
-        print(f"  Batch size overridden → {BATCH_SIZE}")
-    run_experiment(args.experiment, dataset_root=args.dataset_root)
+    run_experiment(
+        args.experiment,
+        dataset_root=args.dataset_root,
+        batch_size=args.batch_size,
+    )

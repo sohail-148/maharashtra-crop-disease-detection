@@ -25,8 +25,11 @@ set -euo pipefail   # exit on any error
 PROJECT_DIR="${PROJECT_DIR:-$(cd "$(dirname "$0")" && pwd)}"
 DATASET_ROOT="${DATASET_ROOT:-/data/datasets}"
 BATCH_SIZE="${BATCH_SIZE:-64}"
-PYTHON="${PYTHON:-python}"
 EXPERIMENTS="${EXPERIMENTS:-G1 G2 C1 S1 S2}"
+
+# Conda environment on the AWS Deep Learning AMI.
+# Override with: CONDA_ENV=my_env ./run_all_experiments.sh
+CONDA_ENV="${CONDA_ENV:-tensorflow2_p310}"
 
 # --------------------------------------------------------------------------
 # Colours for readability
@@ -41,6 +44,14 @@ warn() { echo -e "${YELLOW}[$(date '+%H:%M:%S')] WARNING: $*${NC}"; }
 fail() { echo -e "${RED}[$(date '+%H:%M:%S')] FAILED: $*${NC}"; exit 1; }
 
 # --------------------------------------------------------------------------
+# Activate conda environment
+# --------------------------------------------------------------------------
+CONDA_BASE=$(conda info --base 2>/dev/null) || fail "conda not found. Is this the AWS Deep Learning AMI?"
+source "$CONDA_BASE/etc/profile.d/conda.sh"
+conda activate "$CONDA_ENV"
+PYTHON=$(which python)
+
+# --------------------------------------------------------------------------
 # Pre-flight checks
 # --------------------------------------------------------------------------
 log "=== AWS GPU Training Run ==="
@@ -48,6 +59,8 @@ log "Project dir   : $PROJECT_DIR"
 log "Dataset root  : $DATASET_ROOT"
 log "Batch size    : $BATCH_SIZE"
 log "Experiments   : $EXPERIMENTS"
+log "Conda env     : $CONDA_ENV"
+log "Python        : $PYTHON"
 echo ""
 
 cd "$PROJECT_DIR"
