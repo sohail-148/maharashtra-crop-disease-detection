@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{% block title %}Crop Disease Detection{% endblock %}</title>
+
+  <!-- Favicon -->
+  <link rel="icon" href="{{ url_for('static', filename='img/favicon.svg') }}" type="image/svg+xml" />
+
+  <!-- Main stylesheet -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}" />
+
+  {% block extra_head %}{% endblock %}
+</head>
+<body>
+
+  <!-- ================================================================ -->
+  <!-- Navigation                                                        -->
+  <!-- ================================================================ -->
+  <nav class="navbar" role="navigation" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a class="nav-brand" href="{{ url_for('main.index') }}">
+        <span class="nav-icon" aria-hidden="true">🌿</span>
+        <span>Crop Disease Detection</span>
+      </a>
+
+      <button class="nav-toggle" id="navToggle"
+              aria-expanded="false" aria-controls="navLinks"
+              aria-label="Toggle navigation menu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <ul class="nav-links" id="navLinks" role="list">
+        <li>
+          <a href="{{ url_for('main.index') }}"
+             class="nav-link {% if request.endpoint == 'main.index' %}active{% endif %}">
+            Analyse
+          </a>
+        </li>
+        <li>
+          <a href="{{ url_for('main.history') }}"
+             class="nav-link {% if request.endpoint == 'main.history' %}active{% endif %}">
+            History
+          </a>
+        </li>
+        <li>
+          <a href="{{ url_for('main.about') }}"
+             class="nav-link {% if request.endpoint == 'main.about' %}active{% endif %}">
+            About
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ================================================================ -->
+  <!-- Flash messages                                                    -->
+  <!-- ================================================================ -->
+  {% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+      <div class="flash-container" role="alert" aria-live="polite">
+        {% for category, message in messages %}
+          <div class="flash flash--{{ category }}">
+            <span>{{ message }}</span>
+            <button class="flash-close" aria-label="Dismiss">&times;</button>
+          </div>
+        {% endfor %}
+      </div>
+    {% endif %}
+  {% endwith %}
+
+  <!-- ================================================================ -->
+  <!-- Main content                                                      -->
+  <!-- ================================================================ -->
+  <main class="main-content" id="main" tabindex="-1">
+    {% block content %}{% endblock %}
+  </main>
+
+  <!-- ================================================================ -->
+  <!-- Footer                                                            -->
+  <!-- ================================================================ -->
+  <footer class="footer" role="contentinfo">
+    <div class="footer-inner">
+      <p>Maharashtra Crop Disease Detection &mdash; MobileNetV2 Transfer Learning</p>
+      <p class="footer-sub">
+        Crops: Tomato &bull; Grape &bull; Chilli &bull; Sugarcane
+      </p>
+    </div>
+  </footer>
+
+  <!-- Main JS -->
+  <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+  {% block extra_scripts %}{% endblock %}
+</body>
+</html>

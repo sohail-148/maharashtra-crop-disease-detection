@@ -56,6 +56,13 @@ conda env list
 
 T1 Tomato is already trained locally — do NOT upload it to AWS.
 
+> **Verified dataset total: 31,590 images** (not 31,591 as stated in earlier
+> drafts). The discrepancy came from a hidden Windows `desktop.ini` metadata
+> file in `grape_niphad/Downy Mildew/`. That file is excluded by the
+> image-extension filter in `dataset_preparation.py` and does not appear in
+> any split CSV. All split row counts are correct at 31,590. The `desktop.ini`
+> file is harmless and should not be deleted.
+
 ---
 
 ## Split sizes

@@ -111,10 +111,19 @@ config_local.py
 *.rar
 *.csv.gz
 
-# NOTE: splits/*.csv ARE intentionally tracked (small metadata,
-# no images). If a specific CSV becomes too large, add it here.
+# ------------------------------------------------------------
+# Web application — runtime files (never commit)
+# ------------------------------------------------------------
+instance/
+app/static/uploads/
+
+# NOTE: app/static/css/, app/static/js/, app/static/img/,
+#       and app/templates/ ARE intentionally tracked.
 
 # ------------------------------------------------------------
 # Local-only files (never commit)
 # ------------------------------------------------------------
 1NPDPRO5.DOC
+
+# NOTE: splits/*.csv ARE intentionally tracked (small metadata,
+# no images). If a specific CSV becomes too large, add it here.

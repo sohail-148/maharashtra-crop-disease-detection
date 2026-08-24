@@ -1,0 +1,132 @@
+{% extends "base.html" %}
+
+{% block title %}Prediction History — Crop Disease Detection{% endblock %}
+
+{% block content %}
+<div class="container">
+
+  <div class="page-header">
+    <h1 class="page-header__title">Prediction History</h1>
+    <p class="page-header__sub">
+      {{ total }} record{{ 's' if total != 1 else '' }} stored
+    </p>
+  </div>
+
+  {% if rows %}
+
+  <!-- ============================================================ -->
+  <!-- History table                                                  -->
+  <!-- ============================================================ -->
+  <div class="table-wrapper">
+    <table class="history-table" aria-label="Prediction history">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Date / Time</th>
+          <th scope="col">Crop</th>
+          <th scope="col">Model</th>
+          <th scope="col">Predicted Disease</th>
+          <th scope="col">Confidence</th>
+          <th scope="col">Image</th>
+          <th scope="col"><span class="sr-only">Actions</span></th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for row in rows %}
+        <tr class="{% if row['is_placeholder'] %}history-row--placeholder{% endif %}">
+          <td class="history-id">{{ row['id'] }}</td>
+          <td class="history-date">
+            <time datetime="{{ row['created_at'] }}">
+              {{ row['created_at'] | replace('T', ' ') }}
+            </time>
+          </td>
+          <td>{{ row['crop'] }}</td>
+          <td>
+            <span class="exp-badge">{{ row['experiment'] }}</span>
+          </td>
+          <td>
+            {% if row['is_placeholder'] %}
+            <span class="tag tag--pending">Pending model</span>
+            {% else %}
+            {{ row['disease'] }}
+            {% endif %}
+          </td>
+          <td class="history-conf">
+            {% if row['is_placeholder'] %}
+            <span class="conf-na">N/A</span>
+            {% else %}
+            {{ "%.1f%%" | format(row['confidence'] * 100) }}
+            {% endif %}
+          </td>
+          <td class="history-thumb">
+            {% if row['image_path'] %}
+            <a href="{{ url_for('static', filename=row['image_path']) }}"
+               target="_blank" rel="noopener"
+               aria-label="View uploaded image for prediction {{ row['id'] }}">
+              <img src="{{ url_for('static', filename=row['image_path']) }}"
+                   alt="Thumbnail for prediction {{ row['id'] }}"
+                   class="history-thumb__img"
+                   loading="lazy" />
+            </a>
+            {% else %}
+            <span class="no-image">—</span>
+            {% endif %}
+          </td>
+          <td class="history-actions">
+            <form method="POST"
+                  action="{{ url_for('main.delete_prediction', pred_id=row['id']) }}"
+                  onsubmit="return confirm('Delete prediction #{{ row['id'] }}?')">
+              <button type="submit"
+                      class="btn btn--danger btn--xs"
+                      aria-label="Delete prediction {{ row['id'] }}">
+                Delete
+              </button>
+            </form>
+          </td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div><!-- /.table-wrapper -->
+
+  <!-- ============================================================ -->
+  <!-- Pagination                                                     -->
+  <!-- ============================================================ -->
+  {% if total_pages > 1 %}
+  <nav class="pagination" aria-label="History pagination">
+    {% if page > 1 %}
+    <a href="{{ url_for('main.history', page=page-1) }}"
+       class="pagination__link" aria-label="Previous page">
+      &larr; Previous
+    </a>
+    {% endif %}
+
+    <span class="pagination__info">
+      Page {{ page }} of {{ total_pages }}
+    </span>
+
+    {% if page < total_pages %}
+    <a href="{{ url_for('main.history', page=page+1) }}"
+       class="pagination__link" aria-label="Next page">
+      Next &rarr;
+    </a>
+    {% endif %}
+  </nav>
+  {% endif %}
+
+  {% else %}
+  <!-- Empty state -->
+  <div class="empty-state" role="status">
+    <span class="empty-state__icon" aria-hidden="true">📭</span>
+    <h2 class="empty-state__title">No predictions yet</h2>
+    <p class="empty-state__text">
+      Upload a leaf image on the Analyse page to get started.
+    </p>
+    <a href="{{ url_for('main.index') }}" class="btn btn--primary">
+      Go to Analyser
+    </a>
+  </div>
+  {% endif %}
+
+</div><!-- /.container -->
+{% endblock %}

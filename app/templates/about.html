@@ -1,0 +1,80 @@
+{% extends "base.html" %}
+
+{% block title %}About — Crop Disease Detection{% endblock %}
+
+{% block content %}
+<div class="container container--narrow">
+
+  <div class="page-header">
+    <h1 class="page-header__title">About This Project</h1>
+  </div>
+
+  <div class="prose">
+    <h2>Image-Based Disease Detection of Maharashtra-Relevant Crops</h2>
+    <p>
+      This web application is the deployment layer of a research project that
+      uses <strong>MobileNetV2 transfer learning</strong> to classify leaf
+      diseases across four Maharashtra-relevant crops.
+    </p>
+
+    <h3>Crops Covered</h3>
+    <ul>
+      <li><strong>Tomato</strong> — 10 disease classes (PlantVillage dataset)</li>
+      <li><strong>Grape</strong> — Niphad/Nashik region dataset (4 classes) and Mendeley 2024 dataset (4 classes)</li>
+      <li><strong>Chilli</strong> — COLD 2024 dataset (5 classes)</li>
+      <li><strong>Sugarcane</strong> — Maharashtra dataset (5 classes) and Large dataset (10 classes)</li>
+    </ul>
+
+    <h3>Technology</h3>
+    <ul>
+      <li><strong>Model:</strong> MobileNetV2 pretrained on ImageNet, frozen base with a lightweight classification head</li>
+      <li><strong>Training:</strong> TensorFlow 2.18 / Keras 3.15, 70/15/15 stratified split</li>
+      <li><strong>Backend:</strong> Flask 3.1</li>
+      <li><strong>Database:</strong> SQLite (prediction history)</li>
+      <li><strong>Explainability:</strong> Grad-CAM (Phase 12 — coming)</li>
+    </ul>
+
+    <h3>Model Status</h3>
+    <table class="about-status-table" aria-label="Model training status">
+      <thead>
+        <tr>
+          <th>Experiment</th>
+          <th>Crop</th>
+          <th>Classes</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for exp_id, info in crops.items() %}
+        <tr>
+          <td><span class="exp-badge">{{ exp_id }}</span></td>
+          <td>{{ info.crop }}</td>
+          <td>{{ info.classes | length }}</td>
+          <td>
+            {% if model_status[exp_id] %}
+            <span class="tag tag--ready">✓ Ready</span>
+            {% else %}
+            <span class="tag tag--pending">⏳ Training pending</span>
+            {% endif %}
+          </td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+
+    <h3>Dataset Total</h3>
+    <p>
+      31,590 images across 6 datasets and 38 disease classes.
+    </p>
+
+    <h3>Research Context</h3>
+    <p>
+      The project investigates how effectively a lightweight MobileNetV2
+      framework classifies diseases across multiple Maharashtra-relevant crop
+      datasets, with class-level evaluation and error analysis to understand
+      per-disease performance.
+    </p>
+  </div>
+
+</div><!-- /.container -->
+{% endblock %}

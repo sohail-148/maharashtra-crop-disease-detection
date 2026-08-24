@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block title %}{{ code }} — Crop Disease Detection{% endblock %}
+
+{% block content %}
+<div class="container container--narrow">
+  <div class="error-page">
+    <span class="error-page__code" aria-hidden="true">{{ code }}</span>
+    <h1 class="error-page__title">{{ title }}</h1>
+    <p class="error-page__desc">{{ description }}</p>
+    <a href="{{ url_for('main.index') }}" class="btn btn--primary">
+      ← Back to Analyser
+    </a>
+  </div>
+</div>
+{% endblock %}
