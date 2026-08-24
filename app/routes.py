@@ -209,8 +209,19 @@ def about():
     return render_template("about.html", **_template_context())
 
 
-@main.route("/predictions/<int:pred_id>/delete", methods=["POST"])
+@main.route("/predictions/<int:pred_id>/delete", methods=["POST"], endpoint="delete_prediction")
 def delete_prediction_route(pred_id):
+    record = get_prediction_by_id(current_app.config["DATABASE_PATH"], pred_id)
+    if record and record["image_path"]:
+        img_abs = os.path.join(
+            current_app.root_path, "static", record["image_path"].replace("/", os.sep)
+        )
+        if os.path.exists(img_abs):
+            try:
+                os.remove(img_abs)
+            except OSError:
+                pass
+
     deleted = delete_prediction(
         db_path = current_app.config["DATABASE_PATH"],
         pred_id = pred_id,
