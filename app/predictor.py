@@ -29,51 +29,68 @@ import os
 from typing import Optional
 
 # ---------------------------------------------------------------------------
-# Crop / experiment registry
-# Matches the 6 experiments from the ML training pipeline.
+# Crop / model registry
+# 4-Crop Production Architecture:
+#   TOMATO    -> Tomato (T1 baseline model, 10 classes)
+#   GRAPE     -> Grape Unified (G1+G2 model, 7 classes)
+#   CHILLI    -> Chilli (C1 model, 5 classes)
+#   SUGARCANE -> Sugarcane Unified (S1+S2 model, 11 classes)
 # ---------------------------------------------------------------------------
 
 CROPS = {
-    "T1": {
-        "crop":    "Tomato",
+    "TOMATO": {
+        "crop":         "Tomato",
+        "display_code": "10 Classes",
         "classes": [
             "Bacterial Spot", "Early Blight", "Late Blight", "Leaf Mold",
             "Septoria Leaf Spot", "Spider Mites", "Target Spot",
             "Yellow Leaf Curl Virus", "Mosaic Virus", "Healthy",
         ],
-        "model_file": "tomato/tomato_baseline.keras",
+        "model_file":   "tomato/tomato_baseline.keras",
+        "alt_model_files": [],
     },
-    "G1": {
-        "crop":    "Grape (Niphad)",
-        "classes": ["Bacterial Leaf Spot", "Downy Mildew",
-                    "Healthy Leaves", "Powdery Mildew"],
-        "model_file": "grape_niphad/grape_niphad_baseline.keras",
-    },
-    "G2": {
-        "crop":    "Grape (2024)",
-        "classes": ["Black Rot", "Esca", "Healthy", "Leaf Blight"],
-        "model_file": "grape_2024/grape_2024_baseline.keras",
-    },
-    "C1": {
-        "crop":    "Chilli",
-        "classes": ["Cerocospora", "Healthy", "Murda Complex",
-                    "Nutritional Deficiency", "Powdery Mildew"],
-        "model_file": "chilli_cold/chilli_cold_baseline.keras",
-    },
-    "S1": {
-        "crop":    "Sugarcane (Maharashtra)",
-        "classes": ["Healthy", "Mosaic", "RedRot", "Rust", "Yellow"],
-        "model_file": "sugarcane_maharashtra/sugarcane_maharashtra_baseline.keras",
-    },
-    "S2": {
-        "crop":    "Sugarcane (Large)",
+    "GRAPE": {
+        "crop":         "Grape",
+        "display_code": "7 Classes",
         "classes": [
-            "Banded Chlorosis", "Brown Spot", "Brown Rust", "Grassy Shoot",
-            "Healthy Leaves", "Pokkah Boeng", "Sett Rot", "Smut",
-            "Viral Disease", "Yellow Leaf",
+            "Bacterial Leaf Spot", "Black Rot", "Downy Mildew",
+            "Esca (Black Measles)", "Healthy Leaves", "Leaf Blight",
+            "Powdery Mildew",
         ],
-        "model_file": "sugarcane_large/sugarcane_large_baseline.keras",
+        "model_file":   "grape_unified/grape_unified_baseline.keras",
+        "alt_model_files": ["grape/grape_unified.keras"],
     },
+    "CHILLI": {
+        "crop":         "Chilli",
+        "display_code": "5 Classes",
+        "classes": [
+            "Cercospora Leaf Spot", "Healthy", "Murda Complex (Leaf Curl)",
+            "Nutritional Deficiency", "Powdery Mildew",
+        ],
+        "model_file":   "chilli_cold/chilli_cold_baseline.keras",
+        "alt_model_files": ["chilli/chilli_cold.keras"],
+    },
+    "SUGARCANE": {
+        "crop":         "Sugarcane",
+        "display_code": "11 Classes",
+        "classes": [
+            "Banded Chlorosis", "Brown Spot", "Grassy Shoot", "Healthy Leaves",
+            "Mosaic / Viral Disease", "Pokkah Boeng", "Red Rot",
+            "Rust (Brown Rust)", "Sett Rot", "Smut", "Yellow Leaf Disease",
+        ],
+        "model_file":   "sugarcane_unified/sugarcane_unified_baseline.keras",
+        "alt_model_files": ["sugarcane/sugarcane_unified.keras"],
+    },
+}
+
+# Aliases for backwards compatibility with legacy experiment IDs
+CROP_ALIASES = {
+    "T1": "TOMATO",
+    "G1": "GRAPE",
+    "G2": "GRAPE",
+    "C1": "CHILLI",
+    "S1": "SUGARCANE",
+    "S2": "SUGARCANE",
 }
 
 
@@ -129,31 +146,42 @@ def predict_image(image_path: str, experiment: str,
     -------
     PredictionResult
     """
-    if experiment not in CROPS:
+    if experiment is None:
+        experiment = ""
+    exp_key = CROP_ALIASES.get(experiment.upper(), experiment.upper())
+
+    if exp_key not in CROPS:
         return PredictionResult(
             crop="Unknown", experiment=experiment,
             disease="Unknown", confidence=0.0,
             all_probs=None, is_placeholder=True,
-            message=f"Unknown experiment ID: {experiment}",
+            message=f"Unknown crop/experiment ID: {experiment}",
         )
 
-    cfg        = CROPS[experiment]
+    cfg        = CROPS[exp_key]
     crop_name  = cfg["crop"]
-    model_path = os.path.join(models_dir, cfg["model_file"])
 
     # ------------------------------------------------------------------
-    # Check whether a trained model file exists
+    # Check whether a trained model file exists (primary or alt paths)
     # ------------------------------------------------------------------
+    model_path = os.path.join(models_dir, cfg["model_file"])
+    if not os.path.exists(model_path):
+        for alt in cfg.get("alt_model_files", []):
+            alt_path = os.path.join(models_dir, alt)
+            if os.path.exists(alt_path):
+                model_path = alt_path
+                break
+
     if not os.path.exists(model_path):
         return PredictionResult(
-            crop=crop_name, experiment=experiment,
+            crop=crop_name, experiment=exp_key,
             disease="Model not yet available",
             confidence=0.0, all_probs=None,
             is_placeholder=True,
             message=(
                 f"Model file not found: {cfg['model_file']}. "
-                "Training on AWS GPU is pending. "
-                "Upload the trained .keras file to activate predictions."
+                "GPU training is pending. "
+                "Train on Kaggle/Colab GPU or place the trained .keras file in models/ to activate predictions."
             ),
         )
 
@@ -189,7 +217,7 @@ def predict_image(image_path: str, experiment: str,
         )
 
         return PredictionResult(
-            crop=crop_name, experiment=experiment,
+            crop=crop_name, experiment=exp_key,
             disease=disease, confidence=confidence,
             all_probs=all_probs, is_placeholder=False,
             message="",
@@ -197,7 +225,7 @@ def predict_image(image_path: str, experiment: str,
 
     except Exception as exc:  # noqa: BLE001
         return PredictionResult(
-            crop=crop_name, experiment=experiment,
+            crop=crop_name, experiment=exp_key,
             disease="Inference error",
             confidence=0.0, all_probs=None,
             is_placeholder=True,
@@ -206,8 +234,14 @@ def predict_image(image_path: str, experiment: str,
 
 
 def list_available_models(models_dir: str) -> dict:
-    """Return a dict of experiment_id -> bool (model file present)."""
-    return {
-        exp_id: os.path.exists(os.path.join(models_dir, cfg["model_file"]))
-        for exp_id, cfg in CROPS.items()
-    }
+    """Return a dict of crop_id -> bool (model file present)."""
+    status = {}
+    for crop_id, cfg in CROPS.items():
+        present = os.path.exists(os.path.join(models_dir, cfg["model_file"]))
+        if not present:
+            for alt in cfg.get("alt_model_files", []):
+                if os.path.exists(os.path.join(models_dir, alt)):
+                    present = True
+                    break
+        status[crop_id] = present
+    return status

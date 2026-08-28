@@ -1,0 +1,932 @@
+file_path,class_label,class_index
+D:\CropDiseaseProject\grape_2024\healthy\healthy623.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_niphad\Healthy Leaves\Healthy Leaves_202.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight260.jpg,Leaf Blight,5
+D:\CropDiseaseProject\grape_2024\healthy\healthy021.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_2024\Black rot\black rot317.jpg,Black Rot,1
+D:\CropDiseaseProject\grape_niphad\Healthy Leaves\Healthy Leaves_788.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_2024\esca\esca023.jpg,Esca (Black Measles),3
+D:\CropDiseaseProject\grape_niphad\Healthy Leaves\Healthy Leaves_289.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight643.jpg,Leaf Blight,5
+D:\CropDiseaseProject\grape_niphad\Bacterial Leaf Spot\Bacterial Leaf Spot_3.png,Bacterial Leaf Spot,0
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight382.jpg,Leaf Blight,5
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight191.jpg,Leaf Blight,5
+D:\CropDiseaseProject\grape_niphad\Healthy Leaves\Healthy Leaves_875.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_2024\healthy\healthy474.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_niphad\Healthy Leaves\Healthy Leaves_519.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_niphad\Healthy Leaves\Healthy Leaves_128.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_niphad\Downy Mildew\Downy Mildew_764.jpg,Downy Mildew,2
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight490.jpg,Leaf Blight,5
+D:\CropDiseaseProject\grape_niphad\Downy Mildew\Downy Mildew_648.jpg,Downy Mildew,2
+D:\CropDiseaseProject\grape_2024\healthy\healthy642.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_2024\Black rot\black rot417.jpg,Black Rot,1
+D:\CropDiseaseProject\grape_niphad\Downy Mildew\Downy Mildew_919.jpg,Downy Mildew,2
+D:\CropDiseaseProject\grape_niphad\Downy Mildew\Downy Mildew_861.jpg,Downy Mildew,2
+D:\CropDiseaseProject\grape_niphad\Downy Mildew\Downy Mildew_274.jpg,Downy Mildew,2
+D:\CropDiseaseProject\grape_2024\healthy\healthy350.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_niphad\Downy Mildew\Downy Mildew_761.jpg,Downy Mildew,2
+D:\CropDiseaseProject\grape_2024\esca\esca214.jpg,Esca (Black Measles),3
+D:\CropDiseaseProject\grape_2024\Black rot\black rot264.jpg,Black Rot,1
+D:\CropDiseaseProject\grape_2024\esca\esca334.jpg,Esca (Black Measles),3
+D:\CropDiseaseProject\grape_niphad\Downy Mildew\Downy Mildew_935.jpg,Downy Mildew,2
+D:\CropDiseaseProject\grape_niphad\Healthy Leaves\Healthy Leaves_822.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_niphad\Bacterial Leaf Spot\Bacterial Leaf Spot_98.png,Bacterial Leaf Spot,0
+D:\CropDiseaseProject\grape_niphad\Downy Mildew\Downy Mildew_493.jpg,Downy Mildew,2
+D:\CropDiseaseProject\grape_2024\Black rot\black rot208.jpg,Black Rot,1
+D:\CropDiseaseProject\grape_2024\esca\esca089.jpg,Esca (Black Measles),3
+D:\CropDiseaseProject\grape_2024\healthy\healthy1077.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_niphad\Healthy Leaves\Healthy Leaves_712.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight067.jpg,Leaf Blight,5
+D:\CropDiseaseProject\grape_2024\healthy\healthy669.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_niphad\Downy Mildew\Downy Mildew_552.jpg,Downy Mildew,2
+D:\CropDiseaseProject\grape_niphad\Healthy Leaves\Healthy Leaves_472.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_niphad\Healthy Leaves\Healthy Leaves_629.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_niphad\Healthy Leaves\Healthy Leaves_1162.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_2024\esca\esca196.jpg,Esca (Black Measles),3
+D:\CropDiseaseProject\grape_2024\Black rot\black rot462.jpg,Black Rot,1
+D:\CropDiseaseProject\grape_2024\healthy\healthy410.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_2024\healthy\healthy001.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_2024\esca\esca282.jpg,Esca (Black Measles),3
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight599.jpg,Leaf Blight,5
+D:\CropDiseaseProject\grape_niphad\Powdery Mildew\Powdery Mildew_109.jpg,Powdery Mildew,6
+D:\CropDiseaseProject\grape_niphad\Downy Mildew\Downy Mildew_756.jpg,Downy Mildew,2
+D:\CropDiseaseProject\grape_niphad\Downy Mildew\Downy Mildew_783.jpg,Downy Mildew,2
+D:\CropDiseaseProject\grape_niphad\Downy Mildew\Downy Mildew_546.jpg,Downy Mildew,2
+D:\CropDiseaseProject\grape_2024\Black rot\black rot785.jpg,Black Rot,1
+D:\CropDiseaseProject\grape_niphad\Powdery Mildew\Powdery Mildew_137.jpg,Powdery Mildew,6
+D:\CropDiseaseProject\grape_niphad\Downy Mildew\Downy Mildew_836.jpg,Downy Mildew,2
+D:\CropDiseaseProject\grape_niphad\Healthy Leaves\Healthy Leaves_948.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_2024\Black rot\black rot624.jpg,Black Rot,1
+D:\CropDiseaseProject\grape_2024\healthy\healthy443.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight196.jpg,Leaf Blight,5
+D:\CropDiseaseProject\grape_2024\healthy\healthy345.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_niphad\Downy Mildew\Downy Mildew_951.jpg,Downy Mildew,2
+D:\CropDiseaseProject\grape_2024\esca\esca601.jpg,Esca (Black Measles),3
+D:\CropDiseaseProject\grape_2024\esca\esca634.jpg,Esca (Black Measles),3
+D:\CropDiseaseProject\grape_niphad\Powdery Mildew\Powdery Mildew_43.jpg,Powdery Mildew,6
+D:\CropDiseaseProject\grape_niphad\Healthy Leaves\Healthy Leaves_523.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_2024\Black rot\black rot649.jpg,Black Rot,1
+D:\CropDiseaseProject\grape_2024\healthy\healthy884.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_2024\healthy\healthy747.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_2024\healthy\healthy273.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_2024\esca\esca168.jpg,Esca (Black Measles),3
+D:\CropDiseaseProject\grape_niphad\Healthy Leaves\Healthy Leaves_732.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_niphad\Healthy Leaves\Healthy Leaves_390.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_2024\healthy\healthy901.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_2024\esca\esca641.jpg,Esca (Black Measles),3
+D:\CropDiseaseProject\grape_niphad\Downy Mildew\Downy Mildew_28.jpg,Downy Mildew,2
+D:\CropDiseaseProject\grape_niphad\Healthy Leaves\Healthy Leaves_1120.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_niphad\Healthy Leaves\Healthy Leaves_772.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_niphad\Healthy Leaves\Healthy Leaves_731.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_2024\healthy\healthy1076.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_2024\healthy\healthy522.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_2024\esca\esca005.jpg,Esca (Black Measles),3
+D:\CropDiseaseProject\grape_niphad\Downy Mildew\Downy Mildew_747.jpg,Downy Mildew,2
+D:\CropDiseaseProject\grape_2024\Black rot\black rot036.jpg,Black Rot,1
+D:\CropDiseaseProject\grape_niphad\Healthy Leaves\Healthy Leaves_407.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_2024\Black rot\black rot107.jpg,Black Rot,1
+D:\CropDiseaseProject\grape_2024\healthy\healthy457.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight254.jpg,Leaf Blight,5
+D:\CropDiseaseProject\grape_2024\Black rot\black rot140.jpg,Black Rot,1
+D:\CropDiseaseProject\grape_niphad\Downy Mildew\Downy Mildew_359.jpg,Downy Mildew,2
+D:\CropDiseaseProject\grape_2024\esca\esca715.jpg,Esca (Black Measles),3
+D:\CropDiseaseProject\grape_niphad\Downy Mildew\Downy Mildew_551.jpg,Downy Mildew,2
+D:\CropDiseaseProject\grape_2024\esca\esca682.jpg,Esca (Black Measles),3
+D:\CropDiseaseProject\grape_niphad\Downy Mildew\Downy Mildew_817.jpg,Downy Mildew,2
+D:\CropDiseaseProject\grape_2024\Black rot\black rot512.jpg,Black Rot,1
+D:\CropDiseaseProject\grape_niphad\Downy Mildew\Downy Mildew_868.jpg,Downy Mildew,2
+D:\CropDiseaseProject\grape_2024\healthy\healthy1106.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_niphad\Healthy Leaves\Healthy Leaves_84.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_2024\healthy\healthy683.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_2024\healthy\healthy804.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_niphad\Powdery Mildew\Powdery Mildew_155.jpg,Powdery Mildew,6
+D:\CropDiseaseProject\grape_niphad\Powdery Mildew\Powdery Mildew_222.jpg,Powdery Mildew,6
+D:\CropDiseaseProject\grape_niphad\Powdery Mildew\Powdery Mildew_69.jpg,Powdery Mildew,6
+D:\CropDiseaseProject\grape_niphad\Bacterial Leaf Spot\Bacterial Leaf Spot_63.jpg,Bacterial Leaf Spot,0
+D:\CropDiseaseProject\grape_niphad\Downy Mildew\Downy Mildew_721.jpg,Downy Mildew,2
+D:\CropDiseaseProject\grape_niphad\Downy Mildew\Downy Mildew_843.jpg,Downy Mildew,2
+D:\CropDiseaseProject\grape_2024\esca\esca391.jpg,Esca (Black Measles),3
+D:\CropDiseaseProject\grape_2024\esca\esca690.jpg,Esca (Black Measles),3
+D:\CropDiseaseProject\grape_2024\Black rot\black rot193.jpg,Black Rot,1
+D:\CropDiseaseProject\grape_2024\Black rot\black rot097.jpg,Black Rot,1
+D:\CropDiseaseProject\grape_niphad\Downy Mildew\Downy Mildew_285.jpg,Downy Mildew,2
+D:\CropDiseaseProject\grape_niphad\Healthy Leaves\Healthy Leaves_1243.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight423.jpg,Leaf Blight,5
+D:\CropDiseaseProject\grape_2024\healthy\healthy613.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_niphad\Downy Mildew\Downy Mildew_888.jpg,Downy Mildew,2
+D:\CropDiseaseProject\grape_niphad\Healthy Leaves\Healthy Leaves_654.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight314.jpg,Leaf Blight,5
+D:\CropDiseaseProject\grape_niphad\Downy Mildew\Downy Mildew_907.jpg,Downy Mildew,2
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight520.jpg,Leaf Blight,5
+D:\CropDiseaseProject\grape_2024\healthy\healthy724.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight303.jpg,Leaf Blight,5
+D:\CropDiseaseProject\grape_niphad\Healthy Leaves\Healthy Leaves_196.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_niphad\Healthy Leaves\Healthy Leaves_31.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_2024\healthy\healthy172.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_niphad\Downy Mildew\Downy Mildew_216.jpg,Downy Mildew,2
+D:\CropDiseaseProject\grape_2024\esca\esca526.jpg,Esca (Black Measles),3
+D:\CropDiseaseProject\grape_niphad\Healthy Leaves\Healthy Leaves_711.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight653.jpg,Leaf Blight,5
+D:\CropDiseaseProject\grape_2024\esca\esca403.jpg,Esca (Black Measles),3
+D:\CropDiseaseProject\grape_2024\Black rot\black rot244.jpg,Black Rot,1
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight218.jpg,Leaf Blight,5
+D:\CropDiseaseProject\grape_niphad\Powdery Mildew\Powdery Mildew_181.jpg,Powdery Mildew,6
+D:\CropDiseaseProject\grape_2024\Black rot\black rot702.jpg,Black Rot,1
+D:\CropDiseaseProject\grape_2024\healthy\healthy702.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight551.jpg,Leaf Blight,5
+D:\CropDiseaseProject\grape_niphad\Healthy Leaves\Healthy Leaves_401.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_niphad\Downy Mildew\Downy Mildew_141.jpg,Downy Mildew,2
+D:\CropDiseaseProject\grape_2024\healthy\healthy375.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_niphad\Healthy Leaves\Healthy Leaves_148.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_niphad\Healthy Leaves\Healthy Leaves_331.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_niphad\Powdery Mildew\Powdery Mildew_17.jpg,Powdery Mildew,6
+D:\CropDiseaseProject\grape_niphad\Downy Mildew\Downy Mildew_41.jpg,Downy Mildew,2
+D:\CropDiseaseProject\grape_niphad\Downy Mildew\Downy Mildew_565.jpg,Downy Mildew,2
+D:\CropDiseaseProject\grape_2024\healthy\healthy226.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_2024\Black rot\black rot415.jpg,Black Rot,1
+D:\CropDiseaseProject\grape_2024\healthy\healthy201.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_2024\esca\esca474.jpg,Esca (Black Measles),3
+D:\CropDiseaseProject\grape_niphad\Powdery Mildew\Powdery Mildew_327.jpg,Powdery Mildew,6
+D:\CropDiseaseProject\grape_niphad\Healthy Leaves\Healthy Leaves_584.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight633.jpg,Leaf Blight,5
+D:\CropDiseaseProject\grape_niphad\Powdery Mildew\Powdery Mildew_86.jpg,Powdery Mildew,6
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight391.jpg,Leaf Blight,5
+D:\CropDiseaseProject\grape_2024\healthy\healthy1105.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_niphad\Powdery Mildew\Powdery Mildew_239.jpg,Powdery Mildew,6
+D:\CropDiseaseProject\grape_2024\esca\esca420.jpg,Esca (Black Measles),3
+D:\CropDiseaseProject\grape_niphad\Downy Mildew\Downy Mildew_960.png,Downy Mildew,2
+D:\CropDiseaseProject\grape_2024\healthy\healthy228.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_niphad\Healthy Leaves\Healthy Leaves_518.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_2024\Black rot\black rot647.jpg,Black Rot,1
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight026.jpg,Leaf Blight,5
+D:\CropDiseaseProject\grape_2024\Black rot\black rot034.jpg,Black Rot,1
+D:\CropDiseaseProject\grape_2024\Black rot\black rot297.jpg,Black Rot,1
+D:\CropDiseaseProject\grape_2024\Black rot\black rot465.jpg,Black Rot,1
+D:\CropDiseaseProject\grape_2024\esca\esca751.jpg,Esca (Black Measles),3
+D:\CropDiseaseProject\grape_2024\Black rot\black rot014.jpg,Black Rot,1
+D:\CropDiseaseProject\grape_2024\esca\esca392.jpg,Esca (Black Measles),3
+D:\CropDiseaseProject\grape_niphad\Healthy Leaves\Healthy Leaves_1111.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_niphad\Healthy Leaves\Healthy Leaves_216.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_niphad\Powdery Mildew\Powdery Mildew_400.JPG,Powdery Mildew,6
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight247.jpg,Leaf Blight,5
+D:\CropDiseaseProject\grape_2024\healthy\healthy879.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_2024\Black rot\black rot234.jpg,Black Rot,1
+D:\CropDiseaseProject\grape_niphad\Bacterial Leaf Spot\Bacterial Leaf Spot_91.JPG,Bacterial Leaf Spot,0
+D:\CropDiseaseProject\grape_niphad\Downy Mildew\Downy Mildew_827.jpg,Downy Mildew,2
+D:\CropDiseaseProject\grape_niphad\Healthy Leaves\Healthy Leaves_1026.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_2024\healthy\healthy789.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_niphad\Healthy Leaves\Healthy Leaves_505.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_niphad\Healthy Leaves\Healthy Leaves_568.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_2024\healthy\healthy1078.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_2024\healthy\healthy1094.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight112.jpg,Leaf Blight,5
+D:\CropDiseaseProject\grape_2024\healthy\healthy136.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_niphad\Healthy Leaves\Healthy Leaves_937.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_2024\esca\esca714.jpg,Esca (Black Measles),3
+D:\CropDiseaseProject\grape_2024\esca\esca303.jpg,Esca (Black Measles),3
+D:\CropDiseaseProject\grape_2024\esca\esca730.jpg,Esca (Black Measles),3
+D:\CropDiseaseProject\grape_niphad\Downy Mildew\Downy Mildew_871.jpg,Downy Mildew,2
+D:\CropDiseaseProject\grape_niphad\Healthy Leaves\Healthy Leaves_619.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_niphad\Downy Mildew\Downy Mildew_46.jpg,Downy Mildew,2
+D:\CropDiseaseProject\grape_2024\esca\esca725.jpg,Esca (Black Measles),3
+D:\CropDiseaseProject\grape_2024\Black rot\black rot168.jpg,Black Rot,1
+D:\CropDiseaseProject\grape_niphad\Downy Mildew\Downy Mildew_605.jpg,Downy Mildew,2
+D:\CropDiseaseProject\grape_niphad\Healthy Leaves\Healthy Leaves_1178.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_2024\esca\esca109.jpg,Esca (Black Measles),3
+D:\CropDiseaseProject\grape_2024\healthy\healthy988.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_2024\esca\esca664.jpg,Esca (Black Measles),3
+D:\CropDiseaseProject\grape_2024\esca\esca425.jpg,Esca (Black Measles),3
+D:\CropDiseaseProject\grape_2024\healthy\healthy897.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_2024\Black rot\black rot773.jpg,Black Rot,1
+D:\CropDiseaseProject\grape_niphad\Healthy Leaves\Healthy Leaves_49.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_niphad\Downy Mildew\Downy Mildew_309.jpg,Downy Mildew,2
+D:\CropDiseaseProject\grape_niphad\Powdery Mildew\Powdery Mildew_152.jpg,Powdery Mildew,6
+D:\CropDiseaseProject\grape_niphad\Healthy Leaves\Healthy Leaves_40.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_2024\esca\esca881.jpg,Esca (Black Measles),3
+D:\CropDiseaseProject\grape_2024\healthy\healthy140.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_2024\healthy\healthy035.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight434.jpg,Leaf Blight,5
+D:\CropDiseaseProject\grape_niphad\Healthy Leaves\Healthy Leaves_1232.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_niphad\Powdery Mildew\Powdery Mildew_383.JPG,Powdery Mildew,6
+D:\CropDiseaseProject\grape_2024\esca\esca249.jpg,Esca (Black Measles),3
+D:\CropDiseaseProject\grape_niphad\Healthy Leaves\Healthy Leaves_364.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_niphad\Powdery Mildew\Powdery Mildew_325.jpg,Powdery Mildew,6
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight533.jpg,Leaf Blight,5
+D:\CropDiseaseProject\grape_niphad\Bacterial Leaf Spot\Bacterial Leaf Spot_56.jpg,Bacterial Leaf Spot,0
+D:\CropDiseaseProject\grape_2024\esca\esca140.jpg,Esca (Black Measles),3
+D:\CropDiseaseProject\grape_niphad\Healthy Leaves\Healthy Leaves_759.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_niphad\Downy Mildew\Downy Mildew_697.jpg,Downy Mildew,2
+D:\CropDiseaseProject\grape_2024\healthy\healthy427.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_niphad\Healthy Leaves\Healthy Leaves_412.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_niphad\Healthy Leaves\Healthy Leaves_602.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_2024\esca\esca699.jpg,Esca (Black Measles),3
+D:\CropDiseaseProject\grape_2024\healthy\healthy1097.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_niphad\Healthy Leaves\Healthy Leaves_1007.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_2024\healthy\healthy271.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_2024\Black rot\black rot676.jpg,Black Rot,1
+D:\CropDiseaseProject\grape_niphad\Downy Mildew\Downy Mildew_814.jpg,Downy Mildew,2
+D:\CropDiseaseProject\grape_niphad\Healthy Leaves\Healthy Leaves_1076.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_2024\esca\esca831.jpg,Esca (Black Measles),3
+D:\CropDiseaseProject\grape_2024\Black rot\black rot644.jpg,Black Rot,1
+D:\CropDiseaseProject\grape_niphad\Healthy Leaves\Healthy Leaves_427.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_2024\esca\esca500.jpg,Esca (Black Measles),3
+D:\CropDiseaseProject\grape_2024\esca\esca228.jpg,Esca (Black Measles),3
+D:\CropDiseaseProject\grape_niphad\Downy Mildew\Downy Mildew_855.jpg,Downy Mildew,2
+D:\CropDiseaseProject\grape_niphad\Healthy Leaves\Healthy Leaves_1012.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_2024\esca\esca143.jpg,Esca (Black Measles),3
+D:\CropDiseaseProject\grape_2024\Black rot\black rot066.jpg,Black Rot,1
+D:\CropDiseaseProject\grape_2024\esca\esca511.jpg,Esca (Black Measles),3
+D:\CropDiseaseProject\grape_2024\esca\esca606.jpg,Esca (Black Measles),3
+D:\CropDiseaseProject\grape_2024\Black rot\black rot108.jpg,Black Rot,1
+D:\CropDiseaseProject\grape_niphad\Downy Mildew\Downy Mildew_686.jpg,Downy Mildew,2
+D:\CropDiseaseProject\grape_niphad\Downy Mildew\Downy Mildew_411.jpg,Downy Mildew,2
+D:\CropDiseaseProject\grape_niphad\Healthy Leaves\Healthy Leaves_752.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight272.jpg,Leaf Blight,5
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight501.jpg,Leaf Blight,5
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight386.jpg,Leaf Blight,5
+D:\CropDiseaseProject\grape_niphad\Downy Mildew\Downy Mildew_822.jpg,Downy Mildew,2
+D:\CropDiseaseProject\grape_niphad\Downy Mildew\Downy Mildew_957.png,Downy Mildew,2
+D:\CropDiseaseProject\grape_niphad\Healthy Leaves\Healthy Leaves_842.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_niphad\Powdery Mildew\Powdery Mildew_186.jpg,Powdery Mildew,6
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight605.jpg,Leaf Blight,5
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight305.jpg,Leaf Blight,5
+D:\CropDiseaseProject\grape_niphad\Healthy Leaves\Healthy Leaves_741.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_niphad\Powdery Mildew\Powdery Mildew_92.jpg,Powdery Mildew,6
+D:\CropDiseaseProject\grape_2024\esca\esca782.jpg,Esca (Black Measles),3
+D:\CropDiseaseProject\grape_2024\Black rot\black rot476.jpg,Black Rot,1
+D:\CropDiseaseProject\grape_niphad\Powdery Mildew\Powdery Mildew_96.jpg,Powdery Mildew,6
+D:\CropDiseaseProject\grape_niphad\Downy Mildew\Downy Mildew_297.jpg,Downy Mildew,2
+D:\CropDiseaseProject\grape_2024\Black rot\black rot555.jpg,Black Rot,1
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight580.jpg,Leaf Blight,5
+D:\CropDiseaseProject\grape_2024\Black rot\black rot172.jpg,Black Rot,1
+D:\CropDiseaseProject\grape_2024\Black rot\black rot163.jpg,Black Rot,1
+D:\CropDiseaseProject\grape_2024\Black rot\black rot686.jpg,Black Rot,1
+D:\CropDiseaseProject\grape_2024\esca\esca261.jpg,Esca (Black Measles),3
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight022.jpg,Leaf Blight,5
+D:\CropDiseaseProject\grape_2024\esca\esca402.jpg,Esca (Black Measles),3
+D:\CropDiseaseProject\grape_2024\esca\esca672.jpg,Esca (Black Measles),3
+D:\CropDiseaseProject\grape_2024\healthy\healthy141.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_niphad\Downy Mildew\Downy Mildew_904.jpg,Downy Mildew,2
+D:\CropDiseaseProject\grape_2024\esca\esca139.jpg,Esca (Black Measles),3
+D:\CropDiseaseProject\grape_2024\esca\esca815.jpg,Esca (Black Measles),3
+D:\CropDiseaseProject\grape_2024\esca\esca764.jpg,Esca (Black Measles),3
+D:\CropDiseaseProject\grape_2024\healthy\healthy109.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_niphad\Healthy Leaves\Healthy Leaves_730.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_niphad\Healthy Leaves\Healthy Leaves_1192.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_niphad\Powdery Mildew\Powdery Mildew_332.jpg,Powdery Mildew,6
+D:\CropDiseaseProject\grape_2024\esca\esca698.jpg,Esca (Black Measles),3
+D:\CropDiseaseProject\grape_2024\esca\esca761.jpg,Esca (Black Measles),3
+D:\CropDiseaseProject\grape_niphad\Downy Mildew\Downy Mildew_627.jpg,Downy Mildew,2
+D:\CropDiseaseProject\grape_2024\healthy\healthy799.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_niphad\Powdery Mildew\Powdery Mildew_56.jpg,Powdery Mildew,6
+D:\CropDiseaseProject\grape_niphad\Healthy Leaves\Healthy Leaves_230.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight379.jpg,Leaf Blight,5
+D:\CropDiseaseProject\grape_2024\Black rot\black rot468.jpg,Black Rot,1
+D:\CropDiseaseProject\grape_2024\healthy\healthy039.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_2024\Black rot\black rot695.jpg,Black Rot,1
+D:\CropDiseaseProject\grape_2024\Black rot\black rot189.jpg,Black Rot,1
+D:\CropDiseaseProject\grape_2024\esca\esca642.jpg,Esca (Black Measles),3
+D:\CropDiseaseProject\grape_niphad\Healthy Leaves\Healthy Leaves_664.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight269.jpg,Leaf Blight,5
+D:\CropDiseaseProject\grape_2024\healthy\healthy777.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_niphad\Healthy Leaves\Healthy Leaves_932.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_niphad\Downy Mildew\Downy Mildew_83.jpg,Downy Mildew,2
+D:\CropDiseaseProject\grape_2024\Black rot\black rot299.jpg,Black Rot,1
+D:\CropDiseaseProject\grape_2024\healthy\healthy1084.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight655.jpg,Leaf Blight,5
+D:\CropDiseaseProject\grape_2024\Black rot\black rot732.jpg,Black Rot,1
+D:\CropDiseaseProject\grape_niphad\Downy Mildew\Downy Mildew_708.jpg,Downy Mildew,2
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight483.jpg,Leaf Blight,5
+D:\CropDiseaseProject\grape_niphad\Healthy Leaves\Healthy Leaves_534.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_niphad\Healthy Leaves\Healthy Leaves_418.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight573.jpg,Leaf Blight,5
+D:\CropDiseaseProject\grape_niphad\Healthy Leaves\Healthy Leaves_934.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_niphad\Downy Mildew\Downy Mildew_295.jpg,Downy Mildew,2
+D:\CropDiseaseProject\grape_niphad\Downy Mildew\Downy Mildew_615.jpg,Downy Mildew,2
+D:\CropDiseaseProject\grape_niphad\Bacterial Leaf Spot\Bacterial Leaf Spot_27.jpg,Bacterial Leaf Spot,0
+D:\CropDiseaseProject\grape_niphad\Powdery Mildew\Powdery Mildew_45.jpg,Powdery Mildew,6
+D:\CropDiseaseProject\grape_niphad\Healthy Leaves\Healthy Leaves_225.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_niphad\Healthy Leaves\Healthy Leaves_15.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_niphad\Powdery Mildew\Powdery Mildew_184.jpg,Powdery Mildew,6
+D:\CropDiseaseProject\grape_niphad\Downy Mildew\Downy Mildew_645.jpg,Downy Mildew,2
+D:\CropDiseaseProject\grape_2024\Black rot\black rot123.jpg,Black Rot,1
+D:\CropDiseaseProject\grape_niphad\Healthy Leaves\Healthy Leaves_835.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_niphad\Downy Mildew\Downy Mildew_130.jpg,Downy Mildew,2
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight372.jpg,Leaf Blight,5
+D:\CropDiseaseProject\grape_niphad\Healthy Leaves\Healthy Leaves_1047.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_2024\Black rot\black rot132.jpg,Black Rot,1
+D:\CropDiseaseProject\grape_niphad\Downy Mildew\Downy Mildew_123.jpg,Downy Mildew,2
+D:\CropDiseaseProject\grape_niphad\Healthy Leaves\Healthy Leaves_839.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_niphad\Healthy Leaves\Healthy Leaves_551.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_2024\Black rot\black rot101.jpg,Black Rot,1
+D:\CropDiseaseProject\grape_niphad\Downy Mildew\Downy Mildew_506.jpg,Downy Mildew,2
+D:\CropDiseaseProject\grape_niphad\Healthy Leaves\Healthy Leaves_1142.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_2024\healthy\healthy630.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_niphad\Healthy Leaves\Healthy Leaves_915.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_2024\esca\esca673.jpg,Esca (Black Measles),3
+D:\CropDiseaseProject\grape_niphad\Healthy Leaves\Healthy Leaves_333.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_niphad\Powdery Mildew\Powdery Mildew_158.jpg,Powdery Mildew,6
+D:\CropDiseaseProject\grape_niphad\Healthy Leaves\Healthy Leaves_750.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_2024\healthy\healthy718.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_2024\healthy\healthy059.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_niphad\Healthy Leaves\Healthy Leaves_1254.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_2024\healthy\healthy995.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_2024\esca\esca273.jpg,Esca (Black Measles),3
+D:\CropDiseaseProject\grape_niphad\Healthy Leaves\Healthy Leaves_366.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_niphad\Healthy Leaves\Healthy Leaves_459.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_2024\Black rot\black rot429.jpg,Black Rot,1
+D:\CropDiseaseProject\grape_niphad\Healthy Leaves\Healthy Leaves_75.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_2024\healthy\healthy763.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_niphad\Downy Mildew\Downy Mildew_301.jpg,Downy Mildew,2
+D:\CropDiseaseProject\grape_2024\Black rot\black rot037.jpg,Black Rot,1
+D:\CropDiseaseProject\grape_niphad\Downy Mildew\Downy Mildew_353.jpg,Downy Mildew,2
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight131.jpg,Leaf Blight,5
+D:\CropDiseaseProject\grape_niphad\Downy Mildew\Downy Mildew_676.jpg,Downy Mildew,2
+D:\CropDiseaseProject\grape_2024\esca\esca365.jpg,Esca (Black Measles),3
+D:\CropDiseaseProject\grape_2024\healthy\healthy865.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight279.jpg,Leaf Blight,5
+D:\CropDiseaseProject\grape_niphad\Healthy Leaves\Healthy Leaves_911.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_niphad\Healthy Leaves\Healthy Leaves_726.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_2024\esca\esca192.jpg,Esca (Black Measles),3
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight486.jpg,Leaf Blight,5
+D:\CropDiseaseProject\grape_2024\healthy\healthy907.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_niphad\Downy Mildew\Downy Mildew_427.jpg,Downy Mildew,2
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight226.jpg,Leaf Blight,5
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight570.jpg,Leaf Blight,5
+D:\CropDiseaseProject\grape_2024\healthy\healthy538.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_niphad\Healthy Leaves\Healthy Leaves_748.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_niphad\Powdery Mildew\Powdery Mildew_263.jpg,Powdery Mildew,6
+D:\CropDiseaseProject\grape_2024\healthy\healthy645.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_2024\healthy\healthy998.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_2024\esca\esca732.jpg,Esca (Black Measles),3
+D:\CropDiseaseProject\grape_niphad\Healthy Leaves\Healthy Leaves_1166.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_niphad\Downy Mildew\Downy Mildew_445.jpg,Downy Mildew,2
+D:\CropDiseaseProject\grape_niphad\Downy Mildew\Downy Mildew_402.jpg,Downy Mildew,2
+D:\CropDiseaseProject\grape_niphad\Downy Mildew\Downy Mildew_446.jpg,Downy Mildew,2
+D:\CropDiseaseProject\grape_niphad\Powdery Mildew\Powdery Mildew_116.jpg,Powdery Mildew,6
+D:\CropDiseaseProject\grape_niphad\Downy Mildew\Downy Mildew_768.jpg,Downy Mildew,2
+D:\CropDiseaseProject\grape_2024\healthy\healthy1050.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_2024\Black rot\black rot387.jpg,Black Rot,1
+D:\CropDiseaseProject\grape_niphad\Healthy Leaves\Healthy Leaves_342.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_niphad\Healthy Leaves\Healthy Leaves_786.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_niphad\Bacterial Leaf Spot\Bacterial Leaf Spot_92.png,Bacterial Leaf Spot,0
+D:\CropDiseaseProject\grape_2024\esca\esca824.jpg,Esca (Black Measles),3
+D:\CropDiseaseProject\grape_2024\esca\esca061.jpg,Esca (Black Measles),3
+D:\CropDiseaseProject\grape_niphad\Downy Mildew\Downy Mildew_901.jpg,Downy Mildew,2
+D:\CropDiseaseProject\grape_2024\Black rot\black rot579.jpg,Black Rot,1
+D:\CropDiseaseProject\grape_2024\healthy\healthy257.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight654.jpg,Leaf Blight,5
+D:\CropDiseaseProject\grape_2024\Black rot\black rot022.jpg,Black Rot,1
+D:\CropDiseaseProject\grape_2024\healthy\healthy1107.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_2024\Black rot\black rot349.jpg,Black Rot,1
+D:\CropDiseaseProject\grape_niphad\Downy Mildew\Downy Mildew_209.jpg,Downy Mildew,2
+D:\CropDiseaseProject\grape_2024\healthy\healthy416.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_2024\esca\esca229.jpg,Esca (Black Measles),3
+D:\CropDiseaseProject\grape_2024\Black rot\black rot621.jpg,Black Rot,1
+D:\CropDiseaseProject\grape_niphad\Healthy Leaves\Healthy Leaves_226.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_niphad\Bacterial Leaf Spot\Bacterial Leaf Spot_28.jpg,Bacterial Leaf Spot,0
+D:\CropDiseaseProject\grape_2024\healthy\healthy1019.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_2024\esca\esca107.jpg,Esca (Black Measles),3
+D:\CropDiseaseProject\grape_niphad\Healthy Leaves\Healthy Leaves_435.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_niphad\Powdery Mildew\Powdery Mildew_149.jpg,Powdery Mildew,6
+D:\CropDiseaseProject\grape_niphad\Downy Mildew\Downy Mildew_677.jpg,Downy Mildew,2
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight294.jpg,Leaf Blight,5
+D:\CropDiseaseProject\grape_2024\esca\esca728.jpg,Esca (Black Measles),3
+D:\CropDiseaseProject\grape_niphad\Downy Mildew\Downy Mildew_559.JPG,Downy Mildew,2
+D:\CropDiseaseProject\grape_niphad\Powdery Mildew\Powdery Mildew_242.jpg,Powdery Mildew,6
+D:\CropDiseaseProject\grape_niphad\Downy Mildew\Downy Mildew_516.jpg,Downy Mildew,2
+D:\CropDiseaseProject\grape_2024\esca\esca534.jpg,Esca (Black Measles),3
+D:\CropDiseaseProject\grape_niphad\Powdery Mildew\Powdery Mildew_218.jpg,Powdery Mildew,6
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight532.jpg,Leaf Blight,5
+D:\CropDiseaseProject\grape_niphad\Downy Mildew\Downy Mildew_421.jpg,Downy Mildew,2
+D:\CropDiseaseProject\grape_niphad\Healthy Leaves\Healthy Leaves_617.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_2024\Black rot\black rot793.jpg,Black Rot,1
+D:\CropDiseaseProject\grape_2024\Black rot\black rot131.jpg,Black Rot,1
+D:\CropDiseaseProject\grape_2024\Black rot\black rot253.jpg,Black Rot,1
+D:\CropDiseaseProject\grape_2024\healthy\healthy304.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight537.jpg,Leaf Blight,5
+D:\CropDiseaseProject\grape_2024\healthy\healthy160.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_niphad\Healthy Leaves\Healthy Leaves_1222.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_niphad\Powdery Mildew\Powdery Mildew_159.jpg,Powdery Mildew,6
+D:\CropDiseaseProject\grape_niphad\Healthy Leaves\Healthy Leaves_998.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_2024\esca\esca624.jpg,Esca (Black Measles),3
+D:\CropDiseaseProject\grape_niphad\Powdery Mildew\Powdery Mildew_23.jpg,Powdery Mildew,6
+D:\CropDiseaseProject\grape_niphad\Downy Mildew\Downy Mildew_800.jpg,Downy Mildew,2
+D:\CropDiseaseProject\grape_niphad\Bacterial Leaf Spot\Bacterial Leaf Spot_10.jpg,Bacterial Leaf Spot,0
+D:\CropDiseaseProject\grape_niphad\Healthy Leaves\Healthy Leaves_3.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_2024\Black rot\black rot437.jpg,Black Rot,1
+D:\CropDiseaseProject\grape_2024\Black rot\black rot005.jpg,Black Rot,1
+D:\CropDiseaseProject\grape_2024\healthy\healthy864.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_niphad\Healthy Leaves\Healthy Leaves_267.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_niphad\Healthy Leaves\Healthy Leaves_279.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_2024\healthy\healthy243.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_2024\healthy\healthy633.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_2024\Black rot\black rot616.jpg,Black Rot,1
+D:\CropDiseaseProject\grape_2024\esca\esca015.jpg,Esca (Black Measles),3
+D:\CropDiseaseProject\grape_niphad\Powdery Mildew\Powdery Mildew_213.jpg,Powdery Mildew,6
+D:\CropDiseaseProject\grape_2024\esca\esca835.jpg,Esca (Black Measles),3
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight589.jpg,Leaf Blight,5
+D:\CropDiseaseProject\grape_2024\healthy\healthy087.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_2024\Black rot\black rot161.jpg,Black Rot,1
+D:\CropDiseaseProject\grape_niphad\Healthy Leaves\Healthy Leaves_778.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_niphad\Healthy Leaves\Healthy Leaves_830.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_2024\esca\esca459.jpg,Esca (Black Measles),3
+D:\CropDiseaseProject\grape_niphad\Healthy Leaves\Healthy Leaves_1151.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_2024\healthy\healthy890.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_niphad\Downy Mildew\Downy Mildew_363.jpg,Downy Mildew,2
+D:\CropDiseaseProject\grape_niphad\Downy Mildew\Downy Mildew_372.jpg,Downy Mildew,2
+D:\CropDiseaseProject\grape_2024\Black rot\black rot290.jpg,Black Rot,1
+D:\CropDiseaseProject\grape_niphad\Healthy Leaves\Healthy Leaves_86.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_2024\esca\esca146.jpg,Esca (Black Measles),3
+D:\CropDiseaseProject\grape_2024\Black rot\black rot653.jpg,Black Rot,1
+D:\CropDiseaseProject\grape_2024\esca\esca212.jpg,Esca (Black Measles),3
+D:\CropDiseaseProject\grape_niphad\Healthy Leaves\Healthy Leaves_1146.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_niphad\Healthy Leaves\Healthy Leaves_596.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_niphad\Healthy Leaves\Healthy Leaves_493.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight268.jpg,Leaf Blight,5
+D:\CropDiseaseProject\grape_2024\Black rot\black rot612.jpg,Black Rot,1
+D:\CropDiseaseProject\grape_niphad\Powdery Mildew\Powdery Mildew_316.jpg,Powdery Mildew,6
+D:\CropDiseaseProject\grape_2024\healthy\healthy1012.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_niphad\Healthy Leaves\Healthy Leaves_163.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_niphad\Downy Mildew\Downy Mildew_563.jpg,Downy Mildew,2
+D:\CropDiseaseProject\grape_niphad\Healthy Leaves\Healthy Leaves_723.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_niphad\Powdery Mildew\Powdery Mildew_344.jpg,Powdery Mildew,6
+D:\CropDiseaseProject\grape_niphad\Downy Mildew\Downy Mildew_106.jpg,Downy Mildew,2
+D:\CropDiseaseProject\grape_2024\Black rot\black rot629.jpg,Black Rot,1
+D:\CropDiseaseProject\grape_2024\esca\esca042.jpg,Esca (Black Measles),3
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight366.jpg,Leaf Blight,5
+D:\CropDiseaseProject\grape_2024\Black rot\black rot562.jpg,Black Rot,1
+D:\CropDiseaseProject\grape_niphad\Downy Mildew\Downy Mildew_678.jpg,Downy Mildew,2
+D:\CropDiseaseProject\grape_2024\healthy\healthy824.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight652.jpg,Leaf Blight,5
+D:\CropDiseaseProject\grape_2024\healthy\healthy028.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_niphad\Downy Mildew\Downy Mildew_941.jpg,Downy Mildew,2
+D:\CropDiseaseProject\grape_2024\Black rot\black rot375.jpg,Black Rot,1
+D:\CropDiseaseProject\grape_2024\healthy\healthy272.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_niphad\Healthy Leaves\Healthy Leaves_312.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_niphad\Downy Mildew\Downy Mildew_934.jpg,Downy Mildew,2
+D:\CropDiseaseProject\grape_2024\healthy\healthy385.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_2024\healthy\healthy151.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_2024\Black rot\black rot388.jpg,Black Rot,1
+D:\CropDiseaseProject\grape_2024\healthy\healthy183.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_niphad\Downy Mildew\Downy Mildew_657.jpg,Downy Mildew,2
+D:\CropDiseaseProject\grape_niphad\Downy Mildew\Downy Mildew_270.jpg,Downy Mildew,2
+D:\CropDiseaseProject\grape_2024\esca\esca816.jpg,Esca (Black Measles),3
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight156.jpg,Leaf Blight,5
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight546.jpg,Leaf Blight,5
+D:\CropDiseaseProject\grape_niphad\Healthy Leaves\Healthy Leaves_467.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_niphad\Downy Mildew\Downy Mildew_236.jpg,Downy Mildew,2
+D:\CropDiseaseProject\grape_2024\Black rot\black rot769.jpg,Black Rot,1
+D:\CropDiseaseProject\grape_2024\esca\esca829.jpg,Esca (Black Measles),3
+D:\CropDiseaseProject\grape_2024\Black rot\black rot457.jpg,Black Rot,1
+D:\CropDiseaseProject\grape_niphad\Powdery Mildew\Powdery Mildew_234.jpg,Powdery Mildew,6
+D:\CropDiseaseProject\grape_niphad\Healthy Leaves\Healthy Leaves_754.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_2024\esca\esca025.jpg,Esca (Black Measles),3
+D:\CropDiseaseProject\grape_2024\healthy\healthy919.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_niphad\Powdery Mildew\Powdery Mildew_304.jpg,Powdery Mildew,6
+D:\CropDiseaseProject\grape_niphad\Powdery Mildew\Powdery Mildew_386.JPG,Powdery Mildew,6
+D:\CropDiseaseProject\grape_2024\esca\esca437.jpg,Esca (Black Measles),3
+D:\CropDiseaseProject\grape_2024\healthy\healthy856.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_niphad\Healthy Leaves\Healthy Leaves_808.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight371.jpg,Leaf Blight,5
+D:\CropDiseaseProject\grape_niphad\Downy Mildew\Downy Mildew_79.jpg,Downy Mildew,2
+D:\CropDiseaseProject\grape_2024\esca\esca532.jpg,Esca (Black Measles),3
+D:\CropDiseaseProject\grape_niphad\Healthy Leaves\Healthy Leaves_920.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_niphad\Healthy Leaves\Healthy Leaves_790.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_2024\healthy\healthy101.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_niphad\Powdery Mildew\Powdery Mildew_275.jpg,Powdery Mildew,6
+D:\CropDiseaseProject\grape_niphad\Healthy Leaves\Healthy Leaves_552.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_niphad\Downy Mildew\Downy Mildew_436.jpg,Downy Mildew,2
+D:\CropDiseaseProject\grape_2024\healthy\healthy466.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_2024\healthy\healthy084.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_2024\esca\esca296.jpg,Esca (Black Measles),3
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight354.jpg,Leaf Blight,5
+D:\CropDiseaseProject\grape_niphad\Bacterial Leaf Spot\Bacterial Leaf Spot_35.JPG,Bacterial Leaf Spot,0
+D:\CropDiseaseProject\grape_2024\healthy\healthy422.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_niphad\Downy Mildew\Downy Mildew_326.jpg,Downy Mildew,2
+D:\CropDiseaseProject\grape_niphad\Healthy Leaves\Healthy Leaves_316.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight066.jpg,Leaf Blight,5
+D:\CropDiseaseProject\grape_niphad\Healthy Leaves\Healthy Leaves_760.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_2024\healthy\healthy024.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_niphad\Downy Mildew\Downy Mildew_462.jpg,Downy Mildew,2
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight571.jpg,Leaf Blight,5
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight252.jpg,Leaf Blight,5
+D:\CropDiseaseProject\grape_niphad\Downy Mildew\Downy Mildew_953.jpg,Downy Mildew,2
+D:\CropDiseaseProject\grape_2024\esca\esca572.jpg,Esca (Black Measles),3
+D:\CropDiseaseProject\grape_2024\healthy\healthy007.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_niphad\Healthy Leaves\Healthy Leaves_205.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_niphad\Powdery Mildew\Powdery Mildew_357.jpg,Powdery Mildew,6
+D:\CropDiseaseProject\grape_niphad\Powdery Mildew\Powdery Mildew_70.jpg,Powdery Mildew,6
+D:\CropDiseaseProject\grape_niphad\Bacterial Leaf Spot\Bacterial Leaf Spot_66.JPG,Bacterial Leaf Spot,0
+D:\CropDiseaseProject\grape_niphad\Powdery Mildew\Powdery Mildew_376.JPG,Powdery Mildew,6
+D:\CropDiseaseProject\grape_2024\esca\esca369.jpg,Esca (Black Measles),3
+D:\CropDiseaseProject\grape_2024\healthy\healthy204.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_2024\healthy\healthy442.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_niphad\Healthy Leaves\Healthy Leaves_309.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_2024\healthy\healthy394.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_2024\esca\esca595.jpg,Esca (Black Measles),3
+D:\CropDiseaseProject\grape_niphad\Powdery Mildew\Powdery Mildew_72.jpg,Powdery Mildew,6
+D:\CropDiseaseProject\grape_niphad\Healthy Leaves\Healthy Leaves_203.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_2024\esca\esca422.jpg,Esca (Black Measles),3
+D:\CropDiseaseProject\grape_niphad\Healthy Leaves\Healthy Leaves_1157.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_niphad\Downy Mildew\Downy Mildew_243.jpg,Downy Mildew,2
+D:\CropDiseaseProject\grape_2024\Black rot\black rot742.jpg,Black Rot,1
+D:\CropDiseaseProject\grape_niphad\Healthy Leaves\Healthy Leaves_722.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_niphad\Powdery Mildew\Powdery Mildew_352.jpg,Powdery Mildew,6
+D:\CropDiseaseProject\grape_2024\esca\esca010.jpg,Esca (Black Measles),3
+D:\CropDiseaseProject\grape_niphad\Powdery Mildew\Powdery Mildew_94.jpg,Powdery Mildew,6
+D:\CropDiseaseProject\grape_2024\Black rot\black rot203.jpg,Black Rot,1
+D:\CropDiseaseProject\grape_niphad\Healthy Leaves\Healthy Leaves_898.png,Healthy Leaves,4
+D:\CropDiseaseProject\grape_2024\healthy\healthy728.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_niphad\Healthy Leaves\Healthy Leaves_252.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_niphad\Healthy Leaves\Healthy Leaves_438.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_2024\Black rot\black rot510.jpg,Black Rot,1
+D:\CropDiseaseProject\grape_2024\healthy\healthy984.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_2024\Black rot\black rot089.jpg,Black Rot,1
+D:\CropDiseaseProject\grape_niphad\Downy Mildew\Downy Mildew_10.jpg,Downy Mildew,2
+D:\CropDiseaseProject\grape_2024\esca\esca786.jpg,Esca (Black Measles),3
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight008.jpg,Leaf Blight,5
+D:\CropDiseaseProject\grape_niphad\Downy Mildew\Downy Mildew_865.jpg,Downy Mildew,2
+D:\CropDiseaseProject\grape_niphad\Healthy Leaves\Healthy Leaves_352.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_niphad\Healthy Leaves\Healthy Leaves_539.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_2024\Black rot\black rot798.jpg,Black Rot,1
+D:\CropDiseaseProject\grape_2024\healthy\healthy481.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight161.jpg,Leaf Blight,5
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight377.jpg,Leaf Blight,5
+D:\CropDiseaseProject\grape_niphad\Downy Mildew\Downy Mildew_523.jpg,Downy Mildew,2
+D:\CropDiseaseProject\grape_niphad\Downy Mildew\Downy Mildew_714.jpg,Downy Mildew,2
+D:\CropDiseaseProject\grape_2024\esca\esca046.jpg,Esca (Black Measles),3
+D:\CropDiseaseProject\grape_niphad\Healthy Leaves\Healthy Leaves_1172.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_niphad\Powdery Mildew\Powdery Mildew_284.jpg,Powdery Mildew,6
+D:\CropDiseaseProject\grape_niphad\Downy Mildew\Downy Mildew_14.jpg,Downy Mildew,2
+D:\CropDiseaseProject\grape_niphad\Downy Mildew\Downy Mildew_734.jpg,Downy Mildew,2
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight001.jpg,Leaf Blight,5
+D:\CropDiseaseProject\grape_2024\esca\esca318.jpg,Esca (Black Measles),3
+D:\CropDiseaseProject\grape_niphad\Downy Mildew\Downy Mildew_34.jpg,Downy Mildew,2
+D:\CropDiseaseProject\grape_niphad\Downy Mildew\Downy Mildew_277.jpg,Downy Mildew,2
+D:\CropDiseaseProject\grape_2024\Black rot\black rot473.jpg,Black Rot,1
+D:\CropDiseaseProject\grape_niphad\Healthy Leaves\Healthy Leaves_140.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_niphad\Downy Mildew\Downy Mildew_6.jpg,Downy Mildew,2
+D:\CropDiseaseProject\grape_2024\Black rot\black rot460.jpg,Black Rot,1
+D:\CropDiseaseProject\grape_2024\Black rot\black rot552.jpg,Black Rot,1
+D:\CropDiseaseProject\grape_2024\esca\esca806.jpg,Esca (Black Measles),3
+D:\CropDiseaseProject\grape_2024\healthy\healthy785.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_2024\healthy\healthy577.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_2024\Black rot\black rot029.jpg,Black Rot,1
+D:\CropDiseaseProject\grape_2024\healthy\healthy022.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_niphad\Downy Mildew\Downy Mildew_752.jpg,Downy Mildew,2
+D:\CropDiseaseProject\grape_2024\Black rot\black rot493.jpg,Black Rot,1
+D:\CropDiseaseProject\grape_niphad\Healthy Leaves\Healthy Leaves_633.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_2024\esca\esca419.jpg,Esca (Black Measles),3
+D:\CropDiseaseProject\grape_niphad\Downy Mildew\Downy Mildew_135.jpg,Downy Mildew,2
+D:\CropDiseaseProject\grape_niphad\Healthy Leaves\Healthy Leaves_779.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight058.jpg,Leaf Blight,5
+D:\CropDiseaseProject\grape_niphad\Downy Mildew\Downy Mildew_824.jpg,Downy Mildew,2
+D:\CropDiseaseProject\grape_2024\healthy\healthy231.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_2024\healthy\healthy115.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_2024\Black rot\black rot226.jpg,Black Rot,1
+D:\CropDiseaseProject\grape_2024\esca\esca225.jpg,Esca (Black Measles),3
+D:\CropDiseaseProject\grape_2024\esca\esca662.jpg,Esca (Black Measles),3
+D:\CropDiseaseProject\grape_niphad\Downy Mildew\Downy Mildew_535.jpg,Downy Mildew,2
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight072.jpg,Leaf Blight,5
+D:\CropDiseaseProject\grape_niphad\Healthy Leaves\Healthy Leaves_76.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_niphad\Healthy Leaves\Healthy Leaves_1050.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_2024\Black rot\black rot087.jpg,Black Rot,1
+D:\CropDiseaseProject\grape_2024\Black rot\black rot641.jpg,Black Rot,1
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight544.jpg,Leaf Blight,5
+D:\CropDiseaseProject\grape_niphad\Healthy Leaves\Healthy Leaves_150.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_niphad\Healthy Leaves\Healthy Leaves_697.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_niphad\Downy Mildew\Downy Mildew_176.jpg,Downy Mildew,2
+D:\CropDiseaseProject\grape_2024\healthy\healthy402.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_niphad\Downy Mildew\Downy Mildew_720.jpg,Downy Mildew,2
+D:\CropDiseaseProject\grape_2024\Black rot\black rot232.jpg,Black Rot,1
+D:\CropDiseaseProject\grape_2024\healthy\healthy513.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_2024\esca\esca780.jpg,Esca (Black Measles),3
+D:\CropDiseaseProject\grape_2024\healthy\healthy460.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_niphad\Downy Mildew\Downy Mildew_128.jpg,Downy Mildew,2
+D:\CropDiseaseProject\grape_2024\esca\esca752.jpg,Esca (Black Measles),3
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight384.jpg,Leaf Blight,5
+D:\CropDiseaseProject\grape_2024\esca\esca039.jpg,Esca (Black Measles),3
+D:\CropDiseaseProject\grape_2024\healthy\healthy939.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_2024\healthy\healthy1070.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_2024\healthy\healthy185.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_2024\esca\esca443.jpg,Esca (Black Measles),3
+D:\CropDiseaseProject\grape_niphad\Downy Mildew\Downy Mildew_329.jpg,Downy Mildew,2
+D:\CropDiseaseProject\grape_2024\healthy\healthy208.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_niphad\Healthy Leaves\Healthy Leaves_85.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_2024\esca\esca132.jpg,Esca (Black Measles),3
+D:\CropDiseaseProject\grape_2024\esca\esca872.jpg,Esca (Black Measles),3
+D:\CropDiseaseProject\grape_2024\healthy\healthy495.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_niphad\Downy Mildew\Downy Mildew_320.jpg,Downy Mildew,2
+D:\CropDiseaseProject\grape_niphad\Downy Mildew\Downy Mildew_513.jpg,Downy Mildew,2
+D:\CropDiseaseProject\grape_2024\healthy\healthy468.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_niphad\Powdery Mildew\Powdery Mildew_268.jpg,Powdery Mildew,6
+D:\CropDiseaseProject\grape_2024\healthy\healthy575.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight283.jpg,Leaf Blight,5
+D:\CropDiseaseProject\grape_2024\Black rot\black rot548.jpg,Black Rot,1
+D:\CropDiseaseProject\grape_niphad\Healthy Leaves\Healthy Leaves_659.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_niphad\Downy Mildew\Downy Mildew_521.jpg,Downy Mildew,2
+D:\CropDiseaseProject\grape_niphad\Healthy Leaves\Healthy Leaves_1134.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_niphad\Powdery Mildew\Powdery Mildew_120.jpg,Powdery Mildew,6
+D:\CropDiseaseProject\grape_2024\healthy\healthy532.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_niphad\Healthy Leaves\Healthy Leaves_1193.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_2024\esca\esca804.jpg,Esca (Black Measles),3
+D:\CropDiseaseProject\grape_2024\Black rot\black rot768.jpg,Black Rot,1
+D:\CropDiseaseProject\grape_niphad\Healthy Leaves\Healthy Leaves_976.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight248.jpg,Leaf Blight,5
+D:\CropDiseaseProject\grape_niphad\Powdery Mildew\Powdery Mildew_95.jpg,Powdery Mildew,6
+D:\CropDiseaseProject\grape_2024\Black rot\black rot557.jpg,Black Rot,1
+D:\CropDiseaseProject\grape_niphad\Downy Mildew\Downy Mildew_929.jpg,Downy Mildew,2
+D:\CropDiseaseProject\grape_niphad\Healthy Leaves\Healthy Leaves_931.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_2024\esca\esca508.jpg,Esca (Black Measles),3
+D:\CropDiseaseProject\grape_2024\healthy\healthy478.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_2024\Black rot\black rot714.jpg,Black Rot,1
+D:\CropDiseaseProject\grape_2024\healthy\healthy224.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight115.jpg,Leaf Blight,5
+D:\CropDiseaseProject\grape_niphad\Healthy Leaves\Healthy Leaves_921.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight176.jpg,Leaf Blight,5
+D:\CropDiseaseProject\grape_niphad\Downy Mildew\Downy Mildew_528.jpg,Downy Mildew,2
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight619.jpg,Leaf Blight,5
+D:\CropDiseaseProject\grape_niphad\Downy Mildew\Downy Mildew_842.jpg,Downy Mildew,2
+D:\CropDiseaseProject\grape_2024\esca\esca111.jpg,Esca (Black Measles),3
+D:\CropDiseaseProject\grape_2024\Black rot\black rot721.jpg,Black Rot,1
+D:\CropDiseaseProject\grape_2024\healthy\healthy971.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_2024\healthy\healthy452.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_2024\Black rot\black rot568.jpg,Black Rot,1
+D:\CropDiseaseProject\grape_2024\esca\esca833.jpg,Esca (Black Measles),3
+D:\CropDiseaseProject\grape_niphad\Healthy Leaves\Healthy Leaves_989.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_niphad\Healthy Leaves\Healthy Leaves_638.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_2024\Black rot\black rot506.jpg,Black Rot,1
+D:\CropDiseaseProject\grape_2024\healthy\healthy701.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight177.jpg,Leaf Blight,5
+D:\CropDiseaseProject\grape_2024\healthy\healthy268.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_niphad\Downy Mildew\Downy Mildew_477.jpg,Downy Mildew,2
+D:\CropDiseaseProject\grape_2024\healthy\healthy439.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_niphad\Downy Mildew\Downy Mildew_188.jpg,Downy Mildew,2
+D:\CropDiseaseProject\grape_niphad\Downy Mildew\Downy Mildew_613.jpg,Downy Mildew,2
+D:\CropDiseaseProject\grape_niphad\Healthy Leaves\Healthy Leaves_478.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_2024\healthy\healthy428.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_2024\esca\esca231.jpg,Esca (Black Measles),3
+D:\CropDiseaseProject\grape_niphad\Downy Mildew\Downy Mildew_849.jpg,Downy Mildew,2
+D:\CropDiseaseProject\grape_2024\healthy\healthy944.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_niphad\Healthy Leaves\Healthy Leaves_74.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_2024\esca\esca093.jpg,Esca (Black Measles),3
+D:\CropDiseaseProject\grape_niphad\Powdery Mildew\Powdery Mildew_102.jpg,Powdery Mildew,6
+D:\CropDiseaseProject\grape_niphad\Downy Mildew\Downy Mildew_202.jpg,Downy Mildew,2
+D:\CropDiseaseProject\grape_niphad\Downy Mildew\Downy Mildew_435.jpg,Downy Mildew,2
+D:\CropDiseaseProject\grape_niphad\Downy Mildew\Downy Mildew_514.jpg,Downy Mildew,2
+D:\CropDiseaseProject\grape_niphad\Healthy Leaves\Healthy Leaves_1010.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_niphad\Healthy Leaves\Healthy Leaves_317.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_2024\Black rot\black rot474.jpg,Black Rot,1
+D:\CropDiseaseProject\grape_niphad\Downy Mildew\Downy Mildew_397.jpg,Downy Mildew,2
+D:\CropDiseaseProject\grape_2024\esca\esca716.jpg,Esca (Black Measles),3
+D:\CropDiseaseProject\grape_2024\healthy\healthy482.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_2024\Black rot\black rot295.jpg,Black Rot,1
+D:\CropDiseaseProject\grape_niphad\Powdery Mildew\Powdery Mildew_405.JPG,Powdery Mildew,6
+D:\CropDiseaseProject\grape_2024\esca\esca194.jpg,Esca (Black Measles),3
+D:\CropDiseaseProject\grape_niphad\Healthy Leaves\Healthy Leaves_1179.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_2024\healthy\healthy1014.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight477.jpg,Leaf Blight,5
+D:\CropDiseaseProject\grape_2024\healthy\healthy239.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_niphad\Powdery Mildew\Powdery Mildew_341.jpg,Powdery Mildew,6
+D:\CropDiseaseProject\grape_2024\Black rot\black rot202.jpg,Black Rot,1
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight447.jpg,Leaf Blight,5
+D:\CropDiseaseProject\grape_2024\esca\esca198.jpg,Esca (Black Measles),3
+D:\CropDiseaseProject\grape_2024\healthy\healthy559.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_2024\Black rot\black rot204.jpg,Black Rot,1
+D:\CropDiseaseProject\grape_2024\healthy\healthy726.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_2024\Black rot\black rot255.jpg,Black Rot,1
+D:\CropDiseaseProject\grape_niphad\Healthy Leaves\Healthy Leaves_160.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_2024\Black rot\black rot402.jpg,Black Rot,1
+D:\CropDiseaseProject\grape_2024\healthy\healthy941.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_niphad\Downy Mildew\Downy Mildew_97.jpg,Downy Mildew,2
+D:\CropDiseaseProject\grape_2024\healthy\healthy797.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_2024\esca\esca739.jpg,Esca (Black Measles),3
+D:\CropDiseaseProject\grape_2024\esca\esca075.jpg,Esca (Black Measles),3
+D:\CropDiseaseProject\grape_niphad\Healthy Leaves\Healthy Leaves_336.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_2024\healthy\healthy121.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_niphad\Downy Mildew\Downy Mildew_452.jpg,Downy Mildew,2
+D:\CropDiseaseProject\grape_2024\Black rot\black rot807.jpg,Black Rot,1
+D:\CropDiseaseProject\grape_2024\healthy\healthy174.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_2024\esca\esca776.jpg,Esca (Black Measles),3
+D:\CropDiseaseProject\grape_niphad\Powdery Mildew\Powdery Mildew_82.jpg,Powdery Mildew,6
+D:\CropDiseaseProject\grape_2024\esca\esca289.jpg,Esca (Black Measles),3
+D:\CropDiseaseProject\grape_2024\healthy\healthy779.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_niphad\Downy Mildew\Downy Mildew_885.jpg,Downy Mildew,2
+D:\CropDiseaseProject\grape_2024\esca\esca792.jpg,Esca (Black Measles),3
+D:\CropDiseaseProject\grape_2024\Black rot\black rot093.jpg,Black Rot,1
+D:\CropDiseaseProject\grape_niphad\Healthy Leaves\Healthy Leaves_554.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_2024\esca\esca598.jpg,Esca (Black Measles),3
+D:\CropDiseaseProject\grape_2024\healthy\healthy113.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_2024\healthy\healthy489.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_2024\healthy\healthy875.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_niphad\Bacterial Leaf Spot\Bacterial Leaf Spot_76.jpg,Bacterial Leaf Spot,0
+D:\CropDiseaseProject\grape_niphad\Healthy Leaves\Healthy Leaves_956.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_2024\healthy\healthy597.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_2024\esca\esca239.jpg,Esca (Black Measles),3
+D:\CropDiseaseProject\grape_niphad\Downy Mildew\Downy Mildew_302.jpg,Downy Mildew,2
+D:\CropDiseaseProject\grape_niphad\Downy Mildew\Downy Mildew_367.jpg,Downy Mildew,2
+D:\CropDiseaseProject\grape_niphad\Healthy Leaves\Healthy Leaves_707.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_niphad\Healthy Leaves\Healthy Leaves_422.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_2024\esca\esca787.jpg,Esca (Black Measles),3
+D:\CropDiseaseProject\grape_2024\Black rot\black rot648.jpg,Black Rot,1
+D:\CropDiseaseProject\grape_2024\healthy\healthy753.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_niphad\Healthy Leaves\Healthy Leaves_313.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight102.jpg,Leaf Blight,5
+D:\CropDiseaseProject\grape_2024\Black rot\black rot688.jpg,Black Rot,1
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight032.jpg,Leaf Blight,5
+D:\CropDiseaseProject\grape_2024\healthy\healthy072.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_2024\healthy\healthy417.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_2024\esca\esca126.jpg,Esca (Black Measles),3
+D:\CropDiseaseProject\grape_2024\healthy\healthy1017.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight277.jpg,Leaf Blight,5
+D:\CropDiseaseProject\grape_2024\esca\esca236.jpg,Esca (Black Measles),3
+D:\CropDiseaseProject\grape_2024\Black rot\black rot788.jpg,Black Rot,1
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight387.jpg,Leaf Blight,5
+D:\CropDiseaseProject\grape_2024\Black rot\black rot218.jpg,Black Rot,1
+D:\CropDiseaseProject\grape_niphad\Downy Mildew\Downy Mildew_791.jpg,Downy Mildew,2
+D:\CropDiseaseProject\grape_niphad\Healthy Leaves\Healthy Leaves_606.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_2024\esca\esca537.jpg,Esca (Black Measles),3
+D:\CropDiseaseProject\grape_niphad\Healthy Leaves\Healthy Leaves_113.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_2024\healthy\healthy248.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_niphad\Downy Mildew\Downy Mildew_77.jpg,Downy Mildew,2
+D:\CropDiseaseProject\grape_2024\healthy\healthy826.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_niphad\Downy Mildew\Downy Mildew_185.jpg,Downy Mildew,2
+D:\CropDiseaseProject\grape_2024\healthy\healthy1005.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_2024\esca\esca772.jpg,Esca (Black Measles),3
+D:\CropDiseaseProject\grape_2024\healthy\healthy581.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_2024\healthy\healthy796.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_2024\healthy\healthy585.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_2024\healthy\healthy794.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_niphad\Healthy Leaves\Healthy Leaves_725.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_2024\Black rot\black rot731.jpg,Black Rot,1
+D:\CropDiseaseProject\grape_niphad\Downy Mildew\Downy Mildew_72.jpg,Downy Mildew,2
+D:\CropDiseaseProject\grape_2024\esca\esca073.jpg,Esca (Black Measles),3
+D:\CropDiseaseProject\grape_2024\healthy\healthy011.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_2024\healthy\healthy619.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight559.jpg,Leaf Blight,5
+D:\CropDiseaseProject\grape_2024\healthy\healthy1089.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_2024\healthy\healthy318.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_niphad\Powdery Mildew\Powdery Mildew_110.jpg,Powdery Mildew,6
+D:\CropDiseaseProject\grape_niphad\Bacterial Leaf Spot\Bacterial Leaf Spot_62.jpg,Bacterial Leaf Spot,0
+D:\CropDiseaseProject\grape_niphad\Downy Mildew\Downy Mildew_80.jpg,Downy Mildew,2
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight210.jpg,Leaf Blight,5
+D:\CropDiseaseProject\grape_2024\healthy\healthy898.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_niphad\Bacterial Leaf Spot\Bacterial Leaf Spot_87.png,Bacterial Leaf Spot,0
+D:\CropDiseaseProject\grape_niphad\Healthy Leaves\Healthy Leaves_1071.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight667.jpg,Leaf Blight,5
+D:\CropDiseaseProject\grape_2024\esca\esca137.jpg,Esca (Black Measles),3
+D:\CropDiseaseProject\grape_2024\healthy\healthy310.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_2024\healthy\healthy446.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_2024\Black rot\black rot703.jpg,Black Rot,1
+D:\CropDiseaseProject\grape_2024\esca\esca717.jpg,Esca (Black Measles),3
+D:\CropDiseaseProject\grape_2024\Black rot\black rot443.jpg,Black Rot,1
+D:\CropDiseaseProject\grape_2024\Black rot\black rot082.jpg,Black Rot,1
+D:\CropDiseaseProject\grape_niphad\Powdery Mildew\Powdery Mildew_129.jpg,Powdery Mildew,6
+D:\CropDiseaseProject\grape_2024\esca\esca008.jpg,Esca (Black Measles),3
+D:\CropDiseaseProject\grape_2024\healthy\healthy734.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_niphad\Downy Mildew\Downy Mildew_908.jpg,Downy Mildew,2
+D:\CropDiseaseProject\grape_2024\Black rot\black rot042.jpg,Black Rot,1
+D:\CropDiseaseProject\grape_niphad\Downy Mildew\Downy Mildew_776.jpg,Downy Mildew,2
+D:\CropDiseaseProject\grape_niphad\Powdery Mildew\Powdery Mildew_312.jpg,Powdery Mildew,6
+D:\CropDiseaseProject\grape_2024\Black rot\black rot739.jpg,Black Rot,1
+D:\CropDiseaseProject\grape_niphad\Healthy Leaves\Healthy Leaves_689.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_niphad\Downy Mildew\Downy Mildew_893.jpg,Downy Mildew,2
+D:\CropDiseaseProject\grape_niphad\Downy Mildew\Downy Mildew_595.jpg,Downy Mildew,2
+D:\CropDiseaseProject\grape_2024\esca\esca838.jpg,Esca (Black Measles),3
+D:\CropDiseaseProject\grape_niphad\Healthy Leaves\Healthy Leaves_611.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_2024\healthy\healthy960.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_2024\esca\esca346.jpg,Esca (Black Measles),3
+D:\CropDiseaseProject\grape_niphad\Downy Mildew\Downy Mildew_327.jpg,Downy Mildew,2
+D:\CropDiseaseProject\grape_niphad\Healthy Leaves\Healthy Leaves_1070.png,Healthy Leaves,4
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight529.jpg,Leaf Blight,5
+D:\CropDiseaseProject\grape_2024\Black rot\black rot327.jpg,Black Rot,1
+D:\CropDiseaseProject\grape_niphad\Healthy Leaves\Healthy Leaves_1013.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_2024\healthy\healthy808.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_2024\healthy\healthy484.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_niphad\Healthy Leaves\Healthy Leaves_1021.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_niphad\Healthy Leaves\Healthy Leaves_118.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_2024\healthy\healthy691.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_2024\Black rot\black rot420.jpg,Black Rot,1
+D:\CropDiseaseProject\grape_niphad\Powdery Mildew\Powdery Mildew_238.jpg,Powdery Mildew,6
+D:\CropDiseaseProject\grape_2024\Black rot\black rot347.jpg,Black Rot,1
+D:\CropDiseaseProject\grape_2024\Black rot\black rot691.jpg,Black Rot,1
+D:\CropDiseaseProject\grape_niphad\Healthy Leaves\Healthy Leaves_773.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_2024\esca\esca873.jpg,Esca (Black Measles),3
+D:\CropDiseaseProject\grape_niphad\Downy Mildew\Downy Mildew_754.jpg,Downy Mildew,2
+D:\CropDiseaseProject\grape_niphad\Healthy Leaves\Healthy Leaves_866.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_niphad\Powdery Mildew\Powdery Mildew_347.jpg,Powdery Mildew,6
+D:\CropDiseaseProject\grape_2024\esca\esca157.jpg,Esca (Black Measles),3
+D:\CropDiseaseProject\grape_niphad\Healthy Leaves\Healthy Leaves_806.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_niphad\Healthy Leaves\Healthy Leaves_669.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_2024\healthy\healthy781.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_niphad\Downy Mildew\Downy Mildew_235.jpg,Downy Mildew,2
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight554.jpg,Leaf Blight,5
+D:\CropDiseaseProject\grape_niphad\Healthy Leaves\Healthy Leaves_1078.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_niphad\Downy Mildew\Downy Mildew_693.jpg,Downy Mildew,2
+D:\CropDiseaseProject\grape_2024\esca\esca581.jpg,Esca (Black Measles),3
+D:\CropDiseaseProject\grape_2024\Black rot\black rot245.jpg,Black Rot,1
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight338.jpg,Leaf Blight,5
+D:\CropDiseaseProject\grape_niphad\Healthy Leaves\Healthy Leaves_197.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_2024\esca\esca579.jpg,Esca (Black Measles),3
+D:\CropDiseaseProject\grape_niphad\Healthy Leaves\Healthy Leaves_1102.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_2024\esca\esca254.jpg,Esca (Black Measles),3
+D:\CropDiseaseProject\grape_2024\esca\esca040.jpg,Esca (Black Measles),3
+D:\CropDiseaseProject\grape_2024\healthy\healthy276.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight376.jpg,Leaf Blight,5
+D:\CropDiseaseProject\grape_2024\esca\esca104.jpg,Esca (Black Measles),3
+D:\CropDiseaseProject\grape_niphad\Powdery Mildew\Powdery Mildew_191.jpg,Powdery Mildew,6
+D:\CropDiseaseProject\grape_niphad\Healthy Leaves\Healthy Leaves_933.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_niphad\Healthy Leaves\Healthy Leaves_715.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight148.jpg,Leaf Blight,5
+D:\CropDiseaseProject\grape_2024\Black rot\black rot669.jpg,Black Rot,1
+D:\CropDiseaseProject\grape_niphad\Bacterial Leaf Spot\Bacterial Leaf Spot_52.jpg,Bacterial Leaf Spot,0
+D:\CropDiseaseProject\grape_2024\healthy\healthy349.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_2024\Black rot\black rot575.jpg,Black Rot,1
+D:\CropDiseaseProject\grape_2024\Black rot\black rot701.jpg,Black Rot,1
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight214.jpg,Leaf Blight,5
+D:\CropDiseaseProject\grape_niphad\Healthy Leaves\Healthy Leaves_973.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_2024\esca\esca613.jpg,Esca (Black Measles),3
+D:\CropDiseaseProject\grape_niphad\Downy Mildew\Downy Mildew_784.jpg,Downy Mildew,2
+D:\CropDiseaseProject\grape_niphad\Healthy Leaves\Healthy Leaves_399.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_2024\healthy\healthy177.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_2024\healthy\healthy188.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_niphad\Healthy Leaves\Healthy Leaves_1210.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_niphad\Healthy Leaves\Healthy Leaves_986.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_niphad\Healthy Leaves\Healthy Leaves_305.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight043.jpg,Leaf Blight,5
+D:\CropDiseaseProject\grape_2024\esca\esca727.jpg,Esca (Black Measles),3
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight494.jpg,Leaf Blight,5
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight238.jpg,Leaf Blight,5
+D:\CropDiseaseProject\grape_niphad\Powdery Mildew\Powdery Mildew_185.jpg,Powdery Mildew,6
+D:\CropDiseaseProject\grape_niphad\Healthy Leaves\Healthy Leaves_1063.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_niphad\Powdery Mildew\Powdery Mildew_298.jpg,Powdery Mildew,6
+D:\CropDiseaseProject\grape_2024\Black rot\black rot803.jpg,Black Rot,1
+D:\CropDiseaseProject\grape_niphad\Healthy Leaves\Healthy Leaves_102.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight476.jpg,Leaf Blight,5
+D:\CropDiseaseProject\grape_niphad\Healthy Leaves\Healthy Leaves_648.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_niphad\Powdery Mildew\Powdery Mildew_188.jpg,Powdery Mildew,6
+D:\CropDiseaseProject\grape_niphad\Healthy Leaves\Healthy Leaves_88.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight129.jpg,Leaf Blight,5
+D:\CropDiseaseProject\grape_niphad\Healthy Leaves\Healthy Leaves_510.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_niphad\Healthy Leaves\Healthy Leaves_1203.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_niphad\Healthy Leaves\Healthy Leaves_984.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_2024\healthy\healthy254.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight144.jpg,Leaf Blight,5
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight057.jpg,Leaf Blight,5
+D:\CropDiseaseProject\grape_2024\esca\esca216.jpg,Esca (Black Measles),3
+D:\CropDiseaseProject\grape_2024\Black rot\black rot002.jpg,Black Rot,1
+D:\CropDiseaseProject\grape_2024\esca\esca067.jpg,Esca (Black Measles),3
+D:\CropDiseaseProject\grape_2024\healthy\healthy904.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_2024\healthy\healthy1068.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_niphad\Healthy Leaves\Healthy Leaves_1112.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight647.jpg,Leaf Blight,5
+D:\CropDiseaseProject\grape_2024\healthy\healthy314.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_2024\Black rot\black rot737.jpg,Black Rot,1
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight178.jpg,Leaf Blight,5
+D:\CropDiseaseProject\grape_niphad\Downy Mildew\Downy Mildew_335.jpg,Downy Mildew,2
+D:\CropDiseaseProject\grape_2024\healthy\healthy382.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_2024\Black rot\black rot609.jpg,Black Rot,1
+D:\CropDiseaseProject\grape_2024\esca\esca807.jpg,Esca (Black Measles),3
+D:\CropDiseaseProject\grape_2024\healthy\healthy401.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight302.jpg,Leaf Blight,5
+D:\CropDiseaseProject\grape_niphad\Healthy Leaves\Healthy Leaves_1032.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_2024\esca\esca625.jpg,Esca (Black Measles),3
+D:\CropDiseaseProject\grape_2024\esca\esca253.jpg,Esca (Black Measles),3
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight567.jpg,Leaf Blight,5
+D:\CropDiseaseProject\grape_2024\esca\esca637.jpg,Esca (Black Measles),3
+D:\CropDiseaseProject\grape_niphad\Downy Mildew\Downy Mildew_147.jpg,Downy Mildew,2
+D:\CropDiseaseProject\grape_niphad\Downy Mildew\Downy Mildew_673.jpg,Downy Mildew,2
+D:\CropDiseaseProject\grape_niphad\Downy Mildew\Downy Mildew_215.jpg,Downy Mildew,2
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight595.jpg,Leaf Blight,5
+D:\CropDiseaseProject\grape_niphad\Healthy Leaves\Healthy Leaves_756.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_niphad\Healthy Leaves\Healthy Leaves_796.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_niphad\Healthy Leaves\Healthy Leaves_170.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_niphad\Downy Mildew\Downy Mildew_950.jpg,Downy Mildew,2
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight670.jpg,Leaf Blight,5
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight611.jpg,Leaf Blight,5
+D:\CropDiseaseProject\grape_2024\healthy\healthy846.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_niphad\Healthy Leaves\Healthy Leaves_623.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_2024\healthy\healthy280.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_niphad\Healthy Leaves\Healthy Leaves_126.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_2024\Black rot\black rot124.jpg,Black Rot,1
+D:\CropDiseaseProject\grape_niphad\Healthy Leaves\Healthy Leaves_1065.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_2024\Black rot\black rot511.jpg,Black Rot,1
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight581.jpg,Leaf Blight,5
+D:\CropDiseaseProject\grape_niphad\Downy Mildew\Downy Mildew_757.jpg,Downy Mildew,2
+D:\CropDiseaseProject\grape_niphad\Healthy Leaves\Healthy Leaves_445.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_niphad\Downy Mildew\Downy Mildew_647.jpg,Downy Mildew,2
+D:\CropDiseaseProject\grape_2024\Black rot\black rot507.jpg,Black Rot,1
+D:\CropDiseaseProject\grape_niphad\Downy Mildew\Downy Mildew_22.jpg,Downy Mildew,2
+D:\CropDiseaseProject\grape_niphad\Healthy Leaves\Healthy Leaves_833.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_2024\esca\esca113.jpg,Esca (Black Measles),3
+D:\CropDiseaseProject\grape_niphad\Healthy Leaves\Healthy Leaves_567.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_2024\Black rot\black rot152.jpg,Black Rot,1
+D:\CropDiseaseProject\grape_niphad\Downy Mildew\Downy Mildew_21.jpg,Downy Mildew,2
+D:\CropDiseaseProject\grape_2024\Black rot\black rot360.jpg,Black Rot,1
+D:\CropDiseaseProject\grape_niphad\Healthy Leaves\Healthy Leaves_1003.png,Healthy Leaves,4
+D:\CropDiseaseProject\grape_niphad\Powdery Mildew\Powdery Mildew_164.jpg,Powdery Mildew,6
+D:\CropDiseaseProject\grape_niphad\Downy Mildew\Downy Mildew_711.jpg,Downy Mildew,2
+D:\CropDiseaseProject\grape_2024\healthy\healthy844.jpg,Healthy Leaves,4
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight307.jpg,Leaf Blight,5
+D:\CropDiseaseProject\grape_niphad\Downy Mildew\Downy Mildew_890.jpg,Downy Mildew,2

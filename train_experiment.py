@@ -58,36 +58,61 @@ from sklearn.metrics import (
 
 # ---------------------------------------------------------------------------
 # Experiment registry
-# Each entry: (splits_dir_name, display_title, dataset_folder_name)
-# num_classes is derived automatically from class_index.csv at runtime.
+# Approved 4-Crop Architecture Remaining Training Jobs:
+#   GRAPE     -> grape_unified (G1 + G2, 7 classes)
+#   CHILLI    -> chilli_cold (C1, 5 classes)
+#   SUGARCANE -> sugarcane_unified (S1 + S2, 11 classes)
+# (Legacy G1, G2, C1, S1, S2 retained for standalone experiment training)
 # ---------------------------------------------------------------------------
 EXPERIMENTS = {
+    # Approved 4-Crop Architecture Jobs:
+    "GRAPE": {
+        "splits_name":    "grape_unified",
+        "dataset_folders": ["grape_niphad", "grape_2024"],
+        "display":        "Grape Unified — G1 Niphad + G2 2024 (7 Classes)",
+    },
+    "CHILLI": {
+        "splits_name":    "chilli_cold",
+        "dataset_folders": ["chilli_cold"],
+        "display":        "Chilli — C1 COLD 2024 (5 Classes)",
+    },
+    "SUGARCANE": {
+        "splits_name":    "sugarcane_unified",
+        "dataset_folders": ["sugarcane_maharashtra", "sugarcane_large"],
+        "display":        "Sugarcane Unified — S1 Maharashtra + S2 Large (11 Classes)",
+    },
+    # Legacy individual dataset jobs:
     "G1": {
-        "splits_name":   "grape_niphad",
-        "dataset_folder": "grape_niphad",
-        "display":       "G1 Grape — Niphad",
+        "splits_name":    "grape_niphad",
+        "dataset_folders": ["grape_niphad"],
+        "display":        "G1 Grape — Niphad",
     },
     "G2": {
-        "splits_name":   "grape_2024",
-        "dataset_folder": "grape_2024",
-        "display":       "G2 Grape — 2024",
+        "splits_name":    "grape_2024",
+        "dataset_folders": ["grape_2024"],
+        "display":        "G2 Grape — 2024",
     },
     "C1": {
-        "splits_name":   "chilli_cold",
-        "dataset_folder": "chilli_cold",
-        "display":       "C1 Chilli — COLD",
+        "splits_name":    "chilli_cold",
+        "dataset_folders": ["chilli_cold"],
+        "display":        "C1 Chilli — COLD",
     },
     "S1": {
-        "splits_name":   "sugarcane_maharashtra",
-        "dataset_folder": "sugarcane_maharashtra",
-        "display":       "S1 Sugarcane — Maharashtra",
+        "splits_name":    "sugarcane_maharashtra",
+        "dataset_folders": ["sugarcane_maharashtra"],
+        "display":        "S1 Sugarcane — Maharashtra",
     },
     "S2": {
-        "splits_name":   "sugarcane_large",
-        "dataset_folder": "sugarcane_large",
-        "display":       "S2 Sugarcane — Large",
+        "splits_name":    "sugarcane_large",
+        "dataset_folders": ["sugarcane_large"],
+        "display":        "S2 Sugarcane — Large",
     },
 }
+
+ALL_DATASET_FOLDERS = [
+    "tomato_plantvillage", "grape_niphad", "grape_2024",
+    "chilli_cold", "sugarcane_maharashtra", "sugarcane_large"
+]
 
 # ---------------------------------------------------------------------------
 # Fixed hyperparameters — identical to T1 baseline
@@ -111,8 +136,8 @@ def rewrite_paths(df: pd.DataFrame, new_root: str) -> pd.DataFrame:
     The split CSVs store paths like:
         D:\\CropDiseaseProject\\grape_niphad\\Healthy Leaves\\img.jpg
 
-    On AWS (Linux) the equivalent is:
-        /data/datasets/grape_niphad/Healthy Leaves/img.jpg
+    On Linux/Cloud (Kaggle/Colab/AWS) the equivalent is:
+        /content/datasets/grape_niphad/Healthy Leaves/img.jpg
 
     Strategy: strip everything up to and including the dataset folder name,
     then prepend new_root.  This is robust regardless of what the original
@@ -121,16 +146,15 @@ def rewrite_paths(df: pd.DataFrame, new_root: str) -> pd.DataFrame:
     def _fix(path: str) -> str:
         # Normalise backslashes to forward slashes
         p = path.replace("\\", "/")
-        # Find the dataset folder component — it's always right after the
-        # project root, so we split on known dataset folder names.
-        for folder in EXPERIMENTS.values():
-            marker = "/" + folder["dataset_folder"] + "/"
+        # Find the dataset folder component
+        for folder_name in ALL_DATASET_FOLDERS:
+            marker = "/" + folder_name + "/"
             idx = p.find(marker)
             if idx != -1:
                 # Keep from the dataset folder name onwards
-                relative = p[idx + 1:]          # grape_niphad/Healthy Leaves/img.jpg
+                relative = p[idx + 1:]          # e.g. grape_niphad/Healthy Leaves/img.jpg
                 return os.path.join(new_root, relative).replace("\\", "/")
-        # Fallback: just normalise slashes and hope for the best
+        # Fallback: just normalise slashes
         return p
 
     df = df.copy()
@@ -466,7 +490,7 @@ def parse_args():
         "--experiment", "-e",
         required=True,
         choices=list(EXPERIMENTS.keys()),
-        help="Experiment ID: G1, G2, C1, S1, or S2",
+        help="Experiment ID: GRAPE, CHILLI, SUGARCANE (or legacy G1, G2, C1, S1, S2)",
     )
     parser.add_argument(
         "--dataset-root", "-d",

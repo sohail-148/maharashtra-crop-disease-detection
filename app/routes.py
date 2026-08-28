@@ -24,7 +24,7 @@ from flask import (
 )
 from werkzeug.utils import secure_filename
 
-from app.predictor import CROPS, predict_image, list_available_models
+from app.predictor import CROPS, CROP_ALIASES, predict_image, list_available_models
 from app.database  import (
     save_prediction, get_recent_predictions,
     get_prediction_by_id, delete_prediction,
@@ -33,15 +33,15 @@ from app.database  import (
 main = Blueprint("main", __name__)
 
 # ---------------------------------------------------------------------------
-# Icons for each experiment (used in templates)
+# Icons for each crop (used in templates)
 # ---------------------------------------------------------------------------
 CROP_ICONS = {
-    "T1": "🍅",
-    "G1": "🍇",
-    "G2": "🍇",
-    "C1": "🌶️",
-    "S1": "🌾",
-    "S2": "🌾",
+    "TOMATO":    "🍅",
+    "GRAPE":     "🍇",
+    "CHILLI":    "🌶️",
+    "SUGARCANE": "🌾",
+    # Legacy aliases
+    "T1": "🍅", "G1": "🍇", "G2": "🍇", "C1": "🌶️", "S1": "🌾", "S2": "🌾",
 }
 
 
@@ -104,7 +104,8 @@ def index():
 
 @main.route("/predict", methods=["POST"])
 def predict():
-    experiment = request.form.get("experiment", "").strip().upper()
+    raw_exp    = request.form.get("experiment", "").strip().upper()
+    experiment = CROP_ALIASES.get(raw_exp, raw_exp)
     if experiment not in CROPS:
         flash("Please select a valid crop.", "error")
         return redirect(url_for("main.index"))

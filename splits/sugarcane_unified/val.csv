@@ -1,0 +1,1340 @@
+file_path,class_label,class_index
+D:\CropDiseaseProject\sugarcane_large\Diseases\Pokkah Boeng\Pokkah Boeng023.jpg,Pokkah Boeng,5
+D:\CropDiseaseProject\sugarcane_large\Diseases\Banded Chlorosis\image444.jpg,Banded Chlorosis,0
+D:\CropDiseaseProject\sugarcane_maharashtra\Rust\rust (311).jpeg,Rust (Brown Rust),7
+D:\CropDiseaseProject\sugarcane_maharashtra\Yellow\yellow (3).jpeg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_maharashtra\RedRot\redrot (442).jpeg,Red Rot,6
+D:\CropDiseaseProject\sugarcane_large\Diseases\Viral Disease\Viral Disease108.jpg,Mosaic / Viral Disease,4
+D:\CropDiseaseProject\sugarcane_large\Diseases\smut\Smut155.jpg,Smut,9
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image649.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_large\Diseases\Grassy shoot\image078.jpg,Grassy Shoot,2
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image1537.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image777.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_large\Healthy Leaves\image017.jpg,Healthy Leaves,3
+D:\CropDiseaseProject\sugarcane_maharashtra\Mosaic\mosaic (406).jpeg,Mosaic / Viral Disease,4
+D:\CropDiseaseProject\sugarcane_maharashtra\Rust\rust (390).jpeg,Rust (Brown Rust),7
+D:\CropDiseaseProject\sugarcane_large\Diseases\Sett Rot\Sett Rot625.jpg,Sett Rot,8
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image135.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_large\Diseases\Viral Disease\Viral Disease266.jpg,Mosaic / Viral Disease,4
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image225.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_large\Diseases\Sett Rot\Sett Rot198.jpg,Sett Rot,8
+D:\CropDiseaseProject\sugarcane_large\Healthy Leaves\image092.jpg,Healthy Leaves,3
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image607.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_maharashtra\Healthy\healthy (24).jpeg,Healthy Leaves,3
+D:\CropDiseaseProject\sugarcane_large\Diseases\Yellow Leaf\Yellow Leaf413.jpg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_maharashtra\Rust\rust (133).jpeg,Rust (Brown Rust),7
+D:\CropDiseaseProject\sugarcane_large\Diseases\Sett Rot\Sett Rot119.jpg,Sett Rot,8
+D:\CropDiseaseProject\sugarcane_large\Diseases\Banded Chlorosis\image265.jpg,Banded Chlorosis,0
+D:\CropDiseaseProject\sugarcane_large\Diseases\Sett Rot\Sett Rot141.jpg,Sett Rot,8
+D:\CropDiseaseProject\sugarcane_large\Diseases\Grassy shoot\image266.jpg,Grassy Shoot,2
+D:\CropDiseaseProject\sugarcane_large\Healthy Leaves\image397.jpg,Healthy Leaves,3
+D:\CropDiseaseProject\sugarcane_large\Diseases\Yellow Leaf\Yellow Leaf1008.jpg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image1270.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_large\Diseases\smut\Smut227.jpg,Smut,9
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image549.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_large\Diseases\Yellow Leaf\Yellow Leaf175.jpg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image865.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_large\Diseases\Yellow Leaf\Yellow Leaf308.jpg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_large\Diseases\Grassy shoot\image224.jpg,Grassy Shoot,2
+D:\CropDiseaseProject\sugarcane_large\Diseases\Yellow Leaf\Yellow Leaf276.jpg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_large\Diseases\Sett Rot\Sett Rot241.jpg,Sett Rot,8
+D:\CropDiseaseProject\sugarcane_maharashtra\Mosaic\mosaic (86).jpeg,Mosaic / Viral Disease,4
+D:\CropDiseaseProject\sugarcane_maharashtra\RedRot\redrot (511).jpeg,Red Rot,6
+D:\CropDiseaseProject\sugarcane_large\Diseases\Sett Rot\Sett Rot053.jpg,Sett Rot,8
+D:\CropDiseaseProject\sugarcane_large\Diseases\Viral Disease\Viral Disease007.jpg,Mosaic / Viral Disease,4
+D:\CropDiseaseProject\sugarcane_large\Diseases\Banded Chlorosis\image461.jpg,Banded Chlorosis,0
+D:\CropDiseaseProject\sugarcane_large\Diseases\Banded Chlorosis\image331.jpg,Banded Chlorosis,0
+D:\CropDiseaseProject\sugarcane_maharashtra\Rust\rust (61).jpeg,Rust (Brown Rust),7
+D:\CropDiseaseProject\sugarcane_maharashtra\Healthy\healthy (60).jpeg,Healthy Leaves,3
+D:\CropDiseaseProject\sugarcane_large\Diseases\Grassy shoot\image049.jpg,Grassy Shoot,2
+D:\CropDiseaseProject\sugarcane_large\Healthy Leaves\image032.jpg,Healthy Leaves,3
+D:\CropDiseaseProject\sugarcane_maharashtra\Rust\rust (509).jpeg,Rust (Brown Rust),7
+D:\CropDiseaseProject\sugarcane_large\Diseases\Banded Chlorosis\image382.jpg,Banded Chlorosis,0
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image1560.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image308.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_large\Diseases\Yellow Leaf\Yellow Leaf956.jpg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_large\Diseases\Grassy shoot\image136.jpg,Grassy Shoot,2
+D:\CropDiseaseProject\sugarcane_maharashtra\Healthy\healthy (511).jpeg,Healthy Leaves,3
+D:\CropDiseaseProject\sugarcane_maharashtra\Yellow\yellow (295).jpeg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image438.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_large\Diseases\Pokkah Boeng\Pokkah Boeng268.jpg,Pokkah Boeng,5
+D:\CropDiseaseProject\sugarcane_maharashtra\Rust\rust (332).jpeg,Rust (Brown Rust),7
+D:\CropDiseaseProject\sugarcane_maharashtra\RedRot\redrot (8).jpeg,Red Rot,6
+D:\CropDiseaseProject\sugarcane_large\Diseases\Viral Disease\Viral Disease151.jpg,Mosaic / Viral Disease,4
+D:\CropDiseaseProject\sugarcane_large\Diseases\Yellow Leaf\Yellow Leaf632.jpg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_large\Diseases\Yellow Leaf\Yellow Leaf750.jpg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_large\Diseases\Sett Rot\Sett Rot648.jpg,Sett Rot,8
+D:\CropDiseaseProject\sugarcane_maharashtra\Mosaic\mosaic (188).jpeg,Mosaic / Viral Disease,4
+D:\CropDiseaseProject\sugarcane_large\Diseases\Banded Chlorosis\image072.jpg,Banded Chlorosis,0
+D:\CropDiseaseProject\sugarcane_maharashtra\Mosaic\mosaic (251).jpeg,Mosaic / Viral Disease,4
+D:\CropDiseaseProject\sugarcane_large\Diseases\BrownRust\image170.jpg,Rust (Brown Rust),7
+D:\CropDiseaseProject\sugarcane_maharashtra\Rust\rust (434).jpeg,Rust (Brown Rust),7
+D:\CropDiseaseProject\sugarcane_maharashtra\Yellow\yellow (415).jpeg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_large\Diseases\Yellow Leaf\Yellow Leaf459.jpg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_large\Diseases\Sett Rot\Sett Rot171.jpg,Sett Rot,8
+D:\CropDiseaseProject\sugarcane_large\Healthy Leaves\image383.jpg,Healthy Leaves,3
+D:\CropDiseaseProject\sugarcane_maharashtra\Rust\rust (23).jpeg,Rust (Brown Rust),7
+D:\CropDiseaseProject\sugarcane_large\Diseases\smut\Smut245.jpg,Smut,9
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image206.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_large\Diseases\Pokkah Boeng\Pokkah Boeng219.jpg,Pokkah Boeng,5
+D:\CropDiseaseProject\sugarcane_large\Diseases\Yellow Leaf\Yellow Leaf1057.jpg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_large\Healthy Leaves\image042.jpg,Healthy Leaves,3
+D:\CropDiseaseProject\sugarcane_large\Diseases\Pokkah Boeng\Pokkah Boeng100.jpg,Pokkah Boeng,5
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image483.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_maharashtra\Healthy\healthy (426).jpeg,Healthy Leaves,3
+D:\CropDiseaseProject\sugarcane_maharashtra\Rust\rust (481).jpeg,Rust (Brown Rust),7
+D:\CropDiseaseProject\sugarcane_large\Diseases\Sett Rot\Sett Rot033.jpg,Sett Rot,8
+D:\CropDiseaseProject\sugarcane_maharashtra\Yellow\yellow (138).jpeg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_large\Diseases\Pokkah Boeng\Pokkah Boeng266.jpg,Pokkah Boeng,5
+D:\CropDiseaseProject\sugarcane_large\Healthy Leaves\image365.jpg,Healthy Leaves,3
+D:\CropDiseaseProject\sugarcane_large\Healthy Leaves\image197.jpg,Healthy Leaves,3
+D:\CropDiseaseProject\sugarcane_large\Diseases\Yellow Leaf\Yellow Leaf826.jpg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image1030.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_large\Diseases\Sett Rot\Sett Rot160.jpg,Sett Rot,8
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image140.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image1249.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_large\Diseases\Sett Rot\Sett Rot346.jpg,Sett Rot,8
+D:\CropDiseaseProject\sugarcane_large\Diseases\BrownRust\image143.jpg,Rust (Brown Rust),7
+D:\CropDiseaseProject\sugarcane_large\Healthy Leaves\image426.jpg,Healthy Leaves,3
+D:\CropDiseaseProject\sugarcane_large\Diseases\Yellow Leaf\Yellow Leaf540.jpg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image1535.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image1511.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image497.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_maharashtra\Mosaic\mosaic (15).jpeg,Mosaic / Viral Disease,4
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image728.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_large\Diseases\Viral Disease\Viral Disease098.jpg,Mosaic / Viral Disease,4
+D:\CropDiseaseProject\sugarcane_maharashtra\Mosaic\mosaic (217).jpeg,Mosaic / Viral Disease,4
+D:\CropDiseaseProject\sugarcane_large\Diseases\Banded Chlorosis\image345.jpg,Banded Chlorosis,0
+D:\CropDiseaseProject\sugarcane_maharashtra\RedRot\redrot (224).jpeg,Red Rot,6
+D:\CropDiseaseProject\sugarcane_large\Diseases\smut\Smut066.jpg,Smut,9
+D:\CropDiseaseProject\sugarcane_large\Diseases\Viral Disease\Viral Disease230.jpg,Mosaic / Viral Disease,4
+D:\CropDiseaseProject\sugarcane_maharashtra\Healthy\healthy (50).jpeg,Healthy Leaves,3
+D:\CropDiseaseProject\sugarcane_large\Diseases\Grassy shoot\image169.jpg,Grassy Shoot,2
+D:\CropDiseaseProject\sugarcane_large\Diseases\Pokkah Boeng\Pokkah Boeng136.jpg,Pokkah Boeng,5
+D:\CropDiseaseProject\sugarcane_large\Diseases\Yellow Leaf\Yellow Leaf567.jpg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_maharashtra\RedRot\redrot (507).jpeg,Red Rot,6
+D:\CropDiseaseProject\sugarcane_large\Diseases\Yellow Leaf\Yellow Leaf297.jpg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_maharashtra\Mosaic\mosaic (313).jpeg,Mosaic / Viral Disease,4
+D:\CropDiseaseProject\sugarcane_maharashtra\Mosaic\mosaic (336).jpeg,Mosaic / Viral Disease,4
+D:\CropDiseaseProject\sugarcane_large\Diseases\Viral Disease\Viral Disease585.jpg,Mosaic / Viral Disease,4
+D:\CropDiseaseProject\sugarcane_maharashtra\Healthy\healthy (362).jpeg,Healthy Leaves,3
+D:\CropDiseaseProject\sugarcane_large\Diseases\Grassy shoot\image101.jpg,Grassy Shoot,2
+D:\CropDiseaseProject\sugarcane_large\Diseases\Pokkah Boeng\Pokkah Boeng202.jpg,Pokkah Boeng,5
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image670.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_large\Diseases\Viral Disease\Viral Disease166.jpg,Mosaic / Viral Disease,4
+D:\CropDiseaseProject\sugarcane_maharashtra\Healthy\healthy (84).jpeg,Healthy Leaves,3
+D:\CropDiseaseProject\sugarcane_large\Diseases\Sett Rot\Sett Rot523.jpg,Sett Rot,8
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image189.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_large\Healthy Leaves\image002.jpg,Healthy Leaves,3
+D:\CropDiseaseProject\sugarcane_large\Diseases\Grassy shoot\image029.jpg,Grassy Shoot,2
+D:\CropDiseaseProject\sugarcane_large\Diseases\Grassy shoot\image226.jpg,Grassy Shoot,2
+D:\CropDiseaseProject\sugarcane_maharashtra\Healthy\healthy (268).jpeg,Healthy Leaves,3
+D:\CropDiseaseProject\sugarcane_maharashtra\Rust\rust (313).jpeg,Rust (Brown Rust),7
+D:\CropDiseaseProject\sugarcane_large\Diseases\Viral Disease\Viral Disease476.jpg,Mosaic / Viral Disease,4
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image309.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_maharashtra\Rust\rust (495).jpeg,Rust (Brown Rust),7
+D:\CropDiseaseProject\sugarcane_maharashtra\Yellow\yellow (297).jpeg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_large\Diseases\Viral Disease\Viral Disease495.jpg,Mosaic / Viral Disease,4
+D:\CropDiseaseProject\sugarcane_maharashtra\Mosaic\mosaic (124).jpeg,Mosaic / Viral Disease,4
+D:\CropDiseaseProject\sugarcane_large\Diseases\Yellow Leaf\Yellow Leaf430.jpg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image1117.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image056.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_large\Healthy Leaves\image388.jpg,Healthy Leaves,3
+D:\CropDiseaseProject\sugarcane_large\Diseases\Yellow Leaf\Yellow Leaf481.jpg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_large\Healthy Leaves\image087.jpg,Healthy Leaves,3
+D:\CropDiseaseProject\sugarcane_large\Diseases\Yellow Leaf\Yellow Leaf172.jpg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_maharashtra\Mosaic\mosaic (13).jpeg,Mosaic / Viral Disease,4
+D:\CropDiseaseProject\sugarcane_large\Diseases\Viral Disease\Viral Disease604.jpg,Mosaic / Viral Disease,4
+D:\CropDiseaseProject\sugarcane_large\Diseases\Grassy shoot\image181.jpg,Grassy Shoot,2
+D:\CropDiseaseProject\sugarcane_large\Diseases\Banded Chlorosis\image310.jpg,Banded Chlorosis,0
+D:\CropDiseaseProject\sugarcane_large\Diseases\Pokkah Boeng\Pokkah Boeng210.jpg,Pokkah Boeng,5
+D:\CropDiseaseProject\sugarcane_large\Diseases\Pokkah Boeng\Pokkah Boeng270.jpg,Pokkah Boeng,5
+D:\CropDiseaseProject\sugarcane_large\Diseases\Banded Chlorosis\image162.jpg,Banded Chlorosis,0
+D:\CropDiseaseProject\sugarcane_large\Diseases\Yellow Leaf\Yellow Leaf588.jpg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_large\Diseases\Sett Rot\Sett Rot209.jpg,Sett Rot,8
+D:\CropDiseaseProject\sugarcane_maharashtra\RedRot\redrot (111).jpeg,Red Rot,6
+D:\CropDiseaseProject\sugarcane_maharashtra\RedRot\redrot (303).jpeg,Red Rot,6
+D:\CropDiseaseProject\sugarcane_maharashtra\Mosaic\mosaic (455).jpeg,Mosaic / Viral Disease,4
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image190.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_large\Diseases\Viral Disease\Viral Disease363.jpg,Mosaic / Viral Disease,4
+D:\CropDiseaseProject\sugarcane_large\Diseases\Sett Rot\Sett Rot162.jpg,Sett Rot,8
+D:\CropDiseaseProject\sugarcane_large\Diseases\Pokkah Boeng\Pokkah Boeng062.jpg,Pokkah Boeng,5
+D:\CropDiseaseProject\sugarcane_maharashtra\RedRot\redrot (363).jpeg,Red Rot,6
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image037.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_large\Diseases\Banded Chlorosis\image391.jpg,Banded Chlorosis,0
+D:\CropDiseaseProject\sugarcane_large\Diseases\Banded Chlorosis\image268.jpg,Banded Chlorosis,0
+D:\CropDiseaseProject\sugarcane_large\Diseases\smut\Smut115.jpg,Smut,9
+D:\CropDiseaseProject\sugarcane_large\Diseases\Pokkah Boeng\Pokkah Boeng069.jpg,Pokkah Boeng,5
+D:\CropDiseaseProject\sugarcane_maharashtra\RedRot\redrot (364).jpeg,Red Rot,6
+D:\CropDiseaseProject\sugarcane_maharashtra\Mosaic\mosaic (271).jpeg,Mosaic / Viral Disease,4
+D:\CropDiseaseProject\sugarcane_maharashtra\Healthy\healthy (414).jpeg,Healthy Leaves,3
+D:\CropDiseaseProject\sugarcane_maharashtra\Rust\rust (317).jpeg,Rust (Brown Rust),7
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image1578.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_large\Diseases\BrownRust\image160.jpg,Rust (Brown Rust),7
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image1581.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image846.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_large\Diseases\Sett Rot\Sett Rot329.jpg,Sett Rot,8
+D:\CropDiseaseProject\sugarcane_maharashtra\RedRot\redrot (97).jpeg,Red Rot,6
+D:\CropDiseaseProject\sugarcane_maharashtra\Healthy\healthy (256).jpeg,Healthy Leaves,3
+D:\CropDiseaseProject\sugarcane_large\Diseases\Pokkah Boeng\Pokkah Boeng051.jpg,Pokkah Boeng,5
+D:\CropDiseaseProject\sugarcane_maharashtra\Yellow\yellow (67).jpeg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_maharashtra\Yellow\yellow (357).jpeg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_maharashtra\Yellow\yellow (420).jpeg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_large\Diseases\Sett Rot\Sett Rot272.jpg,Sett Rot,8
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image596.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_maharashtra\RedRot\redrot (510).jpeg,Red Rot,6
+D:\CropDiseaseProject\sugarcane_large\Diseases\Viral Disease\Viral Disease335.jpg,Mosaic / Viral Disease,4
+D:\CropDiseaseProject\sugarcane_maharashtra\Rust\rust (293).jpeg,Rust (Brown Rust),7
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image1277.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_maharashtra\Rust\rust (408).jpeg,Rust (Brown Rust),7
+D:\CropDiseaseProject\sugarcane_large\Diseases\Pokkah Boeng\Pokkah Boeng296.jpg,Pokkah Boeng,5
+D:\CropDiseaseProject\sugarcane_large\Diseases\Yellow Leaf\Yellow Leaf316.jpg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image881.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image910.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_large\Diseases\Viral Disease\Viral Disease596.jpg,Mosaic / Viral Disease,4
+D:\CropDiseaseProject\sugarcane_maharashtra\Yellow\yellow (383).jpeg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_maharashtra\Healthy\healthy (316).jpeg,Healthy Leaves,3
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image1711.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image1602.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_large\Diseases\Viral Disease\Viral Disease615.jpg,Mosaic / Viral Disease,4
+D:\CropDiseaseProject\sugarcane_maharashtra\RedRot\redrot (460).jpeg,Red Rot,6
+D:\CropDiseaseProject\sugarcane_maharashtra\Yellow\yellow (272).jpeg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image236.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_maharashtra\Healthy\healthy (52).jpeg,Healthy Leaves,3
+D:\CropDiseaseProject\sugarcane_large\Diseases\Banded Chlorosis\image294.jpg,Banded Chlorosis,0
+D:\CropDiseaseProject\sugarcane_large\Diseases\Yellow Leaf\Yellow Leaf949.jpg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_maharashtra\Mosaic\mosaic (462).jpeg,Mosaic / Viral Disease,4
+D:\CropDiseaseProject\sugarcane_maharashtra\Yellow\yellow (465).jpeg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_large\Diseases\smut\Smut092.jpg,Smut,9
+D:\CropDiseaseProject\sugarcane_maharashtra\Healthy\healthy (111).jpeg,Healthy Leaves,3
+D:\CropDiseaseProject\sugarcane_large\Diseases\Viral Disease\Viral Disease509.jpg,Mosaic / Viral Disease,4
+D:\CropDiseaseProject\sugarcane_maharashtra\Rust\rust (147).jpeg,Rust (Brown Rust),7
+D:\CropDiseaseProject\sugarcane_maharashtra\Mosaic\mosaic (136).jpeg,Mosaic / Viral Disease,4
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image012.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image326.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image1219.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_large\Diseases\smut\Smut038.jpg,Smut,9
+D:\CropDiseaseProject\sugarcane_large\Diseases\Sett Rot\Sett Rot017.jpg,Sett Rot,8
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image1373.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_maharashtra\Healthy\healthy (302).jpeg,Healthy Leaves,3
+D:\CropDiseaseProject\sugarcane_maharashtra\Yellow\yellow (182).jpeg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image1558.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_maharashtra\RedRot\redrot (358).jpeg,Red Rot,6
+D:\CropDiseaseProject\sugarcane_maharashtra\Yellow\yellow (4).jpeg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_large\Diseases\Grassy shoot\image120.jpg,Grassy Shoot,2
+D:\CropDiseaseProject\sugarcane_large\Diseases\smut\Smut274.jpg,Smut,9
+D:\CropDiseaseProject\sugarcane_large\Healthy Leaves\image008.jpg,Healthy Leaves,3
+D:\CropDiseaseProject\sugarcane_large\Diseases\Viral Disease\Viral Disease079.jpg,Mosaic / Viral Disease,4
+D:\CropDiseaseProject\sugarcane_large\Diseases\BrownRust\image008.jpg,Rust (Brown Rust),7
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image540.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_large\Diseases\Yellow Leaf\Yellow Leaf1107.jpg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image434.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image1706.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_maharashtra\Healthy\healthy (332).jpeg,Healthy Leaves,3
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image742.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_large\Diseases\Banded Chlorosis\image237.jpg,Banded Chlorosis,0
+D:\CropDiseaseProject\sugarcane_large\Diseases\Sett Rot\Sett Rot638.jpg,Sett Rot,8
+D:\CropDiseaseProject\sugarcane_large\Diseases\smut\Smut281.jpg,Smut,9
+D:\CropDiseaseProject\sugarcane_maharashtra\Mosaic\mosaic (104).jpeg,Mosaic / Viral Disease,4
+D:\CropDiseaseProject\sugarcane_large\Diseases\smut\Smut253.jpg,Smut,9
+D:\CropDiseaseProject\sugarcane_large\Diseases\Sett Rot\Sett Rot049.jpg,Sett Rot,8
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image1521.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_large\Diseases\Grassy shoot\image043.jpg,Grassy Shoot,2
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image1152.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image940.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_maharashtra\Healthy\healthy (460).jpeg,Healthy Leaves,3
+D:\CropDiseaseProject\sugarcane_maharashtra\Rust\rust (97).jpeg,Rust (Brown Rust),7
+D:\CropDiseaseProject\sugarcane_large\Diseases\Yellow Leaf\Yellow Leaf011.jpg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_maharashtra\Mosaic\mosaic (220).jpeg,Mosaic / Viral Disease,4
+D:\CropDiseaseProject\sugarcane_large\Diseases\Yellow Leaf\Yellow Leaf156.jpg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_large\Diseases\Grassy shoot\image105.jpg,Grassy Shoot,2
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image420.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_large\Diseases\Banded Chlorosis\image106.jpg,Banded Chlorosis,0
+D:\CropDiseaseProject\sugarcane_maharashtra\Mosaic\mosaic (381).jpeg,Mosaic / Viral Disease,4
+D:\CropDiseaseProject\sugarcane_large\Diseases\Yellow Leaf\Yellow Leaf1029.jpg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image569.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_maharashtra\Yellow\yellow (452).jpeg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image1106.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_large\Diseases\BrownRust\image247.jpg,Rust (Brown Rust),7
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image1402.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_maharashtra\Healthy\healthy (251).jpeg,Healthy Leaves,3
+D:\CropDiseaseProject\sugarcane_large\Diseases\Grassy shoot\image018.jpg,Grassy Shoot,2
+D:\CropDiseaseProject\sugarcane_maharashtra\Rust\rust (50).jpeg,Rust (Brown Rust),7
+D:\CropDiseaseProject\sugarcane_maharashtra\Rust\rust (380).jpeg,Rust (Brown Rust),7
+D:\CropDiseaseProject\sugarcane_large\Diseases\Yellow Leaf\Yellow Leaf1165.jpg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_maharashtra\RedRot\redrot (398).jpeg,Red Rot,6
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image196.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_large\Healthy Leaves\image143.jpg,Healthy Leaves,3
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image543.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image1081.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_large\Diseases\Sett Rot\Sett Rot375.jpg,Sett Rot,8
+D:\CropDiseaseProject\sugarcane_large\Diseases\Grassy shoot\image135.jpg,Grassy Shoot,2
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image261.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_large\Diseases\Banded Chlorosis\image059.jpg,Banded Chlorosis,0
+D:\CropDiseaseProject\sugarcane_large\Diseases\Yellow Leaf\Yellow Leaf375.jpg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_large\Diseases\Yellow Leaf\Yellow Leaf435.jpg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_maharashtra\Mosaic\mosaic (361).jpeg,Mosaic / Viral Disease,4
+D:\CropDiseaseProject\sugarcane_large\Diseases\smut\Smut026.jpg,Smut,9
+D:\CropDiseaseProject\sugarcane_maharashtra\Mosaic\mosaic (60).jpeg,Mosaic / Viral Disease,4
+D:\CropDiseaseProject\sugarcane_maharashtra\Yellow\yellow (397).jpeg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_large\Diseases\Yellow Leaf\Yellow Leaf1044.jpg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_maharashtra\RedRot\redrot (102).jpeg,Red Rot,6
+D:\CropDiseaseProject\sugarcane_large\Healthy Leaves\image335.jpg,Healthy Leaves,3
+D:\CropDiseaseProject\sugarcane_maharashtra\Yellow\yellow (116).jpeg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_maharashtra\Healthy\healthy (157).jpeg,Healthy Leaves,3
+D:\CropDiseaseProject\sugarcane_large\Diseases\Banded Chlorosis\image406.jpg,Banded Chlorosis,0
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image849.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_large\Diseases\BrownRust\image097.jpg,Rust (Brown Rust),7
+D:\CropDiseaseProject\sugarcane_maharashtra\Mosaic\mosaic (354).jpeg,Mosaic / Viral Disease,4
+D:\CropDiseaseProject\sugarcane_maharashtra\Healthy\healthy (214).jpeg,Healthy Leaves,3
+D:\CropDiseaseProject\sugarcane_large\Diseases\Viral Disease\Viral Disease609.jpg,Mosaic / Viral Disease,4
+D:\CropDiseaseProject\sugarcane_maharashtra\Rust\rust (163).jpeg,Rust (Brown Rust),7
+D:\CropDiseaseProject\sugarcane_large\Healthy Leaves\image324.jpg,Healthy Leaves,3
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image316.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_large\Diseases\Banded Chlorosis\image327.jpg,Banded Chlorosis,0
+D:\CropDiseaseProject\sugarcane_large\Diseases\Yellow Leaf\Yellow Leaf751.jpg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_large\Healthy Leaves\image152.jpg,Healthy Leaves,3
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image386.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image446.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_large\Diseases\Grassy shoot\image321.jpg,Grassy Shoot,2
+D:\CropDiseaseProject\sugarcane_large\Diseases\Viral Disease\Viral Disease601.jpg,Mosaic / Viral Disease,4
+D:\CropDiseaseProject\sugarcane_maharashtra\Rust\rust (7).jpeg,Rust (Brown Rust),7
+D:\CropDiseaseProject\sugarcane_large\Diseases\smut\Smut314.jpg,Smut,9
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image1664.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_large\Diseases\Viral Disease\Viral Disease370.jpg,Mosaic / Viral Disease,4
+D:\CropDiseaseProject\sugarcane_large\Diseases\Yellow Leaf\Yellow Leaf192.jpg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_large\Diseases\Viral Disease\Viral Disease242.jpg,Mosaic / Viral Disease,4
+D:\CropDiseaseProject\sugarcane_large\Diseases\BrownRust\image067.jpg,Rust (Brown Rust),7
+D:\CropDiseaseProject\sugarcane_maharashtra\Rust\rust (310).jpeg,Rust (Brown Rust),7
+D:\CropDiseaseProject\sugarcane_large\Diseases\Viral Disease\Viral Disease214.jpg,Mosaic / Viral Disease,4
+D:\CropDiseaseProject\sugarcane_large\Diseases\Banded Chlorosis\image190.jpg,Banded Chlorosis,0
+D:\CropDiseaseProject\sugarcane_large\Diseases\Pokkah Boeng\Pokkah Boeng118.jpg,Pokkah Boeng,5
+D:\CropDiseaseProject\sugarcane_large\Diseases\Grassy shoot\image228.jpg,Grassy Shoot,2
+D:\CropDiseaseProject\sugarcane_large\Diseases\Viral Disease\Viral Disease481.jpg,Mosaic / Viral Disease,4
+D:\CropDiseaseProject\sugarcane_large\Diseases\Banded Chlorosis\image099.jpg,Banded Chlorosis,0
+D:\CropDiseaseProject\sugarcane_large\Diseases\Yellow Leaf\Yellow Leaf882.jpg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image592.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_large\Diseases\Yellow Leaf\Yellow Leaf183.jpg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_maharashtra\Mosaic\mosaic (255).jpeg,Mosaic / Viral Disease,4
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image141.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_large\Diseases\Yellow Leaf\Yellow Leaf249.jpg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image1592.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image138.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_maharashtra\Healthy\healthy (244).jpeg,Healthy Leaves,3
+D:\CropDiseaseProject\sugarcane_large\Diseases\Viral Disease\Viral Disease352.jpg,Mosaic / Viral Disease,4
+D:\CropDiseaseProject\sugarcane_large\Healthy Leaves\image371.jpg,Healthy Leaves,3
+D:\CropDiseaseProject\sugarcane_large\Diseases\Sett Rot\Sett Rot459.jpg,Sett Rot,8
+D:\CropDiseaseProject\sugarcane_large\Diseases\Grassy shoot\image315.jpg,Grassy Shoot,2
+D:\CropDiseaseProject\sugarcane_large\Diseases\Viral Disease\Viral Disease508.jpg,Mosaic / Viral Disease,4
+D:\CropDiseaseProject\sugarcane_large\Diseases\Viral Disease\Viral Disease326.jpg,Mosaic / Viral Disease,4
+D:\CropDiseaseProject\sugarcane_large\Diseases\Banded Chlorosis\image107.jpg,Banded Chlorosis,0
+D:\CropDiseaseProject\sugarcane_large\Diseases\Banded Chlorosis\image351.jpg,Banded Chlorosis,0
+D:\CropDiseaseProject\sugarcane_maharashtra\RedRot\redrot (485).jpeg,Red Rot,6
+D:\CropDiseaseProject\sugarcane_large\Healthy Leaves\image138.jpg,Healthy Leaves,3
+D:\CropDiseaseProject\sugarcane_maharashtra\Mosaic\mosaic (31).jpeg,Mosaic / Viral Disease,4
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image166.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_large\Healthy Leaves\image104.jpg,Healthy Leaves,3
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image736.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image716.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_large\Diseases\Yellow Leaf\Yellow Leaf822.jpg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_large\Healthy Leaves\image040.jpg,Healthy Leaves,3
+D:\CropDiseaseProject\sugarcane_maharashtra\Yellow\yellow (336).jpeg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_maharashtra\Yellow\yellow (278).jpeg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_maharashtra\Yellow\yellow (198).jpeg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_large\Healthy Leaves\image396.jpg,Healthy Leaves,3
+D:\CropDiseaseProject\sugarcane_large\Healthy Leaves\image289.jpg,Healthy Leaves,3
+D:\CropDiseaseProject\sugarcane_maharashtra\Healthy\healthy (106).jpeg,Healthy Leaves,3
+D:\CropDiseaseProject\sugarcane_maharashtra\Rust\rust (188).jpeg,Rust (Brown Rust),7
+D:\CropDiseaseProject\sugarcane_maharashtra\Yellow\yellow (471).jpeg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_maharashtra\Yellow\yellow (151).jpeg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image452.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image1705.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_maharashtra\Yellow\yellow (96).jpeg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_large\Diseases\Yellow Leaf\Yellow Leaf692.jpg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_large\Diseases\Sett Rot\Sett Rot621.jpg,Sett Rot,8
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image762.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_large\Diseases\Viral Disease\Viral Disease318.jpg,Mosaic / Viral Disease,4
+D:\CropDiseaseProject\sugarcane_large\Diseases\Sett Rot\Sett Rot602.jpg,Sett Rot,8
+D:\CropDiseaseProject\sugarcane_large\Diseases\Sett Rot\Sett Rot340.jpg,Sett Rot,8
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image1318.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_maharashtra\Healthy\healthy (377).jpeg,Healthy Leaves,3
+D:\CropDiseaseProject\sugarcane_maharashtra\Rust\rust (79).jpeg,Rust (Brown Rust),7
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image1387.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_large\Diseases\Viral Disease\Viral Disease248.jpg,Mosaic / Viral Disease,4
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image1684.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image1023.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_maharashtra\Rust\rust (45).jpeg,Rust (Brown Rust),7
+D:\CropDiseaseProject\sugarcane_maharashtra\Rust\rust (386).jpeg,Rust (Brown Rust),7
+D:\CropDiseaseProject\sugarcane_maharashtra\RedRot\redrot (386).jpeg,Red Rot,6
+D:\CropDiseaseProject\sugarcane_large\Diseases\smut\Smut265.jpg,Smut,9
+D:\CropDiseaseProject\sugarcane_maharashtra\Yellow\yellow (337).jpeg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_large\Diseases\Yellow Leaf\Yellow Leaf705.jpg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_large\Diseases\Yellow Leaf\Yellow Leaf505.jpg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image466.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_large\Diseases\Banded Chlorosis\image033.jpg,Banded Chlorosis,0
+D:\CropDiseaseProject\sugarcane_large\Diseases\BrownRust\image188.jpg,Rust (Brown Rust),7
+D:\CropDiseaseProject\sugarcane_large\Diseases\smut\Smut295.jpg,Smut,9
+D:\CropDiseaseProject\sugarcane_large\Diseases\Banded Chlorosis\image009.jpg,Banded Chlorosis,0
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image035.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_maharashtra\Rust\rust (65).jpeg,Rust (Brown Rust),7
+D:\CropDiseaseProject\sugarcane_large\Diseases\Sett Rot\Sett Rot401.jpg,Sett Rot,8
+D:\CropDiseaseProject\sugarcane_large\Diseases\Grassy shoot\image222.jpg,Grassy Shoot,2
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image1123.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_large\Diseases\Yellow Leaf\Yellow Leaf133.jpg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_large\Diseases\Viral Disease\Viral Disease312.jpg,Mosaic / Viral Disease,4
+D:\CropDiseaseProject\sugarcane_large\Diseases\Yellow Leaf\Yellow Leaf473.jpg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_large\Diseases\BrownRust\image311.jpg,Rust (Brown Rust),7
+D:\CropDiseaseProject\sugarcane_large\Diseases\Grassy shoot\image008.jpg,Grassy Shoot,2
+D:\CropDiseaseProject\sugarcane_large\Diseases\Yellow Leaf\Yellow Leaf419.jpg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_maharashtra\Healthy\healthy (151).jpeg,Healthy Leaves,3
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image1363.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_maharashtra\RedRot\redrot (388).jpeg,Red Rot,6
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image715.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_maharashtra\RedRot\redrot (209).jpeg,Red Rot,6
+D:\CropDiseaseProject\sugarcane_maharashtra\RedRot\redrot (155).jpeg,Red Rot,6
+D:\CropDiseaseProject\sugarcane_large\Diseases\Yellow Leaf\Yellow Leaf028.jpg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_large\Diseases\Yellow Leaf\Yellow Leaf767.jpg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_large\Diseases\Viral Disease\Viral Disease161.jpg,Mosaic / Viral Disease,4
+D:\CropDiseaseProject\sugarcane_maharashtra\RedRot\redrot (107).jpeg,Red Rot,6
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image1638.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_maharashtra\Rust\rust (339).jpeg,Rust (Brown Rust),7
+D:\CropDiseaseProject\sugarcane_large\Diseases\Grassy shoot\image114.jpg,Grassy Shoot,2
+D:\CropDiseaseProject\sugarcane_large\Diseases\Viral Disease\Viral Disease164.jpg,Mosaic / Viral Disease,4
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image1629.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_large\Diseases\BrownRust\image286.jpg,Rust (Brown Rust),7
+D:\CropDiseaseProject\sugarcane_large\Diseases\Yellow Leaf\Yellow Leaf939.jpg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_maharashtra\Healthy\healthy (448).jpeg,Healthy Leaves,3
+D:\CropDiseaseProject\sugarcane_maharashtra\Mosaic\mosaic (397).jpeg,Mosaic / Viral Disease,4
+D:\CropDiseaseProject\sugarcane_maharashtra\Healthy\healthy (91).jpeg,Healthy Leaves,3
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image1543.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_maharashtra\RedRot\redrot (472).jpeg,Red Rot,6
+D:\CropDiseaseProject\sugarcane_large\Diseases\Grassy shoot\image242.jpg,Grassy Shoot,2
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image186.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_maharashtra\RedRot\redrot (25).jpeg,Red Rot,6
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image651.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_large\Diseases\Viral Disease\Viral Disease139.jpg,Mosaic / Viral Disease,4
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image1135.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_maharashtra\RedRot\redrot (337).jpeg,Red Rot,6
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image352.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_large\Diseases\Sett Rot\Sett Rot471.jpg,Sett Rot,8
+D:\CropDiseaseProject\sugarcane_maharashtra\Rust\rust (442).jpeg,Rust (Brown Rust),7
+D:\CropDiseaseProject\sugarcane_large\Diseases\Yellow Leaf\Yellow Leaf290.jpg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_maharashtra\Rust\rust (98).jpeg,Rust (Brown Rust),7
+D:\CropDiseaseProject\sugarcane_maharashtra\RedRot\redrot (49).jpeg,Red Rot,6
+D:\CropDiseaseProject\sugarcane_large\Diseases\Viral Disease\Viral Disease385.jpg,Mosaic / Viral Disease,4
+D:\CropDiseaseProject\sugarcane_large\Diseases\Pokkah Boeng\Pokkah Boeng242.jpg,Pokkah Boeng,5
+D:\CropDiseaseProject\sugarcane_maharashtra\Yellow\yellow (396).jpeg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_large\Diseases\Banded Chlorosis\image258.jpg,Banded Chlorosis,0
+D:\CropDiseaseProject\sugarcane_large\Diseases\Grassy shoot\image233.jpg,Grassy Shoot,2
+D:\CropDiseaseProject\sugarcane_large\Diseases\BrownRust\image292.jpg,Rust (Brown Rust),7
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image1160.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_large\Diseases\Banded Chlorosis\image410.jpg,Banded Chlorosis,0
+D:\CropDiseaseProject\sugarcane_large\Diseases\Yellow Leaf\Yellow Leaf963.jpg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_large\Diseases\Viral Disease\Viral Disease425.jpg,Mosaic / Viral Disease,4
+D:\CropDiseaseProject\sugarcane_large\Healthy Leaves\image044.jpg,Healthy Leaves,3
+D:\CropDiseaseProject\sugarcane_large\Diseases\BrownRust\image154.jpg,Rust (Brown Rust),7
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image348.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_large\Diseases\Yellow Leaf\Yellow Leaf1190.jpg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_large\Diseases\Sett Rot\Sett Rot380.jpg,Sett Rot,8
+D:\CropDiseaseProject\sugarcane_large\Diseases\Viral Disease\Viral Disease523.jpg,Mosaic / Viral Disease,4
+D:\CropDiseaseProject\sugarcane_large\Healthy Leaves\image074.jpg,Healthy Leaves,3
+D:\CropDiseaseProject\sugarcane_large\Diseases\smut\Smut279.jpg,Smut,9
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image069.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_large\Diseases\Pokkah Boeng\Pokkah Boeng184.jpg,Pokkah Boeng,5
+D:\CropDiseaseProject\sugarcane_large\Diseases\Viral Disease\Viral Disease462.jpg,Mosaic / Viral Disease,4
+D:\CropDiseaseProject\sugarcane_maharashtra\Healthy\healthy (519).jpeg,Healthy Leaves,3
+D:\CropDiseaseProject\sugarcane_large\Diseases\Yellow Leaf\Yellow Leaf880.jpg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_large\Diseases\smut\Smut037.jpg,Smut,9
+D:\CropDiseaseProject\sugarcane_large\Diseases\smut\Smut006.jpg,Smut,9
+D:\CropDiseaseProject\sugarcane_large\Diseases\Grassy shoot\image028.jpg,Grassy Shoot,2
+D:\CropDiseaseProject\sugarcane_large\Diseases\Yellow Leaf\Yellow Leaf073.jpg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_maharashtra\Healthy\healthy (499).jpeg,Healthy Leaves,3
+D:\CropDiseaseProject\sugarcane_maharashtra\Mosaic\mosaic (267).jpeg,Mosaic / Viral Disease,4
+D:\CropDiseaseProject\sugarcane_maharashtra\Mosaic\mosaic (456).jpeg,Mosaic / Viral Disease,4
+D:\CropDiseaseProject\sugarcane_large\Healthy Leaves\image196.jpg,Healthy Leaves,3
+D:\CropDiseaseProject\sugarcane_large\Diseases\BrownRust\image232.jpg,Rust (Brown Rust),7
+D:\CropDiseaseProject\sugarcane_maharashtra\RedRot\redrot (499).jpeg,Red Rot,6
+D:\CropDiseaseProject\sugarcane_maharashtra\Rust\rust (206).jpeg,Rust (Brown Rust),7
+D:\CropDiseaseProject\sugarcane_large\Diseases\Sett Rot\Sett Rot184.jpg,Sett Rot,8
+D:\CropDiseaseProject\sugarcane_large\Healthy Leaves\image408.jpg,Healthy Leaves,3
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image1164.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_large\Diseases\Banded Chlorosis\image436.jpg,Banded Chlorosis,0
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image1116.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_large\Diseases\Yellow Leaf\Yellow Leaf1011.jpg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_large\Diseases\BrownRust\image202.jpg,Rust (Brown Rust),7
+D:\CropDiseaseProject\sugarcane_maharashtra\Rust\rust (44).jpeg,Rust (Brown Rust),7
+D:\CropDiseaseProject\sugarcane_maharashtra\RedRot\redrot (385).jpeg,Red Rot,6
+D:\CropDiseaseProject\sugarcane_large\Diseases\BrownRust\image032.jpg,Rust (Brown Rust),7
+D:\CropDiseaseProject\sugarcane_large\Diseases\Yellow Leaf\Yellow Leaf040.jpg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_large\Diseases\Pokkah Boeng\Pokkah Boeng104.jpg,Pokkah Boeng,5
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image528.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image1515.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_large\Diseases\Yellow Leaf\Yellow Leaf465.jpg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_maharashtra\Yellow\yellow (307).jpeg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image547.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image763.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_large\Diseases\Pokkah Boeng\Pokkah Boeng063.jpg,Pokkah Boeng,5
+D:\CropDiseaseProject\sugarcane_maharashtra\RedRot\redrot (416).jpeg,Red Rot,6
+D:\CropDiseaseProject\sugarcane_large\Diseases\Yellow Leaf\Yellow Leaf1086.jpg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_large\Healthy Leaves\image043.jpg,Healthy Leaves,3
+D:\CropDiseaseProject\sugarcane_large\Diseases\Viral Disease\Viral Disease054.jpg,Mosaic / Viral Disease,4
+D:\CropDiseaseProject\sugarcane_maharashtra\Rust\rust (179).jpeg,Rust (Brown Rust),7
+D:\CropDiseaseProject\sugarcane_large\Diseases\Banded Chlorosis\image260.jpg,Banded Chlorosis,0
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image1529.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_maharashtra\Rust\rust (52).jpeg,Rust (Brown Rust),7
+D:\CropDiseaseProject\sugarcane_maharashtra\RedRot\redrot (304).jpeg,Red Rot,6
+D:\CropDiseaseProject\sugarcane_large\Diseases\BrownRust\image123.jpg,Rust (Brown Rust),7
+D:\CropDiseaseProject\sugarcane_large\Diseases\Banded Chlorosis\image455.jpg,Banded Chlorosis,0
+D:\CropDiseaseProject\sugarcane_large\Diseases\BrownRust\image060.jpg,Rust (Brown Rust),7
+D:\CropDiseaseProject\sugarcane_large\Diseases\Sett Rot\Sett Rot157.jpg,Sett Rot,8
+D:\CropDiseaseProject\sugarcane_large\Healthy Leaves\image399.jpg,Healthy Leaves,3
+D:\CropDiseaseProject\sugarcane_large\Healthy Leaves\image137.jpg,Healthy Leaves,3
+D:\CropDiseaseProject\sugarcane_large\Diseases\Sett Rot\Sett Rot337.jpg,Sett Rot,8
+D:\CropDiseaseProject\sugarcane_large\Diseases\BrownRust\image290.jpg,Rust (Brown Rust),7
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image1008.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_large\Diseases\Yellow Leaf\Yellow Leaf258.jpg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_large\Diseases\Sett Rot\Sett Rot274.jpg,Sett Rot,8
+D:\CropDiseaseProject\sugarcane_maharashtra\Rust\rust (140).jpeg,Rust (Brown Rust),7
+D:\CropDiseaseProject\sugarcane_large\Diseases\Sett Rot\Sett Rot263.jpg,Sett Rot,8
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image169.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image379.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_large\Diseases\BrownRust\image258.jpg,Rust (Brown Rust),7
+D:\CropDiseaseProject\sugarcane_maharashtra\Yellow\yellow (261).jpeg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_large\Healthy Leaves\image055.jpg,Healthy Leaves,3
+D:\CropDiseaseProject\sugarcane_maharashtra\RedRot\redrot (317).jpeg,Red Rot,6
+D:\CropDiseaseProject\sugarcane_large\Diseases\Sett Rot\Sett Rot391.jpg,Sett Rot,8
+D:\CropDiseaseProject\sugarcane_maharashtra\Healthy\healthy (477).jpeg,Healthy Leaves,3
+D:\CropDiseaseProject\sugarcane_maharashtra\Mosaic\mosaic (429).jpeg,Mosaic / Viral Disease,4
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image721.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_large\Diseases\Banded Chlorosis\image161.jpg,Banded Chlorosis,0
+D:\CropDiseaseProject\sugarcane_maharashtra\Healthy\healthy (233).jpeg,Healthy Leaves,3
+D:\CropDiseaseProject\sugarcane_large\Diseases\Yellow Leaf\Yellow Leaf702.jpg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_large\Diseases\Yellow Leaf\Yellow Leaf1155.jpg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image1477.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image157.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_large\Diseases\Yellow Leaf\Yellow Leaf928.jpg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_large\Healthy Leaves\image243.jpg,Healthy Leaves,3
+D:\CropDiseaseProject\sugarcane_large\Diseases\Grassy shoot\image151.jpg,Grassy Shoot,2
+D:\CropDiseaseProject\sugarcane_large\Diseases\Yellow Leaf\Yellow Leaf978.jpg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_large\Diseases\Banded Chlorosis\image386.jpg,Banded Chlorosis,0
+D:\CropDiseaseProject\sugarcane_large\Diseases\BrownRust\image149.jpg,Rust (Brown Rust),7
+D:\CropDiseaseProject\sugarcane_large\Diseases\smut\Smut269.jpg,Smut,9
+D:\CropDiseaseProject\sugarcane_maharashtra\RedRot\redrot (94).jpeg,Red Rot,6
+D:\CropDiseaseProject\sugarcane_large\Diseases\smut\Smut054.jpg,Smut,9
+D:\CropDiseaseProject\sugarcane_maharashtra\Healthy\healthy (512).jpeg,Healthy Leaves,3
+D:\CropDiseaseProject\sugarcane_maharashtra\RedRot\redrot (154).jpeg,Red Rot,6
+D:\CropDiseaseProject\sugarcane_maharashtra\Mosaic\mosaic (35).jpeg,Mosaic / Viral Disease,4
+D:\CropDiseaseProject\sugarcane_maharashtra\Yellow\yellow (217).jpeg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_large\Diseases\Yellow Leaf\Yellow Leaf303.jpg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_large\Diseases\Yellow Leaf\Yellow Leaf330.jpg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image464.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_maharashtra\Healthy\healthy (341).jpeg,Healthy Leaves,3
+D:\CropDiseaseProject\sugarcane_large\Diseases\Viral Disease\Viral Disease379.jpg,Mosaic / Viral Disease,4
+D:\CropDiseaseProject\sugarcane_maharashtra\RedRot\redrot (475).jpeg,Red Rot,6
+D:\CropDiseaseProject\sugarcane_large\Diseases\Yellow Leaf\Yellow Leaf1189.jpg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_large\Diseases\Sett Rot\Sett Rot102.jpg,Sett Rot,8
+D:\CropDiseaseProject\sugarcane_large\Diseases\Viral Disease\Viral Disease528.jpg,Mosaic / Viral Disease,4
+D:\CropDiseaseProject\sugarcane_large\Diseases\Yellow Leaf\Yellow Leaf188.jpg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_large\Diseases\Grassy shoot\image124.jpg,Grassy Shoot,2
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image373.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_maharashtra\Mosaic\mosaic (225).jpeg,Mosaic / Viral Disease,4
+D:\CropDiseaseProject\sugarcane_maharashtra\Yellow\yellow (211).jpeg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_maharashtra\Rust\rust (370).jpeg,Rust (Brown Rust),7
+D:\CropDiseaseProject\sugarcane_maharashtra\Yellow\yellow (285).jpeg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_maharashtra\Rust\rust (417).jpeg,Rust (Brown Rust),7
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image1136.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_maharashtra\Yellow\yellow (241).jpeg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_large\Diseases\Yellow Leaf\Yellow Leaf1003.jpg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_maharashtra\Healthy\healthy (440).jpeg,Healthy Leaves,3
+D:\CropDiseaseProject\sugarcane_maharashtra\Mosaic\mosaic (115).jpeg,Mosaic / Viral Disease,4
+D:\CropDiseaseProject\sugarcane_large\Diseases\Viral Disease\Viral Disease444.jpg,Mosaic / Viral Disease,4
+D:\CropDiseaseProject\sugarcane_large\Diseases\Viral Disease\Viral Disease148.jpg,Mosaic / Viral Disease,4
+D:\CropDiseaseProject\sugarcane_maharashtra\RedRot\redrot (223).jpeg,Red Rot,6
+D:\CropDiseaseProject\sugarcane_large\Diseases\Sett Rot\Sett Rot230.jpg,Sett Rot,8
+D:\CropDiseaseProject\sugarcane_large\Diseases\Sett Rot\Sett Rot528.jpg,Sett Rot,8
+D:\CropDiseaseProject\sugarcane_maharashtra\Yellow\yellow (316).jpeg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image770.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image1368.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image487.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_large\Diseases\Grassy shoot\image139.jpg,Grassy Shoot,2
+D:\CropDiseaseProject\sugarcane_large\Diseases\Viral Disease\Viral Disease603.jpg,Mosaic / Viral Disease,4
+D:\CropDiseaseProject\sugarcane_large\Diseases\Sett Rot\Sett Rot252.jpg,Sett Rot,8
+D:\CropDiseaseProject\sugarcane_large\Diseases\Pokkah Boeng\Pokkah Boeng073.jpg,Pokkah Boeng,5
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image908.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_large\Diseases\Banded Chlorosis\image277.jpg,Banded Chlorosis,0
+D:\CropDiseaseProject\sugarcane_large\Diseases\Sett Rot\Sett Rot187.jpg,Sett Rot,8
+D:\CropDiseaseProject\sugarcane_maharashtra\RedRot\redrot (210).jpeg,Red Rot,6
+D:\CropDiseaseProject\sugarcane_maharashtra\Rust\rust (491).jpeg,Rust (Brown Rust),7
+D:\CropDiseaseProject\sugarcane_large\Diseases\smut\Smut111.jpg,Smut,9
+D:\CropDiseaseProject\sugarcane_maharashtra\RedRot\redrot (275).jpeg,Red Rot,6
+D:\CropDiseaseProject\sugarcane_maharashtra\Yellow\yellow (229).jpeg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_maharashtra\Rust\rust (396).jpeg,Rust (Brown Rust),7
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image1485.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image1083.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image231.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_maharashtra\Rust\rust (476).jpeg,Rust (Brown Rust),7
+D:\CropDiseaseProject\sugarcane_maharashtra\Yellow\yellow (372).jpeg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_large\Diseases\Yellow Leaf\Yellow Leaf657.jpg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_large\Diseases\Viral Disease\Viral Disease123.jpg,Mosaic / Viral Disease,4
+D:\CropDiseaseProject\sugarcane_maharashtra\RedRot\redrot (339).jpeg,Red Rot,6
+D:\CropDiseaseProject\sugarcane_large\Diseases\Yellow Leaf\Yellow Leaf974.jpg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image819.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image640.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_large\Diseases\Yellow Leaf\Yellow Leaf962.jpg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image1658.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_large\Diseases\smut\Smut134.jpg,Smut,9
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image926.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_maharashtra\Mosaic\mosaic (200).jpeg,Mosaic / Viral Disease,4
+D:\CropDiseaseProject\sugarcane_maharashtra\Yellow\yellow (359).jpeg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_large\Diseases\Yellow Leaf\Yellow Leaf741.jpg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_maharashtra\Yellow\yellow (220).jpeg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_large\Diseases\Yellow Leaf\Yellow Leaf973.jpg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_large\Diseases\BrownRust\image130.jpg,Rust (Brown Rust),7
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image1248.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_large\Diseases\Viral Disease\Viral Disease560.jpg,Mosaic / Viral Disease,4
+D:\CropDiseaseProject\sugarcane_large\Diseases\Viral Disease\Viral Disease258.jpg,Mosaic / Viral Disease,4
+D:\CropDiseaseProject\sugarcane_maharashtra\Yellow\yellow (45).jpeg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_maharashtra\Rust\rust (18).jpeg,Rust (Brown Rust),7
+D:\CropDiseaseProject\sugarcane_maharashtra\RedRot\redrot (98).jpeg,Red Rot,6
+D:\CropDiseaseProject\sugarcane_large\Diseases\Sett Rot\Sett Rot177.jpg,Sett Rot,8
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image505.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_maharashtra\Healthy\healthy (521).jpeg,Healthy Leaves,3
+D:\CropDiseaseProject\sugarcane_maharashtra\RedRot\redrot (219).jpeg,Red Rot,6
+D:\CropDiseaseProject\sugarcane_large\Diseases\Yellow Leaf\Yellow Leaf498.jpg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_large\Diseases\Viral Disease\Viral Disease284.jpg,Mosaic / Viral Disease,4
+D:\CropDiseaseProject\sugarcane_large\Diseases\Yellow Leaf\Yellow Leaf621.jpg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_large\Diseases\Viral Disease\Viral Disease311.jpg,Mosaic / Viral Disease,4
+D:\CropDiseaseProject\sugarcane_large\Diseases\Pokkah Boeng\Pokkah Boeng293.jpg,Pokkah Boeng,5
+D:\CropDiseaseProject\sugarcane_large\Diseases\Viral Disease\Viral Disease154.jpg,Mosaic / Viral Disease,4
+D:\CropDiseaseProject\sugarcane_large\Healthy Leaves\image305.jpg,Healthy Leaves,3
+D:\CropDiseaseProject\sugarcane_large\Diseases\Pokkah Boeng\Pokkah Boeng160.jpg,Pokkah Boeng,5
+D:\CropDiseaseProject\sugarcane_maharashtra\Healthy\healthy (378).jpeg,Healthy Leaves,3
+D:\CropDiseaseProject\sugarcane_large\Diseases\Pokkah Boeng\Pokkah Boeng122.jpg,Pokkah Boeng,5
+D:\CropDiseaseProject\sugarcane_large\Diseases\Pokkah Boeng\Pokkah Boeng107.jpg,Pokkah Boeng,5
+D:\CropDiseaseProject\sugarcane_maharashtra\Yellow\yellow (164).jpeg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_large\Healthy Leaves\image169.jpg,Healthy Leaves,3
+D:\CropDiseaseProject\sugarcane_large\Healthy Leaves\image097.jpg,Healthy Leaves,3
+D:\CropDiseaseProject\sugarcane_maharashtra\Healthy\healthy (208).jpeg,Healthy Leaves,3
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image964.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image756.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_maharashtra\RedRot\redrot (236).jpeg,Red Rot,6
+D:\CropDiseaseProject\sugarcane_large\Diseases\Yellow Leaf\Yellow Leaf173.jpg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image936.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_maharashtra\RedRot\redrot (20).jpeg,Red Rot,6
+D:\CropDiseaseProject\sugarcane_maharashtra\Mosaic\mosaic (185).jpeg,Mosaic / Viral Disease,4
+D:\CropDiseaseProject\sugarcane_large\Diseases\Yellow Leaf\Yellow Leaf855.jpg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_maharashtra\Mosaic\mosaic (67).jpeg,Mosaic / Viral Disease,4
+D:\CropDiseaseProject\sugarcane_large\Diseases\Yellow Leaf\Yellow Leaf1006.jpg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_large\Healthy Leaves\image368.jpg,Healthy Leaves,3
+D:\CropDiseaseProject\sugarcane_large\Diseases\smut\Smut153.jpg,Smut,9
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image197.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image1603.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_large\Diseases\Sett Rot\Sett Rot617.jpg,Sett Rot,8
+D:\CropDiseaseProject\sugarcane_maharashtra\RedRot\redrot (179).jpeg,Red Rot,6
+D:\CropDiseaseProject\sugarcane_maharashtra\RedRot\redrot (186).jpeg,Red Rot,6
+D:\CropDiseaseProject\sugarcane_large\Diseases\Banded Chlorosis\image437.jpg,Banded Chlorosis,0
+D:\CropDiseaseProject\sugarcane_maharashtra\Rust\rust (42).jpeg,Rust (Brown Rust),7
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image820.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_large\Diseases\Viral Disease\Viral Disease021.jpg,Mosaic / Viral Disease,4
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image491.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_large\Diseases\Grassy shoot\image087.jpg,Grassy Shoot,2
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image1675.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image1575.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_large\Healthy Leaves\image057.jpg,Healthy Leaves,3
+D:\CropDiseaseProject\sugarcane_large\Diseases\Banded Chlorosis\image293.jpg,Banded Chlorosis,0
+D:\CropDiseaseProject\sugarcane_large\Diseases\BrownRust\image121.jpg,Rust (Brown Rust),7
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image313.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_maharashtra\Healthy\healthy (163).jpeg,Healthy Leaves,3
+D:\CropDiseaseProject\sugarcane_large\Diseases\Banded Chlorosis\image261.jpg,Banded Chlorosis,0
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image161.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image106.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_maharashtra\RedRot\redrot (377).jpeg,Red Rot,6
+D:\CropDiseaseProject\sugarcane_maharashtra\RedRot\redrot (1).jpeg,Red Rot,6
+D:\CropDiseaseProject\sugarcane_large\Diseases\smut\Smut150.jpg,Smut,9
+D:\CropDiseaseProject\sugarcane_maharashtra\Rust\rust (383).jpeg,Rust (Brown Rust),7
+D:\CropDiseaseProject\sugarcane_maharashtra\Yellow\yellow (371).jpeg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_maharashtra\Rust\rust (334).jpeg,Rust (Brown Rust),7
+D:\CropDiseaseProject\sugarcane_large\Diseases\Viral Disease\Viral Disease348.jpg,Mosaic / Viral Disease,4
+D:\CropDiseaseProject\sugarcane_maharashtra\Rust\rust (242).jpeg,Rust (Brown Rust),7
+D:\CropDiseaseProject\sugarcane_maharashtra\Rust\rust (399).jpeg,Rust (Brown Rust),7
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image794.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_maharashtra\Healthy\healthy (497).jpeg,Healthy Leaves,3
+D:\CropDiseaseProject\sugarcane_large\Diseases\Grassy shoot\image343.jpg,Grassy Shoot,2
+D:\CropDiseaseProject\sugarcane_maharashtra\Rust\rust (236).jpeg,Rust (Brown Rust),7
+D:\CropDiseaseProject\sugarcane_large\Diseases\Yellow Leaf\Yellow Leaf716.jpg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_maharashtra\Rust\rust (439).jpeg,Rust (Brown Rust),7
+D:\CropDiseaseProject\sugarcane_large\Diseases\Yellow Leaf\Yellow Leaf636.jpg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_large\Diseases\Sett Rot\Sett Rot165.jpg,Sett Rot,8
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image628.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image1227.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_large\Diseases\Sett Rot\Sett Rot508.jpg,Sett Rot,8
+D:\CropDiseaseProject\sugarcane_large\Diseases\Banded Chlorosis\image373.jpg,Banded Chlorosis,0
+D:\CropDiseaseProject\sugarcane_large\Diseases\Banded Chlorosis\image364.jpg,Banded Chlorosis,0
+D:\CropDiseaseProject\sugarcane_maharashtra\Healthy\healthy (59).jpeg,Healthy Leaves,3
+D:\CropDiseaseProject\sugarcane_large\Diseases\Banded Chlorosis\image103.jpg,Banded Chlorosis,0
+D:\CropDiseaseProject\sugarcane_large\Diseases\Yellow Leaf\Yellow Leaf1050.jpg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_large\Diseases\smut\Smut193.jpg,Smut,9
+D:\CropDiseaseProject\sugarcane_maharashtra\Rust\rust (265).jpeg,Rust (Brown Rust),7
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image371.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image298.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_large\Diseases\Yellow Leaf\Yellow Leaf180.jpg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image341.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image104.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_large\Diseases\Sett Rot\Sett Rot560.jpg,Sett Rot,8
+D:\CropDiseaseProject\sugarcane_maharashtra\Rust\rust (333).jpeg,Rust (Brown Rust),7
+D:\CropDiseaseProject\sugarcane_large\Diseases\Yellow Leaf\Yellow Leaf1153.jpg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_large\Diseases\Viral Disease\Viral Disease260.jpg,Mosaic / Viral Disease,4
+D:\CropDiseaseProject\sugarcane_large\Diseases\Banded Chlorosis\image270.jpg,Banded Chlorosis,0
+D:\CropDiseaseProject\sugarcane_maharashtra\Rust\rust (240).jpeg,Rust (Brown Rust),7
+D:\CropDiseaseProject\sugarcane_maharashtra\Rust\rust (267).jpeg,Rust (Brown Rust),7
+D:\CropDiseaseProject\sugarcane_large\Diseases\BrownRust\image013.jpg,Rust (Brown Rust),7
+D:\CropDiseaseProject\sugarcane_large\Diseases\Banded Chlorosis\image014.jpg,Banded Chlorosis,0
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image622.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_maharashtra\Healthy\healthy (318).jpeg,Healthy Leaves,3
+D:\CropDiseaseProject\sugarcane_large\Diseases\smut\Smut046.jpg,Smut,9
+D:\CropDiseaseProject\sugarcane_maharashtra\RedRot\redrot (18).jpeg,Red Rot,6
+D:\CropDiseaseProject\sugarcane_large\Healthy Leaves\image168.jpg,Healthy Leaves,3
+D:\CropDiseaseProject\sugarcane_large\Diseases\Banded Chlorosis\image167.jpg,Banded Chlorosis,0
+D:\CropDiseaseProject\sugarcane_maharashtra\Mosaic\mosaic (353).jpeg,Mosaic / Viral Disease,4
+D:\CropDiseaseProject\sugarcane_large\Diseases\Yellow Leaf\Yellow Leaf1083.jpg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_large\Diseases\Grassy shoot\image277.jpg,Grassy Shoot,2
+D:\CropDiseaseProject\sugarcane_large\Diseases\Yellow Leaf\Yellow Leaf893.jpg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_large\Healthy Leaves\image238.jpg,Healthy Leaves,3
+D:\CropDiseaseProject\sugarcane_large\Diseases\BrownRust\image293.jpg,Rust (Brown Rust),7
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image008.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_large\Diseases\Yellow Leaf\Yellow Leaf630.jpg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_large\Diseases\Banded Chlorosis\image349.jpg,Banded Chlorosis,0
+D:\CropDiseaseProject\sugarcane_maharashtra\Rust\rust (315).jpeg,Rust (Brown Rust),7
+D:\CropDiseaseProject\sugarcane_large\Diseases\Pokkah Boeng\Pokkah Boeng148.jpg,Pokkah Boeng,5
+D:\CropDiseaseProject\sugarcane_maharashtra\Healthy\healthy (235).jpeg,Healthy Leaves,3
+D:\CropDiseaseProject\sugarcane_large\Diseases\Sett Rot\Sett Rot325.jpg,Sett Rot,8
+D:\CropDiseaseProject\sugarcane_maharashtra\Yellow\yellow (168).jpeg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_maharashtra\Yellow\yellow (30).jpeg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_maharashtra\Healthy\healthy (395).jpeg,Healthy Leaves,3
+D:\CropDiseaseProject\sugarcane_large\Diseases\Grassy shoot\image346.jpg,Grassy Shoot,2
+D:\CropDiseaseProject\sugarcane_large\Diseases\Viral Disease\Viral Disease569.jpg,Mosaic / Viral Disease,4
+D:\CropDiseaseProject\sugarcane_large\Diseases\smut\Smut284.jpg,Smut,9
+D:\CropDiseaseProject\sugarcane_large\Diseases\Viral Disease\Viral Disease038.jpg,Mosaic / Viral Disease,4
+D:\CropDiseaseProject\sugarcane_large\Diseases\Viral Disease\Viral Disease208.jpg,Mosaic / Viral Disease,4
+D:\CropDiseaseProject\sugarcane_maharashtra\Mosaic\mosaic (370).jpeg,Mosaic / Viral Disease,4
+D:\CropDiseaseProject\sugarcane_large\Diseases\Sett Rot\Sett Rot642.jpg,Sett Rot,8
+D:\CropDiseaseProject\sugarcane_large\Diseases\Yellow Leaf\Yellow Leaf083.jpg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_large\Diseases\Pokkah Boeng\Pokkah Boeng250.jpg,Pokkah Boeng,5
+D:\CropDiseaseProject\sugarcane_large\Diseases\Sett Rot\Sett Rot470.jpg,Sett Rot,8
+D:\CropDiseaseProject\sugarcane_large\Diseases\Yellow Leaf\Yellow Leaf492.jpg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_large\Diseases\BrownRust\image125.jpg,Rust (Brown Rust),7
+D:\CropDiseaseProject\sugarcane_large\Diseases\Banded Chlorosis\image459.jpg,Banded Chlorosis,0
+D:\CropDiseaseProject\sugarcane_maharashtra\Yellow\yellow (234).jpeg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_large\Diseases\Viral Disease\Viral Disease655.jpg,Mosaic / Viral Disease,4
+D:\CropDiseaseProject\sugarcane_maharashtra\RedRot\redrot (437).jpeg,Red Rot,6
+D:\CropDiseaseProject\sugarcane_maharashtra\RedRot\redrot (359).jpeg,Red Rot,6
+D:\CropDiseaseProject\sugarcane_large\Diseases\Yellow Leaf\Yellow Leaf613.jpg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_large\Diseases\smut\Smut173.jpg,Smut,9
+D:\CropDiseaseProject\sugarcane_large\Diseases\Pokkah Boeng\Pokkah Boeng171.jpg,Pokkah Boeng,5
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image578.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_large\Diseases\Sett Rot\Sett Rot550.jpg,Sett Rot,8
+D:\CropDiseaseProject\sugarcane_large\Diseases\smut\Smut072.jpg,Smut,9
+D:\CropDiseaseProject\sugarcane_large\Diseases\Pokkah Boeng\Pokkah Boeng075.jpg,Pokkah Boeng,5
+D:\CropDiseaseProject\sugarcane_maharashtra\Healthy\healthy (310).jpeg,Healthy Leaves,3
+D:\CropDiseaseProject\sugarcane_large\Diseases\Sett Rot\Sett Rot567.jpg,Sett Rot,8
+D:\CropDiseaseProject\sugarcane_maharashtra\Mosaic\mosaic (68).jpeg,Mosaic / Viral Disease,4
+D:\CropDiseaseProject\sugarcane_large\Diseases\Viral Disease\Viral Disease196.jpg,Mosaic / Viral Disease,4
+D:\CropDiseaseProject\sugarcane_large\Diseases\smut\Smut203.jpg,Smut,9
+D:\CropDiseaseProject\sugarcane_large\Diseases\Viral Disease\Viral Disease451.jpg,Mosaic / Viral Disease,4
+D:\CropDiseaseProject\sugarcane_maharashtra\RedRot\redrot (311).jpeg,Red Rot,6
+D:\CropDiseaseProject\sugarcane_large\Diseases\Banded Chlorosis\image422.jpg,Banded Chlorosis,0
+D:\CropDiseaseProject\sugarcane_maharashtra\RedRot\redrot (468).jpeg,Red Rot,6
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image630.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_large\Diseases\Grassy shoot\image149.jpg,Grassy Shoot,2
+D:\CropDiseaseProject\sugarcane_maharashtra\Mosaic\mosaic (273).jpeg,Mosaic / Viral Disease,4
+D:\CropDiseaseProject\sugarcane_maharashtra\Healthy\healthy (27).jpeg,Healthy Leaves,3
+D:\CropDiseaseProject\sugarcane_maharashtra\Healthy\healthy (294).jpeg,Healthy Leaves,3
+D:\CropDiseaseProject\sugarcane_maharashtra\Yellow\yellow (368).jpeg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_large\Diseases\Yellow Leaf\Yellow Leaf072.jpg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_maharashtra\Mosaic\mosaic (51).jpeg,Mosaic / Viral Disease,4
+D:\CropDiseaseProject\sugarcane_large\Diseases\Yellow Leaf\Yellow Leaf898.jpg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_large\Diseases\Banded Chlorosis\image081.jpg,Banded Chlorosis,0
+D:\CropDiseaseProject\sugarcane_large\Diseases\Yellow Leaf\Yellow Leaf1136.jpg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_large\Diseases\Yellow Leaf\Yellow Leaf709.jpg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_maharashtra\Yellow\yellow (259).jpeg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_large\Diseases\Pokkah Boeng\Pokkah Boeng030.jpg,Pokkah Boeng,5
+D:\CropDiseaseProject\sugarcane_large\Diseases\smut\Smut076.jpg,Smut,9
+D:\CropDiseaseProject\sugarcane_maharashtra\RedRot\redrot (458).jpeg,Red Rot,6
+D:\CropDiseaseProject\sugarcane_large\Diseases\smut\Smut188.jpg,Smut,9
+D:\CropDiseaseProject\sugarcane_maharashtra\Healthy\healthy (292).jpeg,Healthy Leaves,3
+D:\CropDiseaseProject\sugarcane_maharashtra\Mosaic\mosaic (34).jpeg,Mosaic / Viral Disease,4
+D:\CropDiseaseProject\sugarcane_large\Diseases\Grassy shoot\image113.jpg,Grassy Shoot,2
+D:\CropDiseaseProject\sugarcane_maharashtra\Rust\rust (157).jpeg,Rust (Brown Rust),7
+D:\CropDiseaseProject\sugarcane_large\Diseases\Yellow Leaf\Yellow Leaf1075.jpg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_large\Diseases\Sett Rot\Sett Rot166.jpg,Sett Rot,8
+D:\CropDiseaseProject\sugarcane_maharashtra\Rust\rust (483).jpeg,Rust (Brown Rust),7
+D:\CropDiseaseProject\sugarcane_large\Diseases\Grassy shoot\image213.jpg,Grassy Shoot,2
+D:\CropDiseaseProject\sugarcane_large\Diseases\smut\Smut137.jpg,Smut,9
+D:\CropDiseaseProject\sugarcane_maharashtra\Healthy\healthy (216).jpeg,Healthy Leaves,3
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image1269.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_large\Diseases\Banded Chlorosis\image100.jpg,Banded Chlorosis,0
+D:\CropDiseaseProject\sugarcane_large\Diseases\smut\Smut294.jpg,Smut,9
+D:\CropDiseaseProject\sugarcane_large\Diseases\Sett Rot\Sett Rot228.jpg,Sett Rot,8
+D:\CropDiseaseProject\sugarcane_maharashtra\Healthy\healthy (326).jpeg,Healthy Leaves,3
+D:\CropDiseaseProject\sugarcane_large\Diseases\Yellow Leaf\Yellow Leaf442.jpg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_large\Diseases\Yellow Leaf\Yellow Leaf039.jpg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image1608.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image833.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_maharashtra\RedRot\redrot (176).jpeg,Red Rot,6
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image554.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_maharashtra\RedRot\redrot (45).jpeg,Red Rot,6
+D:\CropDiseaseProject\sugarcane_maharashtra\Yellow\yellow (431).jpeg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_maharashtra\Healthy\healthy (77).jpeg,Healthy Leaves,3
+D:\CropDiseaseProject\sugarcane_large\Diseases\BrownRust\image141.jpg,Rust (Brown Rust),7
+D:\CropDiseaseProject\sugarcane_large\Diseases\Yellow Leaf\Yellow Leaf784.jpg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_large\Diseases\BrownRust\image068.jpg,Rust (Brown Rust),7
+D:\CropDiseaseProject\sugarcane_maharashtra\RedRot\redrot (446).jpeg,Red Rot,6
+D:\CropDiseaseProject\sugarcane_maharashtra\Mosaic\mosaic (106).jpeg,Mosaic / Viral Disease,4
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image248.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_maharashtra\RedRot\redrot (241).jpeg,Red Rot,6
+D:\CropDiseaseProject\sugarcane_maharashtra\Rust\rust (488).jpeg,Rust (Brown Rust),7
+D:\CropDiseaseProject\sugarcane_large\Diseases\Viral Disease\Viral Disease641.jpg,Mosaic / Viral Disease,4
+D:\CropDiseaseProject\sugarcane_large\Diseases\Yellow Leaf\Yellow Leaf369.jpg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_large\Healthy Leaves\image259.jpg,Healthy Leaves,3
+D:\CropDiseaseProject\sugarcane_large\Diseases\Viral Disease\Viral Disease102.jpg,Mosaic / Viral Disease,4
+D:\CropDiseaseProject\sugarcane_large\Diseases\Viral Disease\Viral Disease324.jpg,Mosaic / Viral Disease,4
+D:\CropDiseaseProject\sugarcane_large\Diseases\Sett Rot\Sett Rot149.jpg,Sett Rot,8
+D:\CropDiseaseProject\sugarcane_maharashtra\Healthy\healthy (220).jpeg,Healthy Leaves,3
+D:\CropDiseaseProject\sugarcane_large\Diseases\Banded Chlorosis\image388.jpg,Banded Chlorosis,0
+D:\CropDiseaseProject\sugarcane_large\Diseases\Pokkah Boeng\Pokkah Boeng259.jpg,Pokkah Boeng,5
+D:\CropDiseaseProject\sugarcane_large\Diseases\Grassy shoot\image069.jpg,Grassy Shoot,2
+D:\CropDiseaseProject\sugarcane_large\Diseases\Viral Disease\Viral Disease140.jpg,Mosaic / Viral Disease,4
+D:\CropDiseaseProject\sugarcane_maharashtra\RedRot\redrot (497).jpeg,Red Rot,6
+D:\CropDiseaseProject\sugarcane_large\Diseases\Yellow Leaf\Yellow Leaf845.jpg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_large\Diseases\Yellow Leaf\Yellow Leaf1133.jpg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_large\Diseases\Yellow Leaf\Yellow Leaf1166.jpg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_large\Diseases\Viral Disease\Viral Disease083.jpg,Mosaic / Viral Disease,4
+D:\CropDiseaseProject\sugarcane_large\Diseases\Viral Disease\Viral Disease443.jpg,Mosaic / Viral Disease,4
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image906.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_large\Diseases\Yellow Leaf\Yellow Leaf488.jpg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_maharashtra\Rust\rust (131).jpeg,Rust (Brown Rust),7
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image255.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_maharashtra\Mosaic\mosaic (280).jpeg,Mosaic / Viral Disease,4
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image996.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image1580.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image1502.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_maharashtra\Yellow\yellow (294).jpeg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_maharashtra\RedRot\redrot (466).jpeg,Red Rot,6
+D:\CropDiseaseProject\sugarcane_large\Diseases\Yellow Leaf\Yellow Leaf672.jpg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_large\Diseases\Yellow Leaf\Yellow Leaf570.jpg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_large\Diseases\Sett Rot\Sett Rot163.jpg,Sett Rot,8
+D:\CropDiseaseProject\sugarcane_large\Diseases\Sett Rot\Sett Rot313.jpg,Sett Rot,8
+D:\CropDiseaseProject\sugarcane_large\Healthy Leaves\image260.jpg,Healthy Leaves,3
+D:\CropDiseaseProject\sugarcane_maharashtra\RedRot\redrot (290).jpeg,Red Rot,6
+D:\CropDiseaseProject\sugarcane_maharashtra\RedRot\redrot (465).jpeg,Red Rot,6
+D:\CropDiseaseProject\sugarcane_large\Diseases\BrownRust\image303.jpg,Rust (Brown Rust),7
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image791.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_maharashtra\Rust\rust (274).jpeg,Rust (Brown Rust),7
+D:\CropDiseaseProject\sugarcane_large\Diseases\Pokkah Boeng\Pokkah Boeng113.jpg,Pokkah Boeng,5
+D:\CropDiseaseProject\sugarcane_large\Diseases\Viral Disease\Viral Disease301.jpg,Mosaic / Viral Disease,4
+D:\CropDiseaseProject\sugarcane_maharashtra\Rust\rust (8).jpeg,Rust (Brown Rust),7
+D:\CropDiseaseProject\sugarcane_large\Diseases\smut\Smut147.jpg,Smut,9
+D:\CropDiseaseProject\sugarcane_maharashtra\Rust\rust (412).jpeg,Rust (Brown Rust),7
+D:\CropDiseaseProject\sugarcane_large\Diseases\Grassy shoot\image284.jpg,Grassy Shoot,2
+D:\CropDiseaseProject\sugarcane_large\Diseases\Yellow Leaf\Yellow Leaf736.jpg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image1719.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image1697.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_large\Healthy Leaves\image198.jpg,Healthy Leaves,3
+D:\CropDiseaseProject\sugarcane_large\Diseases\Banded Chlorosis\image446.jpg,Banded Chlorosis,0
+D:\CropDiseaseProject\sugarcane_large\Diseases\Yellow Leaf\Yellow Leaf1184.jpg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image883.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_large\Diseases\Viral Disease\Viral Disease187.jpg,Mosaic / Viral Disease,4
+D:\CropDiseaseProject\sugarcane_maharashtra\Mosaic\mosaic (3).jpeg,Mosaic / Viral Disease,4
+D:\CropDiseaseProject\sugarcane_large\Diseases\Viral Disease\Viral Disease205.jpg,Mosaic / Viral Disease,4
+D:\CropDiseaseProject\sugarcane_large\Diseases\Grassy shoot\image280.jpg,Grassy Shoot,2
+D:\CropDiseaseProject\sugarcane_large\Diseases\Yellow Leaf\Yellow Leaf889.jpg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_large\Diseases\Banded Chlorosis\image208.jpg,Banded Chlorosis,0
+D:\CropDiseaseProject\sugarcane_large\Diseases\BrownRust\image220.jpg,Rust (Brown Rust),7
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image800.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_large\Diseases\Yellow Leaf\Yellow Leaf420.jpg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_maharashtra\Rust\rust (302).jpeg,Rust (Brown Rust),7
+D:\CropDiseaseProject\sugarcane_large\Diseases\Viral Disease\Viral Disease611.jpg,Mosaic / Viral Disease,4
+D:\CropDiseaseProject\sugarcane_maharashtra\RedRot\redrot (518).jpeg,Red Rot,6
+D:\CropDiseaseProject\sugarcane_large\Diseases\Sett Rot\Sett Rot156.jpg,Sett Rot,8
+D:\CropDiseaseProject\sugarcane_large\Healthy Leaves\image020.jpg,Healthy Leaves,3
+D:\CropDiseaseProject\sugarcane_large\Healthy Leaves\image254.jpg,Healthy Leaves,3
+D:\CropDiseaseProject\sugarcane_large\Diseases\Sett Rot\Sett Rot012.jpg,Sett Rot,8
+D:\CropDiseaseProject\sugarcane_large\Healthy Leaves\image284.jpg,Healthy Leaves,3
+D:\CropDiseaseProject\sugarcane_large\Diseases\smut\Smut098.jpg,Smut,9
+D:\CropDiseaseProject\sugarcane_maharashtra\RedRot\redrot (217).jpeg,Red Rot,6
+D:\CropDiseaseProject\sugarcane_large\Diseases\Pokkah Boeng\Pokkah Boeng093.jpg,Pokkah Boeng,5
+D:\CropDiseaseProject\sugarcane_large\Diseases\Viral Disease\Viral Disease127.jpg,Mosaic / Viral Disease,4
+D:\CropDiseaseProject\sugarcane_large\Diseases\Yellow Leaf\Yellow Leaf484.jpg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_large\Diseases\Banded Chlorosis\image328.jpg,Banded Chlorosis,0
+D:\CropDiseaseProject\sugarcane_maharashtra\RedRot\redrot (136).jpeg,Red Rot,6
+D:\CropDiseaseProject\sugarcane_large\Diseases\Yellow Leaf\Yellow Leaf682.jpg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image1606.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_large\Diseases\Viral Disease\Viral Disease303.jpg,Mosaic / Viral Disease,4
+D:\CropDiseaseProject\sugarcane_large\Healthy Leaves\image081.jpg,Healthy Leaves,3
+D:\CropDiseaseProject\sugarcane_large\Diseases\Yellow Leaf\Yellow Leaf517.jpg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_large\Diseases\Sett Rot\Sett Rot607.jpg,Sett Rot,8
+D:\CropDiseaseProject\sugarcane_large\Healthy Leaves\image268.jpg,Healthy Leaves,3
+D:\CropDiseaseProject\sugarcane_large\Diseases\Yellow Leaf\Yellow Leaf1183.jpg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_maharashtra\Rust\rust (435).jpeg,Rust (Brown Rust),7
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image293.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_large\Diseases\Yellow Leaf\Yellow Leaf844.jpg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_large\Diseases\Sett Rot\Sett Rot477.jpg,Sett Rot,8
+D:\CropDiseaseProject\sugarcane_maharashtra\RedRot\redrot (482).jpeg,Red Rot,6
+D:\CropDiseaseProject\sugarcane_large\Diseases\Yellow Leaf\Yellow Leaf112.jpg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_maharashtra\Mosaic\mosaic (344).jpeg,Mosaic / Viral Disease,4
+D:\CropDiseaseProject\sugarcane_large\Diseases\BrownRust\image010.jpg,Rust (Brown Rust),7
+D:\CropDiseaseProject\sugarcane_large\Diseases\Sett Rot\Sett Rot154.jpg,Sett Rot,8
+D:\CropDiseaseProject\sugarcane_large\Diseases\Banded Chlorosis\image022.jpg,Banded Chlorosis,0
+D:\CropDiseaseProject\sugarcane_maharashtra\Yellow\yellow (284).jpeg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_large\Diseases\Yellow Leaf\Yellow Leaf656.jpg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_large\Diseases\Banded Chlorosis\image360.jpg,Banded Chlorosis,0
+D:\CropDiseaseProject\sugarcane_large\Diseases\Viral Disease\Viral Disease315.jpg,Mosaic / Viral Disease,4
+D:\CropDiseaseProject\sugarcane_large\Diseases\BrownRust\image069.jpg,Rust (Brown Rust),7
+D:\CropDiseaseProject\sugarcane_large\Diseases\Sett Rot\Sett Rot626.jpg,Sett Rot,8
+D:\CropDiseaseProject\sugarcane_large\Diseases\Grassy shoot\image200.jpg,Grassy Shoot,2
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image1066.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_large\Diseases\smut\Smut077.jpg,Smut,9
+D:\CropDiseaseProject\sugarcane_large\Diseases\Yellow Leaf\Yellow Leaf1033.jpg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image604.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_maharashtra\Healthy\healthy (393).jpeg,Healthy Leaves,3
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image447.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_large\Diseases\BrownRust\image274.jpg,Rust (Brown Rust),7
+D:\CropDiseaseProject\sugarcane_maharashtra\Rust\rust (134).jpeg,Rust (Brown Rust),7
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image1538.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_maharashtra\Healthy\healthy (68).jpeg,Healthy Leaves,3
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image1060.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_maharashtra\Rust\rust (378).jpeg,Rust (Brown Rust),7
+D:\CropDiseaseProject\sugarcane_large\Healthy Leaves\image192.jpg,Healthy Leaves,3
+D:\CropDiseaseProject\sugarcane_maharashtra\RedRot\redrot (492).jpeg,Red Rot,6
+D:\CropDiseaseProject\sugarcane_large\Diseases\Pokkah Boeng\Pokkah Boeng176.jpg,Pokkah Boeng,5
+D:\CropDiseaseProject\sugarcane_large\Diseases\Yellow Leaf\Yellow Leaf737.jpg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image1683.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_large\Diseases\Sett Rot\Sett Rot290.jpg,Sett Rot,8
+D:\CropDiseaseProject\sugarcane_large\Diseases\Yellow Leaf\Yellow Leaf980.jpg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image968.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_maharashtra\Healthy\healthy (290).jpeg,Healthy Leaves,3
+D:\CropDiseaseProject\sugarcane_maharashtra\Rust\rust (16).jpeg,Rust (Brown Rust),7
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image907.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_maharashtra\Healthy\healthy (6).jpeg,Healthy Leaves,3
+D:\CropDiseaseProject\sugarcane_large\Diseases\Pokkah Boeng\Pokkah Boeng139.jpg,Pokkah Boeng,5
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image824.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_large\Diseases\smut\Smut177.jpg,Smut,9
+D:\CropDiseaseProject\sugarcane_large\Diseases\Banded Chlorosis\image471.jpg,Banded Chlorosis,0
+D:\CropDiseaseProject\sugarcane_maharashtra\Yellow\yellow (74).jpeg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_maharashtra\Yellow\yellow (227).jpeg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_large\Diseases\Yellow Leaf\Yellow Leaf935.jpg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_large\Diseases\Yellow Leaf\Yellow Leaf1004.jpg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_large\Diseases\Yellow Leaf\Yellow Leaf1005.jpg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_large\Diseases\Banded Chlorosis\image414.jpg,Banded Chlorosis,0
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image704.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_maharashtra\Rust\rust (70).jpeg,Rust (Brown Rust),7
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image1594.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_large\Diseases\Sett Rot\Sett Rot412.jpg,Sett Rot,8
+D:\CropDiseaseProject\sugarcane_maharashtra\RedRot\redrot (403).jpeg,Red Rot,6
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image1571.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_maharashtra\Healthy\healthy (337).jpeg,Healthy Leaves,3
+D:\CropDiseaseProject\sugarcane_large\Diseases\Yellow Leaf\Yellow Leaf238.jpg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image1041.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_maharashtra\Rust\rust (66).jpeg,Rust (Brown Rust),7
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image1141.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_maharashtra\Healthy\healthy (345).jpeg,Healthy Leaves,3
+D:\CropDiseaseProject\sugarcane_large\Diseases\Banded Chlorosis\image289.jpg,Banded Chlorosis,0
+D:\CropDiseaseProject\sugarcane_maharashtra\Yellow\yellow (256).jpeg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_large\Diseases\Banded Chlorosis\image274.jpg,Banded Chlorosis,0
+D:\CropDiseaseProject\sugarcane_maharashtra\Mosaic\mosaic (11).jpeg,Mosaic / Viral Disease,4
+D:\CropDiseaseProject\sugarcane_large\Diseases\Pokkah Boeng\Pokkah Boeng201.jpg,Pokkah Boeng,5
+D:\CropDiseaseProject\sugarcane_large\Diseases\Pokkah Boeng\Pokkah Boeng297.jpg,Pokkah Boeng,5
+D:\CropDiseaseProject\sugarcane_maharashtra\Yellow\yellow (26).jpeg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_maharashtra\Healthy\healthy (397).jpeg,Healthy Leaves,3
+D:\CropDiseaseProject\sugarcane_large\Diseases\Viral Disease\Viral Disease271.jpg,Mosaic / Viral Disease,4
+D:\CropDiseaseProject\sugarcane_large\Diseases\Viral Disease\Viral Disease595.jpg,Mosaic / Viral Disease,4
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image1215.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_large\Diseases\Pokkah Boeng\Pokkah Boeng213.jpg,Pokkah Boeng,5
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image995.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_large\Diseases\smut\Smut197.jpg,Smut,9
+D:\CropDiseaseProject\sugarcane_maharashtra\Yellow\yellow (95).jpeg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_maharashtra\Yellow\yellow (362).jpeg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_large\Diseases\Yellow Leaf\Yellow Leaf925.jpg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_large\Diseases\Yellow Leaf\Yellow Leaf766.jpg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_maharashtra\Yellow\yellow (146).jpeg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image524.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image1569.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_large\Diseases\Yellow Leaf\Yellow Leaf284.jpg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_maharashtra\Yellow\yellow (363).jpeg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image355.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_large\Diseases\Viral Disease\Viral Disease237.jpg,Mosaic / Viral Disease,4
+D:\CropDiseaseProject\sugarcane_large\Diseases\Banded Chlorosis\image129.jpg,Banded Chlorosis,0
+D:\CropDiseaseProject\sugarcane_large\Diseases\Yellow Leaf\Yellow Leaf031.jpg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_large\Diseases\Viral Disease\Viral Disease387.jpg,Mosaic / Viral Disease,4
+D:\CropDiseaseProject\sugarcane_large\Diseases\BrownRust\image242.jpg,Rust (Brown Rust),7
+D:\CropDiseaseProject\sugarcane_large\Diseases\Banded Chlorosis\image002.jpg,Banded Chlorosis,0
+D:\CropDiseaseProject\sugarcane_large\Diseases\Viral Disease\Viral Disease322.jpg,Mosaic / Viral Disease,4
+D:\CropDiseaseProject\sugarcane_large\Diseases\Yellow Leaf\Yellow Leaf117.jpg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_large\Diseases\smut\Smut051.jpg,Smut,9
+D:\CropDiseaseProject\sugarcane_maharashtra\Healthy\healthy (284).jpeg,Healthy Leaves,3
+D:\CropDiseaseProject\sugarcane_large\Diseases\Yellow Leaf\Yellow Leaf414.jpg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image806.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_maharashtra\Mosaic\mosaic (401).jpeg,Mosaic / Viral Disease,4
+D:\CropDiseaseProject\sugarcane_large\Diseases\Sett Rot\Sett Rot059.jpg,Sett Rot,8
+D:\CropDiseaseProject\sugarcane_large\Diseases\Banded Chlorosis\image035.jpg,Banded Chlorosis,0
+D:\CropDiseaseProject\sugarcane_large\Diseases\Viral Disease\Viral Disease403.jpg,Mosaic / Viral Disease,4
+D:\CropDiseaseProject\sugarcane_large\Diseases\Sett Rot\Sett Rot438.jpg,Sett Rot,8
+D:\CropDiseaseProject\sugarcane_maharashtra\RedRot\redrot (427).jpeg,Red Rot,6
+D:\CropDiseaseProject\sugarcane_large\Diseases\Viral Disease\Viral Disease583.jpg,Mosaic / Viral Disease,4
+D:\CropDiseaseProject\sugarcane_large\Diseases\Sett Rot\Sett Rot170.jpg,Sett Rot,8
+D:\CropDiseaseProject\sugarcane_large\Diseases\Sett Rot\Sett Rot281.jpg,Sett Rot,8
+D:\CropDiseaseProject\sugarcane_maharashtra\Rust\rust (398).jpeg,Rust (Brown Rust),7
+D:\CropDiseaseProject\sugarcane_large\Diseases\Banded Chlorosis\image369.jpg,Banded Chlorosis,0
+D:\CropDiseaseProject\sugarcane_large\Diseases\Yellow Leaf\Yellow Leaf555.jpg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_large\Diseases\smut\Smut313.jpg,Smut,9
+D:\CropDiseaseProject\sugarcane_maharashtra\Mosaic\mosaic (453).jpeg,Mosaic / Viral Disease,4
+D:\CropDiseaseProject\sugarcane_large\Diseases\Viral Disease\Viral Disease409.jpg,Mosaic / Viral Disease,4
+D:\CropDiseaseProject\sugarcane_maharashtra\Mosaic\mosaic (79).jpeg,Mosaic / Viral Disease,4
+D:\CropDiseaseProject\sugarcane_maharashtra\Healthy\healthy (487).jpeg,Healthy Leaves,3
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image934.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_large\Healthy Leaves\image213.jpg,Healthy Leaves,3
+D:\CropDiseaseProject\sugarcane_large\Diseases\Yellow Leaf\Yellow Leaf107.jpg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image552.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image400.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_maharashtra\Healthy\healthy (295).jpeg,Healthy Leaves,3
+D:\CropDiseaseProject\sugarcane_maharashtra\Rust\rust (319).jpeg,Rust (Brown Rust),7
+D:\CropDiseaseProject\sugarcane_large\Diseases\Yellow Leaf\Yellow Leaf886.jpg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image1320.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_large\Diseases\Sett Rot\Sett Rot620.jpg,Sett Rot,8
+D:\CropDiseaseProject\sugarcane_large\Diseases\BrownRust\image241.jpg,Rust (Brown Rust),7
+D:\CropDiseaseProject\sugarcane_maharashtra\Yellow\yellow (36).jpeg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_maharashtra\Mosaic\mosaic (337).jpeg,Mosaic / Viral Disease,4
+D:\CropDiseaseProject\sugarcane_maharashtra\Mosaic\mosaic (165).jpeg,Mosaic / Viral Disease,4
+D:\CropDiseaseProject\sugarcane_large\Diseases\Yellow Leaf\Yellow Leaf106.jpg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_large\Diseases\Sett Rot\Sett Rot137.jpg,Sett Rot,8
+D:\CropDiseaseProject\sugarcane_large\Diseases\Sett Rot\Sett Rot358.jpg,Sett Rot,8
+D:\CropDiseaseProject\sugarcane_maharashtra\Healthy\healthy (348).jpeg,Healthy Leaves,3
+D:\CropDiseaseProject\sugarcane_maharashtra\Healthy\healthy (138).jpeg,Healthy Leaves,3
+D:\CropDiseaseProject\sugarcane_large\Diseases\Sett Rot\Sett Rot013.jpg,Sett Rot,8
+D:\CropDiseaseProject\sugarcane_large\Diseases\Yellow Leaf\Yellow Leaf195.jpg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image1714.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_large\Diseases\Sett Rot\Sett Rot543.jpg,Sett Rot,8
+D:\CropDiseaseProject\sugarcane_large\Diseases\Banded Chlorosis\image172.jpg,Banded Chlorosis,0
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image1599.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_large\Diseases\Yellow Leaf\Yellow Leaf538.jpg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_large\Diseases\BrownRust\image229.jpg,Rust (Brown Rust),7
+D:\CropDiseaseProject\sugarcane_large\Diseases\Grassy shoot\image183.jpg,Grassy Shoot,2
+D:\CropDiseaseProject\sugarcane_maharashtra\Yellow\yellow (290).jpeg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_maharashtra\Mosaic\mosaic (403).jpeg,Mosaic / Viral Disease,4
+D:\CropDiseaseProject\sugarcane_large\Diseases\Banded Chlorosis\image152.jpg,Banded Chlorosis,0
+D:\CropDiseaseProject\sugarcane_maharashtra\Healthy\healthy (375).jpeg,Healthy Leaves,3
+D:\CropDiseaseProject\sugarcane_maharashtra\Mosaic\mosaic (47).jpeg,Mosaic / Viral Disease,4
+D:\CropDiseaseProject\sugarcane_large\Diseases\Sett Rot\Sett Rot456.jpg,Sett Rot,8
+D:\CropDiseaseProject\sugarcane_maharashtra\Yellow\yellow (408).jpeg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image103.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_large\Diseases\Grassy shoot\image138.jpg,Grassy Shoot,2
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image063.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_large\Diseases\Sett Rot\Sett Rot029.jpg,Sett Rot,8
+D:\CropDiseaseProject\sugarcane_large\Diseases\BrownRust\image047.jpg,Rust (Brown Rust),7
+D:\CropDiseaseProject\sugarcane_large\Diseases\Viral Disease\Viral Disease361.jpg,Mosaic / Viral Disease,4
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image1458.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_large\Diseases\Banded Chlorosis\image213.jpg,Banded Chlorosis,0
+D:\CropDiseaseProject\sugarcane_maharashtra\Yellow\yellow (429).jpeg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_maharashtra\Yellow\yellow (404).jpeg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_large\Diseases\Yellow Leaf\Yellow Leaf677.jpg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_maharashtra\Rust\rust (295).jpeg,Rust (Brown Rust),7
+D:\CropDiseaseProject\sugarcane_large\Diseases\Yellow Leaf\Yellow Leaf455.jpg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image374.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_large\Diseases\BrownRust\image263.jpg,Rust (Brown Rust),7
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image1682.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_large\Diseases\Viral Disease\Viral Disease283.jpg,Mosaic / Viral Disease,4
+D:\CropDiseaseProject\sugarcane_large\Diseases\Sett Rot\Sett Rot294.jpg,Sett Rot,8
+D:\CropDiseaseProject\sugarcane_large\Diseases\Viral Disease\Viral Disease345.jpg,Mosaic / Viral Disease,4
+D:\CropDiseaseProject\sugarcane_maharashtra\Healthy\healthy (148).jpeg,Healthy Leaves,3
+D:\CropDiseaseProject\sugarcane_large\Diseases\Viral Disease\Viral Disease369.jpg,Mosaic / Viral Disease,4
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image1574.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_maharashtra\Yellow\yellow (167).jpeg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_large\Healthy Leaves\image214.jpg,Healthy Leaves,3
+D:\CropDiseaseProject\sugarcane_large\Diseases\BrownRust\image208.jpg,Rust (Brown Rust),7
+D:\CropDiseaseProject\sugarcane_large\Healthy Leaves\image402.jpg,Healthy Leaves,3
+D:\CropDiseaseProject\sugarcane_large\Diseases\Yellow Leaf\Yellow Leaf818.jpg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image107.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_large\Diseases\Yellow Leaf\Yellow Leaf595.jpg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_maharashtra\Rust\rust (385).jpeg,Rust (Brown Rust),7
+D:\CropDiseaseProject\sugarcane_maharashtra\Yellow\yellow (24).jpeg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_large\Diseases\smut\Smut220.jpg,Smut,9
+D:\CropDiseaseProject\sugarcane_large\Diseases\Viral Disease\Viral Disease017.jpg,Mosaic / Viral Disease,4
+D:\CropDiseaseProject\sugarcane_large\Diseases\Yellow Leaf\Yellow Leaf229.jpg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_maharashtra\Mosaic\mosaic (161).jpeg,Mosaic / Viral Disease,4
+D:\CropDiseaseProject\sugarcane_large\Diseases\Sett Rot\Sett Rot618.jpg,Sett Rot,8
+D:\CropDiseaseProject\sugarcane_large\Diseases\Grassy shoot\image299.jpg,Grassy Shoot,2
+D:\CropDiseaseProject\sugarcane_large\Diseases\smut\Smut085.jpg,Smut,9
+D:\CropDiseaseProject\sugarcane_maharashtra\RedRot\redrot (341).jpeg,Red Rot,6
+D:\CropDiseaseProject\sugarcane_maharashtra\Healthy\healthy (5).jpeg,Healthy Leaves,3
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image422.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_large\Diseases\Yellow Leaf\Yellow Leaf042.jpg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_large\Diseases\Yellow Leaf\Yellow Leaf335.jpg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image993.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_large\Diseases\Sett Rot\Sett Rot465.jpg,Sett Rot,8
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image771.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_large\Diseases\Yellow Leaf\Yellow Leaf892.jpg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_maharashtra\Rust\rust (427).jpeg,Rust (Brown Rust),7
+D:\CropDiseaseProject\sugarcane_maharashtra\RedRot\redrot (184).jpeg,Red Rot,6
+D:\CropDiseaseProject\sugarcane_large\Diseases\smut\Smut297.jpg,Smut,9
+D:\CropDiseaseProject\sugarcane_large\Diseases\Banded Chlorosis\image015.jpg,Banded Chlorosis,0
+D:\CropDiseaseProject\sugarcane_large\Diseases\BrownRust\image049.jpg,Rust (Brown Rust),7
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image677.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_large\Healthy Leaves\image210.jpg,Healthy Leaves,3
+D:\CropDiseaseProject\sugarcane_large\Diseases\Grassy shoot\image269.jpg,Grassy Shoot,2
+D:\CropDiseaseProject\sugarcane_large\Diseases\Yellow Leaf\Yellow Leaf533.jpg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image091.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_maharashtra\Mosaic\mosaic (18).jpeg,Mosaic / Viral Disease,4
+D:\CropDiseaseProject\sugarcane_large\Healthy Leaves\image012.jpg,Healthy Leaves,3
+D:\CropDiseaseProject\sugarcane_maharashtra\Healthy\healthy (372).jpeg,Healthy Leaves,3
+D:\CropDiseaseProject\sugarcane_maharashtra\Mosaic\mosaic (447).jpeg,Mosaic / Viral Disease,4
+D:\CropDiseaseProject\sugarcane_large\Diseases\Banded Chlorosis\image402.jpg,Banded Chlorosis,0
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image095.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_maharashtra\Mosaic\mosaic (211).jpeg,Mosaic / Viral Disease,4
+D:\CropDiseaseProject\sugarcane_maharashtra\Yellow\yellow (484).jpeg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image1360.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image1713.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image445.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_large\Diseases\Sett Rot\Sett Rot589.jpg,Sett Rot,8
+D:\CropDiseaseProject\sugarcane_large\Diseases\BrownRust\image138.jpg,Rust (Brown Rust),7
+D:\CropDiseaseProject\sugarcane_large\Diseases\Sett Rot\Sett Rot322.jpg,Sett Rot,8
+D:\CropDiseaseProject\sugarcane_large\Diseases\Viral Disease\Viral Disease632.jpg,Mosaic / Viral Disease,4
+D:\CropDiseaseProject\sugarcane_large\Diseases\Yellow Leaf\Yellow Leaf900.jpg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_large\Diseases\Viral Disease\Viral Disease507.jpg,Mosaic / Viral Disease,4
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image041.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image854.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image401.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_maharashtra\Mosaic\mosaic (356).jpeg,Mosaic / Viral Disease,4
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image1680.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image1016.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_large\Diseases\BrownRust\image070.jpg,Rust (Brown Rust),7
+D:\CropDiseaseProject\sugarcane_large\Diseases\Grassy shoot\image192.jpg,Grassy Shoot,2
+D:\CropDiseaseProject\sugarcane_large\Diseases\Yellow Leaf\Yellow Leaf1078.jpg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_maharashtra\Mosaic\mosaic (346).jpeg,Mosaic / Viral Disease,4
+D:\CropDiseaseProject\sugarcane_large\Diseases\Viral Disease\Viral Disease419.jpg,Mosaic / Viral Disease,4
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image864.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image518.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_maharashtra\Yellow\yellow (427).jpeg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_large\Diseases\Viral Disease\Viral Disease111.jpg,Mosaic / Viral Disease,4
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image661.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_maharashtra\Healthy\healthy (509).jpeg,Healthy Leaves,3
+D:\CropDiseaseProject\sugarcane_maharashtra\Yellow\yellow (293).jpeg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_large\Diseases\Sett Rot\Sett Rot569.jpg,Sett Rot,8
+D:\CropDiseaseProject\sugarcane_maharashtra\Healthy\healthy (383).jpeg,Healthy Leaves,3
+D:\CropDiseaseProject\sugarcane_large\Diseases\Pokkah Boeng\Pokkah Boeng116.jpg,Pokkah Boeng,5
+D:\CropDiseaseProject\sugarcane_maharashtra\Mosaic\mosaic (154).jpeg,Mosaic / Viral Disease,4
+D:\CropDiseaseProject\sugarcane_large\Diseases\Grassy shoot\image111.jpg,Grassy Shoot,2
+D:\CropDiseaseProject\sugarcane_large\Diseases\Yellow Leaf\Yellow Leaf150.jpg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_large\Diseases\Viral Disease\Viral Disease068.jpg,Mosaic / Viral Disease,4
+D:\CropDiseaseProject\sugarcane_maharashtra\Healthy\healthy (123).jpeg,Healthy Leaves,3
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image776.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_large\Diseases\Yellow Leaf\Yellow Leaf305.jpg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_large\Diseases\Yellow Leaf\Yellow Leaf1073.jpg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_large\Diseases\Sett Rot\Sett Rot561.jpg,Sett Rot,8
+D:\CropDiseaseProject\sugarcane_large\Diseases\Banded Chlorosis\image131.jpg,Banded Chlorosis,0
+D:\CropDiseaseProject\sugarcane_maharashtra\Rust\rust (394).jpeg,Rust (Brown Rust),7
+D:\CropDiseaseProject\sugarcane_large\Diseases\Yellow Leaf\Yellow Leaf676.jpg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_maharashtra\Yellow\yellow (354).jpeg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_maharashtra\RedRot\redrot (204).jpeg,Red Rot,6
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image1383.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image732.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_large\Diseases\Pokkah Boeng\Pokkah Boeng099.jpg,Pokkah Boeng,5
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image1289.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_large\Diseases\Yellow Leaf\Yellow Leaf1042.jpg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_large\Diseases\Yellow Leaf\Yellow Leaf568.jpg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_large\Healthy Leaves\image101.jpg,Healthy Leaves,3
+D:\CropDiseaseProject\sugarcane_large\Diseases\Grassy shoot\image203.jpg,Grassy Shoot,2
+D:\CropDiseaseProject\sugarcane_maharashtra\Rust\rust (402).jpeg,Rust (Brown Rust),7
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image1475.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_large\Diseases\Banded Chlorosis\image050.jpg,Banded Chlorosis,0
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image530.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image450.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image1426.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_maharashtra\RedRot\redrot (450).jpeg,Red Rot,6
+D:\CropDiseaseProject\sugarcane_large\Diseases\Viral Disease\Viral Disease338.jpg,Mosaic / Viral Disease,4
+D:\CropDiseaseProject\sugarcane_large\Diseases\Yellow Leaf\Yellow Leaf977.jpg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_maharashtra\Healthy\healthy (330).jpeg,Healthy Leaves,3
+D:\CropDiseaseProject\sugarcane_large\Diseases\Viral Disease\Viral Disease176.jpg,Mosaic / Viral Disease,4
+D:\CropDiseaseProject\sugarcane_large\Diseases\Yellow Leaf\Yellow Leaf361.jpg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_maharashtra\Yellow\yellow (205).jpeg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_large\Diseases\Sett Rot\Sett Rot303.jpg,Sett Rot,8
+D:\CropDiseaseProject\sugarcane_maharashtra\Mosaic\mosaic (326).jpeg,Mosaic / Viral Disease,4
+D:\CropDiseaseProject\sugarcane_maharashtra\Mosaic\mosaic (94).jpeg,Mosaic / Viral Disease,4
+D:\CropDiseaseProject\sugarcane_large\Diseases\Yellow Leaf\Yellow Leaf777.jpg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_large\Diseases\Yellow Leaf\Yellow Leaf1009.jpg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_maharashtra\Healthy\healthy (311).jpeg,Healthy Leaves,3
+D:\CropDiseaseProject\sugarcane_maharashtra\Mosaic\mosaic (261).jpeg,Mosaic / Viral Disease,4
+D:\CropDiseaseProject\sugarcane_large\Diseases\Grassy shoot\image140.jpg,Grassy Shoot,2
+D:\CropDiseaseProject\sugarcane_maharashtra\Yellow\yellow (80).jpeg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image145.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_large\Diseases\Viral Disease\Viral Disease188.jpg,Mosaic / Viral Disease,4
+D:\CropDiseaseProject\sugarcane_large\Healthy Leaves\image307.jpg,Healthy Leaves,3
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image586.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_large\Diseases\Yellow Leaf\Yellow Leaf1112.jpg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_maharashtra\Yellow\yellow (373).jpeg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_large\Diseases\BrownRust\image262.jpg,Rust (Brown Rust),7
+D:\CropDiseaseProject\sugarcane_maharashtra\Yellow\yellow (282).jpeg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_maharashtra\Rust\rust (492).jpeg,Rust (Brown Rust),7
+D:\CropDiseaseProject\sugarcane_large\Diseases\Sett Rot\Sett Rot645.jpg,Sett Rot,8
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image023.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_large\Diseases\Pokkah Boeng\Pokkah Boeng124.jpg,Pokkah Boeng,5
+D:\CropDiseaseProject\sugarcane_large\Diseases\Sett Rot\Sett Rot499.jpg,Sett Rot,8
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image1614.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_large\Diseases\Sett Rot\Sett Rot403.jpg,Sett Rot,8
+D:\CropDiseaseProject\sugarcane_large\Diseases\BrownRust\image196.jpg,Rust (Brown Rust),7
+D:\CropDiseaseProject\sugarcane_large\Diseases\smut\Smut216.jpg,Smut,9
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image668.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_maharashtra\Yellow\yellow (35).jpeg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image1544.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_large\Diseases\BrownRust\image152.jpg,Rust (Brown Rust),7
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image1259.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_large\Diseases\Yellow Leaf\Yellow Leaf504.jpg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image327.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_large\Diseases\Banded Chlorosis\image417.jpg,Banded Chlorosis,0
+D:\CropDiseaseProject\sugarcane_large\Healthy Leaves\image395.jpg,Healthy Leaves,3
+D:\CropDiseaseProject\sugarcane_large\Diseases\smut\Smut179.jpg,Smut,9
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image1553.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image827.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_large\Diseases\Viral Disease\Viral Disease020.jpg,Mosaic / Viral Disease,4
+D:\CropDiseaseProject\sugarcane_large\Healthy Leaves\image176.jpg,Healthy Leaves,3
+D:\CropDiseaseProject\sugarcane_large\Diseases\Yellow Leaf\Yellow Leaf842.jpg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_large\Diseases\Viral Disease\Viral Disease277.jpg,Mosaic / Viral Disease,4
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image1095.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_large\Diseases\Yellow Leaf\Yellow Leaf869.jpg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_large\Diseases\Sett Rot\Sett Rot460.jpg,Sett Rot,8
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image825.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_large\Diseases\Pokkah Boeng\Pokkah Boeng235.jpg,Pokkah Boeng,5
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image1524.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image1122.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_large\Diseases\Sett Rot\Sett Rot649.jpg,Sett Rot,8
+D:\CropDiseaseProject\sugarcane_maharashtra\Healthy\healthy (466).jpeg,Healthy Leaves,3
+D:\CropDiseaseProject\sugarcane_large\Diseases\Sett Rot\Sett Rot565.jpg,Sett Rot,8
+D:\CropDiseaseProject\sugarcane_large\Diseases\Sett Rot\Sett Rot437.jpg,Sett Rot,8
+D:\CropDiseaseProject\sugarcane_large\Healthy Leaves\image270.jpg,Healthy Leaves,3
+D:\CropDiseaseProject\sugarcane_large\Diseases\Pokkah Boeng\Pokkah Boeng165.jpg,Pokkah Boeng,5
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image096.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_large\Diseases\Sett Rot\Sett Rot522.jpg,Sett Rot,8
+D:\CropDiseaseProject\sugarcane_maharashtra\RedRot\redrot (352).jpeg,Red Rot,6
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image758.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_large\Diseases\Yellow Leaf\Yellow Leaf370.jpg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image631.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_large\Diseases\BrownRust\image150.jpg,Rust (Brown Rust),7
+D:\CropDiseaseProject\sugarcane_large\Diseases\Grassy shoot\image175.jpg,Grassy Shoot,2
+D:\CropDiseaseProject\sugarcane_large\Diseases\Banded Chlorosis\image055.jpg,Banded Chlorosis,0
+D:\CropDiseaseProject\sugarcane_large\Diseases\Sett Rot\Sett Rot466.jpg,Sett Rot,8
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image946.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_large\Diseases\Yellow Leaf\Yellow Leaf868.jpg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_large\Healthy Leaves\image085.jpg,Healthy Leaves,3
+D:\CropDiseaseProject\sugarcane_large\Diseases\Yellow Leaf\Yellow Leaf901.jpg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_large\Diseases\smut\Smut280.jpg,Smut,9
+D:\CropDiseaseProject\sugarcane_maharashtra\Yellow\yellow (214).jpeg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_large\Diseases\Banded Chlorosis\image092.jpg,Banded Chlorosis,0
+D:\CropDiseaseProject\sugarcane_large\Diseases\Yellow Leaf\Yellow Leaf989.jpg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_large\Diseases\Yellow Leaf\Yellow Leaf025.jpg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_large\Diseases\Yellow Leaf\Yellow Leaf995.jpg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_large\Healthy Leaves\image275.jpg,Healthy Leaves,3
+D:\CropDiseaseProject\sugarcane_large\Diseases\Yellow Leaf\Yellow Leaf779.jpg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_large\Diseases\Yellow Leaf\Yellow Leaf718.jpg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_maharashtra\Healthy\healthy (13).jpeg,Healthy Leaves,3
+D:\CropDiseaseProject\sugarcane_maharashtra\Mosaic\mosaic (305).jpeg,Mosaic / Viral Disease,4
+D:\CropDiseaseProject\sugarcane_large\Diseases\Grassy shoot\image042.jpg,Grassy Shoot,2
+D:\CropDiseaseProject\sugarcane_maharashtra\RedRot\redrot (63).jpeg,Red Rot,6
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image710.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_maharashtra\RedRot\redrot (396).jpeg,Red Rot,6
+D:\CropDiseaseProject\sugarcane_large\Diseases\Yellow Leaf\Yellow Leaf1079.jpg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_maharashtra\Healthy\healthy (48).jpeg,Healthy Leaves,3
+D:\CropDiseaseProject\sugarcane_large\Diseases\Grassy shoot\image032.jpg,Grassy Shoot,2
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image1263.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image1601.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_large\Diseases\Yellow Leaf\Yellow Leaf389.jpg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_large\Diseases\Yellow Leaf\Yellow Leaf355.jpg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_large\Diseases\Yellow Leaf\Yellow Leaf998.jpg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image1466.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_large\Diseases\Viral Disease\Viral Disease514.jpg,Mosaic / Viral Disease,4
+D:\CropDiseaseProject\sugarcane_maharashtra\RedRot\redrot (221).jpeg,Red Rot,6
+D:\CropDiseaseProject\sugarcane_maharashtra\Healthy\healthy (33).jpeg,Healthy Leaves,3
+D:\CropDiseaseProject\sugarcane_large\Diseases\Viral Disease\Viral Disease570.jpg,Mosaic / Viral Disease,4
+D:\CropDiseaseProject\sugarcane_large\Diseases\BrownRust\image019.jpg,Rust (Brown Rust),7
+D:\CropDiseaseProject\sugarcane_large\Diseases\Yellow Leaf\Yellow Leaf830.jpg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_large\Diseases\Viral Disease\Viral Disease455.jpg,Mosaic / Viral Disease,4
+D:\CropDiseaseProject\sugarcane_maharashtra\RedRot\redrot (201).jpeg,Red Rot,6
+D:\CropDiseaseProject\sugarcane_large\Diseases\Yellow Leaf\Yellow Leaf878.jpg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_maharashtra\RedRot\redrot (160).jpeg,Red Rot,6
+D:\CropDiseaseProject\sugarcane_large\Diseases\Grassy shoot\image314.jpg,Grassy Shoot,2
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image081.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_large\Diseases\Yellow Leaf\Yellow Leaf091.jpg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_maharashtra\Yellow\yellow (215).jpeg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_large\Diseases\Yellow Leaf\Yellow Leaf848.jpg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_maharashtra\Yellow\yellow (58).jpeg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_large\Diseases\Sett Rot\Sett Rot205.jpg,Sett Rot,8
+D:\CropDiseaseProject\sugarcane_large\Diseases\Yellow Leaf\Yellow Leaf277.jpg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_large\Diseases\Yellow Leaf\Yellow Leaf1010.jpg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_maharashtra\Healthy\healthy (142).jpeg,Healthy Leaves,3
+D:\CropDiseaseProject\sugarcane_large\Diseases\Yellow Leaf\Yellow Leaf586.jpg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_maharashtra\Mosaic\mosaic (182).jpeg,Mosaic / Viral Disease,4
+D:\CropDiseaseProject\sugarcane_maharashtra\Mosaic\mosaic (133).jpeg,Mosaic / Viral Disease,4
+D:\CropDiseaseProject\sugarcane_large\Diseases\Sett Rot\Sett Rot623.jpg,Sett Rot,8
+D:\CropDiseaseProject\sugarcane_large\Diseases\Grassy shoot\image173.jpg,Grassy Shoot,2
+D:\CropDiseaseProject\sugarcane_large\Diseases\Viral Disease\Viral Disease574.jpg,Mosaic / Viral Disease,4
+D:\CropDiseaseProject\sugarcane_large\Diseases\Viral Disease\Viral Disease420.jpg,Mosaic / Viral Disease,4
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image340.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_large\Diseases\Sett Rot\Sett Rot178.jpg,Sett Rot,8
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image062.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image620.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_maharashtra\Yellow\yellow (206).jpeg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_maharashtra\Mosaic\mosaic (44).jpeg,Mosaic / Viral Disease,4
+D:\CropDiseaseProject\sugarcane_large\Diseases\Sett Rot\Sett Rot355.jpg,Sett Rot,8
+D:\CropDiseaseProject\sugarcane_large\Diseases\Yellow Leaf\Yellow Leaf947.jpg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_large\Diseases\Pokkah Boeng\Pokkah Boeng162.jpg,Pokkah Boeng,5
+D:\CropDiseaseProject\sugarcane_maharashtra\Yellow\yellow (347).jpeg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_large\Diseases\Yellow Leaf\Yellow Leaf1132.jpg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image317.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_large\Diseases\Viral Disease\Viral Disease063.jpg,Mosaic / Viral Disease,4
+D:\CropDiseaseProject\sugarcane_maharashtra\Yellow\yellow (403).jpeg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_maharashtra\Mosaic\mosaic (444).jpeg,Mosaic / Viral Disease,4
+D:\CropDiseaseProject\sugarcane_maharashtra\Mosaic\mosaic (275).jpeg,Mosaic / Viral Disease,4
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image286.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image723.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_maharashtra\Mosaic\mosaic (451).jpeg,Mosaic / Viral Disease,4
+D:\CropDiseaseProject\sugarcane_large\Diseases\Yellow Leaf\Yellow Leaf036.jpg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_maharashtra\RedRot\redrot (360).jpeg,Red Rot,6
+D:\CropDiseaseProject\sugarcane_large\Diseases\Yellow Leaf\Yellow Leaf058.jpg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image682.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image985.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image176.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_large\Healthy Leaves\image098.jpg,Healthy Leaves,3
+D:\CropDiseaseProject\sugarcane_large\Diseases\Pokkah Boeng\Pokkah Boeng084.jpg,Pokkah Boeng,5
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image729.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_large\Diseases\Yellow Leaf\Yellow Leaf108.jpg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_maharashtra\Rust\rust (164).jpeg,Rust (Brown Rust),7
+D:\CropDiseaseProject\sugarcane_large\Diseases\Banded Chlorosis\image432.jpg,Banded Chlorosis,0
+D:\CropDiseaseProject\sugarcane_large\Diseases\Sett Rot\Sett Rot283.jpg,Sett Rot,8
+D:\CropDiseaseProject\sugarcane_large\Diseases\BrownRust\image026.jpg,Rust (Brown Rust),7
+D:\CropDiseaseProject\sugarcane_large\Diseases\Sett Rot\Sett Rot014.jpg,Sett Rot,8
+D:\CropDiseaseProject\sugarcane_large\Diseases\smut\Smut258.jpg,Smut,9
+D:\CropDiseaseProject\sugarcane_large\Healthy Leaves\image005.jpg,Healthy Leaves,3
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image892.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_maharashtra\Healthy\healthy (404).jpeg,Healthy Leaves,3
+D:\CropDiseaseProject\sugarcane_maharashtra\Rust\rust (21).jpeg,Rust (Brown Rust),7
+D:\CropDiseaseProject\sugarcane_large\Diseases\Yellow Leaf\Yellow Leaf996.jpg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_large\Diseases\Grassy shoot\image048.jpg,Grassy Shoot,2
+D:\CropDiseaseProject\sugarcane_maharashtra\Healthy\healthy (271).jpeg,Healthy Leaves,3
+D:\CropDiseaseProject\sugarcane_large\Healthy Leaves\image058.jpg,Healthy Leaves,3
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image028.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_large\Diseases\Sett Rot\Sett Rot343.jpg,Sett Rot,8
+D:\CropDiseaseProject\sugarcane_large\Diseases\Sett Rot\Sett Rot233.jpg,Sett Rot,8
+D:\CropDiseaseProject\sugarcane_maharashtra\Healthy\healthy (491).jpeg,Healthy Leaves,3
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image158.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_maharashtra\Rust\rust (364).jpeg,Rust (Brown Rust),7
+D:\CropDiseaseProject\sugarcane_large\Diseases\Banded Chlorosis\image316.jpg,Banded Chlorosis,0
+D:\CropDiseaseProject\sugarcane_large\Diseases\Yellow Leaf\Yellow Leaf222.jpg,Yellow Leaf Disease,10
+D:\CropDiseaseProject\sugarcane_maharashtra\Mosaic\mosaic (302).jpeg,Mosaic / Viral Disease,4
+D:\CropDiseaseProject\sugarcane_maharashtra\Mosaic\mosaic (146).jpeg,Mosaic / Viral Disease,4
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image1214.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_large\Diseases\Pokkah Boeng\Pokkah Boeng152.jpg,Pokkah Boeng,5
+D:\CropDiseaseProject\sugarcane_maharashtra\Mosaic\mosaic (246).jpeg,Mosaic / Viral Disease,4
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image1660.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_large\Diseases\Sett Rot\Sett Rot181.jpg,Sett Rot,8
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image1143.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image1523.jpg,Brown Spot,1
+D:\CropDiseaseProject\sugarcane_large\Diseases\smut\Smut094.jpg,Smut,9
+D:\CropDiseaseProject\sugarcane_large\Healthy Leaves\image026.jpg,Healthy Leaves,3

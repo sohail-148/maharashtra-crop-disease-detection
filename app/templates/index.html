@@ -40,7 +40,7 @@
               {{ crop_icons[exp_id] }}
             </span>
             <span class="crop-card__name">{{ info.crop }}</span>
-            <span class="crop-card__exp">{{ exp_id }}</span>
+            <span class="crop-card__exp">{{ info.display_code }}</span>
             {% if not model_status[exp_id] %}
             <span class="crop-card__badge">Training&hellip;</span>
             {% else %}

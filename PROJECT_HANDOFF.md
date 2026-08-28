@@ -1,9 +1,9 @@
 # Crop Disease Detection Project — Master Handoff Package
 
-**Document Version:** 1.1  
+**Document Version:** 1.2  
 **Project Workspace:** `D:\CropDiseaseProject`  
 **Git Repository:** `https://github.com/sohail-148/maharashtra-crop-disease-detection` (Branch: `main`)  
-**Status as of Handoff:** Completed Phase 1–7 & T1 Baseline, AWS training temporarily paused (account pending), Web App foundation built.
+**Status as of Handoff:** Completed Phase 1–7 & T1 Tomato Baseline (90.23%); Approved 4-Crop Production Architecture locked (Tomato, Grape G1+G2, Chilli C1, Sugarcane S1+S2); Web App updated to 4 crops; 3 remaining training jobs prepared for Kaggle/Colab GPU.
 
 ---
 
@@ -52,9 +52,18 @@ $$\text{Maharashtra-relevant crop focus} + \text{6 independent public/regional d
 
 ---
 
-## 4. Six Independent Experiments & Verified Datasets
+## 4. Datasets, Research Baselines & Approved 4-Crop Architecture
 
-To preserve scientific rigor, datasets representing different disease classes are **never merged**. Six independent experiments share an identical architecture and evaluation methodology.
+### Dual-Layer Strategy
+1. **Research Baseline Layer (6 Independent Experiments):**
+   To evaluate dataset-specific performance and domain properties, the original 6 experiments (T1, G1, G2, C1, S1, S2) and their stratified 70/15/15 splits are permanently preserved in `splits/`.
+2. **Production Deployment Layer (4 Crop-Level Models):**
+   For real-world usability and seamless farmer experience, the web application maps the 4 crops directly to 4 dedicated models:
+   - **🍅 Tomato:** T1 Baseline Model (10 classes | 14,529 images — *Trained & Ready: 90.23% accuracy*)
+   - **🍇 Grape:** Grape Unified G1+G2 Model (7 canonical classes | 6,203 images)
+   - **🌶️ Chilli:** Chilli C1 Model (5 canonical classes | 1,932 images)
+   - **🌾 Sugarcane:** Sugarcane Unified S1+S2 Model (11 canonical classes | 8,926 images)
+   - *Total Deployment Scope:* **33 canonical classes across 31,590 images**. All unified splits are generated with zero cross-dataset image overlap or leakage.
 
 ### Verified Dataset Summary (Total: 31,590 Images)
 
