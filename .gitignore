@@ -13,12 +13,12 @@ ENV/
 # ------------------------------------------------------------
 # Dataset directories (images — never commit to git)
 # ------------------------------------------------------------
-tomato_plantvillage/
-grape_niphad/
-grape_2024/
-chilli_cold/
-sugarcane_maharashtra/
-sugarcane_large/
+/tomato_plantvillage/
+/grape_niphad/
+/grape_2024/
+/chilli_cold/
+/sugarcane_maharashtra/
+/sugarcane_large/
 
 # ------------------------------------------------------------
 # Trained model files (large binaries)
@@ -50,6 +50,7 @@ __pycache__/
 # ------------------------------------------------------------
 .ipynb_checkpoints/
 *.ipynb
+!notebooks/*.ipynb
 
 # ------------------------------------------------------------
 # Logs and output artifacts
