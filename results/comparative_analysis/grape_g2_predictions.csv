@@ -1,0 +1,523 @@
+file_path,true_label,true_index,predicted_label,predicted_index,confidence
+D:\CropDiseaseProject\grape_2024\healthy\healthy380.jpg,Healthy Leaves,4,Healthy Leaves,4,1.0
+D:\CropDiseaseProject\grape_2024\healthy\healthy277.jpg,Healthy Leaves,4,Healthy Leaves,4,0.9997
+D:\CropDiseaseProject\grape_2024\healthy\healthy733.jpg,Healthy Leaves,4,Healthy Leaves,4,0.9999
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight289.jpg,Leaf Blight,5,Leaf Blight,5,0.9873
+D:\CropDiseaseProject\grape_2024\Black rot\black rot219.jpg,Black Rot,1,Black Rot,1,0.9611
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight409.jpg,Leaf Blight,5,Esca (Black Measles),3,0.5933
+D:\CropDiseaseProject\grape_2024\esca\esca363.jpg,Esca (Black Measles),3,Esca (Black Measles),3,0.6321
+D:\CropDiseaseProject\grape_2024\Black rot\black rot188.jpg,Black Rot,1,Black Rot,1,1.0
+D:\CropDiseaseProject\grape_2024\esca\esca575.jpg,Esca (Black Measles),3,Esca (Black Measles),3,0.594
+D:\CropDiseaseProject\grape_2024\esca\esca836.jpg,Esca (Black Measles),3,Esca (Black Measles),3,0.9484
+D:\CropDiseaseProject\grape_2024\healthy\healthy924.jpg,Healthy Leaves,4,Healthy Leaves,4,0.9999
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight586.jpg,Leaf Blight,5,Esca (Black Measles),3,0.7601
+D:\CropDiseaseProject\grape_2024\Black rot\black rot393.jpg,Black Rot,1,Black Rot,1,0.9693
+D:\CropDiseaseProject\grape_2024\healthy\healthy1046.jpg,Healthy Leaves,4,Healthy Leaves,4,1.0
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight117.jpg,Leaf Blight,5,Leaf Blight,5,0.9899
+D:\CropDiseaseProject\grape_2024\healthy\healthy840.jpg,Healthy Leaves,4,Healthy Leaves,4,0.9282
+D:\CropDiseaseProject\grape_2024\healthy\healthy756.jpg,Healthy Leaves,4,Healthy Leaves,4,1.0
+D:\CropDiseaseProject\grape_2024\healthy\healthy698.jpg,Healthy Leaves,4,Healthy Leaves,4,1.0
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight265.jpg,Leaf Blight,5,Leaf Blight,5,0.8378
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight601.jpg,Leaf Blight,5,Esca (Black Measles),3,0.6174
+D:\CropDiseaseProject\grape_2024\Black rot\black rot665.jpg,Black Rot,1,Black Rot,1,0.9997
+D:\CropDiseaseProject\grape_2024\Black rot\black rot772.jpg,Black Rot,1,Black Rot,1,0.9981
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight427.jpg,Leaf Blight,5,Esca (Black Measles),3,0.5991
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight251.jpg,Leaf Blight,5,Leaf Blight,5,0.9931
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight600.jpg,Leaf Blight,5,Esca (Black Measles),3,0.6147
+D:\CropDiseaseProject\grape_2024\healthy\healthy520.jpg,Healthy Leaves,4,Healthy Leaves,4,0.9971
+D:\CropDiseaseProject\grape_2024\esca\esca513.jpg,Esca (Black Measles),3,Esca (Black Measles),3,0.818
+D:\CropDiseaseProject\grape_2024\healthy\healthy497.jpg,Healthy Leaves,4,Healthy Leaves,4,1.0
+D:\CropDiseaseProject\grape_2024\Black rot\black rot260.jpg,Black Rot,1,Black Rot,1,0.9962
+D:\CropDiseaseProject\grape_2024\Black rot\black rot310.jpg,Black Rot,1,Black Rot,1,0.9999
+D:\CropDiseaseProject\grape_2024\healthy\healthy092.jpg,Healthy Leaves,4,Healthy Leaves,4,0.9993
+D:\CropDiseaseProject\grape_2024\esca\esca813.jpg,Esca (Black Measles),3,Esca (Black Measles),3,0.9094
+D:\CropDiseaseProject\grape_2024\healthy\healthy573.jpg,Healthy Leaves,4,Healthy Leaves,4,0.9983
+D:\CropDiseaseProject\grape_2024\Black rot\black rot440.jpg,Black Rot,1,Black Rot,1,0.9991
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight456.jpg,Leaf Blight,5,Esca (Black Measles),3,0.753
+D:\CropDiseaseProject\grape_2024\healthy\healthy627.jpg,Healthy Leaves,4,Healthy Leaves,4,1.0
+D:\CropDiseaseProject\grape_2024\Black rot\black rot522.jpg,Black Rot,1,Black Rot,1,0.9984
+D:\CropDiseaseProject\grape_2024\esca\esca377.jpg,Esca (Black Measles),3,Healthy Leaves,4,0.6302
+D:\CropDiseaseProject\grape_2024\healthy\healthy533.jpg,Healthy Leaves,4,Healthy Leaves,4,0.9995
+D:\CropDiseaseProject\grape_2024\esca\esca013.jpg,Esca (Black Measles),3,Esca (Black Measles),3,0.9954
+D:\CropDiseaseProject\grape_2024\Black rot\black rot542.jpg,Black Rot,1,Black Rot,1,0.9981
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight039.jpg,Leaf Blight,5,Leaf Blight,5,0.9953
+D:\CropDiseaseProject\grape_2024\healthy\healthy606.jpg,Healthy Leaves,4,Healthy Leaves,4,1.0
+D:\CropDiseaseProject\grape_2024\esca\esca056.jpg,Esca (Black Measles),3,Esca (Black Measles),3,0.9508
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight436.jpg,Leaf Blight,5,Esca (Black Measles),3,0.4467
+D:\CropDiseaseProject\grape_2024\Black rot\black rot712.jpg,Black Rot,1,Black Rot,1,0.9545
+D:\CropDiseaseProject\grape_2024\Black rot\black rot663.jpg,Black Rot,1,Black Rot,1,0.9911
+D:\CropDiseaseProject\grape_2024\healthy\healthy392.jpg,Healthy Leaves,4,Healthy Leaves,4,1.0
+D:\CropDiseaseProject\grape_2024\healthy\healthy982.jpg,Healthy Leaves,4,Healthy Leaves,4,1.0
+D:\CropDiseaseProject\grape_2024\healthy\healthy002.jpg,Healthy Leaves,4,Healthy Leaves,4,0.9985
+D:\CropDiseaseProject\grape_2024\healthy\healthy100.jpg,Healthy Leaves,4,Healthy Leaves,4,0.9982
+D:\CropDiseaseProject\grape_2024\Black rot\black rot158.jpg,Black Rot,1,Black Rot,1,0.9993
+D:\CropDiseaseProject\grape_2024\esca\esca871.jpg,Esca (Black Measles),3,Esca (Black Measles),3,0.9991
+D:\CropDiseaseProject\grape_2024\esca\esca277.jpg,Esca (Black Measles),3,Esca (Black Measles),3,0.9771
+D:\CropDiseaseProject\grape_2024\healthy\healthy010.jpg,Healthy Leaves,4,Healthy Leaves,4,0.9912
+D:\CropDiseaseProject\grape_2024\Black rot\black rot634.jpg,Black Rot,1,Black Rot,1,0.9999
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight154.jpg,Leaf Blight,5,Leaf Blight,5,0.9994
+D:\CropDiseaseProject\grape_2024\esca\esca315.jpg,Esca (Black Measles),3,Esca (Black Measles),3,0.7642
+D:\CropDiseaseProject\grape_2024\Black rot\black rot216.jpg,Black Rot,1,Black Rot,1,0.9879
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight040.jpg,Leaf Blight,5,Leaf Blight,5,0.9953
+D:\CropDiseaseProject\grape_2024\Black rot\black rot125.jpg,Black Rot,1,Black Rot,1,0.8168
+D:\CropDiseaseProject\grape_2024\esca\esca623.jpg,Esca (Black Measles),3,Esca (Black Measles),3,0.6014
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight097.jpg,Leaf Blight,5,Leaf Blight,5,0.9893
+D:\CropDiseaseProject\grape_2024\Black rot\black rot683.jpg,Black Rot,1,Black Rot,1,0.8457
+D:\CropDiseaseProject\grape_2024\Black rot\black rot235.jpg,Black Rot,1,Black Rot,1,1.0
+D:\CropDiseaseProject\grape_2024\healthy\healthy242.jpg,Healthy Leaves,4,Healthy Leaves,4,1.0
+D:\CropDiseaseProject\grape_2024\healthy\healthy274.jpg,Healthy Leaves,4,Healthy Leaves,4,0.9983
+D:\CropDiseaseProject\grape_2024\esca\esca410.jpg,Esca (Black Measles),3,Esca (Black Measles),3,0.9181
+D:\CropDiseaseProject\grape_2024\esca\esca582.jpg,Esca (Black Measles),3,Esca (Black Measles),3,0.8169
+D:\CropDiseaseProject\grape_2024\healthy\healthy086.jpg,Healthy Leaves,4,Healthy Leaves,4,0.9978
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight530.jpg,Leaf Blight,5,Esca (Black Measles),3,0.3364
+D:\CropDiseaseProject\grape_2024\esca\esca639.jpg,Esca (Black Measles),3,Leaf Blight,5,0.841
+D:\CropDiseaseProject\grape_2024\healthy\healthy521.jpg,Healthy Leaves,4,Healthy Leaves,4,0.9999
+D:\CropDiseaseProject\grape_2024\esca\esca743.jpg,Esca (Black Measles),3,Esca (Black Measles),3,0.8673
+D:\CropDiseaseProject\grape_2024\healthy\healthy132.jpg,Healthy Leaves,4,Healthy Leaves,4,0.9859
+D:\CropDiseaseProject\grape_2024\Black rot\black rot378.jpg,Black Rot,1,Black Rot,1,0.9737
+D:\CropDiseaseProject\grape_2024\esca\esca543.jpg,Esca (Black Measles),3,Esca (Black Measles),3,0.9938
+D:\CropDiseaseProject\grape_2024\healthy\healthy197.jpg,Healthy Leaves,4,Healthy Leaves,4,0.9966
+D:\CropDiseaseProject\grape_2024\esca\esca485.jpg,Esca (Black Measles),3,Esca (Black Measles),3,0.6416
+D:\CropDiseaseProject\grape_2024\healthy\healthy300.jpg,Healthy Leaves,4,Healthy Leaves,4,0.9723
+D:\CropDiseaseProject\grape_2024\esca\esca095.jpg,Esca (Black Measles),3,Esca (Black Measles),3,0.9503
+D:\CropDiseaseProject\grape_2024\Black rot\black rot271.jpg,Black Rot,1,Black Rot,1,0.9581
+D:\CropDiseaseProject\grape_2024\Black rot\black rot681.jpg,Black Rot,1,Black Rot,1,0.9997
+D:\CropDiseaseProject\grape_2024\Black rot\black rot049.jpg,Black Rot,1,Black Rot,1,0.9996
+D:\CropDiseaseProject\grape_2024\esca\esca503.jpg,Esca (Black Measles),3,Esca (Black Measles),3,0.6721
+D:\CropDiseaseProject\grape_2024\esca\esca466.jpg,Esca (Black Measles),3,Leaf Blight,5,0.7122
+D:\CropDiseaseProject\grape_2024\esca\esca524.jpg,Esca (Black Measles),3,Esca (Black Measles),3,0.8611
+D:\CropDiseaseProject\grape_2024\Black rot\black rot594.jpg,Black Rot,1,Black Rot,1,0.9987
+D:\CropDiseaseProject\grape_2024\healthy\healthy918.jpg,Healthy Leaves,4,Healthy Leaves,4,0.999
+D:\CropDiseaseProject\grape_2024\esca\esca750.jpg,Esca (Black Measles),3,Esca (Black Measles),3,0.843
+D:\CropDiseaseProject\grape_2024\Black rot\black rot404.jpg,Black Rot,1,Black Rot,1,0.9983
+D:\CropDiseaseProject\grape_2024\healthy\healthy158.jpg,Healthy Leaves,4,Healthy Leaves,4,0.9997
+D:\CropDiseaseProject\grape_2024\Black rot\black rot399.jpg,Black Rot,1,Black Rot,1,1.0
+D:\CropDiseaseProject\grape_2024\esca\esca516.jpg,Esca (Black Measles),3,Esca (Black Measles),3,0.8338
+D:\CropDiseaseProject\grape_2024\esca\esca173.jpg,Esca (Black Measles),3,Esca (Black Measles),3,0.9355
+D:\CropDiseaseProject\grape_2024\healthy\healthy222.jpg,Healthy Leaves,4,Healthy Leaves,4,0.999
+D:\CropDiseaseProject\grape_2024\Black rot\black rot607.jpg,Black Rot,1,Black Rot,1,1.0
+D:\CropDiseaseProject\grape_2024\Black rot\black rot248.jpg,Black Rot,1,Black Rot,1,0.5704
+D:\CropDiseaseProject\grape_2024\esca\esca121.jpg,Esca (Black Measles),3,Esca (Black Measles),3,0.91
+D:\CropDiseaseProject\grape_2024\healthy\healthy951.jpg,Healthy Leaves,4,Healthy Leaves,4,0.9844
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight588.jpg,Leaf Blight,5,Leaf Blight,5,0.6041
+D:\CropDiseaseProject\grape_2024\esca\esca001.jpg,Esca (Black Measles),3,Esca (Black Measles),3,0.616
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight343.jpg,Leaf Blight,5,Esca (Black Measles),3,0.7259
+D:\CropDiseaseProject\grape_2024\esca\esca616.jpg,Esca (Black Measles),3,Esca (Black Measles),3,0.6236
+D:\CropDiseaseProject\grape_2024\esca\esca034.jpg,Esca (Black Measles),3,Esca (Black Measles),3,0.6174
+D:\CropDiseaseProject\grape_2024\esca\esca145.jpg,Esca (Black Measles),3,Esca (Black Measles),3,0.9957
+D:\CropDiseaseProject\grape_2024\Black rot\black rot015.jpg,Black Rot,1,Black Rot,1,0.9994
+D:\CropDiseaseProject\grape_2024\esca\esca048.jpg,Esca (Black Measles),3,Leaf Blight,5,0.9598
+D:\CropDiseaseProject\grape_2024\healthy\healthy790.jpg,Healthy Leaves,4,Healthy Leaves,4,1.0
+D:\CropDiseaseProject\grape_2024\Black rot\black rot191.jpg,Black Rot,1,Black Rot,1,0.9973
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight028.jpg,Leaf Blight,5,Leaf Blight,5,0.9738
+D:\CropDiseaseProject\grape_2024\esca\esca223.jpg,Esca (Black Measles),3,Leaf Blight,5,0.8961
+D:\CropDiseaseProject\grape_2024\Black rot\black rot064.jpg,Black Rot,1,Black Rot,1,0.9793
+D:\CropDiseaseProject\grape_2024\Black rot\black rot339.jpg,Black Rot,1,Black Rot,1,0.9969
+D:\CropDiseaseProject\grape_2024\healthy\healthy1024.jpg,Healthy Leaves,4,Healthy Leaves,4,1.0
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight506.jpg,Leaf Blight,5,Esca (Black Measles),3,0.7798
+D:\CropDiseaseProject\grape_2024\esca\esca546.jpg,Esca (Black Measles),3,Esca (Black Measles),3,0.8649
+D:\CropDiseaseProject\grape_2024\healthy\healthy915.jpg,Healthy Leaves,4,Healthy Leaves,4,0.9988
+D:\CropDiseaseProject\grape_2024\Black rot\black rot726.jpg,Black Rot,1,Black Rot,1,0.9965
+D:\CropDiseaseProject\grape_2024\healthy\healthy368.jpg,Healthy Leaves,4,Healthy Leaves,4,1.0
+D:\CropDiseaseProject\grape_2024\healthy\healthy198.jpg,Healthy Leaves,4,Healthy Leaves,4,0.9993
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight313.jpg,Leaf Blight,5,Esca (Black Measles),3,0.5091
+D:\CropDiseaseProject\grape_2024\esca\esca525.jpg,Esca (Black Measles),3,Esca (Black Measles),3,0.9581
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight201.jpg,Leaf Blight,5,Leaf Blight,5,0.9988
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight484.jpg,Leaf Blight,5,Esca (Black Measles),3,0.5073
+D:\CropDiseaseProject\grape_2024\Black rot\black rot706.jpg,Black Rot,1,Black Rot,1,0.9934
+D:\CropDiseaseProject\grape_2024\healthy\healthy406.jpg,Healthy Leaves,4,Healthy Leaves,4,0.9999
+D:\CropDiseaseProject\grape_2024\esca\esca007.jpg,Esca (Black Measles),3,Esca (Black Measles),3,0.9821
+D:\CropDiseaseProject\grape_2024\healthy\healthy1085.jpg,Healthy Leaves,4,Healthy Leaves,4,0.9993
+D:\CropDiseaseProject\grape_2024\healthy\healthy1103.jpg,Healthy Leaves,4,Healthy Leaves,4,1.0
+D:\CropDiseaseProject\grape_2024\healthy\healthy1042.jpg,Healthy Leaves,4,Healthy Leaves,4,0.9878
+D:\CropDiseaseProject\grape_2024\esca\esca866.jpg,Esca (Black Measles),3,Esca (Black Measles),3,0.7835
+D:\CropDiseaseProject\grape_2024\Black rot\black rot752.jpg,Black Rot,1,Black Rot,1,0.9982
+D:\CropDiseaseProject\grape_2024\esca\esca295.jpg,Esca (Black Measles),3,Esca (Black Measles),3,0.9386
+D:\CropDiseaseProject\grape_2024\healthy\healthy647.jpg,Healthy Leaves,4,Healthy Leaves,4,0.9997
+D:\CropDiseaseProject\grape_2024\healthy\healthy583.jpg,Healthy Leaves,4,Healthy Leaves,4,0.8271
+D:\CropDiseaseProject\grape_2024\healthy\healthy757.jpg,Healthy Leaves,4,Healthy Leaves,4,0.9998
+D:\CropDiseaseProject\grape_2024\healthy\healthy1023.jpg,Healthy Leaves,4,Healthy Leaves,4,1.0
+D:\CropDiseaseProject\grape_2024\esca\esca710.jpg,Esca (Black Measles),3,Esca (Black Measles),3,0.913
+D:\CropDiseaseProject\grape_2024\esca\esca004.jpg,Esca (Black Measles),3,Leaf Blight,5,0.7451
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight508.jpg,Leaf Blight,5,Esca (Black Measles),3,0.9905
+D:\CropDiseaseProject\grape_2024\Black rot\black rot693.jpg,Black Rot,1,Black Rot,1,0.9997
+D:\CropDiseaseProject\grape_2024\esca\esca086.jpg,Esca (Black Measles),3,Esca (Black Measles),3,0.8208
+D:\CropDiseaseProject\grape_2024\Black rot\black rot477.jpg,Black Rot,1,Black Rot,1,0.9978
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight514.jpg,Leaf Blight,5,Leaf Blight,5,0.833
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight639.jpg,Leaf Blight,5,Esca (Black Measles),3,0.5345
+D:\CropDiseaseProject\grape_2024\esca\esca757.jpg,Esca (Black Measles),3,Esca (Black Measles),3,0.9734
+D:\CropDiseaseProject\grape_2024\Black rot\black rot564.jpg,Black Rot,1,Black Rot,1,0.8761
+D:\CropDiseaseProject\grape_2024\Black rot\black rot368.jpg,Black Rot,1,Black Rot,1,0.9992
+D:\CropDiseaseProject\grape_2024\healthy\healthy978.jpg,Healthy Leaves,4,Healthy Leaves,4,0.9984
+D:\CropDiseaseProject\grape_2024\Black rot\black rot585.jpg,Black Rot,1,Black Rot,1,0.9969
+D:\CropDiseaseProject\grape_2024\healthy\healthy806.jpg,Healthy Leaves,4,Healthy Leaves,4,0.9926
+D:\CropDiseaseProject\grape_2024\healthy\healthy527.jpg,Healthy Leaves,4,Healthy Leaves,4,0.9973
+D:\CropDiseaseProject\grape_2024\healthy\healthy387.jpg,Healthy Leaves,4,Healthy Leaves,4,1.0
+D:\CropDiseaseProject\grape_2024\Black rot\black rot242.jpg,Black Rot,1,Black Rot,1,0.993
+D:\CropDiseaseProject\grape_2024\Black rot\black rot749.jpg,Black Rot,1,Black Rot,1,0.9982
+D:\CropDiseaseProject\grape_2024\healthy\healthy479.jpg,Healthy Leaves,4,Healthy Leaves,4,1.0
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight468.jpg,Leaf Blight,5,Leaf Blight,5,0.8895
+D:\CropDiseaseProject\grape_2024\esca\esca274.jpg,Esca (Black Measles),3,Esca (Black Measles),3,0.9765
+D:\CropDiseaseProject\grape_2024\healthy\healthy261.jpg,Healthy Leaves,4,Healthy Leaves,4,0.9999
+D:\CropDiseaseProject\grape_2024\healthy\healthy498.jpg,Healthy Leaves,4,Healthy Leaves,4,0.9894
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight143.jpg,Leaf Blight,5,Black Rot,1,0.9995
+D:\CropDiseaseProject\grape_2024\healthy\healthy103.jpg,Healthy Leaves,4,Healthy Leaves,4,0.9985
+D:\CropDiseaseProject\grape_2024\Black rot\black rot804.jpg,Black Rot,1,Black Rot,1,0.4761
+D:\CropDiseaseProject\grape_2024\esca\esca320.jpg,Esca (Black Measles),3,Esca (Black Measles),3,0.9799
+D:\CropDiseaseProject\grape_2024\Black rot\black rot275.jpg,Black Rot,1,Black Rot,1,0.993
+D:\CropDiseaseProject\grape_2024\esca\esca856.jpg,Esca (Black Measles),3,Esca (Black Measles),3,0.7935
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight225.jpg,Leaf Blight,5,Leaf Blight,5,0.9689
+D:\CropDiseaseProject\grape_2024\healthy\healthy822.jpg,Healthy Leaves,4,Healthy Leaves,4,0.9999
+D:\CropDiseaseProject\grape_2024\Black rot\black rot461.jpg,Black Rot,1,Black Rot,1,0.9981
+D:\CropDiseaseProject\grape_2024\healthy\healthy196.jpg,Healthy Leaves,4,Healthy Leaves,4,0.9999
+D:\CropDiseaseProject\grape_2024\healthy\healthy714.jpg,Healthy Leaves,4,Healthy Leaves,4,0.9999
+D:\CropDiseaseProject\grape_2024\Black rot\black rot500.jpg,Black Rot,1,Black Rot,1,0.9967
+D:\CropDiseaseProject\grape_2024\Black rot\black rot802.jpg,Black Rot,1,Black Rot,1,0.4761
+D:\CropDiseaseProject\grape_2024\healthy\healthy339.jpg,Healthy Leaves,4,Healthy Leaves,4,1.0
+D:\CropDiseaseProject\grape_2024\healthy\healthy164.jpg,Healthy Leaves,4,Healthy Leaves,4,0.9998
+D:\CropDiseaseProject\grape_2024\healthy\healthy202.jpg,Healthy Leaves,4,Healthy Leaves,4,0.9949
+D:\CropDiseaseProject\grape_2024\healthy\healthy207.jpg,Healthy Leaves,4,Healthy Leaves,4,0.9999
+D:\CropDiseaseProject\grape_2024\Black rot\black rot454.jpg,Black Rot,1,Black Rot,1,0.9945
+D:\CropDiseaseProject\grape_2024\healthy\healthy801.jpg,Healthy Leaves,4,Healthy Leaves,4,1.0
+D:\CropDiseaseProject\grape_2024\esca\esca349.jpg,Esca (Black Measles),3,Esca (Black Measles),3,0.9339
+D:\CropDiseaseProject\grape_2024\Black rot\black rot386.jpg,Black Rot,1,Black Rot,1,0.9945
+D:\CropDiseaseProject\grape_2024\healthy\healthy1027.jpg,Healthy Leaves,4,Healthy Leaves,4,0.9996
+D:\CropDiseaseProject\grape_2024\healthy\healthy1059.jpg,Healthy Leaves,4,Healthy Leaves,4,0.9983
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight568.jpg,Leaf Blight,5,Esca (Black Measles),3,0.8675
+D:\CropDiseaseProject\grape_2024\healthy\healthy166.jpg,Healthy Leaves,4,Healthy Leaves,4,0.9985
+D:\CropDiseaseProject\grape_2024\Black rot\black rot381.jpg,Black Rot,1,Black Rot,1,0.9983
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight485.jpg,Leaf Blight,5,Esca (Black Measles),3,0.6651
+D:\CropDiseaseProject\grape_2024\healthy\healthy1001.jpg,Healthy Leaves,4,Healthy Leaves,4,1.0
+D:\CropDiseaseProject\grape_2024\healthy\healthy291.jpg,Healthy Leaves,4,Healthy Leaves,4,0.9998
+D:\CropDiseaseProject\grape_2024\Black rot\black rot054.jpg,Black Rot,1,Black Rot,1,0.9996
+D:\CropDiseaseProject\grape_2024\esca\esca666.jpg,Esca (Black Measles),3,Leaf Blight,5,0.5464
+D:\CropDiseaseProject\grape_2024\healthy\healthy752.jpg,Healthy Leaves,4,Healthy Leaves,4,0.9951
+D:\CropDiseaseProject\grape_2024\Black rot\black rot750.jpg,Black Rot,1,Black Rot,1,0.9982
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight164.jpg,Leaf Blight,5,Black Rot,1,0.9924
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight128.jpg,Leaf Blight,5,Leaf Blight,5,0.9958
+D:\CropDiseaseProject\grape_2024\healthy\healthy860.jpg,Healthy Leaves,4,Healthy Leaves,4,1.0
+D:\CropDiseaseProject\grape_2024\Black rot\black rot254.jpg,Black Rot,1,Black Rot,1,1.0
+D:\CropDiseaseProject\grape_2024\Black rot\black rot494.jpg,Black Rot,1,Black Rot,1,0.9985
+D:\CropDiseaseProject\grape_2024\esca\esca692.jpg,Esca (Black Measles),3,Esca (Black Measles),3,0.9304
+D:\CropDiseaseProject\grape_2024\Black rot\black rot389.jpg,Black Rot,1,Black Rot,1,0.9641
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight517.jpg,Leaf Blight,5,Leaf Blight,5,0.5953
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight445.jpg,Leaf Blight,5,Leaf Blight,5,0.7386
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight273.jpg,Leaf Blight,5,Leaf Blight,5,0.9451
+D:\CropDiseaseProject\grape_2024\healthy\healthy127.jpg,Healthy Leaves,4,Healthy Leaves,4,0.9853
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight460.jpg,Leaf Blight,5,Leaf Blight,5,0.7787
+D:\CropDiseaseProject\grape_2024\esca\esca003.jpg,Esca (Black Measles),3,Esca (Black Measles),3,0.9078
+D:\CropDiseaseProject\grape_2024\esca\esca051.jpg,Esca (Black Measles),3,Leaf Blight,5,0.6197
+D:\CropDiseaseProject\grape_2024\healthy\healthy850.jpg,Healthy Leaves,4,Healthy Leaves,4,0.9881
+D:\CropDiseaseProject\grape_2024\healthy\healthy590.jpg,Healthy Leaves,4,Healthy Leaves,4,0.9585
+D:\CropDiseaseProject\grape_2024\esca\esca446.jpg,Esca (Black Measles),3,Esca (Black Measles),3,0.8604
+D:\CropDiseaseProject\grape_2024\Black rot\black rot416.jpg,Black Rot,1,Black Rot,1,0.9997
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight198.jpg,Leaf Blight,5,Leaf Blight,5,0.8107
+D:\CropDiseaseProject\grape_2024\healthy\healthy666.jpg,Healthy Leaves,4,Healthy Leaves,4,0.9996
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight219.jpg,Leaf Blight,5,Black Rot,1,0.6251
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight355.jpg,Leaf Blight,5,Leaf Blight,5,0.6066
+D:\CropDiseaseProject\grape_2024\Black rot\black rot408.jpg,Black Rot,1,Black Rot,1,0.9982
+D:\CropDiseaseProject\grape_2024\esca\esca291.jpg,Esca (Black Measles),3,Esca (Black Measles),3,0.5741
+D:\CropDiseaseProject\grape_2024\healthy\healthy624.jpg,Healthy Leaves,4,Esca (Black Measles),3,0.5051
+D:\CropDiseaseProject\grape_2024\esca\esca802.jpg,Esca (Black Measles),3,Esca (Black Measles),3,0.9931
+D:\CropDiseaseProject\grape_2024\healthy\healthy411.jpg,Healthy Leaves,4,Healthy Leaves,4,0.953
+D:\CropDiseaseProject\grape_2024\healthy\healthy246.jpg,Healthy Leaves,4,Healthy Leaves,4,1.0
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight134.jpg,Leaf Blight,5,Black Rot,1,0.9484
+D:\CropDiseaseProject\grape_2024\Black rot\black rot593.jpg,Black Rot,1,Black Rot,1,0.9987
+D:\CropDiseaseProject\grape_2024\healthy\healthy147.jpg,Healthy Leaves,4,Healthy Leaves,4,1.0
+D:\CropDiseaseProject\grape_2024\esca\esca322.jpg,Esca (Black Measles),3,Esca (Black Measles),3,0.863
+D:\CropDiseaseProject\grape_2024\esca\esca548.jpg,Esca (Black Measles),3,Esca (Black Measles),3,0.9903
+D:\CropDiseaseProject\grape_2024\healthy\healthy682.jpg,Healthy Leaves,4,Healthy Leaves,4,1.0
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight417.jpg,Leaf Blight,5,Esca (Black Measles),3,0.802
+D:\CropDiseaseProject\grape_2024\esca\esca550.jpg,Esca (Black Measles),3,Esca (Black Measles),3,0.993
+D:\CropDiseaseProject\grape_2024\esca\esca741.jpg,Esca (Black Measles),3,Esca (Black Measles),3,0.9791
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight561.jpg,Leaf Blight,5,Healthy Leaves,4,0.5973
+D:\CropDiseaseProject\grape_2024\healthy\healthy911.jpg,Healthy Leaves,4,Healthy Leaves,4,0.9999
+D:\CropDiseaseProject\grape_2024\esca\esca233.jpg,Esca (Black Measles),3,Leaf Blight,5,0.5008
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight104.jpg,Leaf Blight,5,Leaf Blight,5,0.905
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight454.jpg,Leaf Blight,5,Leaf Blight,5,0.5526
+D:\CropDiseaseProject\grape_2024\Black rot\black rot486.jpg,Black Rot,1,Black Rot,1,0.9967
+D:\CropDiseaseProject\grape_2024\healthy\healthy695.jpg,Healthy Leaves,4,Healthy Leaves,4,0.9991
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight243.jpg,Leaf Blight,5,Leaf Blight,5,0.7197
+D:\CropDiseaseProject\grape_2024\esca\esca837.jpg,Esca (Black Measles),3,Esca (Black Measles),3,0.7857
+D:\CropDiseaseProject\grape_2024\Black rot\black rot656.jpg,Black Rot,1,Black Rot,1,1.0
+D:\CropDiseaseProject\grape_2024\healthy\healthy1047.jpg,Healthy Leaves,4,Healthy Leaves,4,0.9978
+D:\CropDiseaseProject\grape_2024\Black rot\black rot073.jpg,Black Rot,1,Black Rot,1,0.9841
+D:\CropDiseaseProject\grape_2024\esca\esca742.jpg,Esca (Black Measles),3,Esca (Black Measles),3,0.8836
+D:\CropDiseaseProject\grape_2024\esca\esca090.jpg,Esca (Black Measles),3,Esca (Black Measles),3,0.8651
+D:\CropDiseaseProject\grape_2024\healthy\healthy604.jpg,Healthy Leaves,4,Healthy Leaves,4,0.9819
+D:\CropDiseaseProject\grape_2024\healthy\healthy193.jpg,Healthy Leaves,4,Healthy Leaves,4,0.998
+D:\CropDiseaseProject\grape_2024\Black rot\black rot100.jpg,Black Rot,1,Black Rot,1,0.9972
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight598.jpg,Leaf Blight,5,Leaf Blight,5,0.6319
+D:\CropDiseaseProject\grape_2024\healthy\healthy507.jpg,Healthy Leaves,4,Healthy Leaves,4,1.0
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight437.jpg,Leaf Blight,5,Leaf Blight,5,0.5996
+D:\CropDiseaseProject\grape_2024\healthy\healthy199.jpg,Healthy Leaves,4,Healthy Leaves,4,0.9999
+D:\CropDiseaseProject\grape_2024\healthy\healthy093.jpg,Healthy Leaves,4,Healthy Leaves,4,0.9963
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight142.jpg,Leaf Blight,5,Black Rot,1,0.9962
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight383.jpg,Leaf Blight,5,Leaf Blight,5,0.7795
+D:\CropDiseaseProject\grape_2024\healthy\healthy1039.jpg,Healthy Leaves,4,Healthy Leaves,4,1.0
+D:\CropDiseaseProject\grape_2024\healthy\healthy764.jpg,Healthy Leaves,4,Healthy Leaves,4,1.0
+D:\CropDiseaseProject\grape_2024\esca\esca259.jpg,Esca (Black Measles),3,Leaf Blight,5,0.7671
+D:\CropDiseaseProject\grape_2024\esca\esca504.jpg,Esca (Black Measles),3,Leaf Blight,5,0.5708
+D:\CropDiseaseProject\grape_2024\esca\esca312.jpg,Esca (Black Measles),3,Esca (Black Measles),3,0.9746
+D:\CropDiseaseProject\grape_2024\esca\esca441.jpg,Esca (Black Measles),3,Black Rot,1,0.978
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight671.jpg,Leaf Blight,5,Black Rot,1,0.391
+D:\CropDiseaseProject\grape_2024\esca\esca650.jpg,Esca (Black Measles),3,Leaf Blight,5,0.6953
+D:\CropDiseaseProject\grape_2024\Black rot\black rot374.jpg,Black Rot,1,Black Rot,1,0.8876
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight207.jpg,Leaf Blight,5,Leaf Blight,5,0.9905
+D:\CropDiseaseProject\grape_2024\healthy\healthy611.jpg,Healthy Leaves,4,Healthy Leaves,4,0.9757
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight109.jpg,Leaf Blight,5,Leaf Blight,5,0.9842
+D:\CropDiseaseProject\grape_2024\healthy\healthy868.jpg,Healthy Leaves,4,Healthy Leaves,4,0.9998
+D:\CropDiseaseProject\grape_2024\healthy\healthy622.jpg,Healthy Leaves,4,Healthy Leaves,4,1.0
+D:\CropDiseaseProject\grape_2024\healthy\healthy664.jpg,Healthy Leaves,4,Healthy Leaves,4,0.9952
+D:\CropDiseaseProject\grape_2024\healthy\healthy203.jpg,Healthy Leaves,4,Healthy Leaves,4,0.9976
+D:\CropDiseaseProject\grape_2024\esca\esca547.jpg,Esca (Black Measles),3,Esca (Black Measles),3,0.7702
+D:\CropDiseaseProject\grape_2024\Black rot\black rot060.jpg,Black Rot,1,Black Rot,1,0.9793
+D:\CropDiseaseProject\grape_2024\healthy\healthy008.jpg,Healthy Leaves,4,Healthy Leaves,4,0.9466
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight547.jpg,Leaf Blight,5,Esca (Black Measles),3,0.7037
+D:\CropDiseaseProject\grape_2024\healthy\healthy528.jpg,Healthy Leaves,4,Healthy Leaves,4,0.991
+D:\CropDiseaseProject\grape_2024\healthy\healthy251.jpg,Healthy Leaves,4,Healthy Leaves,4,0.9997
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight435.jpg,Leaf Blight,5,Esca (Black Measles),3,0.4467
+D:\CropDiseaseProject\grape_2024\esca\esca006.jpg,Esca (Black Measles),3,Esca (Black Measles),3,0.9459
+D:\CropDiseaseProject\grape_2024\esca\esca159.jpg,Esca (Black Measles),3,Esca (Black Measles),3,0.9852
+D:\CropDiseaseProject\grape_2024\esca\esca775.jpg,Esca (Black Measles),3,Esca (Black Measles),3,0.9979
+D:\CropDiseaseProject\grape_2024\esca\esca478.jpg,Esca (Black Measles),3,Esca (Black Measles),3,0.6458
+D:\CropDiseaseProject\grape_2024\Black rot\black rot305.jpg,Black Rot,1,Black Rot,1,0.9967
+D:\CropDiseaseProject\grape_2024\esca\esca645.jpg,Esca (Black Measles),3,Leaf Blight,5,0.8629
+D:\CropDiseaseProject\grape_2024\esca\esca834.jpg,Esca (Black Measles),3,Esca (Black Measles),3,0.9626
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight659.jpg,Leaf Blight,5,Leaf Blight,5,0.7649
+D:\CropDiseaseProject\grape_2024\Black rot\black rot687.jpg,Black Rot,1,Black Rot,1,0.9301
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight353.jpg,Leaf Blight,5,Esca (Black Measles),3,0.9185
+D:\CropDiseaseProject\grape_2024\healthy\healthy265.jpg,Healthy Leaves,4,Healthy Leaves,4,0.9682
+D:\CropDiseaseProject\grape_2024\healthy\healthy1026.jpg,Healthy Leaves,4,Healthy Leaves,4,0.7162
+D:\CropDiseaseProject\grape_2024\Black rot\black rot269.jpg,Black Rot,1,Black Rot,1,0.9581
+D:\CropDiseaseProject\grape_2024\healthy\healthy285.jpg,Healthy Leaves,4,Healthy Leaves,4,1.0
+D:\CropDiseaseProject\grape_2024\Black rot\black rot272.jpg,Black Rot,1,Black Rot,1,0.9581
+D:\CropDiseaseProject\grape_2024\Black rot\black rot498.jpg,Black Rot,1,Black Rot,1,0.9978
+D:\CropDiseaseProject\grape_2024\Black rot\black rot463.jpg,Black Rot,1,Black Rot,1,0.9981
+D:\CropDiseaseProject\grape_2024\Black rot\black rot576.jpg,Black Rot,1,Black Rot,1,0.9992
+D:\CropDiseaseProject\grape_2024\Black rot\black rot243.jpg,Black Rot,1,Black Rot,1,1.0
+D:\CropDiseaseProject\grape_2024\healthy\healthy191.jpg,Healthy Leaves,4,Healthy Leaves,4,1.0
+D:\CropDiseaseProject\grape_2024\esca\esca517.jpg,Esca (Black Measles),3,Leaf Blight,5,0.9716
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight259.jpg,Leaf Blight,5,Leaf Blight,5,0.999
+D:\CropDiseaseProject\grape_2024\esca\esca518.jpg,Esca (Black Measles),3,Esca (Black Measles),3,0.8811
+D:\CropDiseaseProject\grape_2024\healthy\healthy895.jpg,Healthy Leaves,4,Healthy Leaves,4,0.9723
+D:\CropDiseaseProject\grape_2024\healthy\healthy687.jpg,Healthy Leaves,4,Healthy Leaves,4,1.0
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight566.jpg,Leaf Blight,5,Leaf Blight,5,0.5756
+D:\CropDiseaseProject\grape_2024\healthy\healthy391.jpg,Healthy Leaves,4,Healthy Leaves,4,0.9994
+D:\CropDiseaseProject\grape_2024\healthy\healthy403.jpg,Healthy Leaves,4,Healthy Leaves,4,1.0
+D:\CropDiseaseProject\grape_2024\esca\esca026.jpg,Esca (Black Measles),3,Esca (Black Measles),3,0.6369
+D:\CropDiseaseProject\grape_2024\esca\esca326.jpg,Esca (Black Measles),3,Leaf Blight,5,0.6362
+D:\CropDiseaseProject\grape_2024\healthy\healthy195.jpg,Healthy Leaves,4,Healthy Leaves,4,1.0
+D:\CropDiseaseProject\grape_2024\esca\esca809.jpg,Esca (Black Measles),3,Esca (Black Measles),3,0.5657
+D:\CropDiseaseProject\grape_2024\healthy\healthy1098.jpg,Healthy Leaves,4,Healthy Leaves,4,1.0
+D:\CropDiseaseProject\grape_2024\Black rot\black rot719.jpg,Black Rot,1,Black Rot,1,0.9545
+D:\CropDiseaseProject\grape_2024\esca\esca789.jpg,Esca (Black Measles),3,Esca (Black Measles),3,0.4217
+D:\CropDiseaseProject\grape_2024\esca\esca574.jpg,Esca (Black Measles),3,Esca (Black Measles),3,0.9553
+D:\CropDiseaseProject\grape_2024\Black rot\black rot284.jpg,Black Rot,1,Black Rot,1,1.0
+D:\CropDiseaseProject\grape_2024\esca\esca596.jpg,Esca (Black Measles),3,Esca (Black Measles),3,0.8168
+D:\CropDiseaseProject\grape_2024\healthy\healthy899.jpg,Healthy Leaves,4,Healthy Leaves,4,1.0
+D:\CropDiseaseProject\grape_2024\Black rot\black rot792.jpg,Black Rot,1,Black Rot,1,0.992
+D:\CropDiseaseProject\grape_2024\esca\esca738.jpg,Esca (Black Measles),3,Esca (Black Measles),3,0.9868
+D:\CropDiseaseProject\grape_2024\esca\esca726.jpg,Esca (Black Measles),3,Leaf Blight,5,0.7661
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight425.jpg,Leaf Blight,5,Esca (Black Measles),3,0.8781
+D:\CropDiseaseProject\grape_2024\healthy\healthy699.jpg,Healthy Leaves,4,Healthy Leaves,4,0.9996
+D:\CropDiseaseProject\grape_2024\healthy\healthy525.jpg,Healthy Leaves,4,Healthy Leaves,4,0.9999
+D:\CropDiseaseProject\grape_2024\healthy\healthy102.jpg,Healthy Leaves,4,Healthy Leaves,4,0.9994
+D:\CropDiseaseProject\grape_2024\Black rot\black rot149.jpg,Black Rot,1,Black Rot,1,0.9779
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight604.jpg,Leaf Blight,5,Esca (Black Measles),3,0.7166
+D:\CropDiseaseProject\grape_2024\healthy\healthy335.jpg,Healthy Leaves,4,Healthy Leaves,4,0.999
+D:\CropDiseaseProject\grape_2024\esca\esca794.jpg,Esca (Black Measles),3,Esca (Black Measles),3,0.9456
+D:\CropDiseaseProject\grape_2024\healthy\healthy133.jpg,Healthy Leaves,4,Healthy Leaves,4,0.9791
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight626.jpg,Leaf Blight,5,Leaf Blight,5,0.735
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight162.jpg,Leaf Blight,5,Black Rot,1,0.9327
+D:\CropDiseaseProject\grape_2024\healthy\healthy640.jpg,Healthy Leaves,4,Healthy Leaves,4,1.0
+D:\CropDiseaseProject\grape_2024\Black rot\black rot350.jpg,Black Rot,1,Black Rot,1,0.9997
+D:\CropDiseaseProject\grape_2024\healthy\healthy294.jpg,Healthy Leaves,4,Healthy Leaves,4,0.8618
+D:\CropDiseaseProject\grape_2024\esca\esca337.jpg,Esca (Black Measles),3,Esca (Black Measles),3,0.5769
+D:\CropDiseaseProject\grape_2024\Black rot\black rot720.jpg,Black Rot,1,Black Rot,1,0.9545
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight553.jpg,Leaf Blight,5,Esca (Black Measles),3,0.6378
+D:\CropDiseaseProject\grape_2024\esca\esca386.jpg,Esca (Black Measles),3,Esca (Black Measles),3,0.8184
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight610.jpg,Leaf Blight,5,Leaf Blight,5,0.541
+D:\CropDiseaseProject\grape_2024\healthy\healthy420.jpg,Healthy Leaves,4,Healthy Leaves,4,0.9989
+D:\CropDiseaseProject\grape_2024\Black rot\black rot114.jpg,Black Rot,1,Black Rot,1,0.998
+D:\CropDiseaseProject\grape_2024\esca\esca379.jpg,Esca (Black Measles),3,Esca (Black Measles),3,0.5727
+D:\CropDiseaseProject\grape_2024\esca\esca791.jpg,Esca (Black Measles),3,Esca (Black Measles),3,0.6994
+D:\CropDiseaseProject\grape_2024\esca\esca243.jpg,Esca (Black Measles),3,Esca (Black Measles),3,0.9942
+D:\CropDiseaseProject\grape_2024\healthy\healthy178.jpg,Healthy Leaves,4,Healthy Leaves,4,1.0
+D:\CropDiseaseProject\grape_2024\esca\esca411.jpg,Esca (Black Measles),3,Esca (Black Measles),3,0.9631
+D:\CropDiseaseProject\grape_2024\esca\esca329.jpg,Esca (Black Measles),3,Esca (Black Measles),3,0.9352
+D:\CropDiseaseProject\grape_2024\healthy\healthy405.jpg,Healthy Leaves,4,Healthy Leaves,4,1.0
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight082.jpg,Leaf Blight,5,Leaf Blight,5,0.9843
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight165.jpg,Leaf Blight,5,Black Rot,1,0.6135
+D:\CropDiseaseProject\grape_2024\esca\esca047.jpg,Esca (Black Measles),3,Leaf Blight,5,0.5235
+D:\CropDiseaseProject\grape_2024\esca\esca607.jpg,Esca (Black Measles),3,Black Rot,1,0.374
+D:\CropDiseaseProject\grape_2024\esca\esca654.jpg,Esca (Black Measles),3,Esca (Black Measles),3,0.7793
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight381.jpg,Leaf Blight,5,Leaf Blight,5,0.5357
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight047.jpg,Leaf Blight,5,Leaf Blight,5,0.866
+D:\CropDiseaseProject\grape_2024\healthy\healthy997.jpg,Healthy Leaves,4,Healthy Leaves,4,0.9997
+D:\CropDiseaseProject\grape_2024\healthy\healthy066.jpg,Healthy Leaves,4,Healthy Leaves,4,1.0
+D:\CropDiseaseProject\grape_2024\healthy\healthy754.jpg,Healthy Leaves,4,Healthy Leaves,4,1.0
+D:\CropDiseaseProject\grape_2024\Black rot\black rot630.jpg,Black Rot,1,Black Rot,1,0.9999
+D:\CropDiseaseProject\grape_2024\esca\esca643.jpg,Esca (Black Measles),3,Esca (Black Measles),3,0.7847
+D:\CropDiseaseProject\grape_2024\esca\esca321.jpg,Esca (Black Measles),3,Leaf Blight,5,0.8487
+D:\CropDiseaseProject\grape_2024\healthy\healthy814.jpg,Healthy Leaves,4,Healthy Leaves,4,0.9998
+D:\CropDiseaseProject\grape_2024\healthy\healthy106.jpg,Healthy Leaves,4,Healthy Leaves,4,0.9249
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight393.jpg,Leaf Blight,5,Esca (Black Measles),3,0.6525
+D:\CropDiseaseProject\grape_2024\Black rot\black rot565.jpg,Black Rot,1,Black Rot,1,0.992
+D:\CropDiseaseProject\grape_2024\esca\esca078.jpg,Esca (Black Measles),3,Leaf Blight,5,0.867
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight344.jpg,Leaf Blight,5,Esca (Black Measles),3,0.7259
+D:\CropDiseaseProject\grape_2024\esca\esca470.jpg,Esca (Black Measles),3,Leaf Blight,5,0.8317
+D:\CropDiseaseProject\grape_2024\healthy\healthy861.jpg,Healthy Leaves,4,Healthy Leaves,4,0.9952
+D:\CropDiseaseProject\grape_2024\healthy\healthy579.jpg,Healthy Leaves,4,Healthy Leaves,4,0.9988
+D:\CropDiseaseProject\grape_2024\healthy\healthy974.jpg,Healthy Leaves,4,Healthy Leaves,4,1.0
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight450.jpg,Leaf Blight,5,Esca (Black Measles),3,0.8227
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight577.jpg,Leaf Blight,5,Esca (Black Measles),3,0.8022
+D:\CropDiseaseProject\grape_2024\healthy\healthy849.jpg,Healthy Leaves,4,Healthy Leaves,4,1.0
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight457.jpg,Leaf Blight,5,Leaf Blight,5,0.6232
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight364.jpg,Leaf Blight,5,Esca (Black Measles),3,0.5391
+D:\CropDiseaseProject\grape_2024\healthy\healthy1096.jpg,Healthy Leaves,4,Healthy Leaves,4,0.9972
+D:\CropDiseaseProject\grape_2024\esca\esca300.jpg,Esca (Black Measles),3,Leaf Blight,5,0.7305
+D:\CropDiseaseProject\grape_2024\Black rot\black rot380.jpg,Black Rot,1,Black Rot,1,0.9737
+D:\CropDiseaseProject\grape_2024\esca\esca770.jpg,Esca (Black Measles),3,Black Rot,1,0.7618
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight044.jpg,Leaf Blight,5,Leaf Blight,5,0.972
+D:\CropDiseaseProject\grape_2024\esca\esca588.jpg,Esca (Black Measles),3,Esca (Black Measles),3,0.8739
+D:\CropDiseaseProject\grape_2024\healthy\healthy707.jpg,Healthy Leaves,4,Healthy Leaves,4,0.9999
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight041.jpg,Leaf Blight,5,Leaf Blight,5,0.9878
+D:\CropDiseaseProject\grape_2024\Black rot\black rot526.jpg,Black Rot,1,Black Rot,1,0.9984
+D:\CropDiseaseProject\grape_2024\esca\esca350.jpg,Esca (Black Measles),3,Esca (Black Measles),3,0.629
+D:\CropDiseaseProject\grape_2024\healthy\healthy1006.jpg,Healthy Leaves,4,Healthy Leaves,4,0.9984
+D:\CropDiseaseProject\grape_2024\esca\esca646.jpg,Esca (Black Measles),3,Leaf Blight,5,0.8847
+D:\CropDiseaseProject\grape_2024\Black rot\black rot341.jpg,Black Rot,1,Black Rot,1,0.9997
+D:\CropDiseaseProject\grape_2024\healthy\healthy1015.jpg,Healthy Leaves,4,Healthy Leaves,4,0.9993
+D:\CropDiseaseProject\grape_2024\healthy\healthy308.jpg,Healthy Leaves,4,Healthy Leaves,4,0.9963
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight079.jpg,Leaf Blight,5,Black Rot,1,0.7835
+D:\CropDiseaseProject\grape_2024\esca\esca559.jpg,Esca (Black Measles),3,Esca (Black Measles),3,0.7925
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight068.jpg,Leaf Blight,5,Leaf Blight,5,0.9829
+D:\CropDiseaseProject\grape_2024\Black rot\black rot162.jpg,Black Rot,1,Black Rot,1,0.9936
+D:\CropDiseaseProject\grape_2024\Black rot\black rot412.jpg,Black Rot,1,Black Rot,1,0.998
+D:\CropDiseaseProject\grape_2024\esca\esca179.jpg,Esca (Black Measles),3,Leaf Blight,5,0.9156
+D:\CropDiseaseProject\grape_2024\esca\esca097.jpg,Esca (Black Measles),3,Esca (Black Measles),3,0.5256
+D:\CropDiseaseProject\grape_2024\esca\esca554.jpg,Esca (Black Measles),3,Black Rot,1,0.8757
+D:\CropDiseaseProject\grape_2024\Black rot\black rot221.jpg,Black Rot,1,Black Rot,1,0.993
+D:\CropDiseaseProject\grape_2024\esca\esca165.jpg,Esca (Black Measles),3,Esca (Black Measles),3,0.984
+D:\CropDiseaseProject\grape_2024\Black rot\black rot614.jpg,Black Rot,1,Black Rot,1,0.9985
+D:\CropDiseaseProject\grape_2024\Black rot\black rot281.jpg,Black Rot,1,Black Rot,1,1.0
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight227.jpg,Leaf Blight,5,Leaf Blight,5,0.938
+D:\CropDiseaseProject\grape_2024\esca\esca435.jpg,Esca (Black Measles),3,Esca (Black Measles),3,0.9095
+D:\CropDiseaseProject\grape_2024\esca\esca719.jpg,Esca (Black Measles),3,Esca (Black Measles),3,0.5701
+D:\CropDiseaseProject\grape_2024\healthy\healthy920.jpg,Healthy Leaves,4,Healthy Leaves,4,1.0
+D:\CropDiseaseProject\grape_2024\Black rot\black rot563.jpg,Black Rot,1,Black Rot,1,0.9997
+D:\CropDiseaseProject\grape_2024\healthy\healthy407.jpg,Healthy Leaves,4,Healthy Leaves,4,1.0
+D:\CropDiseaseProject\grape_2024\Black rot\black rot315.jpg,Black Rot,1,Black Rot,1,0.997
+D:\CropDiseaseProject\grape_2024\esca\esca376.jpg,Esca (Black Measles),3,Esca (Black Measles),3,0.9097
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight333.jpg,Leaf Blight,5,Healthy Leaves,4,0.4295
+D:\CropDiseaseProject\grape_2024\esca\esca580.jpg,Esca (Black Measles),3,Esca (Black Measles),3,0.9932
+D:\CropDiseaseProject\grape_2024\healthy\healthy892.jpg,Healthy Leaves,4,Healthy Leaves,4,0.9985
+D:\CropDiseaseProject\grape_2024\healthy\healthy563.jpg,Healthy Leaves,4,Healthy Leaves,4,0.9655
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight327.jpg,Leaf Blight,5,Esca (Black Measles),3,0.7232
+D:\CropDiseaseProject\grape_2024\Black rot\black rot602.jpg,Black Rot,1,Black Rot,1,0.8876
+D:\CropDiseaseProject\grape_2024\Black rot\black rot185.jpg,Black Rot,1,Black Rot,1,1.0
+D:\CropDiseaseProject\grape_2024\Black rot\black rot566.jpg,Black Rot,1,Black Rot,1,0.9999
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight442.jpg,Leaf Blight,5,Black Rot,1,0.7283
+D:\CropDiseaseProject\grape_2024\esca\esca849.jpg,Esca (Black Measles),3,Esca (Black Measles),3,0.9114
+D:\CropDiseaseProject\grape_2024\Black rot\black rot148.jpg,Black Rot,1,Black Rot,1,0.9779
+D:\CropDiseaseProject\grape_2024\esca\esca573.jpg,Esca (Black Measles),3,Esca (Black Measles),3,0.6278
+D:\CropDiseaseProject\grape_2024\healthy\healthy684.jpg,Healthy Leaves,4,Healthy Leaves,4,0.9999
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight016.jpg,Leaf Blight,5,Leaf Blight,5,0.9772
+D:\CropDiseaseProject\grape_2024\Black rot\black rot725.jpg,Black Rot,1,Black Rot,1,0.9965
+D:\CropDiseaseProject\grape_2024\healthy\healthy090.jpg,Healthy Leaves,4,Black Rot,1,0.5615
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight629.jpg,Leaf Blight,5,Leaf Blight,5,0.8806
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight593.jpg,Leaf Blight,5,Esca (Black Measles),3,0.6155
+D:\CropDiseaseProject\grape_2024\Black rot\black rot207.jpg,Black Rot,1,Black Rot,1,0.9973
+D:\CropDiseaseProject\grape_2024\esca\esca522.jpg,Esca (Black Measles),3,Esca (Black Measles),3,0.7901
+D:\CropDiseaseProject\grape_2024\healthy\healthy963.jpg,Healthy Leaves,4,Healthy Leaves,4,1.0
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight190.jpg,Leaf Blight,5,Leaf Blight,5,0.9952
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight524.jpg,Leaf Blight,5,Esca (Black Measles),3,0.9046
+D:\CropDiseaseProject\grape_2024\esca\esca748.jpg,Esca (Black Measles),3,Leaf Blight,5,0.8368
+D:\CropDiseaseProject\grape_2024\Black rot\black rot567.jpg,Black Rot,1,Black Rot,1,1.0
+D:\CropDiseaseProject\grape_2024\healthy\healthy566.jpg,Healthy Leaves,4,Healthy Leaves,4,1.0
+D:\CropDiseaseProject\grape_2024\Black rot\black rot558.jpg,Black Rot,1,Black Rot,1,0.9984
+D:\CropDiseaseProject\grape_2024\Black rot\black rot136.jpg,Black Rot,1,Black Rot,1,0.8168
+D:\CropDiseaseProject\grape_2024\healthy\healthy184.jpg,Healthy Leaves,4,Healthy Leaves,4,0.9917
+D:\CropDiseaseProject\grape_2024\esca\esca631.jpg,Esca (Black Measles),3,Leaf Blight,5,0.953
+D:\CropDiseaseProject\grape_2024\esca\esca506.jpg,Esca (Black Measles),3,Leaf Blight,5,0.7568
+D:\CropDiseaseProject\grape_2024\esca\esca257.jpg,Esca (Black Measles),3,Healthy Leaves,4,0.5213
+D:\CropDiseaseProject\grape_2024\healthy\healthy615.jpg,Healthy Leaves,4,Healthy Leaves,4,0.9983
+D:\CropDiseaseProject\grape_2024\esca\esca855.jpg,Esca (Black Measles),3,Esca (Black Measles),3,0.8744
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight098.jpg,Leaf Blight,5,Leaf Blight,5,0.9893
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight395.jpg,Leaf Blight,5,Esca (Black Measles),3,0.7563
+D:\CropDiseaseProject\grape_2024\healthy\healthy119.jpg,Healthy Leaves,4,Healthy Leaves,4,1.0
+D:\CropDiseaseProject\grape_2024\Black rot\black rot130.jpg,Black Rot,1,Black Rot,1,0.8168
+D:\CropDiseaseProject\grape_2024\Black rot\black rot023.jpg,Black Rot,1,Black Rot,1,0.9994
+D:\CropDiseaseProject\grape_2024\esca\esca843.jpg,Esca (Black Measles),3,Esca (Black Measles),3,0.9238
+D:\CropDiseaseProject\grape_2024\Black rot\black rot771.jpg,Black Rot,1,Black Rot,1,0.9981
+D:\CropDiseaseProject\grape_2024\Black rot\black rot319.jpg,Black Rot,1,Black Rot,1,0.997
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight086.jpg,Leaf Blight,5,Leaf Blight,5,0.9997
+D:\CropDiseaseProject\grape_2024\healthy\healthy414.jpg,Healthy Leaves,4,Healthy Leaves,4,1.0
+D:\CropDiseaseProject\grape_2024\healthy\healthy1040.jpg,Healthy Leaves,4,Healthy Leaves,4,0.9999
+D:\CropDiseaseProject\grape_2024\healthy\healthy510.jpg,Healthy Leaves,4,Healthy Leaves,4,0.9991
+D:\CropDiseaseProject\grape_2024\esca\esca877.jpg,Esca (Black Measles),3,Esca (Black Measles),3,0.8968
+D:\CropDiseaseProject\grape_2024\healthy\healthy225.jpg,Healthy Leaves,4,Healthy Leaves,4,1.0
+D:\CropDiseaseProject\grape_2024\healthy\healthy009.jpg,Healthy Leaves,4,Healthy Leaves,4,0.9999
+D:\CropDiseaseProject\grape_2024\esca\esca468.jpg,Esca (Black Measles),3,Esca (Black Measles),3,0.8143
+D:\CropDiseaseProject\grape_2024\healthy\healthy552.jpg,Healthy Leaves,4,Healthy Leaves,4,1.0
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight124.jpg,Leaf Blight,5,Leaf Blight,5,0.9998
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight004.jpg,Leaf Blight,5,Black Rot,1,0.6936
+D:\CropDiseaseProject\grape_2024\Black rot\black rot104.jpg,Black Rot,1,Black Rot,1,0.9714
+D:\CropDiseaseProject\grape_2024\Black rot\black rot478.jpg,Black Rot,1,Black Rot,1,0.9978
+D:\CropDiseaseProject\grape_2024\healthy\healthy320.jpg,Healthy Leaves,4,Healthy Leaves,4,0.4773
+D:\CropDiseaseProject\grape_2024\esca\esca604.jpg,Esca (Black Measles),3,Esca (Black Measles),3,0.7812
+D:\CropDiseaseProject\grape_2024\healthy\healthy761.jpg,Healthy Leaves,4,Healthy Leaves,4,1.0
+D:\CropDiseaseProject\grape_2024\esca\esca028.jpg,Esca (Black Measles),3,Leaf Blight,5,0.6744
+D:\CropDiseaseProject\grape_2024\esca\esca319.jpg,Esca (Black Measles),3,Esca (Black Measles),3,0.9998
+D:\CropDiseaseProject\grape_2024\Black rot\black rot504.jpg,Black Rot,1,Black Rot,1,0.9487
+D:\CropDiseaseProject\grape_2024\healthy\healthy1057.jpg,Healthy Leaves,4,Healthy Leaves,4,0.9991
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight021.jpg,Leaf Blight,5,Black Rot,1,0.9467
+D:\CropDiseaseProject\grape_2024\healthy\healthy317.jpg,Healthy Leaves,4,Healthy Leaves,4,0.9999
+D:\CropDiseaseProject\grape_2024\Black rot\black rot403.jpg,Black Rot,1,Black Rot,1,0.9983
+D:\CropDiseaseProject\grape_2024\Black rot\black rot456.jpg,Black Rot,1,Black Rot,1,0.9641
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight401.jpg,Leaf Blight,5,Leaf Blight,5,0.5129
+D:\CropDiseaseProject\grape_2024\esca\esca448.jpg,Esca (Black Measles),3,Esca (Black Measles),3,0.8728
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight504.jpg,Leaf Blight,5,Leaf Blight,5,0.8259
+D:\CropDiseaseProject\grape_2024\Black rot\black rot199.jpg,Black Rot,1,Black Rot,1,0.999
+D:\CropDiseaseProject\grape_2024\Black rot\black rot762.jpg,Black Rot,1,Black Rot,1,0.9991
+D:\CropDiseaseProject\grape_2024\Black rot\black rot391.jpg,Black Rot,1,Black Rot,1,0.9641
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight211.jpg,Leaf Blight,5,Leaf Blight,5,0.9999
+D:\CropDiseaseProject\grape_2024\healthy\healthy977.jpg,Healthy Leaves,4,Healthy Leaves,4,0.9998
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight075.jpg,Leaf Blight,5,Leaf Blight,5,0.6201
+D:\CropDiseaseProject\grape_2024\Black rot\black rot704.jpg,Black Rot,1,Black Rot,1,0.9959
+D:\CropDiseaseProject\grape_2024\esca\esca172.jpg,Esca (Black Measles),3,Black Rot,1,0.7695
+D:\CropDiseaseProject\grape_2024\healthy\healthy1055.jpg,Healthy Leaves,4,Healthy Leaves,4,0.9999
+D:\CropDiseaseProject\grape_2024\esca\esca724.jpg,Esca (Black Measles),3,Esca (Black Measles),3,0.5061
+D:\CropDiseaseProject\grape_2024\esca\esca756.jpg,Esca (Black Measles),3,Esca (Black Measles),3,0.9767
+D:\CropDiseaseProject\grape_2024\healthy\healthy668.jpg,Healthy Leaves,4,Healthy Leaves,4,0.9969
+D:\CropDiseaseProject\grape_2024\Black rot\black rot332.jpg,Black Rot,1,Black Rot,1,0.9997
+D:\CropDiseaseProject\grape_2024\esca\esca270.jpg,Esca (Black Measles),3,Leaf Blight,5,0.9514
+D:\CropDiseaseProject\grape_2024\healthy\healthy793.jpg,Healthy Leaves,4,Healthy Leaves,4,0.9999
+D:\CropDiseaseProject\grape_2024\Black rot\black rot757.jpg,Black Rot,1,Black Rot,1,1.0
+D:\CropDiseaseProject\grape_2024\Black rot\black rot345.jpg,Black Rot,1,Black Rot,1,0.9992
+D:\CropDiseaseProject\grape_2024\healthy\healthy020.jpg,Healthy Leaves,4,Healthy Leaves,4,1.0
+D:\CropDiseaseProject\grape_2024\Black rot\black rot640.jpg,Black Rot,1,Black Rot,1,0.9999
+D:\CropDiseaseProject\grape_2024\healthy\healthy636.jpg,Healthy Leaves,4,Healthy Leaves,4,0.9986
+D:\CropDiseaseProject\grape_2024\Black rot\black rot394.jpg,Black Rot,1,Black Rot,1,0.9693
+D:\CropDiseaseProject\grape_2024\esca\esca394.jpg,Esca (Black Measles),3,Esca (Black Measles),3,0.8462
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight297.jpg,Leaf Blight,5,Leaf Blight,5,0.7734
+D:\CropDiseaseProject\grape_2024\Black rot\black rot491.jpg,Black Rot,1,Black Rot,1,0.9985
+D:\CropDiseaseProject\grape_2024\healthy\healthy014.jpg,Healthy Leaves,4,Healthy Leaves,4,0.9997
+D:\CropDiseaseProject\grape_2024\esca\esca118.jpg,Esca (Black Measles),3,Esca (Black Measles),3,0.979
+D:\CropDiseaseProject\grape_2024\healthy\healthy929.jpg,Healthy Leaves,4,Healthy Leaves,4,1.0
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight220.jpg,Leaf Blight,5,Black Rot,1,0.6251
+D:\CropDiseaseProject\grape_2024\Black rot\black rot278.jpg,Black Rot,1,Black Rot,1,0.5704
+D:\CropDiseaseProject\grape_2024\healthy\healthy616.jpg,Healthy Leaves,4,Healthy Leaves,4,0.9923
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight213.jpg,Leaf Blight,5,Leaf Blight,5,0.8755
+D:\CropDiseaseProject\grape_2024\esca\esca405.jpg,Esca (Black Measles),3,Esca (Black Measles),3,0.9117
+D:\CropDiseaseProject\grape_2024\healthy\healthy727.jpg,Healthy Leaves,4,Healthy Leaves,4,1.0
+D:\CropDiseaseProject\grape_2024\healthy\healthy1053.jpg,Healthy Leaves,4,Healthy Leaves,4,0.9992
+D:\CropDiseaseProject\grape_2024\Black rot\black rot490.jpg,Black Rot,1,Black Rot,1,0.9992
+D:\CropDiseaseProject\grape_2024\healthy\healthy012.jpg,Healthy Leaves,4,Healthy Leaves,4,0.9998
+D:\CropDiseaseProject\grape_2024\healthy\healthy759.jpg,Healthy Leaves,4,Healthy Leaves,4,0.9724
+D:\CropDiseaseProject\grape_2024\esca\esca684.jpg,Esca (Black Measles),3,Esca (Black Measles),3,0.9054
+D:\CropDiseaseProject\grape_2024\healthy\healthy896.jpg,Healthy Leaves,4,Healthy Leaves,4,0.9841
+D:\CropDiseaseProject\grape_2024\healthy\healthy938.jpg,Healthy Leaves,4,Healthy Leaves,4,1.0
+D:\CropDiseaseProject\grape_2024\Black rot\black rot145.jpg,Black Rot,1,Black Rot,1,0.9779
+D:\CropDiseaseProject\grape_2024\healthy\healthy609.jpg,Healthy Leaves,4,Healthy Leaves,4,1.0

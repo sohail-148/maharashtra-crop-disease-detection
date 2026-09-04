@@ -1,0 +1,12 @@
+class,precision,recall,f1_score,support
+Banded Chlorosis,0.0,0.0,0.0,0
+Brown Spot,0.0,0.0,0.0,0
+Grassy Shoot,0.0,0.0,0.0,0
+Healthy Leaves,0.8256,0.8987,0.8606,79
+Mosaic / Viral Disease,0.8167,0.7101,0.7597,69
+Pokkah Boeng,0.0,0.0,0.0,0
+Red Rot,0.8889,0.7179,0.7943,78
+Rust (Brown Rust),0.8571,0.9351,0.8944,77
+Sett Rot,0.0,0.0,0.0,0
+Smut,0.0,0.0,0.0,0
+Yellow Leaf Disease,0.8382,0.75,0.7917,76

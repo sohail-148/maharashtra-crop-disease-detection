@@ -1,0 +1,2 @@
+dataset_partition,sample_count,accuracy,weighted_precision,weighted_recall,weighted_f1,macro_precision,macro_recall,macro_f1,inference_seconds
+Sugarcane S2 — Large Sugarcane (Public Benchmark),961,0.846,0.8467,0.846,0.8444,0.8285,0.82,0.8216,145.96

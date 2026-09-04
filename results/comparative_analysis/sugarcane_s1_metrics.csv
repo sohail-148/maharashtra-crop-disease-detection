@@ -1,0 +1,2 @@
+dataset_partition,sample_count,accuracy,weighted_precision,weighted_recall,weighted_f1,macro_precision,macro_recall,macro_f1,inference_seconds
+Sugarcane S1 — Maharashtra Sugarcane (Regional),379,0.8047,0.8459,0.8047,0.8216,0.5283,0.5015,0.5126,62.91

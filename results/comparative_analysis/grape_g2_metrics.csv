@@ -1,0 +1,2 @@
+dataset_partition,sample_count,accuracy,weighted_precision,weighted_recall,weighted_f1,macro_precision,macro_recall,macro_f1,inference_seconds
+Grape G2 — Mendeley 2024 (Public Benchmark),522,0.841,0.8328,0.841,0.8343,0.8148,0.8172,0.8129,81.22

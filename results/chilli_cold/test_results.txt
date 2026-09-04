@@ -1,0 +1,25 @@
+Chilli — C1 COLD 2024 (5 Classes) — MobileNetV2 Baseline: Test Set Results
+============================================================
+
+Accuracy  : 63.79%
+Precision : 64.74%  (weighted)
+Recall    : 63.79%  (weighted)
+F1-score  : 62.36%  (weighted)
+
+Epochs trained : 19
+Training time  : 1.4 min
+Total params   : 2,269,509
+Trainable      : 8,965
+
+Per-class report:
+                        precision    recall  f1-score   support
+
+           cerocospora     0.7032    0.8074    0.7517       135
+               healthy     0.4688    0.6000    0.5263        50
+         murda complex     0.5429    0.4634    0.5000        41
+nutritional deficiency     0.7143    0.2500    0.3704        40
+        powdery mildew     0.7727    0.7083    0.7391        24
+
+              accuracy                         0.6379       290
+             macro avg     0.6404    0.5658    0.5775       290
+          weighted avg     0.6474    0.6379    0.6236       290

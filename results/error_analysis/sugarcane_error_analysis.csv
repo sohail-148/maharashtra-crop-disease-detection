@@ -1,0 +1,16 @@
+partition,class,support,error_count,error_rate_pct,precision,recall,f1_score
+S1 (Maharashtra),Healthy Leaves,79,8,10.13,0.8256,0.8987,0.8606
+S1 (Maharashtra),Mosaic / Viral Disease,69,20,28.99,0.8167,0.7101,0.7597
+S1 (Maharashtra),Red Rot,78,22,28.21,0.8889,0.7179,0.7943
+S1 (Maharashtra),Rust (Brown Rust),77,5,6.49,0.8571,0.9351,0.8944
+S1 (Maharashtra),Yellow Leaf Disease,76,19,25.0,0.8382,0.75,0.7917
+S2 (Large),Banded Chlorosis,70,22,31.43,0.8136,0.6857,0.7442
+S2 (Large),Brown Spot,258,43,16.67,0.8776,0.8333,0.8549
+S2 (Large),Grassy Shoot,52,2,3.85,0.9804,0.9615,0.9709
+S2 (Large),Healthy Leaves,65,5,7.69,0.9091,0.9231,0.916
+S2 (Large),Mosaic / Viral Disease,100,15,15.0,0.8019,0.85,0.8252
+S2 (Large),Pokkah Boeng,45,7,15.56,0.717,0.8444,0.7755
+S2 (Large),Rust (Brown Rust),47,18,38.3,0.6304,0.617,0.6237
+S2 (Large),Sett Rot,98,0,0.0,0.9899,1.0,0.9949
+S2 (Large),Smut,47,20,42.55,0.75,0.5745,0.6506
+S2 (Large),Yellow Leaf Disease,179,16,8.94,0.815,0.9106,0.8602

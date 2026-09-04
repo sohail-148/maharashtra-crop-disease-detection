@@ -1,0 +1,8 @@
+,Bacterial Leaf Spot,Black Rot,Downy Mildew,Esca (Black Measles),Healthy Leaves,Leaf Blight,Powdery Mildew
+Bacterial Leaf Spot,13,0,1,0,1,0,0
+Black Rot,0,121,0,0,0,0,0
+Downy Mildew,0,0,140,1,2,0,2
+Esca (Black Measles),0,5,0,100,2,27,0
+Healthy Leaves,0,1,4,1,347,0,1
+Leaf Blight,0,13,0,32,2,54,0
+Powdery Mildew,0,0,2,1,4,0,54

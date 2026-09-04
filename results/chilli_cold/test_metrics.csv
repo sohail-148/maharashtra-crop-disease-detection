@@ -1,0 +1,6 @@
+class,precision,recall,f1_score,support
+cerocospora,0.7032,0.8074,0.7517,135
+healthy,0.4688,0.6,0.5263,50
+murda complex,0.5429,0.4634,0.5,41
+nutritional deficiency,0.7143,0.25,0.3704,40
+powdery mildew,0.7727,0.7083,0.7391,24

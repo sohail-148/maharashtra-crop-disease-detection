@@ -1,0 +1,27 @@
+Grape Unified — G1 Niphad + G2 2024 (7 Classes) — MobileNetV2 Baseline: Test Set Results
+============================================================
+
+Accuracy  : 89.04%
+Precision : 88.63%  (weighted)
+Recall    : 89.04%  (weighted)
+F1-score  : 88.68%  (weighted)
+
+Epochs trained : 30
+Training time  : 6.4 min
+Total params   : 2,272,071
+Trainable      : 11,527
+
+Per-class report:
+                      precision    recall  f1-score   support
+
+ Bacterial Leaf Spot     1.0000    0.8667    0.9286        15
+           Black Rot     0.8643    1.0000    0.9272       121
+        Downy Mildew     0.9524    0.9655    0.9589       145
+Esca (Black Measles)     0.7407    0.7463    0.7435       134
+      Healthy Leaves     0.9693    0.9802    0.9747       354
+         Leaf Blight     0.6667    0.5347    0.5934       101
+      Powdery Mildew     0.9474    0.8852    0.9153        61
+
+            accuracy                         0.8904       931
+           macro avg     0.8772    0.8541    0.8631       931
+        weighted avg     0.8863    0.8904    0.8868       931

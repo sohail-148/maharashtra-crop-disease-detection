@@ -1,0 +1,7 @@
+Crop,Dataset Scope,Total Test Images,Total Errors,Error Rate (%),Accuracy (%),Weighted F1 (%),Weakest Class,Strongest Class,Top Confusion Pair
+Tomato,T1 PlantVillage,2180,213,9.77,90.23,90.18,"Early blight (F1: 71.09%, Err: 37.50%)","Tomato Yellow Leaf Curl (F1: 97.80%, Err: 3.42%)",Spider mites -> Target Spot (19) & Early blight -> Septoria (13)
+Grape (G1),G1 Niphad (Regional),409,19,4.65,95.35,95.56,"Powdery Mildew (F1: 91.53%, Err: 11.48%)","Healthy Leaves (F1: 96.83%, Err: 2.66%)",Healthy Leaves -> Downy Mildew (4) & Powdery -> Healthy (4)
+Grape (G2),G2 Mendeley 2024 (Benchmark),522,83,15.9,84.1,83.43,"Leaf Blight (F1: 59.34%, Err: 46.53%)","Healthy Leaves (F1: 98.20%, Err: 1.20%)",Leaf Blight -> Esca (32) & Esca -> Leaf Blight (27)
+Chilli,C1 COLD 2024,290,105,36.21,63.79,62.36,"Nutritional Deficiency (F1: 37.04%, Err: 75.00%)","Cerocospora (F1: 75.17%, Err: 19.26%)",Nutritional Deficiency -> Cerocospora (19) & Healthy -> Cerocospora (13)
+Sugarcane (S1),S1 Maharashtra (Regional),379,74,19.53,80.47,82.16,"Mosaic / Viral (F1: 75.97%, Err: 28.99%)","Rust (Brown Rust) (F1: 89.44%, Err: 6.49%)",Red Rot -> Brown Spot (10) & Mosaic -> Healthy (9)
+Sugarcane (S2),S2 Large Sugarcane (Benchmark),961,148,15.4,84.6,84.44,"Rust (Brown Rust) (F1: 62.37%, Err: 38.30%) & Smut (F1: 65.06%)","Sett Rot (F1: 99.49%, Err: 0.00%)",Brown Spot -> Yellow Leaf (24) & Smut -> Pokkah Boeng (14)

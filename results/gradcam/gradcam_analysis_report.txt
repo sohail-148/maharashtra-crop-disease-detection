@@ -1,0 +1,241 @@
+=====================================================================================
+PHASE 15: CONSOLIDATED GRAD-CAM EXPLAINABILITY ANALYSIS REPORT
+Maharashtra Crop Disease Detection Project
+=====================================================================================
+
+1. EXECUTIVE SUMMARY
+-------------------------------------------------------------------------------------
+This report details Gradient-weighted Class Activation Mapping (Grad-CAM)
+explainability analysis across the four production MobileNetV2 models
+(Tomato, Grape Unified, Chilli, and Sugarcane Unified). Ten prioritized
+diagnostic error cases were investigated, comparing the convolutional feature
+activations for the model's PREDICTED class against the GROUND TRUTH class.
+
+Methodological Standard:
+  - Model Layer: Terminal spatial MobileNetV2 representation (out_relu, 7x7x1280)
+  - Gradient Target: Unnormalized class logits (pre-softmax) to prevent saturation
+  - Rectification: Positive gradient weighting with ReLU
+  - Resolution: Jet colormap overlaid onto original RGB resolution
+
+2. CASE-BY-CASE DIAGNOSTIC EVALUATIONS
+-------------------------------------------------------------------------------------
+
+CASE 01: Grape — Leaf Blight misclassified as Esca (Black Measles)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  - Source Dataset       : Grape G2 (Mendeley 2024)
+  - Image Path           : D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight508.jpg
+  - Ground Truth Class   : Leaf Blight (Model Probability: 0.90%)
+  - Predicted Class      : Esca (Black Measles) (Model Confidence: 99.05%)
+  - Grad-CAM Layer Used  : mobilenetv2_1.00_224.out_relu (shape: 7x7x1280)
+  - Output Subdirectory  : results/gradcam/grape_g2_leafblight_to_esca/
+
+  Direct Visual Observations:
+    * Predicted Class (Esca (Black Measles)):
+      Peak activation is concentrated on dark interveinal necrotic patches and adjacent chlorotic tissue.
+    * True Class (Leaf Blight):
+      Activation is distributed more weakly and broadly across peripheral leaf blade margins.
+
+  Factual Comparison & Analytical Interpretation:
+    The model attends to prominent central necrotic patches resembling Esca tiger-stripe necrosis rather than peripheral blight halos.
+
+CASE 02: Grape — Esca (Black Measles) misclassified as Leaf Blight
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  - Source Dataset       : Grape G2 (Mendeley 2024)
+  - Image Path           : D:\CropDiseaseProject\grape_2024\esca\esca517.jpg
+  - Ground Truth Class   : Esca (Black Measles) (Model Probability: 2.69%)
+  - Predicted Class      : Leaf Blight (Model Confidence: 97.16%)
+  - Grad-CAM Layer Used  : mobilenetv2_1.00_224.out_relu (shape: 7x7x1280)
+  - Output Subdirectory  : results/gradcam/grape_g2_esca_to_leafblight/
+
+  Direct Visual Observations:
+    * Predicted Class (Leaf Blight):
+      Intense focal activation centers squarely on discrete, isolated circular necrotic spots between primary veins.
+    * True Class (Esca (Black Measles)):
+      Activation attempts to span multiple spots across the leaf surface, but with weaker peak intensity.
+
+  Factual Comparison & Analytical Interpretation:
+    The model triggers on isolated circular necrotic patches (mimicking discrete fungal spots) rather than recognizing the holistic interveinal tiger-stripe distribution.
+
+CASE 03: Sugarcane — Red Rot misclassified as Brown Spot
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  - Source Dataset       : Sugarcane S1 (Maharashtra Regional)
+  - Image Path           : D:\CropDiseaseProject\sugarcane_maharashtra\RedRot\redrot (13).jpeg
+  - Ground Truth Class   : Red Rot (Model Probability: 4.60%)
+  - Predicted Class      : Brown Spot (Model Confidence: 93.19%)
+  - Grad-CAM Layer Used  : mobilenetv2_1.00_224.out_relu (shape: 7x7x1280)
+  - Output Subdirectory  : results/gradcam/sugarcane_s1_redrot_to_brownspot/
+
+  Direct Visual Observations:
+    * Predicted Class (Brown Spot):
+      Strong activation highlights elongated red-brown necrotic streaks along the sugarcane leaf blade.
+    * True Class (Red Rot):
+      True Red Rot map shows faint, diffuse activation over the midrib region with lower peak magnitude.
+
+  Factual Comparison & Analytical Interpretation:
+    The visualization suggests the model interprets elongated foliar necrotic streaks as Brown Spot lesions (introduced primarily from S2) rather than recognizing leaf-phase Red Rot.
+
+CASE 04: Sugarcane — Smut misclassified as Pokkah Boeng
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  - Source Dataset       : Sugarcane S2 (Large Sugarcane)
+  - Image Path           : D:\CropDiseaseProject\sugarcane_large\Diseases\smut\Smut068.jpg
+  - Ground Truth Class   : Smut (Model Probability: 14.08%)
+  - Predicted Class      : Pokkah Boeng (Model Confidence: 85.79%)
+  - Grad-CAM Layer Used  : mobilenetv2_1.00_224.out_relu (shape: 7x7x1280)
+  - Output Subdirectory  : results/gradcam/sugarcane_s2_smut_to_pokkahboeng/
+
+  Direct Visual Observations:
+    * Predicted Class (Pokkah Boeng):
+      Peak activation is localized along the distorted, twisted central apical whorl and spindle leaves.
+    * True Class (Smut):
+      True Smut activation similarly highlights the apical whip region but with slightly lower confidence weighting.
+
+  Factual Comparison & Analytical Interpretation:
+    Both pathologies deform the terminal apical spindle; the model appears to trigger on the macroscopic twisted silhouette characteristic of top-rot (Pokkah Boeng) rather than fungal whip texture.
+
+CASE 05: Sugarcane — Brown Spot misclassified as Yellow Leaf Disease
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  - Source Dataset       : Sugarcane S2 (Large Sugarcane)
+  - Image Path           : D:\CropDiseaseProject\sugarcane_large\Diseases\Brown Spot\image1107.jpg
+  - Ground Truth Class   : Brown Spot (Model Probability: 4.05%)
+  - Predicted Class      : Yellow Leaf Disease (Model Confidence: 95.89%)
+  - Grad-CAM Layer Used  : mobilenetv2_1.00_224.out_relu (shape: 7x7x1280)
+  - Output Subdirectory  : results/gradcam/sugarcane_s2_brownspot_to_yellowleaf/
+
+  Direct Visual Observations:
+    * Predicted Class (Yellow Leaf Disease):
+      Broad activation spans the generalized yellow chlorotic background tissue across the entire leaf lamina.
+    * True Class (Brown Spot):
+      True Brown Spot activation focuses more specifically on dense clusters of individual brown punctate lesions.
+
+  Factual Comparison & Analytical Interpretation:
+    The visualization demonstrates that extensive background senescent yellowing overrides focal fungal spots, causing the model to prioritize chlorosis features associated with Yellow Leaf Disease.
+
+CASE 06: Chilli — nutritional deficiency misclassified as cerocospora
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  - Source Dataset       : Chilli C1 (COLD 2024)
+  - Image Path           : D:\CropDiseaseProject\chilli_cold
+utritional deficiency\IMG_4869.JPG
+  - Ground Truth Class   : nutritional deficiency (Model Probability: 0.49%)
+  - Predicted Class      : cerocospora (Model Confidence: 97.03%)
+  - Grad-CAM Layer Used  : mobilenetv2_1.00_224.out_relu (shape: 7x7x1280)
+  - Output Subdirectory  : results/gradcam/chilli_c1_nutritional_deficiency_to_cercospora/
+
+  Direct Visual Observations:
+    * Predicted Class (cerocospora):
+      Intense activation focuses on high-contrast leaf spots and specular lighting reflections on the leaf margin.
+    * True Class (nutritional deficiency):
+      True Nutritional Deficiency map shows weak, diffuse activation across interveinal yellowing without strong focal points.
+
+  Factual Comparison & Analytical Interpretation:
+    The model strongly aligns with high-contrast circular light/shadow artifacts mimicking Cercospora lesions, driven by the strong majority-class attractor effect in the COLD dataset.
+
+CASE 07: Tomato — Early_blight misclassified as Septoria_leaf_spot
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  - Source Dataset       : Tomato T1 (PlantVillage)
+  - Image Path           : D:\CropDiseaseProject\tomato_plantvillage\Tomato___Early_blight\eabc47ee-5023-476b-9992-53baa566d270___RS_Erly.B 7757.JPG
+  - Ground Truth Class   : Early_blight (Model Probability: 12.53%)
+  - Predicted Class      : Septoria_leaf_spot (Model Confidence: 85.27%)
+  - Grad-CAM Layer Used  : mobilenetv2_1.00_224.out_relu (shape: 7x7x1280)
+  - Output Subdirectory  : results/gradcam/tomato_t1_earlyblight_to_septoria/
+
+  Direct Visual Observations:
+    * Predicted Class (Septoria_leaf_spot):
+      Activation concentrates on multiple small, discrete circular brown lesions distributed across the leaflet.
+    * True Class (Early_blight):
+      True Early Blight activation highlights the larger necrotic patches with expanding yellow borders.
+
+  Factual Comparison & Analytical Interpretation:
+    Because this Early Blight specimen exhibits smaller non-concentric lesions, the convolutional features resolve them as multiple punctate spots typical of Septoria Leaf Spot.
+
+CASE 08: Tomato — Spider_mites Two-spotted_spider_mite misclassified as Target_Spot
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  - Source Dataset       : Tomato T1 (PlantVillage)
+  - Image Path           : D:\CropDiseaseProject\tomato_plantvillage\Tomato___Spider_mites Two-spotted_spider_mite\5a6127d7-01c4-45a4-8ee9-fa61266f57e4___Com.G_SpM_FL 1574.JPG
+  - Ground Truth Class   : Spider_mites Two-spotted_spider_mite (Model Probability: 3.03%)
+  - Predicted Class      : Target_Spot (Model Confidence: 93.22%)
+  - Grad-CAM Layer Used  : mobilenetv2_1.00_224.out_relu (shape: 7x7x1280)
+  - Output Subdirectory  : results/gradcam/tomato_t1_spidermites_to_targetspot/
+
+  Direct Visual Observations:
+    * Predicted Class (Target_Spot):
+      High activation highlights dense speckling clusters where mite feeding punctures coalesce into dark spots.
+    * True Class (Spider_mites Two-spotted_spider_mite):
+      True Spider Mites activation covers a broader, diffuse zone across the stippled upper leaf surface.
+
+  Factual Comparison & Analytical Interpretation:
+    Aggregated feeding stippling creates localized micro-contrast zones that the feature extractor interprets as pinpoint fungal Target Spots rather than arthropod damage.
+
+CASE 09: Grape — Bacterial Leaf Spot misclassified as Downy Mildew
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  - Source Dataset       : Grape G1 (Niphad, Nashik)
+  - Image Path           : D:\CropDiseaseProject\grape_niphad\Bacterial Leaf Spot\Bacterial Leaf Spot_85.png
+  - Ground Truth Class   : Bacterial Leaf Spot (Model Probability: 0.81%)
+  - Predicted Class      : Downy Mildew (Model Confidence: 98.32%)
+  - Grad-CAM Layer Used  : mobilenetv2_1.00_224.out_relu (shape: 7x7x1280)
+  - Output Subdirectory  : results/gradcam/grape_g1_bacterialspot_to_downymildew/
+
+  Direct Visual Observations:
+    * Predicted Class (Downy Mildew):
+      Activation heavily concentrates on water-soaked yellowish-brown chlorotic spots on the upper leaf surface.
+    * True Class (Bacterial Leaf Spot):
+      True Bacterial Leaf Spot activation is more restricted to dark angular veins.
+
+  Factual Comparison & Analytical Interpretation:
+    Under field illumination, early bacterial water-soaked lesions exhibit translucent chlorotic halos that closely resemble the 'oil-spot' stage of Downy Mildew.
+
+CASE 10: Sugarcane — Mosaic / Viral Disease misclassified as Healthy Leaves
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  - Source Dataset       : Sugarcane S1 (Maharashtra Regional)
+  - Image Path           : D:\CropDiseaseProject\sugarcane_maharashtra\Mosaic\mosaic (228).jpeg
+  - Ground Truth Class   : Mosaic / Viral Disease (Model Probability: 2.94%)
+  - Predicted Class      : Healthy Leaves (Model Confidence: 97.02%)
+  - Grad-CAM Layer Used  : mobilenetv2_1.00_224.out_relu (shape: 7x7x1280)
+  - Output Subdirectory  : results/gradcam/sugarcane_s1_mosaic_to_healthy/
+
+  Direct Visual Observations:
+    * Predicted Class (Healthy Leaves):
+      Activation broadly covers uniform green leaf blade regions, completely ignoring subtle light/dark mottling.
+    * True Class (Mosaic / Viral Disease):
+      True Mosaic map shows weak, fragmented activations without distinct focal gradients.
+
+  Factual Comparison & Analytical Interpretation:
+    Because viral mosaic lacks dark necrotic tissue or discrete fungal lesions, the subtle chlorotic banding fails to generate sufficient gradient response and is absorbed into the Healthy class.
+
+=====================================================================================
+3. CROSS-CROP SUMMARY & THESIS IMPLICATIONS
+-------------------------------------------------------------------------------------
+1. Consistency Across Models:
+   The Grad-CAM pipeline functioned with 100% technical consistency across all four
+   production architectures (Tomato, Grape, Chilli, Sugarcane). Every model cleanly
+   produced non-null, finite gradients and well-formed 7x7 spatial heatmaps.
+
+2. Foliar vs. Background Attention:
+   In 9 out of the 10 diagnostic cases, model activations concentrated squarely on
+   actual vegetative leaf tissue, lesion borders, or structural shoot deformations,
+   confirming that the models learn biologically relevant foliar patterns rather
+   than memorizing photographic backgrounds. The sole partial exception was Chilli C1
+   (Case 6), where specular sunlight glare and soil specks triggered false spot features.
+
+3. Clearest Mismatches Between Expected Pathology and Model Attention:
+   - Grape G2 (Case 1 & 2): The model fixates on local necrotic lesion color rather
+     than global interveinal tiger-stripe distribution, driving Esca <-> Leaf Blight confusion.
+   - Sugarcane S2 (Case 5): Severe background leaf chlorosis completely overrides
+     focal necrotic Brown Spot lesions, pulling the prediction into Yellow Leaf Disease.
+   - Sugarcane S1 (Case 10): Non-necrotic viral mosaic lacks sharp spatial contrast,
+     causing the gradient activations to wash out and default to Healthy.
+   - Tomato T1 (Case 8): Microscopic feeding punctures from spider mites aggregate
+     into dark contrast patches that trigger fungal Target Spot activations.
+
+4. Core Recommendations for Thesis Discussion:
+   - Visual evidence confirms that MobileNetV2 operates primarily as a texture/color
+     detector at 224x224 input resolution.
+   - Diseases sharing similar necrotic pigmentation (e.g. Esca vs Leaf Blight, Red Rot vs
+     Brown Spot) require multi-scale or high-resolution architectural attention to distinguish
+     macro-distribution from micro-texture.
+   - For diffuse whole-leaf conditions (nutritional chlorosis, viral mosaic, leaf curl),
+     attention maps demonstrate that standard CNN classification heads lack focal anchors,
+     empirically validating the need for agronomic thresholds or dual-stream networks.
+
+=====================================================================================
+END OF CONSOLIDATED GRAD-CAM REPORT
+=====================================================================================

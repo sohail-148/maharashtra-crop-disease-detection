@@ -1,0 +1,9 @@
+partition,class,support,error_count,error_rate_pct,precision,recall,f1_score
+G1 (Niphad),Bacterial Leaf Spot,15,2,13.33,1.0,0.8667,0.9286
+G1 (Niphad),Downy Mildew,145,5,3.45,0.9524,0.9655,0.9589
+G1 (Niphad),Healthy Leaves,188,5,2.66,0.9632,0.9734,0.9683
+G1 (Niphad),Powdery Mildew,61,7,11.48,0.9474,0.8852,0.9153
+G2 (2024),Black Rot,121,0,0.0,0.8643,1.0,0.9272
+G2 (2024),Esca (Black Measles),134,34,25.37,0.7519,0.7463,0.7491
+G2 (2024),Healthy Leaves,166,2,1.2,0.9762,0.988,0.982
+G2 (2024),Leaf Blight,101,47,46.53,0.6667,0.5347,0.5934

@@ -1,0 +1,8 @@
+class,precision,recall,f1_score,support
+Bacterial Leaf Spot,1.0,0.8667,0.9286,15
+Black Rot,0.0,0.0,0.0,0
+Downy Mildew,0.9524,0.9655,0.9589,145
+Esca (Black Measles),0.0,0.0,0.0,0
+Healthy Leaves,0.9632,0.9734,0.9683,188
+Leaf Blight,0.0,0.0,0.0,0
+Powdery Mildew,0.9474,0.8852,0.9153,61

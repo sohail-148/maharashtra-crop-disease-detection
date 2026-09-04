@@ -1,0 +1,6 @@
+crop,class,support,error_count,error_rate_pct,precision,recall,f1_score
+Chilli (C1 COLD),nutritional deficiency,40,30,75.0,0.7143,0.25,0.3704
+Chilli (C1 COLD),murda complex,41,22,53.66,0.5429,0.4634,0.5
+Chilli (C1 COLD),healthy,50,20,40.0,0.4688,0.6,0.5263
+Chilli (C1 COLD),powdery mildew,24,7,29.17,0.7727,0.7083,0.7391
+Chilli (C1 COLD),cerocospora,135,26,19.26,0.7032,0.8074,0.7517

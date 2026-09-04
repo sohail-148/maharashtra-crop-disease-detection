@@ -1,0 +1,98 @@
+================================================================================
+CROSS-DATASET & COMPARATIVE EVALUATION REPORT
+Maharashtra Crop Disease Detection Project — Phase 9 / 10
+================================================================================
+
+1. EXECUTIVE OVERVIEW
+--------------------------------------------------------------------------------
+This report evaluates the performance of the locked production MobileNetV2
+transfer-learning models across both pooled unified test sets and their
+constituent regional vs public benchmark dataset partitions:
+  - Grape Unified Model (7 classes) on G1 (Niphad, Nashik) vs G2 (Mendeley 2024)
+  - Sugarcane Unified Model (11 classes) on S1 (Maharashtra) vs S2 (Large Sugarcane)
+  - Baseline models: Tomato (T1 PlantVillage) and Chilli (C1 COLD 2024)
+
+2. MASTER COMPARATIVE PERFORMANCE TABLE
+--------------------------------------------------------------------------------
+Crop        Dataset / Partition                    Samples      Acc  Precision   Recall  F1-Score
+-----------------------------------------------------------------------------------------------
+Tomato      T1 PlantVillage (Full Baseline)           2180   90.23%     90.40%   90.23%    90.18%
+Grape       Unified Full Test Set (G1+G2)              931   89.04%     88.63%   89.04%    88.68%
+Grape       G1 Niphad, Nashik (Regional)               409   95.35%     95.83%   95.35%    95.56%
+Grape       G2 Mendeley 2024 (Benchmark)               522   84.10%     83.28%   84.10%    83.43%
+Chilli      C1 COLD 2024 (Full Baseline)               290   63.79%     64.74%   63.79%    62.36%
+Sugarcane   Unified Full Test Set (S1+S2)             1340   83.43%     83.47%   83.43%    83.29%
+Sugarcane   S1 Maharashtra Sugarcane (Regional)        379   80.47%     84.59%   80.47%    82.16%
+Sugarcane   S2 Large Sugarcane (Benchmark)             961   84.60%     84.67%   84.60%    84.44%
+-----------------------------------------------------------------------------------------------
+
+3. GRAPE UNIFIED MODEL: G1 (NIPHAD) VS G2 (2024) ANALYSIS
+--------------------------------------------------------------------------------
+  - G1 Niphad (Maharashtra) : Accuracy = 95.35%, Weighted F1 = 95.56% (N = 409)
+  - G2 2024 (Public)        : Accuracy = 84.10%, Weighted F1 = 83.43% (N = 522)
+  - Observed Discrepancy    : G1 Accuracy is 11.25% higher than G2
+                              G1 Weighted F1 is 12.13% higher than G2
+
+  Per-Class Metrics in G1 (Niphad Test Set):
+              class  precision  recall  f1_score  support
+Bacterial Leaf Spot     1.0000  0.8667    0.9286       15
+       Downy Mildew     0.9524  0.9655    0.9589      145
+     Healthy Leaves     0.9632  0.9734    0.9683      188
+     Powdery Mildew     0.9474  0.8852    0.9153       61
+
+  Per-Class Metrics in G2 (Grape 2024 Test Set):
+               class  precision  recall  f1_score  support
+           Black Rot     0.8643  1.0000    0.9272      121
+Esca (Black Measles)     0.7519  0.7463    0.7491      134
+      Healthy Leaves     0.9762  0.9880    0.9820      166
+         Leaf Blight     0.6667  0.5347    0.5934      101
+
+4. SUGARCANE UNIFIED MODEL: S1 (MAHARASHTRA) VS S2 (LARGE) ANALYSIS
+--------------------------------------------------------------------------------
+  - S1 Maharashtra (Regional) : Accuracy = 80.47%, Weighted F1 = 82.16% (N = 379)
+  - S2 Large (Public)         : Accuracy = 84.60%, Weighted F1 = 84.44% (N = 961)
+  - Observed Discrepancy      : S1 Accuracy is 4.12% lower than S2
+                                S1 Weighted F1 is 2.28% lower than S2
+
+  Per-Class Metrics in S1 (Maharashtra Sugarcane Test Set):
+                 class  precision  recall  f1_score  support
+        Healthy Leaves     0.8256  0.8987    0.8606       79
+Mosaic / Viral Disease     0.8167  0.7101    0.7597       69
+               Red Rot     0.8889  0.7179    0.7943       78
+     Rust (Brown Rust)     0.8571  0.9351    0.8944       77
+   Yellow Leaf Disease     0.8382  0.7500    0.7917       76
+
+  Per-Class Metrics in S2 (Large Sugarcane Test Set):
+                 class  precision  recall  f1_score  support
+      Banded Chlorosis     0.8136  0.6857    0.7442       70
+            Brown Spot     0.8776  0.8333    0.8549      258
+          Grassy Shoot     0.9804  0.9615    0.9709       52
+        Healthy Leaves     0.9091  0.9231    0.9160       65
+Mosaic / Viral Disease     0.8019  0.8500    0.8252      100
+          Pokkah Boeng     0.7170  0.8444    0.7755       45
+     Rust (Brown Rust)     0.6304  0.6170    0.6237       47
+              Sett Rot     0.9899  1.0000    0.9949       98
+                  Smut     0.7500  0.5745    0.6506       47
+   Yellow Leaf Disease     0.8150  0.9106    0.8602      179
+
+5. RESEARCH FINDINGS & KEY OBSERVATIONS
+--------------------------------------------------------------------------------
+1. Grape Discrepancies:
+   - G1 (Niphad) achieves high accuracy driven by well-separated Downy Mildew and Healthy Leaves.
+   - G2 (2024) performance is tempered by Leaf Blight (F1 ~0.59) and Esca (F1 ~0.74), which exhibit
+     similar brown necrotic foliage lesions causing mutual confusion.
+
+2. Sugarcane Discrepancies:
+   - S1 (Maharashtra) and S2 (Large) both demonstrate strong alignment on shared classes (Healthy,
+     Mosaic, Yellow Leaf).
+   - In S2, distinctive physical pathologies such as Sett Rot (F1 0.99) and Grassy Shoot (F1 0.96)
+     achieve near-perfect classification, whereas Smut (F1 0.65) shows the highest error rate.
+
+3. Methodological Note:
+   - Differences in observed performance between G1/G2 and S1/S2 represent observed source-domain
+     and disease-taxonomy characteristics rather than conclusive domain shifts, providing
+     empirically defensible insights for Maharashtra agricultural deployment.
+
+================================================================================
+END OF REPORT
+================================================================================

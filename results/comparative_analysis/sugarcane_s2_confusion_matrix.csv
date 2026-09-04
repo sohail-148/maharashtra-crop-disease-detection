@@ -1,0 +1,12 @@
+,Banded Chlorosis,Brown Spot,Grassy Shoot,Healthy Leaves,Mosaic / Viral Disease,Pokkah Boeng,Red Rot,Rust (Brown Rust),Sett Rot,Smut,Yellow Leaf Disease
+Banded Chlorosis,48,7,0,1,4,0,0,6,0,0,4
+Brown Spot,5,215,0,3,6,1,0,4,0,0,24
+Grassy Shoot,0,1,50,0,0,0,0,0,1,0,0
+Healthy Leaves,1,2,0,60,1,0,0,1,0,0,0
+Mosaic / Viral Disease,0,5,0,2,85,0,0,2,0,3,3
+Pokkah Boeng,0,1,0,0,0,38,0,0,0,6,0
+Red Rot,0,0,0,0,0,0,0,0,0,0,0
+Rust (Brown Rust),5,5,0,0,4,0,0,29,0,0,4
+Sett Rot,0,0,0,0,0,0,0,0,98,0,0
+Smut,0,1,1,0,2,14,0,0,0,27,2
+Yellow Leaf Disease,0,8,0,0,4,0,0,4,0,0,163

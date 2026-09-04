@@ -1,0 +1,31 @@
+Sugarcane Unified — S1 Maharashtra + S2 Large (11 Classes) — MobileNetV2 Baseline: Test Set Results
+============================================================
+
+Accuracy  : 83.43%
+Precision : 83.47%  (weighted)
+Recall    : 83.43%  (weighted)
+F1-score  : 83.29%  (weighted)
+
+Epochs trained : 30
+Training time  : 9.0 min
+Total params   : 2,277,195
+Trainable      : 16,651
+
+Per-class report:
+                        precision    recall  f1-score   support
+
+      Banded Chlorosis     0.8136    0.6857    0.7442        70
+            Brown Spot     0.8238    0.8333    0.8285       258
+          Grassy Shoot     0.9615    0.9615    0.9615        52
+        Healthy Leaves     0.8618    0.9097    0.8851       144
+Mosaic / Viral Disease     0.8072    0.7929    0.8000       169
+          Pokkah Boeng     0.7170    0.8444    0.7755        45
+               Red Rot     0.8889    0.7179    0.7943        78
+     Rust (Brown Rust)     0.7769    0.8145    0.7953       124
+              Sett Rot     0.9800    1.0000    0.9899        98
+                  Smut     0.7500    0.5745    0.6506        47
+   Yellow Leaf Disease     0.8209    0.8627    0.8413       255
+
+              accuracy                         0.8343      1340
+             macro avg     0.8365    0.8179    0.8242      1340
+          weighted avg     0.8347    0.8343    0.8329      1340
