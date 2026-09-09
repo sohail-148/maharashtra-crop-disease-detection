@@ -1,0 +1,16 @@
+model,class_index,canonical_class,display_name,dataset_status,support,precision,recall,f1_score
+Baseline (Frozen),0,cerocospora,Cercospora Leaf Spot,REPRESENTED,62,0.5373,0.5806,0.5581
+Candidate B (Fine-Tune+Aug),0,cerocospora,Cercospora Leaf Spot,REPRESENTED,62,0.7667,0.371,0.5
+Candidate D (Multi-Source Field),0,cerocospora,Cercospora Leaf Spot,REPRESENTED,62,0.7879,0.4194,0.5474
+Baseline (Frozen),1,healthy,Healthy Leaves,REPRESENTED,53,0.5,0.2642,0.3457
+Candidate B (Fine-Tune+Aug),1,healthy,Healthy Leaves,REPRESENTED,53,0.575,0.434,0.4946
+Candidate D (Multi-Source Field),1,healthy,Healthy Leaves,REPRESENTED,53,0.7027,0.4906,0.5778
+Baseline (Frozen),2,murda complex,Murda Complex (Not Represented),NOT REPRESENTED IN THIS VALIDATION DATASET,0,0.0,0.0,0.0
+Candidate B (Fine-Tune+Aug),2,murda complex,Murda Complex (Not Represented),NOT REPRESENTED IN THIS VALIDATION DATASET,0,0.0,0.0,0.0
+Candidate D (Multi-Source Field),2,murda complex,Murda Complex (Not Represented),NOT REPRESENTED IN THIS VALIDATION DATASET,0,0.0,0.0,0.0
+Baseline (Frozen),3,nutritional deficiency,Nutritional Deficiency (Not Represented),NOT REPRESENTED IN THIS VALIDATION DATASET,0,0.0,0.0,0.0
+Candidate B (Fine-Tune+Aug),3,nutritional deficiency,Nutritional Deficiency (Not Represented),NOT REPRESENTED IN THIS VALIDATION DATASET,0,0.0,0.0,0.0
+Candidate D (Multi-Source Field),3,nutritional deficiency,Nutritional Deficiency (Not Represented),NOT REPRESENTED IN THIS VALIDATION DATASET,0,0.0,0.0,0.0
+Baseline (Frozen),4,powdery mildew,Powdery Mildew (Not Represented),NOT REPRESENTED IN THIS VALIDATION DATASET,0,0.0,0.0,0.0
+Candidate B (Fine-Tune+Aug),4,powdery mildew,Powdery Mildew (Not Represented),NOT REPRESENTED IN THIS VALIDATION DATASET,0,0.0,0.0,0.0
+Candidate D (Multi-Source Field),4,powdery mildew,Powdery Mildew (Not Represented),NOT REPRESENTED IN THIS VALIDATION DATASET,0,0.0,0.0,0.0

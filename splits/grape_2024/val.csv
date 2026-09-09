@@ -1,0 +1,523 @@
+file_path,class_label,class_index
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight272.jpg,leaf blight,3
+D:\CropDiseaseProject\grape_2024\healthy\healthy113.jpg,healthy,2
+D:\CropDiseaseProject\grape_2024\healthy\healthy799.jpg,healthy,2
+D:\CropDiseaseProject\grape_2024\healthy\healthy724.jpg,healthy,2
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight611.jpg,leaf blight,3
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight619.jpg,leaf blight,3
+D:\CropDiseaseProject\grape_2024\esca\esca716.jpg,esca,1
+D:\CropDiseaseProject\grape_2024\healthy\healthy243.jpg,healthy,2
+D:\CropDiseaseProject\grape_2024\esca\esca824.jpg,esca,1
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight529.jpg,leaf blight,3
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight283.jpg,leaf blight,3
+D:\CropDiseaseProject\grape_2024\healthy\healthy350.jpg,healthy,2
+D:\CropDiseaseProject\grape_2024\healthy\healthy575.jpg,healthy,2
+D:\CropDiseaseProject\grape_2024\esca\esca365.jpg,esca,1
+D:\CropDiseaseProject\grape_2024\healthy\healthy059.jpg,healthy,2
+D:\CropDiseaseProject\grape_2024\Black rot\black rot108.jpg,Black rot,0
+D:\CropDiseaseProject\grape_2024\healthy\healthy427.jpg,healthy,2
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight654.jpg,leaf blight,3
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight494.jpg,leaf blight,3
+D:\CropDiseaseProject\grape_2024\esca\esca761.jpg,esca,1
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight655.jpg,leaf blight,3
+D:\CropDiseaseProject\grape_2024\healthy\healthy1106.jpg,healthy,2
+D:\CropDiseaseProject\grape_2024\healthy\healthy824.jpg,healthy,2
+D:\CropDiseaseProject\grape_2024\healthy\healthy136.jpg,healthy,2
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight067.jpg,leaf blight,3
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight156.jpg,leaf blight,3
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight307.jpg,leaf blight,3
+D:\CropDiseaseProject\grape_2024\healthy\healthy474.jpg,healthy,2
+D:\CropDiseaseProject\grape_2024\Black rot\black rot641.jpg,Black rot,0
+D:\CropDiseaseProject\grape_2024\Black rot\black rot474.jpg,Black rot,0
+D:\CropDiseaseProject\grape_2024\healthy\healthy141.jpg,healthy,2
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight520.jpg,leaf blight,3
+D:\CropDiseaseProject\grape_2024\esca\esca739.jpg,esca,1
+D:\CropDiseaseProject\grape_2024\esca\esca192.jpg,esca,1
+D:\CropDiseaseProject\grape_2024\healthy\healthy394.jpg,healthy,2
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight490.jpg,leaf blight,3
+D:\CropDiseaseProject\grape_2024\healthy\healthy272.jpg,healthy,2
+D:\CropDiseaseProject\grape_2024\esca\esca025.jpg,esca,1
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight191.jpg,leaf blight,3
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight533.jpg,leaf blight,3
+D:\CropDiseaseProject\grape_2024\esca\esca212.jpg,esca,1
+D:\CropDiseaseProject\grape_2024\Black rot\black rot769.jpg,Black rot,0
+D:\CropDiseaseProject\grape_2024\Black rot\black rot621.jpg,Black rot,0
+D:\CropDiseaseProject\grape_2024\Black rot\black rot557.jpg,Black rot,0
+D:\CropDiseaseProject\grape_2024\Black rot\black rot097.jpg,Black rot,0
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight238.jpg,leaf blight,3
+D:\CropDiseaseProject\grape_2024\healthy\healthy276.jpg,healthy,2
+D:\CropDiseaseProject\grape_2024\healthy\healthy763.jpg,healthy,2
+D:\CropDiseaseProject\grape_2024\healthy\healthy901.jpg,healthy,2
+D:\CropDiseaseProject\grape_2024\Black rot\black rot507.jpg,Black rot,0
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight595.jpg,leaf blight,3
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight559.jpg,leaf blight,3
+D:\CropDiseaseProject\grape_2024\esca\esca040.jpg,esca,1
+D:\CropDiseaseProject\grape_2024\esca\esca005.jpg,esca,1
+D:\CropDiseaseProject\grape_2024\healthy\healthy439.jpg,healthy,2
+D:\CropDiseaseProject\grape_2024\Black rot\black rot624.jpg,Black rot,0
+D:\CropDiseaseProject\grape_2024\esca\esca023.jpg,esca,1
+D:\CropDiseaseProject\grape_2024\esca\esca113.jpg,esca,1
+D:\CropDiseaseProject\grape_2024\healthy\healthy865.jpg,healthy,2
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight269.jpg,leaf blight,3
+D:\CropDiseaseProject\grape_2024\Black rot\black rot232.jpg,Black rot,0
+D:\CropDiseaseProject\grape_2024\Black rot\black rot203.jpg,Black rot,0
+D:\CropDiseaseProject\grape_2024\healthy\healthy691.jpg,healthy,2
+D:\CropDiseaseProject\grape_2024\healthy\healthy753.jpg,healthy,2
+D:\CropDiseaseProject\grape_2024\healthy\healthy024.jpg,healthy,2
+D:\CropDiseaseProject\grape_2024\esca\esca625.jpg,esca,1
+D:\CropDiseaseProject\grape_2024\esca\esca807.jpg,esca,1
+D:\CropDiseaseProject\grape_2024\Black rot\black rot575.jpg,Black rot,0
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight112.jpg,leaf blight,3
+D:\CropDiseaseProject\grape_2024\esca\esca459.jpg,esca,1
+D:\CropDiseaseProject\grape_2024\esca\esca273.jpg,esca,1
+D:\CropDiseaseProject\grape_2024\esca\esca662.jpg,esca,1
+D:\CropDiseaseProject\grape_2024\healthy\healthy151.jpg,healthy,2
+D:\CropDiseaseProject\grape_2024\Black rot\black rot290.jpg,Black rot,0
+D:\CropDiseaseProject\grape_2024\esca\esca229.jpg,esca,1
+D:\CropDiseaseProject\grape_2024\Black rot\black rot002.jpg,Black rot,0
+D:\CropDiseaseProject\grape_2024\healthy\healthy988.jpg,healthy,2
+D:\CropDiseaseProject\grape_2024\esca\esca139.jpg,esca,1
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight371.jpg,leaf blight,3
+D:\CropDiseaseProject\grape_2024\esca\esca833.jpg,esca,1
+D:\CropDiseaseProject\grape_2024\healthy\healthy960.jpg,healthy,2
+D:\CropDiseaseProject\grape_2024\healthy\healthy273.jpg,healthy,2
+D:\CropDiseaseProject\grape_2024\healthy\healthy846.jpg,healthy,2
+D:\CropDiseaseProject\grape_2024\esca\esca157.jpg,esca,1
+D:\CropDiseaseProject\grape_2024\Black rot\black rot299.jpg,Black rot,0
+D:\CropDiseaseProject\grape_2024\esca\esca146.jpg,esca,1
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight268.jpg,leaf blight,3
+D:\CropDiseaseProject\grape_2024\esca\esca075.jpg,esca,1
+D:\CropDiseaseProject\grape_2024\Black rot\black rot695.jpg,Black rot,0
+D:\CropDiseaseProject\grape_2024\healthy\healthy484.jpg,healthy,2
+D:\CropDiseaseProject\grape_2024\esca\esca642.jpg,esca,1
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight354.jpg,leaf blight,3
+D:\CropDiseaseProject\grape_2024\esca\esca725.jpg,esca,1
+D:\CropDiseaseProject\grape_2024\Black rot\black rot042.jpg,Black rot,0
+D:\CropDiseaseProject\grape_2024\esca\esca039.jpg,esca,1
+D:\CropDiseaseProject\grape_2024\healthy\healthy904.jpg,healthy,2
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight102.jpg,leaf blight,3
+D:\CropDiseaseProject\grape_2024\healthy\healthy021.jpg,healthy,2
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight379.jpg,leaf blight,3
+D:\CropDiseaseProject\grape_2024\esca\esca727.jpg,esca,1
+D:\CropDiseaseProject\grape_2024\healthy\healthy941.jpg,healthy,2
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight302.jpg,leaf blight,3
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight058.jpg,leaf blight,3
+D:\CropDiseaseProject\grape_2024\healthy\healthy084.jpg,healthy,2
+D:\CropDiseaseProject\grape_2024\Black rot\black rot462.jpg,Black rot,0
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight551.jpg,leaf blight,3
+D:\CropDiseaseProject\grape_2024\Black rot\black rot226.jpg,Black rot,0
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight501.jpg,leaf blight,3
+D:\CropDiseaseProject\grape_2024\Black rot\black rot029.jpg,Black rot,0
+D:\CropDiseaseProject\grape_2024\Black rot\black rot034.jpg,Black rot,0
+D:\CropDiseaseProject\grape_2024\esca\esca728.jpg,esca,1
+D:\CropDiseaseProject\grape_2024\Black rot\black rot691.jpg,Black rot,0
+D:\CropDiseaseProject\grape_2024\Black rot\black rot123.jpg,Black rot,0
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight131.jpg,leaf blight,3
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight532.jpg,leaf blight,3
+D:\CropDiseaseProject\grape_2024\healthy\healthy248.jpg,healthy,2
+D:\CropDiseaseProject\grape_2024\Black rot\black rot172.jpg,Black rot,0
+D:\CropDiseaseProject\grape_2024\esca\esca764.jpg,esca,1
+D:\CropDiseaseProject\grape_2024\healthy\healthy998.jpg,healthy,2
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight294.jpg,leaf blight,3
+D:\CropDiseaseProject\grape_2024\Black rot\black rot649.jpg,Black rot,0
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight643.jpg,leaf blight,3
+D:\CropDiseaseProject\grape_2024\Black rot\black rot579.jpg,Black rot,0
+D:\CropDiseaseProject\grape_2024\Black rot\black rot234.jpg,Black rot,0
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight022.jpg,leaf blight,3
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight386.jpg,leaf blight,3
+D:\CropDiseaseProject\grape_2024\Black rot\black rot686.jpg,Black rot,0
+D:\CropDiseaseProject\grape_2024\esca\esca624.jpg,esca,1
+D:\CropDiseaseProject\grape_2024\esca\esca786.jpg,esca,1
+D:\CropDiseaseProject\grape_2024\Black rot\black rot022.jpg,Black rot,0
+D:\CropDiseaseProject\grape_2024\esca\esca641.jpg,esca,1
+D:\CropDiseaseProject\grape_2024\healthy\healthy826.jpg,healthy,2
+D:\CropDiseaseProject\grape_2024\healthy\healthy1107.jpg,healthy,2
+D:\CropDiseaseProject\grape_2024\Black rot\black rot387.jpg,Black rot,0
+D:\CropDiseaseProject\grape_2024\healthy\healthy172.jpg,healthy,2
+D:\CropDiseaseProject\grape_2024\esca\esca730.jpg,esca,1
+D:\CropDiseaseProject\grape_2024\healthy\healthy028.jpg,healthy,2
+D:\CropDiseaseProject\grape_2024\esca\esca717.jpg,esca,1
+D:\CropDiseaseProject\grape_2024\Black rot\black rot562.jpg,Black rot,0
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight633.jpg,leaf blight,3
+D:\CropDiseaseProject\grape_2024\healthy\healthy1012.jpg,healthy,2
+D:\CropDiseaseProject\grape_2024\healthy\healthy452.jpg,healthy,2
+D:\CropDiseaseProject\grape_2024\esca\esca391.jpg,esca,1
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight537.jpg,leaf blight,3
+D:\CropDiseaseProject\grape_2024\healthy\healthy1089.jpg,healthy,2
+D:\CropDiseaseProject\grape_2024\esca\esca228.jpg,esca,1
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight148.jpg,leaf blight,3
+D:\CropDiseaseProject\grape_2024\Black rot\black rot788.jpg,Black rot,0
+D:\CropDiseaseProject\grape_2024\esca\esca196.jpg,esca,1
+D:\CropDiseaseProject\grape_2024\healthy\healthy345.jpg,healthy,2
+D:\CropDiseaseProject\grape_2024\esca\esca046.jpg,esca,1
+D:\CropDiseaseProject\grape_2024\esca\esca253.jpg,esca,1
+D:\CropDiseaseProject\grape_2024\healthy\healthy188.jpg,healthy,2
+D:\CropDiseaseProject\grape_2024\Black rot\black rot737.jpg,Black rot,0
+D:\CropDiseaseProject\grape_2024\Black rot\black rot731.jpg,Black rot,0
+D:\CropDiseaseProject\grape_2024\Black rot\black rot803.jpg,Black rot,0
+D:\CropDiseaseProject\grape_2024\esca\esca613.jpg,esca,1
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight647.jpg,leaf blight,3
+D:\CropDiseaseProject\grape_2024\healthy\healthy160.jpg,healthy,2
+D:\CropDiseaseProject\grape_2024\esca\esca673.jpg,esca,1
+D:\CropDiseaseProject\grape_2024\Black rot\black rot457.jpg,Black rot,0
+D:\CropDiseaseProject\grape_2024\healthy\healthy890.jpg,healthy,2
+D:\CropDiseaseProject\grape_2024\healthy\healthy478.jpg,healthy,2
+D:\CropDiseaseProject\grape_2024\Black rot\black rot473.jpg,Black rot,0
+D:\CropDiseaseProject\grape_2024\healthy\healthy734.jpg,healthy,2
+D:\CropDiseaseProject\grape_2024\healthy\healthy011.jpg,healthy,2
+D:\CropDiseaseProject\grape_2024\healthy\healthy1097.jpg,healthy,2
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight008.jpg,leaf blight,3
+D:\CropDiseaseProject\grape_2024\Black rot\black rot218.jpg,Black rot,0
+D:\CropDiseaseProject\grape_2024\Black rot\black rot388.jpg,Black rot,0
+D:\CropDiseaseProject\grape_2024\healthy\healthy185.jpg,healthy,2
+D:\CropDiseaseProject\grape_2024\Black rot\black rot244.jpg,Black rot,0
+D:\CropDiseaseProject\grape_2024\healthy\healthy728.jpg,healthy,2
+D:\CropDiseaseProject\grape_2024\healthy\healthy1076.jpg,healthy,2
+D:\CropDiseaseProject\grape_2024\healthy\healthy919.jpg,healthy,2
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight226.jpg,leaf blight,3
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight026.jpg,leaf blight,3
+D:\CropDiseaseProject\grape_2024\Black rot\black rot548.jpg,Black rot,0
+D:\CropDiseaseProject\grape_2024\esca\esca698.jpg,esca,1
+D:\CropDiseaseProject\grape_2024\healthy\healthy907.jpg,healthy,2
+D:\CropDiseaseProject\grape_2024\healthy\healthy1019.jpg,healthy,2
+D:\CropDiseaseProject\grape_2024\Black rot\black rot208.jpg,Black rot,0
+D:\CropDiseaseProject\grape_2024\esca\esca664.jpg,esca,1
+D:\CropDiseaseProject\grape_2024\healthy\healthy808.jpg,healthy,2
+D:\CropDiseaseProject\grape_2024\healthy\healthy228.jpg,healthy,2
+D:\CropDiseaseProject\grape_2024\healthy\healthy304.jpg,healthy,2
+D:\CropDiseaseProject\grape_2024\esca\esca403.jpg,esca,1
+D:\CropDiseaseProject\grape_2024\Black rot\black rot101.jpg,Black rot,0
+D:\CropDiseaseProject\grape_2024\Black rot\black rot415.jpg,Black rot,0
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight254.jpg,leaf blight,3
+D:\CropDiseaseProject\grape_2024\healthy\healthy039.jpg,healthy,2
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight129.jpg,leaf blight,3
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight314.jpg,leaf blight,3
+D:\CropDiseaseProject\grape_2024\healthy\healthy633.jpg,healthy,2
+D:\CropDiseaseProject\grape_2024\esca\esca249.jpg,esca,1
+D:\CropDiseaseProject\grape_2024\healthy\healthy1105.jpg,healthy,2
+D:\CropDiseaseProject\grape_2024\Black rot\black rot264.jpg,Black rot,0
+D:\CropDiseaseProject\grape_2024\esca\esca500.jpg,esca,1
+D:\CropDiseaseProject\grape_2024\healthy\healthy174.jpg,healthy,2
+D:\CropDiseaseProject\grape_2024\esca\esca231.jpg,esca,1
+D:\CropDiseaseProject\grape_2024\esca\esca093.jpg,esca,1
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight176.jpg,leaf blight,3
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight001.jpg,leaf blight,3
+D:\CropDiseaseProject\grape_2024\healthy\healthy446.jpg,healthy,2
+D:\CropDiseaseProject\grape_2024\healthy\healthy1084.jpg,healthy,2
+D:\CropDiseaseProject\grape_2024\Black rot\black rot152.jpg,Black rot,0
+D:\CropDiseaseProject\grape_2024\healthy\healthy577.jpg,healthy,2
+D:\CropDiseaseProject\grape_2024\healthy\healthy897.jpg,healthy,2
+D:\CropDiseaseProject\grape_2024\esca\esca815.jpg,esca,1
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight391.jpg,leaf blight,3
+D:\CropDiseaseProject\grape_2024\esca\esca126.jpg,esca,1
+D:\CropDiseaseProject\grape_2024\Black rot\black rot629.jpg,Black rot,0
+D:\CropDiseaseProject\grape_2024\healthy\healthy481.jpg,healthy,2
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight434.jpg,leaf blight,3
+D:\CropDiseaseProject\grape_2024\Black rot\black rot714.jpg,Black rot,0
+D:\CropDiseaseProject\grape_2024\Black rot\black rot204.jpg,Black rot,0
+D:\CropDiseaseProject\grape_2024\esca\esca572.jpg,esca,1
+D:\CropDiseaseProject\grape_2024\esca\esca595.jpg,esca,1
+D:\CropDiseaseProject\grape_2024\healthy\healthy597.jpg,healthy,2
+D:\CropDiseaseProject\grape_2024\healthy\healthy777.jpg,healthy,2
+D:\CropDiseaseProject\grape_2024\esca\esca601.jpg,esca,1
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight260.jpg,leaf blight,3
+D:\CropDiseaseProject\grape_2024\esca\esca132.jpg,esca,1
+D:\CropDiseaseProject\grape_2024\esca\esca239.jpg,esca,1
+D:\CropDiseaseProject\grape_2024\healthy\healthy630.jpg,healthy,2
+D:\CropDiseaseProject\grape_2024\Black rot\black rot161.jpg,Black rot,0
+D:\CropDiseaseProject\grape_2024\healthy\healthy785.jpg,healthy,2
+D:\CropDiseaseProject\grape_2024\esca\esca225.jpg,esca,1
+D:\CropDiseaseProject\grape_2024\esca\esca194.jpg,esca,1
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight382.jpg,leaf blight,3
+D:\CropDiseaseProject\grape_2024\Black rot\black rot688.jpg,Black rot,0
+D:\CropDiseaseProject\grape_2024\Black rot\black rot721.jpg,Black rot,0
+D:\CropDiseaseProject\grape_2024\Black rot\black rot202.jpg,Black rot,0
+D:\CropDiseaseProject\grape_2024\esca\esca137.jpg,esca,1
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight546.jpg,leaf blight,3
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight196.jpg,leaf blight,3
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight277.jpg,leaf blight,3
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight057.jpg,leaf blight,3
+D:\CropDiseaseProject\grape_2024\Black rot\black rot420.jpg,Black rot,0
+D:\CropDiseaseProject\grape_2024\esca\esca598.jpg,esca,1
+D:\CropDiseaseProject\grape_2024\esca\esca872.jpg,esca,1
+D:\CropDiseaseProject\grape_2024\esca\esca061.jpg,esca,1
+D:\CropDiseaseProject\grape_2024\healthy\healthy208.jpg,healthy,2
+D:\CropDiseaseProject\grape_2024\healthy\healthy422.jpg,healthy,2
+D:\CropDiseaseProject\grape_2024\Black rot\black rot785.jpg,Black rot,0
+D:\CropDiseaseProject\grape_2024\healthy\healthy1005.jpg,healthy,2
+D:\CropDiseaseProject\grape_2024\Black rot\black rot189.jpg,Black rot,0
+D:\CropDiseaseProject\grape_2024\Black rot\black rot653.jpg,Black rot,0
+D:\CropDiseaseProject\grape_2024\Black rot\black rot037.jpg,Black rot,0
+D:\CropDiseaseProject\grape_2024\healthy\healthy224.jpg,healthy,2
+D:\CropDiseaseProject\grape_2024\healthy\healthy268.jpg,healthy,2
+D:\CropDiseaseProject\grape_2024\esca\esca699.jpg,esca,1
+D:\CropDiseaseProject\grape_2024\Black rot\black rot124.jpg,Black rot,0
+D:\CropDiseaseProject\grape_2024\healthy\healthy538.jpg,healthy,2
+D:\CropDiseaseProject\grape_2024\Black rot\black rot511.jpg,Black rot,0
+D:\CropDiseaseProject\grape_2024\healthy\healthy645.jpg,healthy,2
+D:\CropDiseaseProject\grape_2024\Black rot\black rot417.jpg,Black rot,0
+D:\CropDiseaseProject\grape_2024\Black rot\black rot644.jpg,Black rot,0
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight072.jpg,leaf blight,3
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight115.jpg,leaf blight,3
+D:\CropDiseaseProject\grape_2024\Black rot\black rot506.jpg,Black rot,0
+D:\CropDiseaseProject\grape_2024\esca\esca089.jpg,esca,1
+D:\CropDiseaseProject\grape_2024\esca\esca776.jpg,esca,1
+D:\CropDiseaseProject\grape_2024\esca\esca806.jpg,esca,1
+D:\CropDiseaseProject\grape_2024\esca\esca751.jpg,esca,1
+D:\CropDiseaseProject\grape_2024\Black rot\black rot327.jpg,Black rot,0
+D:\CropDiseaseProject\grape_2024\Black rot\black rot647.jpg,Black rot,0
+D:\CropDiseaseProject\grape_2024\Black rot\black rot093.jpg,Black rot,0
+D:\CropDiseaseProject\grape_2024\healthy\healthy109.jpg,healthy,2
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight252.jpg,leaf blight,3
+D:\CropDiseaseProject\grape_2024\esca\esca829.jpg,esca,1
+D:\CropDiseaseProject\grape_2024\healthy\healthy140.jpg,healthy,2
+D:\CropDiseaseProject\grape_2024\healthy\healthy401.jpg,healthy,2
+D:\CropDiseaseProject\grape_2024\healthy\healthy442.jpg,healthy,2
+D:\CropDiseaseProject\grape_2024\Black rot\black rot082.jpg,Black rot,0
+D:\CropDiseaseProject\grape_2024\healthy\healthy468.jpg,healthy,2
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight177.jpg,leaf blight,3
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight178.jpg,leaf blight,3
+D:\CropDiseaseProject\grape_2024\Black rot\black rot512.jpg,Black rot,0
+D:\CropDiseaseProject\grape_2024\Black rot\black rot349.jpg,Black rot,0
+D:\CropDiseaseProject\grape_2024\esca\esca419.jpg,esca,1
+D:\CropDiseaseProject\grape_2024\healthy\healthy619.jpg,healthy,2
+D:\CropDiseaseProject\grape_2024\healthy\healthy121.jpg,healthy,2
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight247.jpg,leaf blight,3
+D:\CropDiseaseProject\grape_2024\Black rot\black rot702.jpg,Black rot,0
+D:\CropDiseaseProject\grape_2024\Black rot\black rot375.jpg,Black rot,0
+D:\CropDiseaseProject\grape_2024\esca\esca015.jpg,esca,1
+D:\CropDiseaseProject\grape_2024\esca\esca198.jpg,esca,1
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight599.jpg,leaf blight,3
+D:\CropDiseaseProject\grape_2024\esca\esca537.jpg,esca,1
+D:\CropDiseaseProject\grape_2024\Black rot\black rot609.jpg,Black rot,0
+D:\CropDiseaseProject\grape_2024\Black rot\black rot360.jpg,Black rot,0
+D:\CropDiseaseProject\grape_2024\esca\esca579.jpg,esca,1
+D:\CropDiseaseProject\grape_2024\healthy\healthy349.jpg,healthy,2
+D:\CropDiseaseProject\grape_2024\Black rot\black rot460.jpg,Black rot,0
+D:\CropDiseaseProject\grape_2024\Black rot\black rot255.jpg,Black rot,0
+D:\CropDiseaseProject\grape_2024\esca\esca508.jpg,esca,1
+D:\CropDiseaseProject\grape_2024\Black rot\black rot768.jpg,Black rot,0
+D:\CropDiseaseProject\grape_2024\esca\esca420.jpg,esca,1
+D:\CropDiseaseProject\grape_2024\healthy\healthy804.jpg,healthy,2
+D:\CropDiseaseProject\grape_2024\healthy\healthy875.jpg,healthy,2
+D:\CropDiseaseProject\grape_2024\Black rot\black rot476.jpg,Black rot,0
+D:\CropDiseaseProject\grape_2024\esca\esca881.jpg,esca,1
+D:\CropDiseaseProject\grape_2024\healthy\healthy1077.jpg,healthy,2
+D:\CropDiseaseProject\grape_2024\esca\esca109.jpg,esca,1
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight477.jpg,leaf blight,3
+D:\CropDiseaseProject\grape_2024\Black rot\black rot140.jpg,Black rot,0
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight066.jpg,leaf blight,3
+D:\CropDiseaseProject\grape_2024\healthy\healthy257.jpg,healthy,2
+D:\CropDiseaseProject\grape_2024\Black rot\black rot163.jpg,Black rot,0
+D:\CropDiseaseProject\grape_2024\Black rot\black rot245.jpg,Black rot,0
+D:\CropDiseaseProject\grape_2024\healthy\healthy482.jpg,healthy,2
+D:\CropDiseaseProject\grape_2024\healthy\healthy1094.jpg,healthy,2
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight580.jpg,leaf blight,3
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight589.jpg,leaf blight,3
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight338.jpg,leaf blight,3
+D:\CropDiseaseProject\grape_2024\Black rot\black rot443.jpg,Black rot,0
+D:\CropDiseaseProject\grape_2024\esca\esca254.jpg,esca,1
+D:\CropDiseaseProject\grape_2024\esca\esca008.jpg,esca,1
+D:\CropDiseaseProject\grape_2024\esca\esca792.jpg,esca,1
+D:\CropDiseaseProject\grape_2024\Black rot\black rot669.jpg,Black rot,0
+D:\CropDiseaseProject\grape_2024\healthy\healthy457.jpg,healthy,2
+D:\CropDiseaseProject\grape_2024\esca\esca111.jpg,esca,1
+D:\CropDiseaseProject\grape_2024\healthy\healthy375.jpg,healthy,2
+D:\CropDiseaseProject\grape_2024\healthy\healthy794.jpg,healthy,2
+D:\CropDiseaseProject\grape_2024\Black rot\black rot568.jpg,Black rot,0
+D:\CropDiseaseProject\grape_2024\esca\esca303.jpg,esca,1
+D:\CropDiseaseProject\grape_2024\healthy\healthy087.jpg,healthy,2
+D:\CropDiseaseProject\grape_2024\healthy\healthy522.jpg,healthy,2
+D:\CropDiseaseProject\grape_2024\Black rot\black rot703.jpg,Black rot,0
+D:\CropDiseaseProject\grape_2024\esca\esca606.jpg,esca,1
+D:\CropDiseaseProject\grape_2024\healthy\healthy702.jpg,healthy,2
+D:\CropDiseaseProject\grape_2024\healthy\healthy385.jpg,healthy,2
+D:\CropDiseaseProject\grape_2024\esca\esca073.jpg,esca,1
+D:\CropDiseaseProject\grape_2024\healthy\healthy683.jpg,healthy,2
+D:\CropDiseaseProject\grape_2024\healthy\healthy226.jpg,healthy,2
+D:\CropDiseaseProject\grape_2024\esca\esca816.jpg,esca,1
+D:\CropDiseaseProject\grape_2024\healthy\healthy642.jpg,healthy,2
+D:\CropDiseaseProject\grape_2024\esca\esca637.jpg,esca,1
+D:\CropDiseaseProject\grape_2024\esca\esca581.jpg,esca,1
+D:\CropDiseaseProject\grape_2024\Black rot\black rot089.jpg,Black rot,0
+D:\CropDiseaseProject\grape_2024\Black rot\black rot510.jpg,Black rot,0
+D:\CropDiseaseProject\grape_2024\esca\esca672.jpg,esca,1
+D:\CropDiseaseProject\grape_2024\esca\esca690.jpg,esca,1
+D:\CropDiseaseProject\grape_2024\Black rot\black rot676.jpg,Black rot,0
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight248.jpg,leaf blight,3
+D:\CropDiseaseProject\grape_2024\Black rot\black rot648.jpg,Black rot,0
+D:\CropDiseaseProject\grape_2024\Black rot\black rot107.jpg,Black rot,0
+D:\CropDiseaseProject\grape_2024\esca\esca715.jpg,esca,1
+D:\CropDiseaseProject\grape_2024\healthy\healthy984.jpg,healthy,2
+D:\CropDiseaseProject\grape_2024\healthy\healthy101.jpg,healthy,2
+D:\CropDiseaseProject\grape_2024\healthy\healthy797.jpg,healthy,2
+D:\CropDiseaseProject\grape_2024\esca\esca392.jpg,esca,1
+D:\CropDiseaseProject\grape_2024\Black rot\black rot005.jpg,Black rot,0
+D:\CropDiseaseProject\grape_2024\healthy\healthy781.jpg,healthy,2
+D:\CropDiseaseProject\grape_2024\esca\esca282.jpg,esca,1
+D:\CropDiseaseProject\grape_2024\esca\esca534.jpg,esca,1
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight210.jpg,leaf blight,3
+D:\CropDiseaseProject\grape_2024\esca\esca634.jpg,esca,1
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight667.jpg,leaf blight,3
+D:\CropDiseaseProject\grape_2024\healthy\healthy280.jpg,healthy,2
+D:\CropDiseaseProject\grape_2024\healthy\healthy1070.jpg,healthy,2
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight214.jpg,leaf blight,3
+D:\CropDiseaseProject\grape_2024\esca\esca346.jpg,esca,1
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight652.jpg,leaf blight,3
+D:\CropDiseaseProject\grape_2024\healthy\healthy204.jpg,healthy,2
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight043.jpg,leaf blight,3
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight476.jpg,leaf blight,3
+D:\CropDiseaseProject\grape_2024\healthy\healthy183.jpg,healthy,2
+D:\CropDiseaseProject\grape_2024\healthy\healthy726.jpg,healthy,2
+D:\CropDiseaseProject\grape_2024\Black rot\black rot739.jpg,Black rot,0
+D:\CropDiseaseProject\grape_2024\healthy\healthy115.jpg,healthy,2
+D:\CropDiseaseProject\grape_2024\Black rot\black rot087.jpg,Black rot,0
+D:\CropDiseaseProject\grape_2024\healthy\healthy382.jpg,healthy,2
+D:\CropDiseaseProject\grape_2024\esca\esca804.jpg,esca,1
+D:\CropDiseaseProject\grape_2024\healthy\healthy1014.jpg,healthy,2
+D:\CropDiseaseProject\grape_2024\esca\esca236.jpg,esca,1
+D:\CropDiseaseProject\grape_2024\healthy\healthy796.jpg,healthy,2
+D:\CropDiseaseProject\grape_2024\healthy\healthy898.jpg,healthy,2
+D:\CropDiseaseProject\grape_2024\esca\esca532.jpg,esca,1
+D:\CropDiseaseProject\grape_2024\esca\esca780.jpg,esca,1
+D:\CropDiseaseProject\grape_2024\healthy\healthy416.jpg,healthy,2
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight554.jpg,leaf blight,3
+D:\CropDiseaseProject\grape_2024\esca\esca752.jpg,esca,1
+D:\CropDiseaseProject\grape_2024\healthy\healthy1017.jpg,healthy,2
+D:\CropDiseaseProject\grape_2024\esca\esca143.jpg,esca,1
+D:\CropDiseaseProject\grape_2024\healthy\healthy581.jpg,healthy,2
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight377.jpg,leaf blight,3
+D:\CropDiseaseProject\grape_2024\esca\esca835.jpg,esca,1
+D:\CropDiseaseProject\grape_2024\healthy\healthy884.jpg,healthy,2
+D:\CropDiseaseProject\grape_2024\esca\esca042.jpg,esca,1
+D:\CropDiseaseProject\grape_2024\Black rot\black rot066.jpg,Black rot,0
+D:\CropDiseaseProject\grape_2024\healthy\healthy460.jpg,healthy,2
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight384.jpg,leaf blight,3
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight372.jpg,leaf blight,3
+D:\CropDiseaseProject\grape_2024\healthy\healthy995.jpg,healthy,2
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight670.jpg,leaf blight,3
+D:\CropDiseaseProject\grape_2024\Black rot\black rot773.jpg,Black rot,0
+D:\CropDiseaseProject\grape_2024\Black rot\black rot807.jpg,Black rot,0
+D:\CropDiseaseProject\grape_2024\Black rot\black rot132.jpg,Black rot,0
+D:\CropDiseaseProject\grape_2024\esca\esca296.jpg,esca,1
+D:\CropDiseaseProject\grape_2024\Black rot\black rot168.jpg,Black rot,0
+D:\CropDiseaseProject\grape_2024\healthy\healthy201.jpg,healthy,2
+D:\CropDiseaseProject\grape_2024\esca\esca873.jpg,esca,1
+D:\CropDiseaseProject\grape_2024\Black rot\black rot437.jpg,Black rot,0
+D:\CropDiseaseProject\grape_2024\healthy\healthy318.jpg,healthy,2
+D:\CropDiseaseProject\grape_2024\esca\esca104.jpg,esca,1
+D:\CropDiseaseProject\grape_2024\esca\esca838.jpg,esca,1
+D:\CropDiseaseProject\grape_2024\healthy\healthy035.jpg,healthy,2
+D:\CropDiseaseProject\grape_2024\esca\esca216.jpg,esca,1
+D:\CropDiseaseProject\grape_2024\healthy\healthy613.jpg,healthy,2
+D:\CropDiseaseProject\grape_2024\healthy\healthy856.jpg,healthy,2
+D:\CropDiseaseProject\grape_2024\Black rot\black rot701.jpg,Black rot,0
+D:\CropDiseaseProject\grape_2024\healthy\healthy428.jpg,healthy,2
+D:\CropDiseaseProject\grape_2024\Black rot\black rot295.jpg,Black rot,0
+D:\CropDiseaseProject\grape_2024\healthy\healthy971.jpg,healthy,2
+D:\CropDiseaseProject\grape_2024\esca\esca772.jpg,esca,1
+D:\CropDiseaseProject\grape_2024\Black rot\black rot612.jpg,Black rot,0
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight570.jpg,leaf blight,3
+D:\CropDiseaseProject\grape_2024\healthy\healthy623.jpg,healthy,2
+D:\CropDiseaseProject\grape_2024\Black rot\black rot468.jpg,Black rot,0
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight573.jpg,leaf blight,3
+D:\CropDiseaseProject\grape_2024\healthy\healthy1068.jpg,healthy,2
+D:\CropDiseaseProject\grape_2024\healthy\healthy310.jpg,healthy,2
+D:\CropDiseaseProject\grape_2024\healthy\healthy489.jpg,healthy,2
+D:\CropDiseaseProject\grape_2024\esca\esca714.jpg,esca,1
+D:\CropDiseaseProject\grape_2024\healthy\healthy271.jpg,healthy,2
+D:\CropDiseaseProject\grape_2024\healthy\healthy789.jpg,healthy,2
+D:\CropDiseaseProject\grape_2024\Black rot\black rot732.jpg,Black rot,0
+D:\CropDiseaseProject\grape_2024\Black rot\black rot297.jpg,Black rot,0
+D:\CropDiseaseProject\grape_2024\healthy\healthy417.jpg,healthy,2
+D:\CropDiseaseProject\grape_2024\healthy\healthy254.jpg,healthy,2
+D:\CropDiseaseProject\grape_2024\healthy\healthy718.jpg,healthy,2
+D:\CropDiseaseProject\grape_2024\Black rot\black rot317.jpg,Black rot,0
+D:\CropDiseaseProject\grape_2024\Black rot\black rot493.jpg,Black rot,0
+D:\CropDiseaseProject\grape_2024\esca\esca107.jpg,esca,1
+D:\CropDiseaseProject\grape_2024\healthy\healthy669.jpg,healthy,2
+D:\CropDiseaseProject\grape_2024\healthy\healthy007.jpg,healthy,2
+D:\CropDiseaseProject\grape_2024\healthy\healthy239.jpg,healthy,2
+D:\CropDiseaseProject\grape_2024\esca\esca474.jpg,esca,1
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight447.jpg,leaf blight,3
+D:\CropDiseaseProject\grape_2024\healthy\healthy1050.jpg,healthy,2
+D:\CropDiseaseProject\grape_2024\esca\esca831.jpg,esca,1
+D:\CropDiseaseProject\grape_2024\healthy\healthy559.jpg,healthy,2
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight486.jpg,leaf blight,3
+D:\CropDiseaseProject\grape_2024\Black rot\black rot131.jpg,Black rot,0
+D:\CropDiseaseProject\grape_2024\esca\esca334.jpg,esca,1
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight567.jpg,leaf blight,3
+D:\CropDiseaseProject\grape_2024\Black rot\black rot555.jpg,Black rot,0
+D:\CropDiseaseProject\grape_2024\esca\esca511.jpg,esca,1
+D:\CropDiseaseProject\grape_2024\esca\esca732.jpg,esca,1
+D:\CropDiseaseProject\grape_2024\healthy\healthy844.jpg,healthy,2
+D:\CropDiseaseProject\grape_2024\healthy\healthy072.jpg,healthy,2
+D:\CropDiseaseProject\grape_2024\healthy\healthy747.jpg,healthy,2
+D:\CropDiseaseProject\grape_2024\healthy\healthy701.jpg,healthy,2
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight571.jpg,leaf blight,3
+D:\CropDiseaseProject\grape_2024\Black rot\black rot253.jpg,Black rot,0
+D:\CropDiseaseProject\grape_2024\esca\esca261.jpg,esca,1
+D:\CropDiseaseProject\grape_2024\esca\esca526.jpg,esca,1
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight305.jpg,leaf blight,3
+D:\CropDiseaseProject\grape_2024\healthy\healthy177.jpg,healthy,2
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight423.jpg,leaf blight,3
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight581.jpg,leaf blight,3
+D:\CropDiseaseProject\grape_2024\Black rot\black rot742.jpg,Black rot,0
+D:\CropDiseaseProject\grape_2024\esca\esca682.jpg,esca,1
+D:\CropDiseaseProject\grape_2024\Black rot\black rot036.jpg,Black rot,0
+D:\CropDiseaseProject\grape_2024\healthy\healthy314.jpg,healthy,2
+D:\CropDiseaseProject\grape_2024\healthy\healthy585.jpg,healthy,2
+D:\CropDiseaseProject\grape_2024\healthy\healthy532.jpg,healthy,2
+D:\CropDiseaseProject\grape_2024\healthy\healthy443.jpg,healthy,2
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight605.jpg,leaf blight,3
+D:\CropDiseaseProject\grape_2024\esca\esca214.jpg,esca,1
+D:\CropDiseaseProject\grape_2024\Black rot\black rot429.jpg,Black rot,0
+D:\CropDiseaseProject\grape_2024\Black rot\black rot616.jpg,Black rot,0
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight544.jpg,leaf blight,3
+D:\CropDiseaseProject\grape_2024\esca\esca437.jpg,esca,1
+D:\CropDiseaseProject\grape_2024\esca\esca787.jpg,esca,1
+D:\CropDiseaseProject\grape_2024\healthy\healthy779.jpg,healthy,2
+D:\CropDiseaseProject\grape_2024\healthy\healthy495.jpg,healthy,2
+D:\CropDiseaseProject\grape_2024\Black rot\black rot465.jpg,Black rot,0
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight387.jpg,leaf blight,3
+D:\CropDiseaseProject\grape_2024\healthy\healthy944.jpg,healthy,2
+D:\CropDiseaseProject\grape_2024\esca\esca425.jpg,esca,1
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight279.jpg,leaf blight,3
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight218.jpg,leaf blight,3
+D:\CropDiseaseProject\grape_2024\esca\esca782.jpg,esca,1
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight161.jpg,leaf blight,3
+D:\CropDiseaseProject\grape_2024\esca\esca318.jpg,esca,1
+D:\CropDiseaseProject\grape_2024\healthy\healthy402.jpg,healthy,2
+D:\CropDiseaseProject\grape_2024\esca\esca422.jpg,esca,1
+D:\CropDiseaseProject\grape_2024\healthy\healthy513.jpg,healthy,2
+D:\CropDiseaseProject\grape_2024\esca\esca443.jpg,esca,1
+D:\CropDiseaseProject\grape_2024\healthy\healthy939.jpg,healthy,2
+D:\CropDiseaseProject\grape_2024\healthy\healthy231.jpg,healthy,2
+D:\CropDiseaseProject\grape_2024\Black rot\black rot402.jpg,Black rot,0
+D:\CropDiseaseProject\grape_2024\healthy\healthy410.jpg,healthy,2
+D:\CropDiseaseProject\grape_2024\healthy\healthy001.jpg,healthy,2
+D:\CropDiseaseProject\grape_2024\esca\esca168.jpg,esca,1
+D:\CropDiseaseProject\grape_2024\Black rot\black rot347.jpg,Black rot,0
+D:\CropDiseaseProject\grape_2024\Black rot\black rot798.jpg,Black rot,0
+D:\CropDiseaseProject\grape_2024\healthy\healthy1078.jpg,healthy,2
+D:\CropDiseaseProject\grape_2024\Black rot\black rot552.jpg,Black rot,0
+D:\CropDiseaseProject\grape_2024\esca\esca067.jpg,esca,1
+D:\CropDiseaseProject\grape_2024\esca\esca289.jpg,esca,1
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight483.jpg,leaf blight,3
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight366.jpg,leaf blight,3
+D:\CropDiseaseProject\grape_2024\healthy\healthy022.jpg,healthy,2
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight653.jpg,leaf blight,3
+D:\CropDiseaseProject\grape_2024\Black rot\black rot193.jpg,Black rot,0
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight032.jpg,leaf blight,3
+D:\CropDiseaseProject\grape_2024\Black rot\black rot793.jpg,Black rot,0
+D:\CropDiseaseProject\grape_2024\esca\esca402.jpg,esca,1
+D:\CropDiseaseProject\grape_2024\healthy\healthy466.jpg,healthy,2
+D:\CropDiseaseProject\grape_2024\esca\esca140.jpg,esca,1
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight144.jpg,leaf blight,3
+D:\CropDiseaseProject\grape_2024\healthy\healthy864.jpg,healthy,2
+D:\CropDiseaseProject\grape_2024\Black rot\black rot014.jpg,Black rot,0
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight303.jpg,leaf blight,3
+D:\CropDiseaseProject\grape_2024\leaf blight\leaf blight376.jpg,leaf blight,3
+D:\CropDiseaseProject\grape_2024\esca\esca010.jpg,esca,1
+D:\CropDiseaseProject\grape_2024\healthy\healthy879.jpg,healthy,2
+D:\CropDiseaseProject\grape_2024\esca\esca369.jpg,esca,1

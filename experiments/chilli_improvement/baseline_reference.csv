@@ -1,0 +1,2 @@
+Model,Accuracy,Weighted Precision,Weighted Recall,Weighted F1,Macro F1,Accuracy Delta,Weighted F1 Delta
+Baseline (Frozen),0.6379,0.6474,0.6379,0.6236,0.5775,0.0,0.0

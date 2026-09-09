@@ -1,0 +1,16 @@
+model,true_class_index,true_canonical_class,true_display_name,true_support,pred_cerocospora,pred_healthy,pred_murda complex,pred_nutritional deficiency,pred_powdery mildew
+Baseline (Frozen),0,cerocospora,Cercospora Leaf Spot,62,36,14,6,4,2
+Baseline (Frozen),1,healthy,Healthy Leaves,53,31,14,2,4,2
+Baseline (Frozen),2,murda complex,Murda Complex (Not Represented),0,0,0,0,0,0
+Baseline (Frozen),3,nutritional deficiency,Nutritional Deficiency (Not Represented),0,0,0,0,0,0
+Baseline (Frozen),4,powdery mildew,Powdery Mildew (Not Represented),0,0,0,0,0,0
+Candidate B (Fine-Tune+Aug),0,cerocospora,Cercospora Leaf Spot,62,23,17,3,14,5
+Candidate B (Fine-Tune+Aug),1,healthy,Healthy Leaves,53,7,23,2,20,1
+Candidate B (Fine-Tune+Aug),2,murda complex,Murda Complex (Not Represented),0,0,0,0,0,0
+Candidate B (Fine-Tune+Aug),3,nutritional deficiency,Nutritional Deficiency (Not Represented),0,0,0,0,0,0
+Candidate B (Fine-Tune+Aug),4,powdery mildew,Powdery Mildew (Not Represented),0,0,0,0,0,0
+Candidate D (Multi-Source Field),0,cerocospora,Cercospora Leaf Spot,62,26,11,16,8,1
+Candidate D (Multi-Source Field),1,healthy,Healthy Leaves,53,7,26,10,9,1
+Candidate D (Multi-Source Field),2,murda complex,Murda Complex (Not Represented),0,0,0,0,0,0
+Candidate D (Multi-Source Field),3,nutritional deficiency,Nutritional Deficiency (Not Represented),0,0,0,0,0,0
+Candidate D (Multi-Source Field),4,powdery mildew,Powdery Mildew (Not Represented),0,0,0,0,0,0

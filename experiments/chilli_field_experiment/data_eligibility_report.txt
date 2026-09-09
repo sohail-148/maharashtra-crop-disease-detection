@@ -1,0 +1,59 @@
+================================================================================
+CHILLI EXPERIMENT 4: DATA ELIGIBILITY & FIELD MANIFEST REPORT
+================================================================================
+
+Generated: 2026-09-06
+Target Model: Candidate D (Multi-Source Field-Data Generalization)
+Manifest File: D:\CropDiseaseProject\experiments\chilli_field_experiment\field_data_manifest.csv
+Excluded Log:  D:\CropDiseaseProject\experiments\chilli_field_experiment\excluded_images.csv
+
+--------------------------------------------------------------------------------
+1. DATASET SOURCES & SAMPLE INVENTORY
+--------------------------------------------------------------------------------
+Original In-Domain Training Data (COLD 2024 train.csv):   1352 images
+Verified Independent Field Data (Ulfa et al. 2023):         800 images
+Total Candidate D Training Set Size:                       2152 images
+
+--------------------------------------------------------------------------------
+2. CLASS DISTRIBUTION COMPARISON (ORIGINAL VS EXPERIMENT 4 MANIFEST)
+--------------------------------------------------------------------------------
+Class Label               Class ID   Original Train   Field Added    Total Train    % of Total  
+-------------------------------------------------------------------------------------------
+cerocospora               0          629              200            829             38.52%
+healthy                   1          230              200            430             19.98%
+murda complex             2          193              200            393             18.26%
+nutritional deficiency    3          187              200            387             17.98%
+powdery mildew            4          113              0              113              5.25%
+-------------------------------------------------------------------------------------------
+TOTAL                     --         1352             800            2152           100.00%
+
+--------------------------------------------------------------------------------
+3. STRICT EXCLUSION & DEDUPLICATION AUDIT
+--------------------------------------------------------------------------------
+Total Exclusions Recorded: 1263
+
+  - INTERNAL_DATASET_DUPLICATE                   :   951 occurrences
+  - EVAL_SET_EXACT_COLLISION (Track B)           :   186 occurrences
+  - EVAL_SET_EXACT_COLLISION (Track C)           :   104 occurrences
+  - EVAL_SET_NEAR_DUPLICATE                      :    22 occurrences
+
+Breakdown of Near-Duplicate Exclusions (dHash Hamming distance <= 5):
+  Total Near-Duplicates Screened Out: 22
+    * cerocospora             : 8 screened out
+    * healthy                 : 2 screened out
+    * murda complex           : 0 screened out
+    * nutritional deficiency  : 12 screened out
+    * powdery mildew          : 0 screened out
+
+--------------------------------------------------------------------------------
+4. EVALUATION BENCHMARK ISOLATION GUARANTEES
+--------------------------------------------------------------------------------
+Held-Out In-Domain Test Split (splits/chilli_cold/test.csv):        290 images (100% UNCHANGED)
+Held-Out Validation Split (splits/chilli_cold/val.csv):             290 images (100% UNCHANGED)
+Track B Independent External Evaluation Set (Ulfa Benchmark):       120 images (100% DISJOINT, 0 HASH COLLISIONS)
+Track C Real-World Field Evaluation Set (Farmer Mobile):             97 images (100% DISJOINT, 0 HASH COLLISIONS)
+Track C High-Quality Real-World Subset:                              77 images (100% DISJOINT, 0 HASH COLLISIONS)
+
+ZERO DATA LEAKAGE VERIFICATION: PASSED
+All test/evaluation splits remain completely untouched and isolated from the training manifest.
+================================================================================

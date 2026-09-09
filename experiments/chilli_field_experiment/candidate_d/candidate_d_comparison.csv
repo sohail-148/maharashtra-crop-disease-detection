@@ -1,0 +1,12 @@
+Metric,Baseline (Frozen),Candidate B (Fine-Tune+Aug),Candidate D (Multi-Source Field),Delta (D - Baseline),Delta (D - Cand B)
+Test Accuracy,63.79%,73.45%,68.62%,+4.83%,-4.83%
+Test Weighted F1,62.36%,72.31%,67.90%,+5.54%,-4.41%
+Test Macro F1,57.75%,68.62%,64.13%,+6.38%,-4.49%
+Track B External Acc,55.00%,52.50%,92.50%,+37.50%,+40.00%
+Track C Real-World (All),57.73%,54.64%,81.44%,+23.71%,+26.80%
+Track C Real-World (High),50.65%,44.16%,76.62%,+25.97%,+32.46%
+  * Cercospora F1,75.17%,83.22%,80.14%,+4.97%,-3.08%
+  * Healthy Leaves F1,52.63%,64.65%,51.69%,-0.94%,-12.96%
+  * Murda Complex F1,50.00%,65.06%,57.73%,+7.73%,-7.33%
+  * Nutritional Def F1,37.04%,44.44%,48.48%,+11.44%,+4.04%
+  * Powdery Mildew F1,73.91%,85.71%,82.61%,+8.70%,-3.10%

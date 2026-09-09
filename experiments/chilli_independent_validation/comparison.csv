@@ -1,0 +1,10 @@
+Metric,Baseline (Frozen),Candidate B (Fine-Tune+Aug),Candidate D (Multi-Source Field),Delta (D - Baseline),Delta (D - Cand B)
+Validation Accuracy (115 samples),43.48%,40.00%,45.22%,+1.74%,+5.22%
+Weighted F1 Score,46.02%,49.75%,56.14%,+10.12%,+6.39%
+Macro F1 (Represented 2 Classes),45.19%,49.73%,56.26%,+11.07%,+6.53%
+Macro F1 (All 5 Canonical Classes),18.08%,19.89%,22.50%,+4.43%,+2.61%
+  * Cercospora Leaf Spot F1 (n=62),55.81%,50.00%,54.74%,-1.08%,+4.74%
+  * Healthy Leaves F1 (n=53),34.57%,49.46%,57.78%,+23.21%,+8.32%
+"  * Murda Complex (n=0, NOT REPRESENTED)",N/A (support=0),N/A (support=0),N/A (support=0),N/A,N/A
+"  * Nutritional Def (n=0, NOT REPRESENTED)",N/A (support=0),N/A (support=0),N/A (support=0),N/A,N/A
+"  * Powdery Mildew (n=0, NOT REPRESENTED)",N/A (support=0),N/A (support=0),N/A (support=0),N/A,N/A

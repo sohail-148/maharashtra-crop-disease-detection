@@ -1,0 +1,57 @@
+================================================================================
+CHILLI CONTROLLED MODEL IMPROVEMENT EXPERIMENT REPORT
+================================================================================
+Date: September 2026
+Target Experiment: C1 Chilli (COLD 2024, 5 Classes)
+Production Baseline Status: LOCKED & UNMODIFIED (SHA-256 Verified)
+
+1. OFFICIAL TEST BENCHMARK RESULTS (Test Set, n = 290)
+--------------------------------------------------------------------------------
+Model                   Accuracy    Weighted F1    Macro F1    Acc Delta    F1 Delta
+--------------------------------------------------------------------------------
+Baseline (Frozen)        63.79%       62.36%        57.75%        ---          ---
+Candidate A (Fine-Tune)   71.38%        70.33%         66.47%       +7.59%      +7.97%
+Candidate B (+Real Aug)   73.45%        72.31%         68.62%       +9.66%      +9.95%
+Candidate C (+Class Wgt)  71.38%        71.14%         67.94%       +7.59%      +8.78%
+--------------------------------------------------------------------------------
+
+2. CLASS-LEVEL F1 COMPARISON (Weak Classes Focus)
+--------------------------------------------------------------------------------
+Class                   Baseline F1    Cand A F1    Cand B F1    Cand C F1
+--------------------------------------------------------------------------------
+Cercospora Leaf Spot      75.17%         80.81%        83.22%        81.65%
+Healthy Leaves            52.63%         55.17%        64.65%        60.55%
+Murda Complex (Curl)      50.00%         64.37%        65.06%        60.47%
+Nutritional Deficiency    37.04%         57.58%        44.44%        50.75%
+Powdery Mildew            73.91%         74.42%        85.71%        86.27%
+--------------------------------------------------------------------------------
+
+3. SECONDARY GENERALIZATION EVALUATION (Independent Audit Samples)
+--------------------------------------------------------------------------------
+Evaluation Set                       Baseline Accuracy    Candidate B Accuracy    Delta
+--------------------------------------------------------------------------------
+Track B (Independent External, n=120)      55.00%                 52.50%           -2.50%
+Track C (Real-World Field, n=97)           57.73%                 54.64%           -3.09%
+Track C (High-Quality Only, n=77)          50.65%                 44.16%           -6.49%
+--------------------------------------------------------------------------------
+
+4. BEST CANDIDATE SELECTION & EMPIRICAL INTERPRETATION
+--------------------------------------------------------------------------------
+Top-Ranked Candidate: Candidate B
+Model File: experiments/chilli_improvement/candidate_b/model.keras
+
+Key Findings:
+1. Official Test Set: Candidate B achieved 73.45% accuracy (+9.66% vs baseline)
+   and 72.31% Weighted F1 (+9.95% vs baseline).
+2. Class Balance: Macro F1 changed from 57.75% to 68.62%.
+3. Weak Classes: Nutritional Deficiency and Murda Complex behavior was systematically analyzed.
+4. Generalization Trade-Off: Secondary evaluation on external Track B and real-world Track C samples
+   shows the exact empirical trade-off between in-domain fine-tuning and cross-domain robustness.
+
+5. INTEGRITY CONFIRMATION
+--------------------------------------------------------------------------------
+- Production baseline model (models/chilli_cold/chilli_cold_baseline.keras): UNTOUCHED & VERIFIED
+- Split CSVs (splits/chilli_cold/{train,val,test}.csv): UNTOUCHED & VERIFIED
+- Flask application & Grad-CAM: UNTOUCHED & PAUSED
+- Git status: Clean / No commits or pushes made.
+================================================================================

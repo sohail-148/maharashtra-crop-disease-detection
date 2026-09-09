@@ -1,0 +1,49 @@
+================================================================================
+CHILLI EXPERIMENT 5: INDEPENDENT SOURCE ISOLATION & OVERLAP AUDIT
+================================================================================
+
+Evaluation Dataset: PlantDoc (Bell Pepper Field Subset)
+Source Citation: Singh et al., "PlantDoc: A Dataset for Visual Plant Disease Detection", CoDS-COMAD 2020
+Source Repository: https://github.com/pratikkayal/PlantDoc-Dataset
+Git Commit: 5467f6012d78d1c446145d5f582da6096f852ae8
+Total Validation Images: 115
+
+--------------------------------------------------------------------------------
+1. REPRESENTED CLASS BREAKDOWN
+--------------------------------------------------------------------------------
+- cerocospora (Bell_pepper leaf spot): 62 images (53.91%) -> Canonical Class Index 0
+- healthy     (Bell_pepper leaf)     : 53 images (46.09%) -> Canonical Class Index 1
+
+--------------------------------------------------------------------------------
+2. UNREPRESENTED CLASSES (EXPLICIT DISCLOSURE)
+--------------------------------------------------------------------------------
+- murda complex         : NOT REPRESENTED IN THIS VALIDATION DATASET
+- nutritional deficiency: NOT REPRESENTED IN THIS VALIDATION DATASET
+- powdery mildew        : NOT REPRESENTED IN THIS VALIDATION DATASET
+
+Notice: This dataset is an independent two-class field validation subset,
+NOT a complete five-class Chilli benchmark.
+
+--------------------------------------------------------------------------------
+3. EXACT SHA-256 HASH COLLISION AUDIT
+--------------------------------------------------------------------------------
+Checked against all project datasets:
+- COLD Training Split (splits/chilli_cold/train.csv)                   : 0 collisions (PASSED)
+- COLD Validation Split (splits/chilli_cold/val.csv)                   : 0 collisions (PASSED)
+- COLD Test Split (splits/chilli_cold/test.csv)                         : 0 collisions (PASSED)
+- Candidate D Multi-Source Manifest (field_data_manifest.csv, n=2152)   : 0 collisions (PASSED)
+- Track B External Benchmark (external_provenance.csv, chilli n=120)    : 0 collisions (PASSED)
+- Track C Real-World Benchmark (realworld_provenance.csv, chilli n=97)  : 0 collisions (PASSED)
+- Internal Duplicates within PlantDoc 115-image subset                  : 0 duplicates (115 unique hashes)
+
+--------------------------------------------------------------------------------
+4. PERCEPTUAL NEAR-DUPLICATE AUDIT (Pure NumPy dHash Hamming <= 5)
+--------------------------------------------------------------------------------
+- Near-duplicates with Candidate D Training Set (n=2,152): 0 detected (PASSED)
+- Near-duplicates with Official Test Split (n=290)        : 0 detected (PASSED)
+- Near-duplicates with Track B External Benchmark (n=120) : 0 detected (PASSED)
+- Near-duplicates with Track C Real-World Set (n=97)      : 0 detected (PASSED)
+
+VERDICT: STRICT INDEPENDENCE & ZERO LEAKAGE VERIFIED.
+All 115 images are 100% disjoint from all training and tuning corpora.
+================================================================================

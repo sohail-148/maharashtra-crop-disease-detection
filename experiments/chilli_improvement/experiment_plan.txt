@@ -1,0 +1,37 @@
+================================================================================
+CHILLI CONTROLLED MODEL IMPROVEMENT EXPERIMENT PLAN & DESIGN LOG
+================================================================================
+Target Model: models/chilli_cold/chilli_cold_baseline.keras (5 classes)
+Official Baseline: Accuracy = 63.79% | Weighted F1 = 62.36% | Macro F1 = 57.75%
+Random Seed: 42 (Reproducible across Python, NumPy, TensorFlow)
+
+EXPERIMENT 1 — CANDIDATE A (PARTIAL FINE-TUNING)
+- Starting Point: Chilli baseline model weights
+- Lower Layers: Frozen (Layers 0 to 124, blocks 1 to 13)
+- Unfrozen Layers: Upper 29 layers (Layers 125 to 153: blocks 14, 15, 16, Conv_1, out_relu)
+- BatchNormalization: Kept frozen inside base to stabilize statistics
+- Optimizer: Adam
+- Learning Rate: 0.0001 (10x smaller than initial head LR of 1e-3)
+- Batch Size: 32
+- Max Epochs: 30
+- Callbacks: EarlyStopping(patience=5, restore_best_weights=True), ReduceLROnPlateau(factor=0.2, patience=3)
+- Augmentation: Standard baseline augmentation
+
+EXPERIMENT 2 — CANDIDATE B (FINE-TUNING + REALISTIC FIELD AUGMENTATION)
+- Architecture & Optimizer: Identical to Candidate A
+- Augmentation: Realistic field-oriented transformations
+  * Random horizontal flip (p=0.5)
+  * Moderate random crop/zoom (85% to 100% scale)
+  * Random brightness variation (delta=±0.15)
+  * Random contrast variation (0.85 to 1.15)
+  * Values clipped to [-1.0, 1.0]
+
+EXPERIMENT 3 — CANDIDATE C (FINE-TUNING + AUGMENTATION + CLASS WEIGHTING)
+- Architecture, Optimizer, Augmentation: Identical to Candidate B
+- Class Weighting: Balanced class weights computed EXCLUSIVELY from train.csv
+  * cerocospora:            0.4299 (629 samples)
+  * healthy:                1.1757 (230 samples)
+  * murda complex:          1.4010 (193 samples)
+  * nutritional deficiency: 1.4460 (187 samples)
+  * powdery mildew:         2.3929 (113 samples)
+================================================================================

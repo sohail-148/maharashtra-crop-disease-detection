@@ -1,0 +1,17 @@
+model_tested,input_source_type,n_samples,mean_confidence,pct_conf_ge_80,pct_conf_ge_90,max_confidence,most_frequent_false_label
+Tomato,Cross-Crop: Grape Leaves,25,0.7788670086860656,48.0,32.0,0.9998458623886108,Tomato___Late_blight
+Tomato,Cross-Crop: Chilli Leaves,25,0.9233248686790466,92.0,76.0,0.9999933242797852,Tomato___Early_blight
+Tomato,Cross-Crop: Sugarcane Leaves,25,0.945346028804779,92.0,80.0,1.0,Tomato___Tomato_Yellow_Leaf_Curl_Virus
+Grape,Cross-Crop: Tomato Leaves,25,0.804741644859314,56.00000000000001,40.0,0.9843658208847046,Healthy Leaves
+Grape,Cross-Crop: Chilli Leaves,25,0.7493833661079407,44.0,16.0,0.9593799114227295,Leaf Blight
+Grape,Cross-Crop: Sugarcane Leaves,25,0.7335703182220459,36.0,16.0,0.9956974983215332,Bacterial Leaf Spot
+Chilli,Cross-Crop: Tomato Leaves,25,0.7251212966442108,44.0,24.0,0.9866140484809875,cerocospora
+Chilli,Cross-Crop: Grape Leaves,25,0.6450347077846527,28.000000000000004,12.0,0.975262463092804,healthy
+Chilli,Cross-Crop: Sugarcane Leaves,25,0.5868412411212921,12.0,4.0,0.952024519443512,healthy
+Sugarcane,Cross-Crop: Tomato Leaves,25,0.7683335721492768,48.0,36.0,0.9988466501235962,Yellow Leaf Disease
+Sugarcane,Cross-Crop: Grape Leaves,25,0.7279493641853333,32.0,24.0,0.9943079352378845,Yellow Leaf Disease
+Sugarcane,Cross-Crop: Chilli Leaves,25,0.7400637006759644,44.0,28.000000000000004,0.9996262788772583,Pokkah Boeng
+Tomato,Unrelated Non-Leaf Objects,20,0.9072303354740143,80.0,75.0,0.9999227523803711,Tomato___Early_blight
+Grape,Unrelated Non-Leaf Objects,20,0.832506500184536,65.0,50.0,0.998805046081543,Healthy Leaves
+Chilli,Unrelated Non-Leaf Objects,20,0.7508358791470527,55.00000000000001,30.0,0.998089611530304,cerocospora
+Sugarcane,Unrelated Non-Leaf Objects,20,0.7112780600786209,35.0,25.0,0.9986592531204224,Mosaic / Viral Disease

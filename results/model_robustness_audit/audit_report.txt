@@ -1,0 +1,249 @@
+================================================================================
+4-TRACK EMPIRICAL MODEL ROBUSTNESS AUDIT REPORT
+Maharashtra Crop Disease Detection Project
+Date: September 2026
+Models Audited: Existing Production Models (models/*.keras) — Zero Retraining
+Total Empirical Evaluations: 2,556 Inferences Across 4 Crops
+================================================================================
+
+EXECUTIVE SUMMARY
+-----------------
+Prior to full deployment and before making decisions regarding retraining, data augmentation,
+or architecture changes, a comprehensive 4-track empirical robustness audit was conducted on
+the 4 locked production models:
+  - Tomato (tomato_baseline.keras, 10 classes)
+  - Grape (grape_unified_baseline.keras, 7 classes)
+  - Chilli (chilli_cold_baseline.keras, 5 classes)
+  - Sugarcane (sugarcane_unified_baseline.keras, 11 classes)
+
+EVALUATION METHODOLOGY:
+  - TRACK A (Internal Held-Out Test Audit): 1,119 randomly sampled held-out test images
+    (seed 42, up to 30/class) from our project splits.
+  - TRACK B (Independent External Labeled Audit): 632 independently sourced, research-grade
+    labeled images from open public datasets (Pakistan Tomato Field, PlantDoc, GLDD, AI Challenger,
+    Ulfa Chili, Sabidarrow Sugarcane) with 100% verified ZERO hash collisions with project datasets.
+  - TRACK C (Real-World / Internet User-Style Audit): 425 uncontrolled field/farmer photographs
+    with complex backgrounds, varying daylight, weed clutter, shadows, and hands (369 HIGH quality).
+  - TRACK D (Wrong-Crop & Unrelated Object Stress Test): 380 evaluations (300 cross-crop leaf tests,
+    80 unrelated non-leaf benchmark images such as cars, persons, animals, furniture).
+
+CORE HEADLINE FINDINGS:
+1. TRACK A TO TRACK B COLLAPSE (LABORATORY OVERFITTING):
+   - Tomato collapsed from 88.00% internal accuracy to 14.34% on independent external benchmarks.
+   - Grape collapsed from 88.00% internal accuracy to 13.33% on independent external benchmarks.
+   - Sugarcane dropped from 82.00% internal accuracy to 38.33% on independent external benchmarks.
+   - Chilli maintained 56.25% internal vs 55.00% external (low internal accuracy, but zero lab drop).
+
+2. REAL-WORLD FIELD TEST DEGRADATION (TRACK C):
+   - Real-world field accuracy (HIGH quality): Tomato 30.92%, Grape 10.00%, Chilli 50.65%, Sugarcane 30.00%.
+   - Overall real-world accuracy across all crops: 29.27% (108/369).
+
+3. PATHOLOGICAL OUT-OF-DISTRIBUTION (OOD) OVERCONFIDENCE (TRACK D):
+   - Models do NOT fail gracefully or express low confidence when fed completely wrong crops or non-leaf objects.
+   - When fed unrelated non-leaf objects (cars, shoes, baboons, furniture):
+     * Tomato model accepted them with 90.72% mean confidence (80% at conf >= 80%), predicting "Early Blight".
+     * Grape model accepted them with 83.25% mean confidence (65% at conf >= 80%), predicting "Healthy Leaves".
+     * Chilli model accepted them with 75.08% mean confidence (55% at conf >= 80%), predicting "Cercospora".
+     * Sugarcane model accepted them with 71.13% mean confidence (35% at conf >= 80%), predicting "Mosaic Virus".
+   - When fed cross-crop leaves (e.g. Tomato model fed Sugarcane leaves):
+     * Tomato predicted "Yellow Leaf Curl Virus" with 94.53% mean confidence (80% of samples at >= 90% confidence, max 100.0%).
+
+================================================================================
+TRACK-BY-TRACK EMPIRICAL BENCHMARKS
+================================================================================
+
+TRACK A: INTERNAL HELD-OUT TEST AUDIT (n = 1,119)
+-------------------------------------------------
+  Tomato (300 samples, 10 classes):    Accuracy: 88.00% | Mean Conf: 87.31% | High-Conf Err (>=80%): 27.8%
+  Grape (225 samples, 7 classes):     Accuracy: 88.00% | Mean Conf: 90.61% | High-Conf Err (>=80%): 25.9%
+  Chilli (144 samples, 5 classes):    Accuracy: 56.25% | Mean Conf: 65.03% | High-Conf Err (>=80%): 9.5%
+  Sugarcane (450 samples, 11 classes): Accuracy: 82.00% | Mean Conf: 82.56% | High-Conf Err (>=80%): 23.5%
+  OVERALL TRACK A ACCURACY: 82.75% (926/1,119)
+
+TRACK B: INDEPENDENT EXTERNAL LABELED AUDIT (n = 632)
+-----------------------------------------------------
+  Tomato (272 samples, 10 classes):    Accuracy: 14.34% | Mean Conf: 84.33% | High-Conf Err (>=80%): 67.0%
+  Grape (180 samples, 6 classes):     Accuracy: 13.33% | Mean Conf: 77.58% | High-Conf Err (>=80%): 51.3%
+  Chilli (120 samples, 4 classes):    Accuracy: 55.00% | Mean Conf: 61.11% | High-Conf Err (>=80%): 5.6%
+  Sugarcane (60 samples, 2 classes):  Accuracy: 38.33% | Mean Conf: 65.72% | High-Conf Err (>=80%): 27.0%
+  OVERALL TRACK B ACCURACY: 24.05% (152/632)
+  GENERALIZATION DROP (Track A -> B): -58.70 percentage points overall
+
+TRACK C: REAL-WORLD / USER-STYLE FIELD AUDIT (n = 425)
+------------------------------------------------------
+  Tomato High-Quality (152 samples):   Accuracy: 30.92% | Mean Conf: 84.23% | High-Conf Err (>=80%): 68.1%
+  Grape High-Quality (100 samples):    Accuracy: 10.00% | Mean Conf: 83.28% | High-Conf Err (>=80%): 45.6%
+  Chilli High-Quality (77 samples):    Accuracy: 50.65% | Mean Conf: 68.16% | High-Conf Err (>=80%): 9.8%
+  Sugarcane High-Quality (40 samples): Accuracy: 30.00% | Mean Conf: 90.53% | High-Conf Err (>=80%): 32.1%
+  OVERALL TRACK C HIGH-QUALITY ACCURACY: 29.27% (108/369)
+  OVERALL TRACK C ALL-SAMPLES ACCURACY:  29.41% (125/425)
+
+TRACK D: OUT-OF-DISTRIBUTION STRESS TESTS (n = 380)
+---------------------------------------------------
+  Cross-Crop Leaf Tests (300 evaluations across 12 cross-pairs):
+    - Tomato Model on Grape leaves:     Mean Conf: 77.89% | Conf >= 80%: 48.0% | Top False: Late Blight
+    - Tomato Model on Chilli leaves:    Mean Conf: 92.33% | Conf >= 80%: 92.0% | Top False: Early Blight (99.99%)
+    - Tomato Model on Sugarcane leaves: Mean Conf: 94.53% | Conf >= 80%: 92.0% | Top False: Yellow Leaf Curl (100.0%)
+    - Grape Model on Tomato leaves:     Mean Conf: 80.47% | Conf >= 80%: 56.0% | Top False: Healthy Leaves (98.44%)
+    - Grape Model on Chilli leaves:     Mean Conf: 74.94% | Conf >= 80%: 44.0% | Top False: Leaf Blight (95.94%)
+    - Grape Model on Sugarcane leaves:  Mean Conf: 73.36% | Conf >= 80%: 36.0% | Top False: Bacterial Leaf Spot (99.57%)
+    - Chilli Model on Tomato leaves:    Mean Conf: 72.51% | Conf >= 80%: 44.0% | Top False: Cercospora (98.66%)
+    - Chilli Model on Grape leaves:     Mean Conf: 64.50% | Conf >= 80%: 28.0% | Top False: Healthy (97.53%)
+    - Chilli Model on Sugarcane leaves: Mean Conf: 58.68% | Conf >= 80%: 12.0% | Top False: Healthy (95.20%)
+    - Sugarcane Model on Tomato leaves: Mean Conf: 76.83% | Conf >= 80%: 48.0% | Top False: Yellow Leaf Disease (99.88%)
+    - Sugarcane Model on Grape leaves:  Mean Conf: 72.79% | Conf >= 80%: 32.0% | Top False: Yellow Leaf Disease (99.43%)
+    - Sugarcane Model on Chilli leaves: Mean Conf: 74.01% | Conf >= 80%: 44.0% | Top False: Pokkah Boeng (99.96%)
+
+  Unrelated Non-Leaf Objects (80 evaluations across 20 standard objects):
+    - Tomato Model:    Mean Conf: 90.72% | Conf >= 80%: 80.0% | Conf >= 90%: 75.0% | Max: 99.99% (Early Blight)
+    - Grape Model:     Mean Conf: 83.25% | Conf >= 80%: 65.0% | Conf >= 90%: 50.0% | Max: 99.88% (Healthy Leaves)
+    - Chilli Model:    Mean Conf: 75.08% | Conf >= 80%: 55.0% | Conf >= 90%: 30.0% | Max: 99.81% (Cercospora)
+    - Sugarcane Model: Mean Conf: 71.13% | Conf >= 80%: 35.0% | Conf >= 90%: 25.0% | Max: 99.87% (Mosaic Virus)
+
+================================================================================
+FAILURE MODE ANALYSIS & ROOT CAUSES
+================================================================================
+
+1. THE TOMATO "BLIGHT ATTRACTOR" (BACKGROUND SHORTCUT LEARNING):
+   - Root Cause: The Tomato model was trained exclusively on PlantVillage, where leaves were photographed
+     against uniform artificial laboratory backdrops (solid grey, black, or blue cards).
+   - In contrast, real farmer and external images (Pakistan, PlantDoc, Sylhet) contain natural field backgrounds
+     (soil, sky, shadows, weeds, hands).
+   - The model learned the artificial background as a shortcut feature: when exposed to natural field foliage,
+     it systematically defaults to "Early Blight" or "Late Blight" with 80% to 99.9% confidence, regardless of
+     actual pathology. External healthy tomato leaves had a 0.0% accuracy, with 100% misclassified as Blight.
+
+2. THE GRAPE "HEALTHY / MILDEW ATTRACTOR" (SENSOR ARTIFACT OVERFITTING):
+   - Root Cause: Grape unified model trained on Niphad + 2024 datasets. The model overfitted to camera sensor
+     profiles and lighting characteristics of those specific vineyard collections.
+   - When presented with independent external images (baliwaka, GLDD), 70% of diseased leaves collapsed into
+     "Healthy Leaves" or "Powdery Mildew" with high confidence.
+
+3. THE CHILLI STABILITY PARADOX (DOMAIN ALIGNMENT):
+   - Chilli was trained on the Krishna River Basin dataset, which was already an in-field farmer collection.
+   - Because it was trained on real field conditions, it suffered virtually ZERO laboratory drop (56.25% Track A
+     vs 55.00% Track B vs 57.73% Track C).
+   - However, its baseline capacity is bottlenecked at ~55% due to class confusion between Cercospora,
+     Nutritional Deficiency, and Healthy.
+
+4. THE OOD HALLUCINATION VULNERABILITY:
+   - Without an explicit out-of-distribution detection mechanism, background class, or confidence thresholding,
+     the softmax layer forces every arbitrary input into one of the trained disease classes.
+   - The extreme overconfidence (>90%) on completely unrelated objects (cars, baboons, sports balls) confirms
+     that raw softmax confidence CANNOT be trusted as an indicator of real-world prediction validity.
+
+================================================================================
+ANSWERS TO THE 15 DECISION SUPPORT QUESTIONS
+================================================================================
+
+Q1: Does the Tomato model generalize to real-world / external tomato images?
+ANSWER: NO. The Tomato model experiences a catastrophic generalization drop from 88.00% (internal)
+to 14.34% (external) and 30.92% (real-world field). It is heavily overfitted to PlantVillage laboratory backdrops.
+
+Q2: Which tomato classes are robust, and which are completely broken?
+ANSWER:
+  - Robust (Green): Late Blight (93.3% internal, 66.7% external, 80.0% real-world).
+  - Moderate (Yellow): Early Blight (63.3% internal, 46.7% external, 50.0% real-world).
+  - Broken (Red): Healthy (0.0% external), Leaf Mold (0.0% external), Target Spot (0.0% external),
+    Mosaic Virus (0.0% external), Yellow Leaf Curl (3.3% external), Bacterial Spot (3.3% external),
+    Septoria (10.0% external), Spider Mites (0.0% external). All collapse into Early/Late Blight.
+
+Q3: Does the Grape unified model generalize to external grape images?
+ANSWER: NO. Grape collapses from 88.00% internal accuracy to 13.33% external and 10.00% real-world field.
+Only Healthy Leaves showed partial generalization (63.3%); Black Rot, Esca, Downy Mildew, Leaf Blight,
+and Powdery Mildew all dropped below 10% on external field collections.
+
+Q4: Does the Chilli model generalize, or is its 56% internal accuracy also degraded externally?
+ANSWER: Chilli maintains its performance without domain collapse (56.25% internal vs 55.00% external vs
+50.65% real-world). Because its training data came from real fields, it does not suffer from laboratory
+backdrop overfitting; however, its overall accuracy is too low for standalone clinical diagnosis.
+
+Q5: Does the Sugarcane model generalize to external sugarcane images?
+ANSWER: PARTIALLY. Sugarcane drops from 82.00% internal to 38.33% external and 30.00% real-world field.
+Red Rot generalizes moderately (50.0% external, 45.0% real-world), but Healthy Leaves dropped to 26.7%
+external as field textures triggered false disease alarms.
+
+Q6: What is the primary cause of generalization failure across models?
+ANSWER: Shortcut learning on non-pathological background features (artificial solid-color backgrounds in
+PlantVillage) and dataset-specific camera sensor noise, rather than invariant leaf lesion pathology.
+
+Q7: What happens when models receive images of the WRONG crop?
+ANSWER: Severe false alarms with extreme overconfidence. The models assign wrong-crop leaves to random
+disease classes with up to 94.5% mean confidence, with 80% to 92% of predictions exceeding 80% confidence.
+
+Q8: What happens when models receive completely UNRELATED non-leaf images?
+ANSWER: The models confidently hallucinate diseases on ordinary objects (cars, animals, furniture). Tomato
+accepted 80% of unrelated objects at >= 80% confidence (mean 90.72%), and Grape accepted 65% at >= 80% confidence.
+
+Q9: Can raw softmax confidence be used as a reliability filter?
+ANSWER: ABSOLUTELY NOT. The mean confidence on erroneous external predictions is 84.1% in Tomato, 76.9% in Grape,
+and 61.0% in Sugarcane. Over 67% of Tomato errors have confidence >= 80%. High softmax confidence indicates
+model overconfidence, not predictive accuracy.
+
+Q10: Is Grad-CAM faithful and meaningful on external error cases?
+ANSWER: YES. As demonstrated in Phase 15 and verified during the audit, Grad-CAM accurately exposes WHY the
+models fail: on external and wrong-crop images, heatmaps consistently highlight the background soil, image borders,
+or healthy vein structures rather than localized necrotic spots, confirming shortcut learning.
+
+Q11: Which crops are viable for production deployment in their CURRENT state?
+ANSWER: NONE are viable for unconstrained standalone deployment. However, with strict UI disclaimers and human-
+in-the-loop validation:
+  - Sugarcane (S1/S2): Conditionally viable for Red Rot triage.
+  - Tomato: Conditionally viable ONLY for Late Blight / Early Blight differentiation.
+  - Chilli and Grape: NOT viable for production diagnosis without retraining.
+
+Q12: Is retraining necessary, or can post-processing / thresholding fix the issues?
+ANSWER: RETRAINING IS MANDATORY. Post-processing (confidence thresholding) cannot fix the problem because the
+models are 90%+ confident on their errors. The models must be retrained with natural field data, heavy background
+augmentation, and out-of-distribution regularization.
+
+Q13: What specific data interventions are required for each crop?
+ANSWER:
+  - Tomato: Must replace/augment PlantVillage with real field datasets (Pakistan field collection, PlantDoc,
+    augmented outdoor backgrounds) to break the solid-background shortcut.
+  - Grape: Must perform heavy color jitter, contrast normalization, and cross-vineyard domain generalization.
+  - Chilli: Needs fine-grained lesion contrast enhancement and expert re-labeling of nutritional deficiency.
+  - Sugarcane: Needs more diverse field stalk and canopy images across Indian growing regions.
+
+Q14: Should a generic "Leaf / Non-Leaf" or "Crop Identifier" gatekeeper model be added?
+ANSWER: YES, CRITICAL. A lightweight two-stage front-end gatekeeper is essential:
+  Stage 1: Plant Leaf vs Non-Leaf Gatekeeper (rejects arbitrary objects).
+  Stage 2: Crop Classifier Gatekeeper (verifies Tomato vs Grape vs Chilli vs Sugarcane before disease diagnosis).
+
+Q15: What should the immediate priority be for the project roadmap?
+ANSWER: Retraining the core models using cross-dataset field collections and implementing a Crop/Leaf Gatekeeper,
+while maintaining Grad-CAM as an explanatory inspection tool.
+
+================================================================================
+PER-CROP RECOMMENDATIONS & ACTION PLAN
+================================================================================
+
+RECOMMENDATION A — TOMATO:
+  - Action: MAJOR RETRAINING REQUIRED (Highest Priority).
+  - Remedy: Integrate the Pakistan field collection (1,300+ raw field photos) and PlantDoc tomato images
+    into the training corpus. Apply CutMix, Mosaic, and synthetic background replacement so the model learns
+    lesion contours instead of background cards.
+
+RECOMMENDATION B — GRAPE:
+  - Action: RETRAINING WITH DOMAIN ADAPTATION.
+  - Remedy: Combine Niphad and Grape 2024 with AI Challenger and GLDD vineyard data. Apply heavy photometric
+    augmentations (hue/saturation/brightness jitter) and train with domain-adversarial or MixUp loss.
+
+RECOMMENDATION C — CHILLI:
+  - Action: CLASS REBALANCING & LESION-FOCUSED TRAINING.
+  - Remedy: Re-examine nutritional deficiency vs cercospora labels. Incorporate higher-resolution localized
+    lesion crops and test modern lightweight vision transformer backbones (MobileViT or EfficientNet-V2).
+
+RECOMMENDATION D — SUGARCANE:
+  - Action: FIELD DATASET EXPANSION & MULTI-LABEL MODELING.
+  - Remedy: Broaden external field representations for Smut, Wilt, and Rust. Implement temperature scaling
+    calibration to soften overconfident predictions.
+
+RECOMMENDATION E — SYSTEM-WIDE ARCHITECTURE & FLASK INTEGRATION:
+  - Action: IMPLEMENT TWO-STAGE GATEKEEPER & CALIBRATION.
+  - Remedy:
+    1. Implement Crop Gatekeeper: Verify crop identity before invoking the disease classifier.
+    2. Implement Out-of-Distribution (OOD) Detector: Reject non-leaf or low-confidence inputs gracefully.
+    3. Temperature Scaling: Calibrate logits so probabilities reflect true empirical likelihood.
+    4. Maintain Grad-CAM: Keep Grad-CAM enabled in Flask UI to provide explainability for farmer trust.
+================================================================================
