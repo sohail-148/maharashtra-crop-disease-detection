@@ -475,16 +475,93 @@ ul, ol { list-style: none; }
 .probs-bar__fill{ height: 100%; background: var(--color-primary); border-radius: var(--radius-full); }
 .probs-pct      { width: 44px; text-align: right; font-size: .82rem; color: var(--color-text-muted); }
 
-/* Grad-CAM placeholder */
-.gradcam-placeholder {
+/* Grad-CAM visual explanation */
+.gradcam-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 18px 20px;
+  box-shadow: var(--shadow-sm);
+  margin-bottom: 20px;
+}
+.gradcam-card--pending,
+.gradcam-card--unavailable {
   background: var(--color-bg);
   border: 1px dashed var(--color-border);
-  border-radius: var(--radius-md);
-  padding: 24px;
   text-align: center;
+  padding: 24px;
 }
-.gradcam-placeholder__icon { font-size: 2rem; display: block; margin-bottom: 8px; }
-.gradcam-placeholder__text { font-size: .9rem; color: var(--color-text-muted); }
+.gradcam-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+.gradcam-card--pending .gradcam-header,
+.gradcam-card--unavailable .gradcam-header {
+  justify-content: center;
+}
+.gradcam-header__icon {
+  font-size: 1.5rem;
+  line-height: 1;
+}
+.gradcam-header__title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--color-text);
+  margin: 0;
+}
+.gradcam-badge {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: var(--radius-full);
+  background: var(--color-primary-light);
+  color: var(--color-primary-dark);
+  font-size: 0.72rem;
+  font-weight: 700;
+  margin-top: 2px;
+}
+.gradcam-visual-wrapper {
+  margin-bottom: 14px;
+}
+.gradcam-frame {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  background: #000;
+  box-shadow: var(--shadow-sm);
+  aspect-ratio: 1 / 1;
+  max-width: 320px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.gradcam-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.gradcam-info {
+  border-top: 1px solid var(--color-border);
+  padding-top: 12px;
+}
+.gradcam-text {
+  font-size: 0.88rem;
+  color: var(--color-text);
+  line-height: 1.5;
+  margin-bottom: 8px;
+}
+.gradcam-text--muted {
+  color: var(--color-text-muted);
+  font-style: italic;
+  margin-bottom: 0;
+}
+.gradcam-disclaimer {
+  font-size: 0.76rem;
+  color: var(--color-text-light);
+  line-height: 1.4;
+}
 
 .result-actions { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 8px; }
 
@@ -501,6 +578,11 @@ ul, ol { list-style: none; }
   background: var(--color-warning-bg);
   border: 1px solid var(--color-warning-border);
   color: #78350f;
+}
+.banner--danger {
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  color: #991b1b;
 }
 .banner__icon { font-size: 1.5rem; flex-shrink: 0; margin-top: 2px; }
 .banner p    { font-size: .9rem; margin-top: 4px; }

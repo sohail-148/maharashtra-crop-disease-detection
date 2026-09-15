@@ -1,0 +1,44 @@
+crop,model,true_index,true_class,support,pred_Bacterial Spot,pred_Early Blight,pred_Late Blight,pred_Leaf Mold,pred_Septoria Leaf Spot,pred_Spider Mites,pred_Target Spot,pred_Yellow Leaf Curl Virus,pred_Mosaic Virus,pred_Healthy,pred_Bacterial Leaf Spot,pred_Black Rot,pred_Downy Mildew,pred_Esca (Black Measles),pred_Healthy Leaves,pred_Leaf Blight,pred_Powdery Mildew,pred_Banded Chlorosis,pred_Brown Spot,pred_Grassy Shoot,pred_Mosaic / Viral Disease,pred_Pokkah Boeng,pred_Red Rot,pred_Rust (Brown Rust),pred_Sett Rot,pred_Smut,pred_Yellow Leaf Disease,pred_Cercospora Leaf Spot,pred_Murda Complex (Leaf Curl),pred_Nutritional Deficiency
+Tomato,Baseline,0,Bacterial Spot,39,2.0,18.0,9.0,0.0,8.0,0.0,0.0,2.0,0.0,0.0,,,,,,,,,,,,,,,,,,,,
+Tomato,Baseline,1,Early Blight,58,0.0,28.0,26.0,0.0,3.0,0.0,0.0,1.0,0.0,0.0,,,,,,,,,,,,,,,,,,,,
+Tomato,Baseline,2,Late Blight,60,0.0,16.0,44.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,,,,,,,,,,,,,,,,,,,,
+Tomato,Baseline,3,Leaf Mold,56,3.0,21.0,22.0,0.0,7.0,0.0,0.0,3.0,0.0,0.0,,,,,,,,,,,,,,,,,,,,
+Tomato,Baseline,4,Septoria Leaf Spot,61,4.0,33.0,12.0,0.0,9.0,0.0,0.0,3.0,0.0,0.0,,,,,,,,,,,,,,,,,,,,
+Tomato,Baseline,5,Spider Mites,2,0.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,,,,,,,,,,,,,,,,,,,,
+Tomato,Baseline,6,Target Spot,30,0.0,23.0,7.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,,,,,,,,,,,,,,,,,,,,
+Tomato,Baseline,7,Yellow Leaf Curl Virus,56,1.0,10.0,39.0,0.0,2.0,0.0,0.0,4.0,0.0,0.0,,,,,,,,,,,,,,,,,,,,
+Tomato,Baseline,8,Mosaic Virus,40,0.0,13.0,25.0,0.0,0.0,0.0,0.0,2.0,0.0,0.0,,,,,,,,,,,,,,,,,,,,
+Tomato,Baseline,9,Healthy,58,0.0,23.0,32.0,0.0,0.0,0.0,0.0,3.0,0.0,0.0,,,,,,,,,,,,,,,,,,,,
+Grape,Grape Unified Baseline,0,Bacterial Leaf Spot,0,,,,,,,,,,,0.0,0.0,0.0,0.0,0.0,0.0,0.0,,,,,,,,,,,,,
+Grape,Grape Unified Baseline,1,Black Rot,58,,,,,,,,,,,0.0,0.0,0.0,3.0,30.0,1.0,24.0,,,,,,,,,,,,,
+Grape,Grape Unified Baseline,2,Downy Mildew,50,,,,,,,,,,,2.0,13.0,2.0,8.0,14.0,3.0,8.0,,,,,,,,,,,,,
+Grape,Grape Unified Baseline,3,Esca (Black Measles),50,,,,,,,,,,,1.0,1.0,5.0,1.0,32.0,0.0,10.0,,,,,,,,,,,,,
+Grape,Grape Unified Baseline,4,Healthy Leaves,42,,,,,,,,,,,2.0,8.0,0.0,2.0,28.0,1.0,1.0,,,,,,,,,,,,,
+Grape,Grape Unified Baseline,5,Leaf Blight,50,,,,,,,,,,,3.0,1.0,2.0,3.0,6.0,2.0,33.0,,,,,,,,,,,,,
+Grape,Grape Unified Baseline,6,Powdery Mildew,30,,,,,,,,,,,0.0,0.0,0.0,8.0,21.0,0.0,1.0,,,,,,,,,,,,,
+Sugarcane,Sugarcane Unified Baseline,0,Banded Chlorosis,0,,,,,,,,,,,,,,,0.0,,,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,,,
+Sugarcane,Sugarcane Unified Baseline,1,Brown Spot,0,,,,,,,,,,,,,,,0.0,,,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,,,
+Sugarcane,Sugarcane Unified Baseline,2,Grassy Shoot,0,,,,,,,,,,,,,,,0.0,,,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,,,
+Sugarcane,Sugarcane Unified Baseline,3,Healthy Leaves,50,,,,,,,,,,,,,,,11.0,,,2.0,10.0,0.0,16.0,4.0,4.0,1.0,0.0,1.0,1.0,,,
+Sugarcane,Sugarcane Unified Baseline,4,Mosaic / Viral Disease,0,,,,,,,,,,,,,,,0.0,,,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,,,
+Sugarcane,Sugarcane Unified Baseline,5,Pokkah Boeng,0,,,,,,,,,,,,,,,0.0,,,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,,,
+Sugarcane,Sugarcane Unified Baseline,6,Red Rot,50,,,,,,,,,,,,,,,0.0,,,4.0,12.0,0.0,1.0,0.0,24.0,9.0,0.0,0.0,0.0,,,
+Sugarcane,Sugarcane Unified Baseline,7,Rust (Brown Rust),0,,,,,,,,,,,,,,,0.0,,,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,,,
+Sugarcane,Sugarcane Unified Baseline,8,Sett Rot,0,,,,,,,,,,,,,,,0.0,,,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,,,
+Sugarcane,Sugarcane Unified Baseline,9,Smut,0,,,,,,,,,,,,,,,0.0,,,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,,,
+Sugarcane,Sugarcane Unified Baseline,10,Yellow Leaf Disease,0,,,,,,,,,,,,,,,0.0,,,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,,,
+Chilli,Baseline,0,Cercospora Leaf Spot,121,,,,,,,,,,27.0,,,,,,,2.0,,,,,,,,,,,76.0,8.0,8.0
+Chilli,Baseline,1,Healthy,111,,,,,,,,,,51.0,,,,,,,2.0,,,,,,,,,,,48.0,3.0,7.0
+Chilli,Baseline,2,Murda Complex (Leaf Curl),50,,,,,,,,,,14.0,,,,,,,1.0,,,,,,,,,,,27.0,1.0,7.0
+Chilli,Baseline,3,Nutritional Deficiency,50,,,,,,,,,,2.0,,,,,,,1.0,,,,,,,,,,,6.0,1.0,40.0
+Chilli,Baseline,4,Powdery Mildew,0,,,,,,,,,,0.0,,,,,,,0.0,,,,,,,,,,,0.0,0.0,0.0
+Chilli,Candidate B,0,Cercospora Leaf Spot,121,,,,,,,,,,46.0,,,,,,,7.0,,,,,,,,,,,40.0,4.0,24.0
+Chilli,Candidate B,1,Healthy,111,,,,,,,,,,75.0,,,,,,,1.0,,,,,,,,,,,7.0,2.0,26.0
+Chilli,Candidate B,2,Murda Complex (Leaf Curl),50,,,,,,,,,,22.0,,,,,,,1.0,,,,,,,,,,,10.0,1.0,16.0
+Chilli,Candidate B,3,Nutritional Deficiency,50,,,,,,,,,,0.0,,,,,,,1.0,,,,,,,,,,,3.0,1.0,45.0
+Chilli,Candidate B,4,Powdery Mildew,0,,,,,,,,,,0.0,,,,,,,0.0,,,,,,,,,,,0.0,0.0,0.0
+Chilli,Candidate D,0,Cercospora Leaf Spot,121,,,,,,,,,,17.0,,,,,,,1.0,,,,,,,,,,,75.0,17.0,11.0
+Chilli,Candidate D,1,Healthy,111,,,,,,,,,,80.0,,,,,,,1.0,,,,,,,,,,,7.0,11.0,12.0
+Chilli,Candidate D,2,Murda Complex (Leaf Curl),50,,,,,,,,,,7.0,,,,,,,3.0,,,,,,,,,,,7.0,31.0,2.0
+Chilli,Candidate D,3,Nutritional Deficiency,50,,,,,,,,,,0.0,,,,,,,0.0,,,,,,,,,,,0.0,0.0,50.0
+Chilli,Candidate D,4,Powdery Mildew,0,,,,,,,,,,0.0,,,,,,,0.0,,,,,,,,,,,0.0,0.0,0.0

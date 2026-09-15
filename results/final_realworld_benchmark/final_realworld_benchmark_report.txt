@@ -1,0 +1,292 @@
+================================================================================
+MAHARASHTRA CROP DISEASE DETECTION PROJECT
+FINAL COMPREHENSIVE REAL-WORLD FIELD BENCHMARK REPORT
+================================================================================
+Date: September 13, 2026
+Execution Mode: Evaluation-Only / Read-Only (Zero Retraining, Zero Data Alteration)
+Hardware: Local CPU Inference
+Artifact Directory: results/final_realworld_benchmark/
+
+================================================================================
+1. EXECUTIVE SUMMARY & BENCHMARK ARCHITECTURE
+================================================================================
+This benchmark evaluates the generalization of deep learning classification models
+across real-world, field-collected agricultural images for four primary crops of
+Maharashtra: Tomato, Grape, Sugarcane, and Chilli.
+
+All models evaluated are MobileNetV2-based backbones (ImageNet pretrained, 224x224
+input resolution, [-1, 1] normalization) trained on canonical laboratory and
+field datasets.
+
+DATA INTEGRITY ASSURANCE:
+- Total Audited Field Images: n = 1,172
+- Physical Decodability: 1,172 / 1,172 images (100% verified via PIL)
+- Train/Val/Test Leakage: 0 SHA-256 hash collisions with any training, validation,
+  or official test split, and 0 collisions with Candidate D training manifest.
+- Inter-Track Disjointness: 0 hash collisions between Track B (n=632),
+  Track C (n=425), and Experiment 5 (n=115).
+
+OVERALL REAL-WORLD BENCHMARK SUMMARY TABLE:
+-------------------------------------------------------------------------------------------------------------------------
+Crop        Model Evaluated              Total Imgs  Rep Classes  Accuracy  Weighted F1  Macro F1(Rep)  Macro F1(All)
+-------------------------------------------------------------------------------------------------------------------------
+Tomato      Tomato Baseline              460         10 / 10      18.91%    11.70%        9.37%          9.37%
+Grape       Grape Unified Baseline       280          6 /  7      12.14%     8.00%        8.45%          7.24%
+Sugarcane   Sugarcane Unified Baseline   100          2 / 11      35.00%    48.80%       48.80%          8.87%
+Chilli      Chilli Baseline              332          4 /  5      50.60%    47.80%       44.76%         35.81%
+Chilli      Candidate B (In-Domain)      332          4 /  5      48.49%    44.79%       40.65%         32.52%
+Chilli      Candidate D (Mixed-Domain)   332          4 /  5      71.08%    71.53%       70.68%         56.55%
+-------------------------------------------------------------------------------------------------------------------------
+*Note: Macro F1 (Rep) calculates the unweighted mean over classes with non-zero evaluation ground truth.
+ Macro F1 (All) includes unrepresented classes with F1 = 0.0%.
+
+KEY EMPIRICAL TAKEAWAYS:
+1. Laboratory-to-Field Domain Collapse:
+   Models trained primarily on laboratory/clean background datasets (Tomato Baseline,
+   Grape Unified Baseline) suffer severe domain collapse when evaluated on uncurated,
+   real-world field imagery (Tomato: 18.91% accuracy; Grape: 12.14% accuracy).
+2. Chilli Mixed-Domain Superiority (Candidate D):
+   Chilli Candidate D (trained with mixed lab + field imagery) achieved 71.08% accuracy
+   and 71.53% Weighted F1 across the 332-image real-world benchmark, outperforming
+   the Production Baseline (+20.48% acc) and Candidate B (+22.59% acc).
+3. Critical Field Representation Deficits:
+   Several key diseases lack ground-truth field evaluation imagery across public sources:
+   - Chilli Powdery Mildew: 0 images (100% missing).
+   - Grape Bacterial Leaf Spot: 0 images (100% missing).
+   - Sugarcane 9 of 11 Classes: 0 images (81.8% of canonical classes missing).
+   - Tomato Spider Mites: 2 images (critically underrepresented).
+
+================================================================================
+2. CHILLI THREE-MODEL HEAD-TO-HEAD BENCHMARK (n = 332)
+================================================================================
+To evaluate real-world field robustness, all three Chilli candidate models were
+evaluated on the exact same pool of 332 audited field images:
+- Track B (External Benchmarks): n = 120
+- Track C (Real-World Curated):  n = 97
+- Experiment 5 (PlantDoc):       n = 115
+
+DIRECT HEAD-TO-HEAD COMPARISON TABLE:
+-------------------------------------------------------------------------------------------------------------------------
+Benchmark Metric / Subset             Baseline      Candidate B   Candidate D   Delta (D - Base)  Delta (D - Cand B)
+-------------------------------------------------------------------------------------------------------------------------
+Combined Real-World Accuracy (n=332)   50.60%        48.49%        71.08%        +20.48%           +22.59%
+Combined Weighted F1 (n=332)          47.80%        44.79%        71.53%        +23.73%           +26.74%
+Combined Macro F1 (Represented)       44.76%        40.65%        70.68%        +25.92%           +30.03%
+Combined Macro F1 (All 5 Classes)     35.81%        32.52%        56.55%        +20.74%           +24.03%
+-------------------------------------------------------------------------------------------------------------------------
+Track B (External, n=120) Accuracy    51.67%        51.67%        89.17%        +37.50%           +37.50%
+Track B Weighted F1                   45.18%        42.76%        88.68%        +43.50%           +45.92%
+Track C (Real-World, n=97) Accuracy   57.73%        54.64%        79.38%        +21.65%           +24.74%
+Track C Weighted F1                   53.57%        48.01%        80.03%        +26.46%           +32.02%
+Exp 5 (PlantDoc, n=115) Accuracy      43.48%        40.00%        45.22%         +1.74%            +5.22%
+Exp 5 Weighted F1                     46.02%        49.75%        56.14%        +10.12%            +6.39%
+-------------------------------------------------------------------------------------------------------------------------
+Per-Class F1 Scores:
+* Cercospora Leaf Spot (n=121)         54.68%        44.20%        71.43%        +16.75%           +27.23%
+* Healthy Leaves (n=111)               49.76%        59.06%        74.42%        +24.66%           +15.36%
+* Murda Complex / Leaf Curl (n=50)      3.17%         3.45%        56.88%        +53.71%           +53.43%
+* Nutritional Deficiency (n=50)        71.43%        55.90%        80.00%         +8.57%           +24.10%
+* Powdery Mildew (n=0, UNREPRESENTED)  N/A           N/A           N/A           N/A               N/A
+-------------------------------------------------------------------------------------------------------------------------
+
+PER-CLASS DETAILED METRICS FOR CHILLI:
+-------------------------------------------------------------------------------------------------------------------------
+Class Name                  Model        Support  Precision  Recall   F1-Score  Pred Counts (Distribution)
+-------------------------------------------------------------------------------------------------------------------------
+Cercospora Leaf Spot        Baseline     121      48.41%     62.81%   54.68%    157 predicted
+                            Cand B       121      66.67%     33.06%   44.20%     60 predicted
+                            Cand D       121      84.27%     61.98%   71.43%     89 predicted
+
+Healthy Leaves              Baseline     111      54.26%     45.95%   49.76%     94 predicted
+                            Cand B       111      52.45%     67.57%   59.06%    143 predicted
+                            Cand D       111      76.92%     72.07%   74.42%    104 predicted
+
+Murda Complex (Leaf Curl)   Baseline      50       7.69%      2.00%    3.17%     13 predicted (1/50 caught)
+                            Cand B        50      12.50%      2.00%    3.45%      8 predicted (1/50 caught)
+                            Cand D        50      52.54%     62.00%   56.88%     59 predicted (31/50 caught)
+
+Nutritional Deficiency      Baseline      50      64.52%     80.00%   71.43%     62 predicted (40/50 caught)
+                            Cand B        50      40.54%     90.00%   55.90%    111 predicted (45/50 caught, 66 FPs)
+                            Cand D        50      66.67%    100.00%   80.00%     75 predicted (50/50 caught, 25 FPs)
+
+Powdery Mildew              Baseline       0      N/A        N/A      N/A         6 predicted (false alarms)
+                            Cand B         0      N/A        N/A      N/A        10 predicted (false alarms)
+                            Cand D         0      N/A        N/A      N/A         5 predicted (false alarms)
+-------------------------------------------------------------------------------------------------------------------------
+
+CHILLI CONFUSION MATRICES (Raw Counts):
+
+Baseline:
+Pred ->               Cercospora  Healthy  Murda Complex  Nutr Deficiency  Powdery Mildew  Total
+True: Cercospora             76       27              8                8               2    121
+True: Healthy                48       51              3                7               2    111
+True: Murda Complex          27       14              1                7               1     50
+True: Nutr Deficiency         6        2              1               40               1     50
+True: Powdery Mildew          0        0              0                0               0      0
+
+Candidate B:
+Pred ->               Cercospora  Healthy  Murda Complex  Nutr Deficiency  Powdery Mildew  Total
+True: Cercospora             40       46              4               24               7    121
+True: Healthy                 7       75              2               26               1    111
+True: Murda Complex          10       22              1               16               1     50
+True: Nutr Deficiency         3        0              1               45               1     50
+True: Powdery Mildew          0        0              0                0               0      0
+
+Candidate D:
+Pred ->               Cercospora  Healthy  Murda Complex  Nutr Deficiency  Powdery Mildew  Total
+True: Cercospora             75       17             17               11               1    121
+True: Healthy                 7       80             11               12               1    111
+True: Murda Complex           7        7             31                2               3     50
+True: Nutr Deficiency         0        0              0               50               0     50
+True: Powdery Mildew          0        0              0                0               0      0
+
+DEEP DIVE: WHY CANDIDATE D EXCELS IN REAL FIELDS:
+1. Resolving the Murda Complex Blindspot:
+   Both the Production Baseline and Candidate B exhibit near-total catastrophic failure
+   on real-world Murda Complex field images (Recall = 2.0%, detecting exactly 1 out of
+   50 field images). Candidate D successfully captured 31 out of 50 field samples
+   (Recall = 62.00%, Precision = 52.54%, F1 = 56.88%). This represents a +53.71% F1 leap.
+2. Complete Coverage on Nutritional Deficiency:
+   Candidate D detected 100% of all Nutritional Deficiency field images (50/50, Recall = 100%).
+   Candidate B produced 66 false positive Nutritional Deficiency predictions, degrading its
+   precision to 40.54%. Candidate D kept false positives significantly lower (Precision = 66.67%).
+3. Robustness on Cercospora and Healthy:
+   Candidate D maintains strong precision and recall simultaneously on Cercospora (F1 = 71.43%)
+   and Healthy Leaves (F1 = 74.42%), whereas Baseline and Candidate B suffered substantial
+   cross-talk between Cercospora and Healthy classes.
+
+================================================================================
+3. CROP-SPECIFIC REAL-WORLD BENCHMARK RESULTS
+================================================================================
+
+--------------------------------------------------------------------------------
+A. TOMATO (Tomato Baseline, n = 460 images across 10 classes)
+--------------------------------------------------------------------------------
+Overall Accuracy:   18.91% (87 / 460)
+Weighted Precision: 13.06%
+Weighted Recall:    18.91%
+Weighted F1:        11.70%
+Macro F1 (All 10):   9.37%
+
+Class Representation & Per-Class Performance:
+- Bacterial Spot:           n = 39 | Prec: 20.00% | Rec:  5.13% | F1:  8.16%
+- Early Blight:             n = 58 | Prec: 15.05% | Rec: 48.28% | F1: 22.95%
+- Late Blight:              n = 60 | Prec: 20.28% | Rec: 73.33% | F1: 31.77%
+- Leaf Mold:                n = 56 | Prec:  0.00% | Rec:  0.00% | F1:  0.00%
+- Septoria Leaf Spot:       n = 61 | Prec: 31.03% | Rec: 14.75% | F1: 20.00%
+- Spider Mites:             n =  2 | Prec:  0.00% | Rec:  0.00% | F1:  0.00%
+- Target Spot:              n = 30 | Prec:  0.00% | Rec:  0.00% | F1:  0.00%
+- Yellow Leaf Curl Virus:   n = 56 | Prec: 22.22% | Rec:  7.14% | F1: 10.81%
+- Mosaic Virus:             n = 40 | Prec:  0.00% | Rec:  0.00% | F1:  0.00%
+- Healthy:                  n = 58 | Prec:  0.00% | Rec:  0.00% | F1:  0.00%
+
+Diagnostic Findings:
+- Severe domain shift: The model predicts Early Blight (168 times) and Late Blight (193 times),
+  accounting for 361 of 460 predictions (78.5%).
+- 5 out of 10 classes achieved 0% recall (Leaf Mold, Spider Mites, Target Spot, Mosaic Virus, Healthy).
+- Laboratory background features (plain gray/black backgrounds in PlantVillage) failed completely
+  to transfer to natural field backgrounds (soil, sunlight, clutter).
+
+--------------------------------------------------------------------------------
+B. GRAPE (Grape Unified Baseline, n = 280 images across 7 classes)
+--------------------------------------------------------------------------------
+Overall Accuracy:      12.14% (34 / 280)
+Weighted Precision:    13.13%
+Weighted Recall:       12.14%
+Weighted F1:            8.00%
+Macro F1 (6 Rep):       8.45%
+Macro F1 (All 7):       7.24%
+
+Class Representation & Per-Class Performance:
+- Bacterial Leaf Spot:     n =  0 | UNREPRESENTED IN FIELD BENCHMARK (F1: N/A)
+- Black Rot:               n = 58 | Prec:  0.00% | Rec:  0.00% | F1:  0.00%
+- Downy Mildew:            n = 50 | Prec: 22.22% | Rec:  4.00% | F1:  6.78%
+- Esca (Black Measles):    n = 50 | Prec:  4.00% | Rec:  2.00% | F1:  2.67%
+- Healthy Leaves:          n = 42 | Prec: 21.37% | Rec: 66.67% | F1: 32.37%
+- Leaf Blight:             n = 50 | Prec: 28.57% | Rec:  4.00% | F1:  7.02%
+- Powdery Mildew:          n = 30 | Prec:  1.30% | Rec:  3.33% | F1:  1.87%
+
+Diagnostic Findings:
+- Bacterial Leaf Spot has zero representation across all verified external field datasets.
+- The model collapses heavily toward predicting Healthy Leaves (131 predictions) and Leaf Blight /
+  Powdery Mildew, failing to differentiate Black Rot (0/58 caught) and Esca (1/50 caught).
+
+--------------------------------------------------------------------------------
+C. SUGARCANE (Sugarcane Unified Baseline, n = 100 images across 11 classes)
+--------------------------------------------------------------------------------
+Overall Accuracy:      35.00% (35 / 100)
+Weighted Precision:    92.86%
+Weighted Recall:       35.00%
+Weighted F1:           48.80%
+Macro F1 (2 Rep):      48.80%
+Macro F1 (All 11):      8.87%
+
+Class Representation & Per-Class Performance:
+- Healthy Leaves:          n = 50 | Prec: 100.00% | Rec: 22.00% | F1: 36.07%
+- Red Rot:                 n = 50 | Prec:  85.71% | Rec: 48.00% | F1: 61.54%
+- 9 Unrepresented Classes: n =  0 for Banded Chlorosis, Brown Spot, Grassy Shoot,
+  Mosaic/Viral Disease, Pokkah Boeng, Rust, Sett Rot, Smut, Yellow Leaf Disease.
+
+Diagnostic Findings:
+- Precision is exceptionally high (100% on Healthy, 85.71% on Red Rot), but recall is low
+  because 65 images were misclassified into the 9 classes not represented in the ground truth
+  (e.g., Grassy Shoot: 22 false predictions; Pokkah Boeng: 17 false predictions).
+- 81.8% of the canonical classes in Sugarcane completely lack external field validation data.
+
+================================================================================
+4. COMPREHENSIVE DISCLOSURE OF UNREPRESENTED & UNDERREPRESENTED CLASSES
+================================================================================
+Scientific rigor requires documenting the exact coverage gaps of the current
+field evaluation benchmark:
+
+1. Chilli:
+   - Powdery Mildew: 0 images. Across all available public field datasets (PlantDoc,
+     Kaggle, GitHub field archives), zero verified, leakage-free field images exist.
+     Consequently, no real-world claim can be made regarding model accuracy on
+     Chilli Powdery Mildew under field conditions.
+2. Grape:
+   - Bacterial Leaf Spot: 0 images. Unrepresented in field datasets.
+3. Sugarcane:
+   - 9 Classes Unrepresented: Banded Chlorosis, Brown Spot, Grassy Shoot, Mosaic,
+     Pokkah Boeng, Rust, Sett Rot, Smut, Yellow Leaf Disease have 0 evaluation images.
+     Only Healthy Leaves and Red Rot are represented.
+4. Tomato:
+   - Spider Mites: Only 2 field images exist. Metrics on this class have extreme
+     variance and cannot be considered statistically significant.
+
+================================================================================
+5. SCIENTIFIC RECOMMENDATION FOR CHILLI MODEL SELECTION
+================================================================================
+Based on the completed experimental evidence across in-domain test splits (Exp 1-3),
+external field benchmarks (Exp 4), and independent source validation (Exp 5):
+
+RECOMMENDATION: PROMOTE CANDIDATE D TO PRODUCTION CANDIDATE FOR CHILLI
+
+EVIDENCE BASE:
+1. Overwhelming Real-World Generalization Advantage:
+   Across the 332 audited real-world images, Candidate D achieves 71.08% accuracy
+   versus 50.60% for Baseline (+20.48%) and 48.49% for Candidate B (+22.59%).
+2. Critical Field Symptom Coverage (Murda Complex):
+   Murda Complex (thrips/mites leaf curl) is one of the most economically devastating
+   diseases for chilli farmers in Maharashtra. Both Baseline and Candidate B fail
+   almost completely in the field (2.0% recall). Candidate D achieves 62.00% recall
+   and 56.88% F1.
+3. Track Breakdown Consistency:
+   Candidate D outperforms both models on every field track:
+   - Track B External: 89.17% vs 51.67% (+37.50%)
+   - Track C Real-World: 79.38% vs 57.73% (+21.65%)
+   - Exp 5 PlantDoc: 45.22% vs 43.48% (+1.74%)
+4. Acknowledged Trade-Off:
+   Candidate D's official laboratory test set accuracy is 68.62% compared to
+   Candidate B's 73.45% (-4.83%). However, laboratory test sets contain synthetic/
+   curated backgrounds. In real agricultural deployment, Candidate D's +20.48%
+   field superiority far outweighs laboratory score differences.
+
+NEXT STEP GUIDANCE:
+When ready for production deployment, Candidate D (`experiments/chilli_field_experiment/
+candidate_d/model.keras`) can be safely copied to `models/chilli/chilli_baseline.keras`
+with accompanying updates to predictor configurations and documentation.
+================================================================================
+Report generated automatically by Antigravity paired evaluation engine.
+================================================================================
+

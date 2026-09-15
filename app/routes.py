@@ -168,7 +168,7 @@ def predict():
         disease        = result.disease,
         confidence     = result.confidence,
         image_path     = rel_path,
-        is_placeholder = result.is_placeholder,
+        is_placeholder = result.is_placeholder or result.is_error,
     )
 
     return render_template(
@@ -220,6 +220,15 @@ def delete_prediction_route(pred_id):
         if os.path.exists(img_abs):
             try:
                 os.remove(img_abs)
+            except OSError:
+                pass
+
+        # Also clean up associated Grad-CAM overlay if present
+        stem, _ = os.path.splitext(img_abs)
+        gradcam_abs = f"{stem}_gradcam.jpg"
+        if os.path.exists(gradcam_abs):
+            try:
+                os.remove(gradcam_abs)
             except OSError:
                 pass
 

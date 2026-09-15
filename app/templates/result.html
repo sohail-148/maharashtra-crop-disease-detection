@@ -6,7 +6,7 @@
 <div class="container">
 
   <!-- ============================================================ -->
-  <!-- Placeholder banner (shown when no model is available)         -->
+  <!-- Status banners                                                 -->
   <!-- ============================================================ -->
   {% if result.is_placeholder %}
   <div class="banner banner--warning" role="alert">
@@ -15,6 +15,16 @@
       <strong>Model training in progress</strong>
       <p>{{ result.message }}</p>
       <p>This is a placeholder result. No real prediction was made.</p>
+    </div>
+  </div>
+  {% endif %}
+
+  {% if result.is_error %}
+  <div class="banner banner--danger" role="alert">
+    <span class="banner__icon" aria-hidden="true">⚠️</span>
+    <div>
+      <strong>Image Analysis Error</strong>
+      <p>{{ result.message }}</p>
     </div>
   </div>
   {% endif %}
@@ -53,8 +63,8 @@
         <div class="result-card__row">
           <span class="result-card__label">Predicted Disease</span>
           <span class="result-card__value result-card__value--disease
-                       {% if result.is_placeholder %}result-card__value--placeholder{% endif %}">
-            {% if result.is_placeholder %}
+                       {% if result.is_placeholder or result.is_error %}result-card__value--placeholder{% endif %}">
+            {% if result.is_placeholder or result.is_error %}
               —
             {% else %}
               {{ result.disease }}
@@ -65,7 +75,7 @@
         <div class="result-card__row">
           <span class="result-card__label">Confidence</span>
           <div class="result-card__value">
-            {% if result.is_placeholder %}
+            {% if result.is_placeholder or result.is_error %}
               <span class="confidence-na">N/A</span>
             {% else %}
               <span class="confidence-pct">{{ result.confidence_pct() }}</span>
@@ -115,14 +125,53 @@
       </details>
       {% endif %}
 
-      <!-- Grad-CAM placeholder (will be wired up in Phase 12) -->
-      <div class="gradcam-placeholder" aria-label="Grad-CAM section">
-        <span class="gradcam-placeholder__icon" aria-hidden="true">🔍</span>
-        <p class="gradcam-placeholder__text">
-          Grad-CAM visual explanation will appear here once model integration
-          is complete (Phase 12).
+      <!-- Grad-CAM Visual Explanation Section -->
+      {% if result.is_placeholder %}
+      <div class="gradcam-card gradcam-card--pending" aria-label="Grad-CAM section pending">
+        <div class="gradcam-header">
+          <span class="gradcam-header__icon" aria-hidden="true">🔍</span>
+          <h3 class="gradcam-header__title">Model Attention Explanation</h3>
+        </div>
+        <p class="gradcam-text gradcam-text--muted">
+          Visual explanation will be available once model training is complete.
         </p>
       </div>
+      {% elif result.gradcam_path %}
+      <div class="gradcam-card" aria-label="Grad-CAM visual explanation">
+        <div class="gradcam-header">
+          <span class="gradcam-header__icon" aria-hidden="true">🔍</span>
+          <div>
+            <h3 class="gradcam-header__title">Model Attention (Grad-CAM)</h3>
+            <span class="gradcam-badge">Visual Feature Attribution</span>
+          </div>
+        </div>
+        <div class="gradcam-visual-wrapper">
+          <div class="gradcam-frame">
+            <img src="{{ url_for('static', filename=result.gradcam_path) }}"
+                 alt="Grad-CAM visual attention heatmap for {{ result.disease }}"
+                 class="gradcam-image" />
+          </div>
+        </div>
+        <div class="gradcam-info">
+          <p class="gradcam-text">
+            The heatmap highlights leaf regions that most heavily influenced the model's prediction of <strong>{{ result.disease }}</strong>. Warmer colors indicate higher model attention.
+          </p>
+          <p class="gradcam-disclaimer">
+            This is an algorithmic explainability visualization of model focus, not an independent biological diagnosis.
+          </p>
+        </div>
+      </div>
+      {% else %}
+      <div class="gradcam-card gradcam-card--unavailable" aria-label="Grad-CAM section unavailable">
+        <div class="gradcam-header">
+          <span class="gradcam-header__icon" aria-hidden="true">ℹ️</span>
+          <h3 class="gradcam-header__title">Model Attention (Grad-CAM)</h3>
+        </div>
+        <p class="gradcam-text gradcam-text--muted">
+          Visual explanation is unavailable for this prediction.
+        </p>
+      </div>
+      {% endif %}
 
     </div><!-- /.result-details-col -->
   </div><!-- /.result-layout -->

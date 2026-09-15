@@ -1,0 +1,12 @@
+Metric / Benchmark Subset,Baseline,Candidate B,Candidate D,Delta (D - Baseline),Delta (D - Cand B)
+Combined Real-World Accuracy (n=332),50.60%,48.49%,71.08%,+20.48%,+22.59%
+Combined Real-World Weighted F1 (n=332),47.80%,44.79%,71.53%,+23.73%,+26.74%
+Combined Macro F1 (Represented Classes),44.76%,40.65%,70.68%,+25.92%,+30.03%
+Track B (External) Accuracy,51.67%,51.67%,89.17%,+37.50%,+37.50%
+Track C (Real-World) Accuracy,57.73%,54.64%,79.38%,+21.65%,+24.74%
+Experiment 5 (PlantDoc) Accuracy,43.48%,40.00%,45.22%,+1.74%,+5.22%
+  * Cercospora Leaf Spot F1 (n=121),54.68%,44.20%,71.43%,+16.75%,+27.23%
+  * Healthy F1 (n=111),49.76%,59.06%,74.42%,+24.66%,+15.36%
+  * Murda Complex (Leaf Curl) F1 (n=50),3.17%,3.45%,56.88%,+53.71%,+53.43%
+  * Nutritional Deficiency F1 (n=50),71.43%,55.90%,80.00%,+8.57%,+24.10%
+"  * Powdery Mildew F1 (n=0, UNREPRESENTED)",N/A (support=0),N/A (support=0),N/A (support=0),N/A,N/A
