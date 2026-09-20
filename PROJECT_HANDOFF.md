@@ -1,14 +1,16 @@
 # Crop Disease Detection Project — Master Handoff Package
 
-**Document Version:** 1.6  
+**Document Version:** 1.8  
 **Project Workspace:** `D:\CropDiseaseProject`  
 **Git Repository:** `https://github.com/sohail-148/maharashtra-crop-disease-detection` (Branch: `main`)  
-**Status as of Handoff:** Completed Phases 1–8 (Model Training & Verification), Phase 9 (Comparative / Cross-Dataset Evaluation), Phase 10 (In-Depth Error Analysis), Phase 15 (Standalone Grad-CAM Explainability Analysis on 10 Prioritized Cases), Phase 16 (Comprehensive 4-Track Model Robustness Audit across 2,556 Inferences), and the complete Chilli Research Cycle:
+**Status as of Handoff:** Completed Phases 1–8 (Model Training & Verification), Phase 9 (Comparative / Cross-Dataset Evaluation), Phase 10 (In-Depth Error Analysis), Phase 15 (Standalone Grad-CAM Explainability Analysis on 10 Prioritized Cases), Phase 16 (Comprehensive 4-Track Model Robustness Audit across 2,556 Inferences), the complete Chilli Research Cycle (Experiments 1–5), Phase 18, and Phase 19A:
 - **Chilli Experiments 1–3:** Candidates A, B, and C evaluated on COLD; Candidate B achieved **73.45% accuracy**, **72.31% Weighted F1**, and **68.62% Macro F1** on the official test split as the leading in-domain research candidate.
 - **Chilli Experiment 4:** Candidate D trained with mixed-domain data (COLD 2024 + Ulfa 2023 field data, total $n=2,152$) achieved **68.62% official test Accuracy**, **67.90% official test Weighted F1**, and **64.13% official test Macro F1**; on external/field benchmarks Candidate D achieved **92.50% on Track B External** (+40.00% over Candidate B), **81.44% on Track C Real-World** (+26.80% over Candidate B), and **76.62% on Track C High-Quality** (+32.46% over Candidate B).
 - **Chilli Experiment 5:** Independent field-source validation using an unseen PlantDoc subset ($n=115$: 62 Cercospora, 53 Healthy; Murda Complex, Nutritional Deficiency, and Powdery Mildew strictly unrepresented). Candidate D achieved **45.22% Accuracy**, **56.14% Weighted F1**, and **56.26% represented-class Macro F1** (+10.12% Weighted F1 over Baseline, +6.39% over Candidate B).
+- **Phase 18 (Completed in Commit `23f26ea`):** Clean real-world multi-crop benchmark ($n=1,172$) executed across Tomato, Grape, Sugarcane, and Chilli; Candidate D integrated into Flask for Chilli inference ($71.08\%$ real-world accuracy across $332$ images vs $50.60\%$ Baseline); runtime Grad-CAM visual attention integrated into the Flask web UI; production baselines for Tomato, Grape, and Sugarcane retained.
+- **Phase 19A (Completed):** End-to-end demonstration and software verification of the Flask application completed across all 18 dimensions (startup, home page, `/api/status`, all 4 model routes with Chilli -> Candidate D, 4-crop predictions, runtime Grad-CAM, WEBP upload, server-side base64 camera pipeline, invalid/corrupt input error handling, deletion + file cleanup, protected model/dataset integrity).
 
-Production baseline models remain strictly locked and unchanged; Flask application and Grad-CAM remain unchanged and unpromoted; Candidate B and Candidate D remain research candidates.
+Next active research phase is Phase 19B (Cross-Crop Generalization, Two-Stage Gatekeeper, and OOD Safeguard Architecture).
 
 ---
 
@@ -341,14 +343,14 @@ A complete Flask web application is operational locally and serves live predicti
 - `config.py`: Configuration parameters.
 - `app/__init__.py`: Application factory, database setup, upload limits.
 - `app/routes.py`: Web routes for upload, camera capture, prediction, and history management.
-- `app/predictor.py`: Inference service layer connecting Flask routes to `.keras` models.
-- `app/gradcam.py`: Application Grad-CAM integration module. *(Work on this module is currently PAUSED).*
+- `app/predictor.py`: Inference service layer connecting Flask routes to `.keras` models (routes Tomato, Grape, Sugarcane to baseline models; Chilli to Candidate D).
+- `app/gradcam.py`: Application Grad-CAM integration module (runtime explainability via `tf.GradientTape`).
 - `app/database.py`: SQLite operations (`instance/predictions.db`).
 
-### Status of Phase 15B Application Work:
-- Application Grad-CAM integration work is **STRICTLY PAUSED**.
-- No application code, templates, or styles have been committed or deployed.
-- Current production inference relies on the locked baseline models.
+### Status of Web Application (Phase 18 Complete):
+- Flask application model routing updated in Phase 18: Chilli routes to Candidate D (`experiments/chilli_field_experiment/candidate_d/model.keras`), while Tomato, Grape, and Sugarcane route to production baselines.
+- Runtime Grad-CAM visual attention overlay is fully integrated and operational in the web UI.
+- Verified and committed to `main` in commit `23f26ea`.
 
 ---
 
@@ -371,28 +373,90 @@ A complete Flask web application is operational locally and serves live predicti
 [Phase 17A: Chilli Experiments 1–3]       ✅ COMPLETED (Candidates A, B, C; Cand B: 73.45% in-domain)
 [Phase 17B: Chilli Experiment 4 (GPU)]    ✅ COMPLETED (Candidate D mixed-domain: 92.50% Track B, 81.44% Track C)
 [Phase 17C: Chilli Experiment 5]          ✅ COMPLETED (Independent PlantDoc validation: Cand D 56.14% W-F1)
+[Phase 18: Real-World Benchmark & Flask]  ✅ COMPLETED (Clean 4-crop benchmark n=1,172; Candidate D & Grad-CAM integrated; commit 23f26ea)
 ─────────────────────────────────────────────────────────────────────────────
-[Phase 15B: Application Grad-CAM Port]    ⏸️ PAUSED (To resume after research direction is locked)
-[Phase 18: Production Deployment Prep]    🔜 PENDING (Prod config, gatekeeper architecture)
-[Phase 19: Cross-Crop Generalization]     🔜 PENDING (Full 5-class field benchmarking)
-[Phase 20: Research Thesis Chapters]      🔜 PENDING (Chapters 5, 6, 7, 8, 9)
+[Phase 19: Cross-Crop Generalization & Gatekeeper Architecture] 🔄 ACTIVE
+    ├── [Phase 19A: Flask Demonstration Verification]           ✅ COMPLETED (18/18 verification dimensions passed; 4 routes, Candidate D, Grad-CAM, WEBP, camera base64, deletion)
+    └── [Phase 19B: Gatekeeper & OOD Safeguard Architecture]    🔜 NEXT (Substantive research: Gatekeepers, OOD, field gaps)
+[Phase 20: Research Thesis & Dissertation]                      🔜 PENDING (Chapters 5, 6, 7, 8, 9)
 ```
 
 ---
 
-## 13. Immediate Research Roadmap
+## 13. Phase Hierarchy & Immediate Roadmap (Phase 18 -> 19 -> 20)
 
-1. **Complete 5-Class Field Benchmarking:**
-   - Assemble a field-verified evaluation set covering the three unrepresented classes (Murda Complex, Nutritional Deficiency, Powdery Mildew) to supplement the 2-class PlantDoc validation.
-   - Evaluate whether Candidate D's observed field improvements hold across all five canonical classes.
+### Phase Hierarchy:
+```
+Phase 18 — Final Real-World Benchmark & Flask Candidate D Integration ✅
+    ↓
+Phase 19 — Cross-Crop Generalization & Two-Stage Gatekeeper Architecture
+    ├── Phase 19A — Final Flask / Real-World Demonstration Verification ✅ (COMPLETED)
+    └── Phase 19B — Cross-Crop Generalization, Two-Stage Gatekeeper, and OOD Safeguard Architecture 🔜 (NEXT)
+    ↓
+Phase 20 — Research Thesis & Project Dissertation
+```
 
-2. **Two-Stage Gatekeeper Architecture Design:**
-   - Based on Track D robustness audit findings, design a front-end gatekeeper pipeline:
-     * Stage 1: Leaf vs Non-Leaf validation.
-     * Stage 2: Crop species verification before disease classification.
+### Phase 18: Final Real-World Benchmark & Flask Candidate D Integration (COMPLETED ✅)
+- **Status:** Completed and committed in `23f26ea`.
+- **Outputs:**
+  * Multi-crop clean real-world benchmark evaluated across 1,172 audited field images (Tomato $n=460$, Grape $n=280$, Sugarcane $n=100$, Chilli $n=332$).
+  * Established Chilli head-to-head comparison on 332 identical images: Candidate D ($71.08\%$ accuracy, $71.53\%$ W-F1) demonstrated strong field generalization over Baseline ($50.60\%$) and Candidate B ($48.49\%$), particularly recovering Murda Complex recall ($62.00\%$ vs $2.00\%$).
+  * Flask model routing updated: Chilli routes to Candidate D (`experiments/chilli_field_experiment/candidate_d/model.keras`), while Tomato, Grape, and Sugarcane route to production baselines.
+  * Runtime Grad-CAM explainability generation integrated into the Flask application using non-symbolic `tf.GradientTape`.
 
-3. **Resume Phase 15B Application Work (Post-Research):**
-   - Finalize user-upload debugging and web UI Grad-CAM rendering once model decisions are locked.
+---
+
+### Phase 19: Cross-Crop Generalization & Two-Stage Gatekeeper Architecture (PARENT PHASE)
+Phase 19 addresses the critical operational limitations exposed during the Phase 16 Robustness Audit and Phase 18 Real-World Benchmarks. To ensure operational stability, Phase 19 is explicitly split into two sequential sub-phases: **Phase 19A** (verification of existing software integration) and **Phase 19B** (substantive machine learning research).
+
+#### Phase 19A: Final Flask / Real-World Demonstration Verification (COMPLETED ✅)
+- **Status:** Completed. All 18 verification dimensions passed.
+- **Role:** Verification sub-phase inserted prior to undertaking substantive Phase 19B research. *(Note: Phase 19A was a demonstration and software verification checkpoint, confirming the stability and routing of the deployed Flask application).*
+- **Verification Results & Scope:**
+  1. **Flask Startup & Endpoints:** Flask initializes cleanly; home page (`GET /`) returns HTTP 200; `/api/status` returns HTTP 200 (`healthy`) confirming all 4 crop models loaded.
+  2. **Model Routing:**
+     - Tomato: `models/tomato/tomato_baseline.keras` (10 classes)
+     - Grape: `models/grape_unified/grape_unified_baseline.keras` (7 classes)
+     - Sugarcane: `models/sugarcane_unified/sugarcane_unified_baseline.keras` (11 classes)
+     - Chilli: `experiments/chilli_field_experiment/candidate_d/model.keras` (SHA-256: `d15704b95c3cc77e6f06a9a20af7d7e87b50f928089eccdd373097f08e96d437`, 5 classes)
+     - Confirmed Chilli does **NOT** load `models/chilli_cold/chilli_cold_baseline.keras`.
+  3. **Prediction Pipeline:** All 4 crops verified with valid leaf images; all return HTTP 200 with complete diagnosis cards, confidence metrics, and probability tables.
+  4. **Runtime Grad-CAM:** Heatmap synthesis via `tf.GradientTape` verified on `mobilenetv2_1.00_224.out_relu`; physical `*_gradcam.jpg` overlay files generated and rendered in UI.
+  5. **File Formats:** Standard image formats (JPEG, PNG) and WEBP upload verified end-to-end.
+  6. **Camera Capture Workflow:** Verified via the server-side base64 `camera_image` data URL pipeline (POSTing base64 payload to `/predict`, decoding, and executing inference).  
+     > [!NOTE]
+     > **Camera Verification Scope:** Browser automation tools (Selenium / Playwright) were unavailable in the execution environment. The camera workflow was therefore verified through the server-side base64 `camera_image` pipeline, **NOT** as an automated browser camera test.
+  7. **Error Handling:** Corrupt image files and non-image payloads return HTTP 200 with user-facing danger alerts; zero HTTP 500 crashes.
+  8. **Deletion & Cleanup:** Deleting predictions via `POST /delete/<id>` removes the SQLite database record and deletes both the uploaded image and its associated Grad-CAM heatmap file from disk.
+  9. **Data Integrity:** All model binaries, stratified split CSVs, and raw datasets verified 100% untouched.
+
+#### Phase 19B: Cross-Crop Generalization, Two-Stage Gatekeeper, and OOD Safeguard Architecture (NEXT 🔜)
+- **Role:** The core, substantive machine learning research phase that preserves and expands the original Phase 19 research objectives.
+- **Scientific Context & Caution:** While mixed-domain training in Candidate D yielded significant observed field accuracy gains for Chilli ($+20.48\%$ over Baseline on evaluated subsets), this empirical difference does not prove causality or unrestricted open-world generalization. Substantive architectural defenses are required to handle arbitrary real-world inputs.
+- **Key Research Components:**
+  1. **Two-Stage Front-End Gatekeeper Architecture:**
+     - *Stage 1 (Leaf vs. Non-Leaf Gatekeeper):* A lightweight binary classifier to detect and reject non-plant or arbitrary real-world objects (hands, soil, tools, sky, backgrounds) before any disease model is engaged.
+     - *Stage 2 (Crop Species Identifier / Cross-Crop Validation):* Validates the crop species identity (Tomato, Grape, Chilli, Sugarcane) against user selection to eliminate the Track D failure mode where models produce $>90\%$ confident predictions on wrong-crop inputs.
+  2. **Out-of-Distribution (OOD) & Low-Confidence Safeguard Architecture:**
+     - Implement temperature scaling and prediction entropy thresholds to calibrate model confidence.
+     - Introduce an explicit rejection fallback (e.g., softmax confidence $< 60\%$ or high distribution entropy triggers an *"Uncertain / Please Retake"* prompt rather than a false positive diagnosis).
+  3. **Evaluation of Missing Real-World Field Classes:**
+     - Source and audit true field-collected ground-truth imagery for unrepresented canonical classes identified in Phase 18:
+       * Chilli Powdery Mildew ($n=0$ currently available in field benchmarks).
+       * Grape Bacterial Leaf Spot ($n=0$ in external field datasets).
+       * Sugarcane canonical classes ($9$ of $11$ classes currently unrepresented in field benchmarks).
+  4. **Extending Mixed-Domain Training Research to Tomato & Grape:**
+     - Adapt Candidate D's multi-source domain-mixing methodology to Tomato and Grape to address the severe laboratory-to-field domain shifts observed in Phase 18 ($18.91\%$ and $12.14\%$ field accuracy, respectively).
+
+---
+
+### Phase 20: Research Thesis & Project Dissertation (UPCOMING)
+- Comprehensive thesis documentation across Chapters 5, 6, 7, 8, and 9 covering:
+  * Chapter 5: Baseline Training & Single-Crop In-Domain Results.
+  * Chapter 6: Comparative Analysis, Cross-Dataset Validation & Error Characterization.
+  * Chapter 7: Explainable AI via Grad-CAM & Agronomic Plausibility Analysis.
+  * Chapter 8: Multi-Track Robustness Audit, Field Benchmarking & Gatekeeper Evaluation.
+  * Chapter 9: Discussion, Engineering Lessons, Limitations, and Future Agricultural Vision Systems.
 
 ---
 
@@ -416,7 +480,7 @@ A complete Flask web application is operational locally and serves live predicti
 ```
 D:\CropDiseaseProject/
 ├── .gitignore
-├── PROJECT_HANDOFF.md                 <-- Master single source of truth document (v1.6)
+├── PROJECT_HANDOFF.md                 <-- Master single source of truth document (v1.8)
 ├── config.py                          <-- Flask configuration (Dev / Prod)
 ├── run.py                             <-- Web application entry point
 ├── dataset_analysis.py                <-- Dataset verification script
@@ -435,11 +499,11 @@ D:\CropDiseaseProject/
 │   ├── train_kaggle_colab.ipynb       <-- Baseline training notebook
 │   └── chilli_experiment4_kaggle.ipynb<-- Chilli Experiment 4 (Candidate D) Kaggle GPU notebook
 │
-├── app/                               <-- Flask Web Application (PAUSED)
+├── app/                               <-- Flask Web Application (Verified in Phase 19A)
 │   ├── __init__.py                    <-- App factory
 │   ├── database.py                    <-- SQLite database operations
-│   ├── gradcam.py                     <-- Application Grad-CAM module (paused)
-│   ├── predictor.py                   <-- 4-crop inference service layer
+│   ├── gradcam.py                     <-- Application Grad-CAM module (operational)
+│   ├── predictor.py                   <-- 4-crop inference service layer (Chilli -> Candidate D)
 │   ├── routes.py                      <-- Web routes and endpoints
 │   ├── static/                        <-- Styles, scripts, and uploaded assets
 │   └── templates/                     <-- Jinja2 HTML templates
