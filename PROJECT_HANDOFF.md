@@ -1,16 +1,17 @@
 # Crop Disease Detection Project — Master Handoff Package
 
-**Document Version:** 1.8  
+**Document Version:** 1.9  
 **Project Workspace:** `D:\CropDiseaseProject`  
 **Git Repository:** `https://github.com/sohail-148/maharashtra-crop-disease-detection` (Branch: `main`)  
-**Status as of Handoff:** Completed Phases 1–8 (Model Training & Verification), Phase 9 (Comparative / Cross-Dataset Evaluation), Phase 10 (In-Depth Error Analysis), Phase 15 (Standalone Grad-CAM Explainability Analysis on 10 Prioritized Cases), Phase 16 (Comprehensive 4-Track Model Robustness Audit across 2,556 Inferences), the complete Chilli Research Cycle (Experiments 1–5), Phase 18, and Phase 19A:
+**Status as of Handoff:** Completed Phases 1–8 (Model Training & Verification), Phase 9 (Comparative / Cross-Dataset Evaluation), Phase 10 (In-Depth Error Analysis), Phase 15 (Standalone Grad-CAM Explainability Analysis on 10 Prioritized Cases), Phase 16 (Comprehensive 4-Track Model Robustness Audit across 2,556 Inferences), the complete Chilli Research Cycle (Experiments 1–5), Phase 18, Phase 19A, and Phase 19B-1:
 - **Chilli Experiments 1–3:** Candidates A, B, and C evaluated on COLD; Candidate B achieved **73.45% accuracy**, **72.31% Weighted F1**, and **68.62% Macro F1** on the official test split as the leading in-domain research candidate.
 - **Chilli Experiment 4:** Candidate D trained with mixed-domain data (COLD 2024 + Ulfa 2023 field data, total $n=2,152$) achieved **68.62% official test Accuracy**, **67.90% official test Weighted F1**, and **64.13% official test Macro F1**; on external/field benchmarks Candidate D achieved **92.50% on Track B External** (+40.00% over Candidate B), **81.44% on Track C Real-World** (+26.80% over Candidate B), and **76.62% on Track C High-Quality** (+32.46% over Candidate B).
 - **Chilli Experiment 5:** Independent field-source validation using an unseen PlantDoc subset ($n=115$: 62 Cercospora, 53 Healthy; Murda Complex, Nutritional Deficiency, and Powdery Mildew strictly unrepresented). Candidate D achieved **45.22% Accuracy**, **56.14% Weighted F1**, and **56.26% represented-class Macro F1** (+10.12% Weighted F1 over Baseline, +6.39% over Candidate B).
 - **Phase 18 (Completed in Commit `23f26ea`):** Clean real-world multi-crop benchmark ($n=1,172$) executed across Tomato, Grape, Sugarcane, and Chilli; Candidate D integrated into Flask for Chilli inference ($71.08\%$ real-world accuracy across $332$ images vs $50.60\%$ Baseline); runtime Grad-CAM visual attention integrated into the Flask web UI; production baselines for Tomato, Grape, and Sugarcane retained.
-- **Phase 19A (Completed):** End-to-end demonstration and software verification of the Flask application completed across all 18 dimensions (startup, home page, `/api/status`, all 4 model routes with Chilli -> Candidate D, 4-crop predictions, runtime Grad-CAM, WEBP upload, server-side base64 camera pipeline, invalid/corrupt input error handling, deletion + file cleanup, protected model/dataset integrity).
+- **Phase 19A (Completed in Commit `bb3df48`):** End-to-end demonstration and software verification of the Flask application completed across all 18 dimensions (startup, home page, `/api/status`, all 4 model routes with Chilli -> Candidate D, 4-crop predictions, runtime Grad-CAM, WEBP upload, server-side base64 camera pipeline, invalid/corrupt input error handling, deletion + file cleanup, protected model/dataset integrity).
+- **Phase 19B-1 (Completed):** Offline confidence calibration (Temperature Scaling fit strictly on validation splits) and validation-selected rejection analysis completed across all 4 production baselines and Candidate D. Proved that temperature scaling improves in-domain calibration (reducing ECE and NLL), but does not separate correct vs incorrect real-world predictions; validation-selected confidence thresholds fail to adequately reject wrong-crop leaves (up to 73.3% false pass) or non-leaf objects (up to 60% false pass), proving that raw or calibrated softmax confidence alone is insufficient as an OOD safeguard and establishing the empirical necessity of Phase 19B-2.
 
-Next active research phase is Phase 19B (Cross-Crop Generalization, Two-Stage Gatekeeper, and OOD Safeguard Architecture).
+Next active research phase is Phase 19B-2 (Dedicated Stage 2 Crop Species Identifier).
 
 ---
 
@@ -376,9 +377,10 @@ A complete Flask web application is operational locally and serves live predicti
 [Phase 18: Real-World Benchmark & Flask]  ✅ COMPLETED (Clean 4-crop benchmark n=1,172; Candidate D & Grad-CAM integrated; commit 23f26ea)
 ─────────────────────────────────────────────────────────────────────────────
 [Phase 19: Cross-Crop Generalization & Gatekeeper Architecture] 🔄 ACTIVE
-    ├── [Phase 19A: Flask Demonstration Verification]           ✅ COMPLETED (18/18 verification dimensions passed; 4 routes, Candidate D, Grad-CAM, WEBP, camera base64, deletion)
-    └── [Phase 19B: Gatekeeper & OOD Safeguard Architecture]    🔜 NEXT (Substantive research: Gatekeepers, OOD, field gaps)
-[Phase 20: Research Thesis & Dissertation]                      🔜 PENDING (Chapters 5, 6, 7, 8, 9)
+    ├── [Phase 19A: Flask Demonstration Verification]               ✅ COMPLETED (18/18 verification dimensions passed; commit bb3df48)
+    ├── [Phase 19B-1: Confidence Calibration & Rejection Analysis]  ✅ COMPLETED (T fit on val; ECE/Brier/NLL evaluated; confidence alone insufficient for OOD)
+    └── [Phase 19B-2: Stage 2 Crop Species Identifier]              🔜 NEXT (Train 4-class classifier on splits/*/train.csv; eliminate Track D cross-crop failures)
+[Phase 20: Research Thesis & Dissertation]                          🔜 PENDING (Chapters 5, 6, 7, 8, 9)
 ```
 
 ---
@@ -391,7 +393,9 @@ Phase 18 — Final Real-World Benchmark & Flask Candidate D Integration ✅
     ↓
 Phase 19 — Cross-Crop Generalization & Two-Stage Gatekeeper Architecture
     ├── Phase 19A — Final Flask / Real-World Demonstration Verification ✅ (COMPLETED)
-    └── Phase 19B — Cross-Crop Generalization, Two-Stage Gatekeeper, and OOD Safeguard Architecture 🔜 (NEXT)
+    └── Phase 19B — Cross-Crop Generalization, Two-Stage Gatekeeper, and OOD Safeguard Architecture
+        ├── Phase 19B-1 — Offline Calibration & Rejection Curve Analysis ✅ (COMPLETED)
+        └── Phase 19B-2 — Dedicated Stage 2 Crop Species Identifier 🔜 (NEXT)
     ↓
 Phase 20 — Research Thesis & Project Dissertation
 ```
@@ -407,46 +411,54 @@ Phase 20 — Research Thesis & Project Dissertation
 ---
 
 ### Phase 19: Cross-Crop Generalization & Two-Stage Gatekeeper Architecture (PARENT PHASE)
-Phase 19 addresses the critical operational limitations exposed during the Phase 16 Robustness Audit and Phase 18 Real-World Benchmarks. To ensure operational stability, Phase 19 is explicitly split into two sequential sub-phases: **Phase 19A** (verification of existing software integration) and **Phase 19B** (substantive machine learning research).
+Phase 19 addresses the critical operational limitations exposed during the Phase 16 Robustness Audit and Phase 18 Real-World Benchmarks.
 
 #### Phase 19A: Final Flask / Real-World Demonstration Verification (COMPLETED ✅)
-- **Status:** Completed. All 18 verification dimensions passed.
-- **Role:** Verification sub-phase inserted prior to undertaking substantive Phase 19B research. *(Note: Phase 19A was a demonstration and software verification checkpoint, confirming the stability and routing of the deployed Flask application).*
+- **Status:** Completed and committed in `bb3df48`. All 18 verification dimensions passed.
 - **Verification Results & Scope:**
   1. **Flask Startup & Endpoints:** Flask initializes cleanly; home page (`GET /`) returns HTTP 200; `/api/status` returns HTTP 200 (`healthy`) confirming all 4 crop models loaded.
-  2. **Model Routing:**
-     - Tomato: `models/tomato/tomato_baseline.keras` (10 classes)
-     - Grape: `models/grape_unified/grape_unified_baseline.keras` (7 classes)
-     - Sugarcane: `models/sugarcane_unified/sugarcane_unified_baseline.keras` (11 classes)
-     - Chilli: `experiments/chilli_field_experiment/candidate_d/model.keras` (SHA-256: `d15704b95c3cc77e6f06a9a20af7d7e87b50f928089eccdd373097f08e96d437`, 5 classes)
-     - Confirmed Chilli does **NOT** load `models/chilli_cold/chilli_cold_baseline.keras`.
+  2. **Model Routing:** Tomato Baseline (10 classes), Grape Unified Baseline (7 classes), Sugarcane Unified Baseline (11 classes), Chilli Candidate D (5 classes; SHA-256: `d15704b95c3cc77e6f06a9a20af7d7e87b50f928089eccdd373097f08e96d437`). Confirmed Chilli does **NOT** load baseline.
   3. **Prediction Pipeline:** All 4 crops verified with valid leaf images; all return HTTP 200 with complete diagnosis cards, confidence metrics, and probability tables.
   4. **Runtime Grad-CAM:** Heatmap synthesis via `tf.GradientTape` verified on `mobilenetv2_1.00_224.out_relu`; physical `*_gradcam.jpg` overlay files generated and rendered in UI.
   5. **File Formats:** Standard image formats (JPEG, PNG) and WEBP upload verified end-to-end.
-  6. **Camera Capture Workflow:** Verified via the server-side base64 `camera_image` data URL pipeline (POSTing base64 payload to `/predict`, decoding, and executing inference).  
+  6. **Camera Capture Workflow:** Verified via server-side base64 `camera_image` data URL pipeline (POSTing base64 payload to `/predict`, decoding, and executing inference).  
      > [!NOTE]
      > **Camera Verification Scope:** Browser automation tools (Selenium / Playwright) were unavailable in the execution environment. The camera workflow was therefore verified through the server-side base64 `camera_image` pipeline, **NOT** as an automated browser camera test.
   7. **Error Handling:** Corrupt image files and non-image payloads return HTTP 200 with user-facing danger alerts; zero HTTP 500 crashes.
-  8. **Deletion & Cleanup:** Deleting predictions via `POST /delete/<id>` removes the SQLite database record and deletes both the uploaded image and its associated Grad-CAM heatmap file from disk.
+  8. **Deletion & Cleanup:** Deleting predictions via `POST /delete/<id>` removes SQLite record, uploaded image, and Grad-CAM heatmap file from disk.
   9. **Data Integrity:** All model binaries, stratified split CSVs, and raw datasets verified 100% untouched.
 
-#### Phase 19B: Cross-Crop Generalization, Two-Stage Gatekeeper, and OOD Safeguard Architecture (NEXT 🔜)
-- **Role:** The core, substantive machine learning research phase that preserves and expands the original Phase 19 research objectives.
-- **Scientific Context & Caution:** While mixed-domain training in Candidate D yielded significant observed field accuracy gains for Chilli ($+20.48\%$ over Baseline on evaluated subsets), this empirical difference does not prove causality or unrestricted open-world generalization. Substantive architectural defenses are required to handle arbitrary real-world inputs.
-- **Key Research Components:**
-  1. **Two-Stage Front-End Gatekeeper Architecture:**
-     - *Stage 1 (Leaf vs. Non-Leaf Gatekeeper):* A lightweight binary classifier to detect and reject non-plant or arbitrary real-world objects (hands, soil, tools, sky, backgrounds) before any disease model is engaged.
-     - *Stage 2 (Crop Species Identifier / Cross-Crop Validation):* Validates the crop species identity (Tomato, Grape, Chilli, Sugarcane) against user selection to eliminate the Track D failure mode where models produce $>90\%$ confident predictions on wrong-crop inputs.
-  2. **Out-of-Distribution (OOD) & Low-Confidence Safeguard Architecture:**
-     - Implement temperature scaling and prediction entropy thresholds to calibrate model confidence.
-     - Introduce an explicit rejection fallback (e.g., softmax confidence $< 60\%$ or high distribution entropy triggers an *"Uncertain / Please Retake"* prompt rather than a false positive diagnosis).
-  3. **Evaluation of Missing Real-World Field Classes:**
-     - Source and audit true field-collected ground-truth imagery for unrepresented canonical classes identified in Phase 18:
-       * Chilli Powdery Mildew ($n=0$ currently available in field benchmarks).
-       * Grape Bacterial Leaf Spot ($n=0$ in external field datasets).
-       * Sugarcane canonical classes ($9$ of $11$ classes currently unrepresented in field benchmarks).
-  4. **Extending Mixed-Domain Training Research to Tomato & Grape:**
-     - Adapt Candidate D's multi-source domain-mixing methodology to Tomato and Grape to address the severe laboratory-to-field domain shifts observed in Phase 18 ($18.91\%$ and $12.14\%$ field accuracy, respectively).
+#### Phase 19B: Cross-Crop Generalization, Two-Stage Gatekeeper, and OOD Safeguard Architecture
+
+##### Phase 19B-1: Offline Confidence Calibration & Rejection Analysis (COMPLETED ✅)
+- **Status:** Completed. All 9 analysis deliverables generated under `results/phase19b_1_calibration/`.
+- **Methodology:** Post-hoc Temperature Scaling ($T$) fit **strictly on validation splits** (`splits/*/val.csv`) by minimizing NLL via scalar optimization. Internal held-out test splits, Track B (external), Track C (real-world), and Track D (cross-crop & unrelated) were quarantined strictly as held-out evaluation sets.
+- **Optimal Temperatures ($T$):**
+  * Tomato Baseline: $T = 0.932$ (in-domain laboratory data is already sharply calibrated).
+  * Grape Unified Baseline: $T = 1.148$ (softens moderate in-domain overconfidence).
+  * Chilli Baseline: $T = 1.263$ (substantially softens in-domain overconfidence).
+  * Sugarcane Unified Baseline: $T = 0.961$ (well-calibrated in-domain).
+  * Chilli Candidate D (Supplementary): $T = 1.498$ (softens sharp COLD validation distribution).
+- **Calibration Findings (ECE, Brier, NLL):**
+  * *In-Domain:* Temperature scaling consistently improved in-domain probability reliability across all models, halving ECE on held-out internal test splits (Tomato test ECE: $0.0115 \to 0.0052$; Grape test ECE: $0.0329 \to 0.0196$; Chilli test ECE: $0.0801 \to 0.0676$).
+  * *Out-of-Domain:* On external (Track B) and real-world (Track C) benchmarks, calibration error remained high (Tomato Track B ECE: $0.6900$, Track C ECE: $0.6061$; Grape Track B ECE: $0.6179$, Track C ECE: $0.6552$; Sugarcane Track B ECE: $0.3311$, Track C ECE: $0.4610$). Because temperature scaling is strictly monotonic, it preserves logit rankings and cannot resolve domain shift or separate overlapping error distributions.
+- **Rejection & Threshold Findings:**
+  * Validation-selected thresholds ($\theta_{\text{acc} \ge 90\%}$ and $\theta_{\text{acc} \ge 95\%}$) allowed **44.0% to 98.7% of wrong-crop leaves (Track D Cross-Crop)** and **up to 60% of non-leaf objects (Track D Unrelated)** to bypass rejection and receive false positive diagnoses.
+  * Raising thresholds to aggressively reject OOD inputs severely degraded real-world operational coverage, discarding **40% to 97% of legitimate real-world field predictions**.
+- **Core Conclusion & Next Step:**
+  * Raw or calibrated softmax confidence alone is **fundamentally insufficient** as the sole OOD/wrong-crop safeguard.
+  * The empirical findings directly justify proceeding to **Phase 19B-2: Dedicated Stage 2 Crop Species Identifier**.
+  * *Scientific Guardrail:* Findings reflect observed empirical differences; we do not claim calibration proves causality or solves OOD, nor that gatekeepers are the only possible solution.
+
+##### Phase 19B-2: Dedicated Stage 2 Crop Species Identifier (NEXT 🔜)
+- **Role:** Build a lightweight MobileNetV2 4-class crop species identifier (Tomato, Grape, Chilli, Sugarcane) to validate user crop selection before disease inference is engaged.
+- **Data Strategy:** Train strictly on `splits/*/train.csv` ($n=22,110$: Tomato $10,170$, Grape $4,341$, Chilli $1,352$, Sugarcane $6,247$). Preserve all test splits and external benchmarks for evaluation. Apply heavy background/color augmentations to prevent Tomato PlantVillage background shortcut learning.
+- **Target:** Eliminate the Track D failure mode where disease models produce $>90\%$ confident diagnoses on wrong-crop inputs.
+
+##### Subsequent Phase 19B Research Roadmap:
+- **Phase 19B-3:** Sourcing and curation of an audited agricultural non-leaf negative dataset ($n \approx 1,000$–$2,000$: soil, hands, sky, farm tools, background weeds).
+- **Phase 19B-4:** Stage 1 Leaf vs. Non-Leaf Binary Gatekeeper training and evaluation.
+- **Phase 19B-5:** Sourcing missing field classes (Chilli Powdery Mildew, Grape Bacterial Leaf Spot, 9 Sugarcane classes) and Tomato/Grape field training data.
 
 ---
 
@@ -557,21 +569,18 @@ D:\CropDiseaseProject/
 │   ├── comparative_analysis/          <-- Phase 9 comparative metrics, reports, confusion matrices
 │   ├── error_analysis/                <-- Phase 10 error summary, class analyses, sample catalog
 │   ├── gradcam/                       <-- Phase 15 diagnostic case directories & consolidated report
-│   └── model_robustness_audit/        <-- Phase 16 4-Track Audit deliverables (13 reports + 5 charts)
-│       ├── audit_predictions.csv      <-- All 2,556 empirical predictions
-│       ├── audit_dataset_summary.csv  <-- Track & crop level summaries
-│       ├── audit_per_class.csv        <-- Per-class metrics across tracks
-│       ├── audit_confusions.csv       <-- Aggregated confusion pairs
-│       ├── high_confidence_errors.csv <-- 632 high-confidence errors analyzed
-│       ├── internal_external_comparison.csv
-│       ├── internal_external_realworld_comparison.csv
-│       ├── class_reliability.csv      <-- Green/Yellow/Red class scorecard
-│       ├── wrong_crop_stress_test.csv <-- Track D cross-crop & unrelated results
-│       ├── external_provenance.csv    <-- 632 Track B sample records (zero hash collisions)
-│       ├── realworld_provenance.csv   <-- 425 Track C sample records (zero hash collisions)
-│       ├── representative_audit_errors.csv
-│       ├── audit_report.txt           <-- Master audit technical report
-│       └── [5 visualization PNG charts]
+│   ├── model_robustness_audit/        <-- Phase 16 4-Track Audit deliverables (13 reports + 5 charts)
+│   ├── final_realworld_benchmark/     <-- Phase 18 clean multi-crop benchmark (1,172 samples)
+│   └── phase19b_1_calibration/        <-- Phase 19B-1 temperature scaling & rejection deliverables
+│       ├── calibration_summary.csv    <-- Master calibration summary
+│       ├── temperature_scaling_results.csv
+│       ├── threshold_sweep_validation.csv
+│       ├── threshold_sweep_heldout.csv
+│       ├── ece_results.csv
+│       ├── brier_results.csv
+│       ├── reliability_data.csv
+│       ├── rejection_analysis.csv
+│       └── phase19b_1_report.txt      <-- Consolidated technical report
 │
 ├── splits/                            <-- Stratified Train/Val/Test CSVs (UNTOUCHED)
 │   ├── tomato/

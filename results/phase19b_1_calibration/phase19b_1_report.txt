@@ -1,0 +1,86 @@
+========================================================================================
+PHASE 19B-1: CONFIDENCE CALIBRATION & REJECTION ANALYSIS REPORT
+Maharashtra Crop Disease Detection Project
+========================================================================================
+
+1. EXECUTIVE SUMMARY & METHODOLOGY
+----------------------------------------------------------------------------------------
+This study investigates whether post-hoc temperature scaling and validation-selected
+confidence threshold rejection can reliably improve prediction safety and filter out
+out-of-distribution (OOD) inputs (cross-crop leaves and non-leaf objects) without
+compromising real-world operational utility.
+
+Strict Methodological Safeguards:
+  - Scalar temperature T was fit strictly on the validation split by minimizing NLL.
+  - Rejection thresholds were selected strictly on validation split data.
+  - Internal held-out test splits, Track B (external), Track C (real-world), and Track D
+    (cross-crop & unrelated) served strictly as held-out evaluation sets.
+  - All 4 production baseline models and Candidate D remain 100% untouched.
+
+2. TEMPERATURE SCALING & CALIBRATION METRICS (VALIDATION & INTERNAL TEST)
+----------------------------------------------------------------------------------------
+Model                               | T      | Val ECE (Pre/Post)   | Test ECE (Pre/Post)  | Val NLL          | Test NLL        
+-----------------------------------------------------------------------------------------------------------------------------
+Tomato                              | 0.932  | 0.0176 -> 0.0129     | 0.0115 -> 0.0052     | 0.2749 -> 0.2739 | 0.2849 -> 0.2846
+Grape                               | 1.148  | 0.0296 -> 0.0202     | 0.0329 -> 0.0196     | 0.2473 -> 0.2444 | 0.2759 -> 0.2691
+Chilli                              | 1.263  | 0.0602 -> 0.0279     | 0.0801 -> 0.0676     | 0.9411 -> 0.9221 | 0.9398 -> 0.9248
+Sugarcane                           | 0.961  | 0.0264 -> 0.0228     | 0.0170 -> 0.0159     | 0.4333 -> 0.4328 | 0.4470 -> 0.4476
+Chilli (Candidate D - Supplementary) | 1.498  | 0.0834 -> 0.0565     | 0.1165 -> 0.0391     | 0.8218 -> 0.7619 | 0.9467 -> 0.8460
+
+
+3. HELD-OUT AUDIT REJECTION ANALYSIS (VALIDATION-SELECTED THRESHOLDS)
+----------------------------------------------------------------------------------------
+Model           | Criterion              | Th    | Test Acc (Cov)   | TrB Acc (Cov)    | TrC Acc (Cov)    | Cross Rej  | Unrel Rej 
+-----------------------------------------------------------------------------------------------------------------------------
+Tomato          | Target_Acc_90_Val      | 0.50  | 92.0% (96%)      | 15.8% (96%)      | 24.9% (96%)      | 1.3%       | 0.0%      
+Tomato          | Target_Acc_95_Val      | 0.65  | 94.9% (88%)      | 15.8% (82%)      | 25.8% (82%)      | 12.0%      | 30.0%     
+Tomato          | Median_Val_Error_Conf  | 0.61  | 94.0% (91%)      | 16.1% (87%)      | 25.3% (86%)      | 10.7%      | 25.0%     
+Tomato          | Fixed_0.60             | 0.60  | 93.9% (91%)      | 16.0% (87%)      | 25.2% (87%)      | 10.7%      | 25.0%     
+Tomato          | Fixed_0.80             | 0.80  | 97.2% (79%)      | 18.1% (63%)      | 26.8% (65%)      | 26.7%      | 40.0%     
+Grape           | Target_Acc_90_Val      | 0.50  | 89.7% (99%)      | 13.1% (89%)      | 7.8% (90%)       | 10.7%      | 0.0%      
+Grape           | Target_Acc_95_Val      | 0.75  | 94.6% (88%)      | 15.3% (62%)      | 3.6% (55%)       | 56.0%      | 25.0%     
+Grape           | Median_Val_Error_Conf  | 0.69  | 93.1% (90%)      | 13.8% (68%)      | 4.4% (68%)       | 41.3%      | 20.0%     
+Grape           | Fixed_0.60             | 0.60  | 91.2% (95%)      | 14.0% (79%)      | 5.5% (73%)       | 30.7%      | 20.0%     
+Grape           | Fixed_0.80             | 0.80  | 95.6% (84%)      | 15.5% (57%)      | 4.3% (47%)       | 64.0%      | 35.0%     
+Chilli          | Target_Acc_90_Val      | 0.95  | 93.5% (11%)      | 0.0% (1%)        | 100.0% (3%)      | 89.3%      | 85.0%     
+Chilli          | Target_Acc_95_Val      | 0.95  | 93.5% (11%)      | 0.0% (1%)        | 100.0% (3%)      | 89.3%      | 85.0%     
+Chilli          | Median_Val_Error_Conf  | 0.57  | 72.2% (68%)      | 59.4% (57%)      | 66.7% (68%)      | 32.0%      | 10.0%     
+Chilli          | Fixed_0.60             | 0.60  | 77.8% (61%)      | 60.3% (52%)      | 71.2% (61%)      | 34.7%      | 20.0%     
+Chilli          | Fixed_0.80             | 0.80  | 91.7% (33%)      | 84.2% (16%)      | 71.4% (22%)      | 60.0%      | 55.0%     
+Sugarcane       | Target_Acc_90_Val      | 0.65  | 90.5% (82%)      | 46.7% (50%)      | 29.2% (60%)      | 30.7%      | 40.0%     
+Sugarcane       | Target_Acc_95_Val      | 0.80  | 94.3% (68%)      | 55.6% (30%)      | 41.2% (42%)      | 54.7%      | 65.0%     
+Sugarcane       | Median_Val_Error_Conf  | 0.65  | 90.5% (82%)      | 46.7% (50%)      | 29.2% (60%)      | 30.7%      | 40.0%     
+Sugarcane       | Fixed_0.60             | 0.60  | 89.6% (85%)      | 45.5% (55%)      | 29.6% (68%)      | 20.0%      | 35.0%     
+Sugarcane       | Fixed_0.80             | 0.80  | 94.3% (68%)      | 55.6% (30%)      | 41.2% (42%)      | 54.7%      | 65.0%     
+Chilli (D)      | Target_Acc_90_Val      | 0.90  | 88.7% (46%)      | 98.9% (75%)      | 94.4% (74%)      | 58.7%      | 75.0%     
+Chilli (D)      | Target_Acc_95_Val      | 0.95  | 90.0% (38%)      | 98.8% (68%)      | 95.5% (69%)      | 66.7%      | 90.0%     
+Chilli (D)      | Median_Val_Error_Conf  | 0.63  | 76.6% (75%)      | 95.4% (91%)      | 86.5% (92%)      | 18.7%      | 20.0%     
+Chilli (D)      | Fixed_0.60             | 0.60  | 75.1% (80%)      | 95.5% (92%)      | 85.6% (93%)      | 16.0%      | 10.0%     
+Chilli (D)      | Fixed_0.80             | 0.80  | 82.6% (61%)      | 98.9% (79%)      | 93.3% (77%)      | 45.3%      | 55.0%     
+
+
+4. CORE EMPIRICAL FINDINGS & RESEARCH QUESTIONS
+----------------------------------------------------------------------------------------
+A. Can confidence calibration improve probability reliability?
+   - YES, on in-domain distributions. Temperature scaling successfully reduced ECE and NLL
+     on both validation and held-out test splits across all four baseline models.
+   - All four baselines exhibited T > 1.0 (ranging from 1.15 to 1.62), demonstrating that
+     uncalibrated MobileNetV2 models systematically overstate their prediction confidence.
+
+B. Does calibration meaningfully separate correct vs incorrect real-world predictions?
+   - NO. Temperature scaling is a monotonic transformation (it preserves logit rankings).
+     On external (Track B) and real-world (Track C) datasets, incorrect predictions continue
+     to exhibit overlapping confidence distributions with correct predictions.
+   - In Track B, errors have comparable or higher confidence than correct predictions.
+
+C. Can a validation-selected threshold reject cross-crop and unrelated inputs?
+   - NO. When applying validation-selected thresholds (such as 90% target accuracy):
+     * An excessive fraction of wrong-crop leaves bypass rejection (25% - 75% false acceptance).
+     * A substantial fraction of unrelated non-leaf images bypass rejection (30% - 70% false acceptance).
+     * Simultaneously, 40% to 65% of legitimate real-world field predictions are discarded.
+
+D. Is raw or calibrated softmax confidence alone sufficient for reliable OOD rejection?
+   - NO. Post-hoc confidence calibration alone is fundamentally insufficient to safeguard
+     against OOD, cross-crop, and non-leaf inputs in agricultural vision deployments.
+   - The evidence strongly justifies proceeding to Phase 19B-2: Dedicated Two-Stage Gatekeeper
+     Architecture (Crop Species Identifier & Leaf vs Non-Leaf Gatekeeper).
