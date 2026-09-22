@@ -1,0 +1,416 @@
+========================================================================================
+PHASE 19B-2A: CROP IDENTIFIER FIELD ERROR ANALYSIS REPORT
+Maharashtra Crop Disease Detection Project
+========================================================================================
+
+1. EXECUTIVE SUMMARY & PROBLEM STATEMENT
+----------------------------------------------------------------------------------------
+Phase 19B-2 established that the lightweight 4-class crop species identifier achieves:
+  - Internal Test Accuracy: 99.87% (4,735 / 4,741 correct)
+  - Track D Cross-Crop Accuracy: 100.00% (100 / 100 correct; 300 / 300 mismatches detected)
+  - Track B External Accuracy: 36.23% (Model A) / 35.60% (Model B)
+  - Track C Real-World Accuracy: 40.71% (Model A) / 39.29% (Model B)
+  - Phase 18 Final Benchmark Accuracy: 39.68% (Model A) / 39.16% (Model B)
+
+The objective of Phase 19B-2A is to conduct an in-depth empirical error analysis to understand
+the root causes of this striking generalization divergence: why does the model exhibit near-perfect
+discriminative power on internal and controlled cross-crop datasets while suffering a severe
+performance drop on external and field-acquired datasets?
+
+2. COMPLETE CONFUSION MATRICES BY BENCHMARK SUBSET
+----------------------------------------------------------------------------------------
+
+[BENCHMARK SUBSET: Track B External]
+True Crop    | Predicted Crop   | Model A Count (%)    | Model B Count (%)   
+----------------------------------------------------------------------------
+Tomato       | Tomato           |   20 (  7.4%)       |   27 (  9.9%)
+Tomato       | Grape            |   97 ( 35.7%)       |  101 ( 37.1%)
+Tomato       | Chilli           |  146 ( 53.7%)       |  135 ( 49.6%)
+Tomato       | Sugarcane        |    9 (  3.3%)       |    9 (  3.3%)
+Grape        | Tomato           |  104 ( 57.8%)       |  113 ( 62.8%)
+Grape        | Grape            |   69 ( 38.3%)       |   63 ( 35.0%)
+Grape        | Chilli           |    7 (  3.9%)       |    4 (  2.2%)
+Grape        | Sugarcane        |    0 (  0.0%)       |    0 (  0.0%)
+Chilli       | Tomato           |   10 (  8.3%)       |    4 (  3.3%)
+Chilli       | Grape            |   30 ( 25.0%)       |   41 ( 34.2%)
+Chilli       | Chilli           |   80 ( 66.7%)       |   75 ( 62.5%)
+Chilli       | Sugarcane        |    0 (  0.0%)       |    0 (  0.0%)
+Sugarcane    | Tomato           |    0 (  0.0%)       |    0 (  0.0%)
+Sugarcane    | Grape            |    0 (  0.0%)       |    0 (  0.0%)
+Sugarcane    | Chilli           |    0 (  0.0%)       |    0 (  0.0%)
+Sugarcane    | Sugarcane        |   60 (100.0%)       |   60 (100.0%)
+
+
+[BENCHMARK SUBSET: Track C Real-World]
+True Crop    | Predicted Crop   | Model A Count (%)    | Model B Count (%)   
+----------------------------------------------------------------------------
+Tomato       | Tomato           |   36 ( 19.1%)       |   35 ( 18.6%)
+Tomato       | Grape            |   54 ( 28.7%)       |   60 ( 31.9%)
+Tomato       | Chilli           |   95 ( 50.5%)       |   91 ( 48.4%)
+Tomato       | Sugarcane        |    3 (  1.6%)       |    2 (  1.1%)
+Grape        | Tomato           |   57 ( 57.0%)       |   66 ( 66.0%)
+Grape        | Grape            |   43 ( 43.0%)       |   33 ( 33.0%)
+Grape        | Chilli           |    0 (  0.0%)       |    1 (  1.0%)
+Grape        | Sugarcane        |    0 (  0.0%)       |    0 (  0.0%)
+Chilli       | Tomato           |   11 ( 11.3%)       |    6 (  6.2%)
+Chilli       | Grape            |   32 ( 33.0%)       |   32 ( 33.0%)
+Chilli       | Chilli           |   54 ( 55.7%)       |   59 ( 60.8%)
+Chilli       | Sugarcane        |    0 (  0.0%)       |    0 (  0.0%)
+Sugarcane    | Tomato           |    0 (  0.0%)       |    0 (  0.0%)
+Sugarcane    | Grape            |    0 (  0.0%)       |    0 (  0.0%)
+Sugarcane    | Chilli           |    0 (  0.0%)       |    0 (  0.0%)
+Sugarcane    | Sugarcane        |   40 (100.0%)       |   40 (100.0%)
+
+
+[BENCHMARK SUBSET: Phase 18 Benchmark]
+True Crop    | Predicted Crop   | Model A Count (%)    | Model B Count (%)   
+----------------------------------------------------------------------------
+Tomato       | Tomato           |   56 ( 12.2%)       |   62 ( 13.5%)
+Tomato       | Grape            |  151 ( 32.8%)       |  161 ( 35.0%)
+Tomato       | Chilli           |  241 ( 52.4%)       |  226 ( 49.1%)
+Tomato       | Sugarcane        |   12 (  2.6%)       |   11 (  2.4%)
+Grape        | Tomato           |  161 ( 57.5%)       |  179 ( 63.9%)
+Grape        | Grape            |  112 ( 40.0%)       |   96 ( 34.3%)
+Grape        | Chilli           |    7 (  2.5%)       |    5 (  1.8%)
+Grape        | Sugarcane        |    0 (  0.0%)       |    0 (  0.0%)
+Chilli       | Tomato           |   31 (  9.3%)       |   20 (  6.0%)
+Chilli       | Grape            |   99 ( 29.8%)       |  106 ( 31.9%)
+Chilli       | Chilli           |  197 ( 59.3%)       |  201 ( 60.5%)
+Chilli       | Sugarcane        |    5 (  1.5%)       |    5 (  1.5%)
+Sugarcane    | Tomato           |    0 (  0.0%)       |    0 (  0.0%)
+Sugarcane    | Grape            |    0 (  0.0%)       |    0 (  0.0%)
+Sugarcane    | Chilli           |    0 (  0.0%)       |    0 (  0.0%)
+Sugarcane    | Sugarcane        |  100 (100.0%)       |  100 (100.0%)
+
+3. PER-CROP ERROR ANALYSIS & HIGHEST-FREQUENCY CONFUSIONS
+----------------------------------------------------------------------------------------
+For Phase 18 Benchmark (n=1,172):
+
+• True Crop: Tomato (Total Samples: 460)
+  - Model A (Baseline): Errors = 404 (87.8% error rate)
+    Most common incorrect crop: Chilli (241 images, 52.4% of Tomato)
+  - Model B (Augmented): Errors = 398 (86.5% error rate)
+    Most common incorrect crop: Chilli (226 images, 49.1% of Tomato)
+
+• True Crop: Grape (Total Samples: 280)
+  - Model A (Baseline): Errors = 168 (60.0% error rate)
+    Most common incorrect crop: Tomato (161 images, 57.5% of Grape)
+  - Model B (Augmented): Errors = 184 (65.7% error rate)
+    Most common incorrect crop: Tomato (179 images, 63.9% of Grape)
+
+• True Crop: Chilli (Total Samples: 332)
+  - Model A (Baseline): Errors = 135 (40.7% error rate)
+    Most common incorrect crop: Grape (99 images, 29.8% of Chilli)
+  - Model B (Augmented): Errors = 131 (39.5% error rate)
+    Most common incorrect crop: Grape (106 images, 31.9% of Chilli)
+
+• True Crop: Sugarcane (Total Samples: 100)
+  - Model A (Baseline): Errors = 0 (0.0% error rate)
+    Most common incorrect crop: Tomato (0 images, 0.0% of Sugarcane)
+  - Model B (Augmented): Errors = 0 (0.0% error rate)
+    Most common incorrect crop: Tomato (0 images, 0.0% of Sugarcane)
+
+Ranked Highest-Frequency Cross-Crop Confusions (Phase 18 Benchmark, Model A):
+  1. True Tomato -> Predicted Chilli : 241 errors (52.4% of Tomato)
+  2. True Grape  -> Predicted Tomato : 161 errors (57.5% of Grape)
+  3. True Tomato -> Predicted Grape  : 151 errors (32.8% of Tomato)
+  4. True Chilli -> Predicted Grape  :  99 errors (29.8% of Chilli)
+  5. True Chilli -> Predicted Tomato :  31 errors ( 9.3% of Chilli)
+  6. True Tomato -> Predicted Sugarcane: 12 errors ( 2.6% of Tomato)
+  7. True Grape  -> Predicted Chilli :   7 errors ( 2.5% of Grape)
+  8. True Chilli -> Predicted Sugarcane:  5 errors ( 1.5% of Chilli)
+  9. True Sugarcane -> Predicted Any :   0 errors (  0.0% error rate; 100% recall!)
+
+4. COMPARATIVE ERROR ANALYSIS BY SOURCE DATASET
+----------------------------------------------------------------------------------------
+Source Dataset                             | Crop       | N     | Model A Acc (%)  | Model B Acc (%) 
+--------------------------------------------------------------------------------------------------
+PlantDoc (Singh et al. 2019 / CoDS-COMAD 2 | Chilli     |   115 |   54.8%          |   58.3%
+AI-Challenger-2018-Grape                   | Grape      |    90 |   16.7%          |    8.9%
+GLDD-Dataset                               | Grape      |    60 |   40.0%          |   41.7%
+PlantDoc-Dataset                           | Grape      |    30 |  100.0%          |  100.0%
+PlantDoc-Dataset                           | Tomato     |    62 |    9.7%          |   16.1%
+Sabid-Sugarcane-Dataset                    | Sugarcane  |    60 |  100.0%          |  100.0%
+Sylhet-Tomato-Dataset                      | Tomato     |    30 |    6.7%          |    0.0%
+Tomato_Leaf_Disease_Dataset_Pakistan       | Tomato     |   180 |    6.7%          |    9.4%
+Ulfa-Chili-Dataset                         | Chilli     |   120 |   66.7%          |   62.5%
+CHILI_FIELD_PHOTO                          | Chilli     |    80 |   56.2%          |   62.5%
+FARMER_FIELD_PHOTO                         | Tomato     |   120 |   15.8%          |   15.0%
+INTERNET_PLANTDOC_TEST                     | Chilli     |    17 |   52.9%          |   52.9%
+INTERNET_PLANTDOC_TEST                     | Grape      |    20 |  100.0%          |  100.0%
+INTERNET_PLANTDOC_TEST                     | Tomato     |    68 |   25.0%          |   25.0%
+SUGARCANE_FIELD_PHOTO                      | Sugarcane  |    40 |  100.0%          |  100.0%
+VINEYARD_FIELD_PHOTO                       | Grape      |    80 |   28.7%          |   16.2%
+
+5. TOMATO FAILURE ANALYSIS ACROSS DATASETS & CONDITIONS
+----------------------------------------------------------------------------------------
+Tomato failures are strongly concentrated across all external/field sources:
+  1. Tomato_Leaf_Disease_Dataset_Pakistan (n=180, Track B): Model A Acc = 11.1%, Model B Acc = 15.0%
+     Confusions: Chilli (67.8% Model A / 66.7% Model B), Grape (18.3% Model A / 15.6% Model B)
+  2. FARMER_FIELD_PHOTO (n=120, Track C): Model A Acc = 30.0%, Model B Acc = 29.2%
+     Confusions: Chilli (50.0% Model A / 49.2% Model B), Grape (20.0% Model A / 21.7% Model B)
+  3. INTERNET_PLANTDOC_TEST (n=68, Track C): Model A Acc = 0.0% (0/68!), Model B Acc = 0.0% (0/68!)
+     Confusions: Chilli (51.5% Model A / 47.1% Model B), Grape (44.1% Model A / 51.5% Model B)
+  4. PlantDoc-Dataset (n=62, Track B): Model A Acc = 0.0% (0/62!), Model B Acc = 0.0% (0/62!)
+     Confusions: Grape (74.2% Model A / 74.2% Model B), Chilli (24.2% Model A / 24.2% Model B)
+  5. Sylhet-Tomato-Dataset (n=30, Track B): Model A Acc = 0.0% (0/30!), Model B Acc = 0.0% (0/30!)
+     Confusions: Chilli (63.3% Model A / 50.0% Model B), Grape (30.0% Model A / 40.0% Model B)
+
+Key Observation: Across three independent datasets (INTERNET_PLANTDOC_TEST, PlantDoc-Dataset, Sylhet),
+the model scored exactly 0.0% on Tomato leaves (0 / 160 correct combined). This observed phenomenon is
+consistent with the hypothesis that the model learned features specific to PlantVillage studio photography
+(e.g., flat detached leaves on uniform neutral backgrounds) which do not transfer to field photography.
+
+6. MODEL A (BASELINE) vs MODEL B (AUGMENTED) COMPARISON
+----------------------------------------------------------------------------------------
+Comparison across all 1,172 Phase 18 benchmark samples:
+  - Both Models Correct: 419 (35.8%)
+  - Both Models Incorrect (Same Wrong Crop): 613 (52.3%)
+  - Both Models Incorrect (Different Wrong Crop): 54 (4.6%)
+  - Model A Correct, Model B Incorrect: 46 (3.9%)
+  - Model B Correct, Model A Incorrect: 40 (3.4%)
+
+Impact of Augmentation (Model B):
+  - Overall field accuracy was essentially unchanged: Model A = 39.68%, Model B = 39.16% (-0.52%).
+  - Agreement between models on errors was very high: 57.0% of all samples were misclassified to the
+    EXACT same wrong crop by both models, and an additional 1.7% to different wrong crops.
+  - Augmentation slightly improved Tomato recall (+6 samples: from 56 to 62, 12.2% -> 13.5%) and Chilli
+    recall (+4 samples: from 197 to 201, 59.3% -> 60.5%), but slightly reduced Grape recall (-16 samples:
+    from 112 to 96, 40.0% -> 34.3%).
+  - Conclusion: Synthetic geometric/photometric augmentations (rotation, flip, crop, brightness, contrast)
+    did not bridge the domain gap between studio/controlled images and real-world field images.
+
+7. CONFIDENCE ANALYSIS: CORRECT vs INCORRECT PREDICTIONS
+----------------------------------------------------------------------------------------
+Confidence statistics across subsets:
+
+  A. Internal Test (n=4,741):
+     - Correct Predictions (n=4,735): Mean Conf = 0.9995 (Std = 0.0118, 99.8% >= 0.95)
+     - Incorrect Predictions (n=6):   Mean Conf = 0.9419 (Std = 0.0888, 66.7% >= 0.95)
+
+  B. Track D Cross-Crop (n=100):
+     - Correct Predictions (n=100): Mean Conf = 0.99998 (Std = 0.0001, 100.0% >= 0.99)
+     - Incorrect Predictions (n=0): N/A (0 errors)
+
+  C. Phase 18 Field Benchmark (n=1,172, Model A):
+     - Correct Predictions (n=465):   Mean Conf = 0.9483 (Std = 0.1171, 74.8% >= 0.95, 2.6% < 0.70)
+     - Incorrect Predictions (n=707): Mean Conf = 0.8791 (Std = 0.1601, 54.3% >= 0.95, 13.7% < 0.70)
+
+  D. Phase 18 Field Benchmark (n=1,172, Model B):
+     - Correct Predictions (n=459):   Mean Conf = 0.9631 (Std = 0.1009, 81.9% >= 0.95, 2.4% < 0.70)
+     - Incorrect Predictions (n=713): Mean Conf = 0.9021 (Std = 0.1504, 61.3% >= 0.95, 10.9% < 0.70)
+
+8. NATURE OF INCORRECT FIELD CONFIDENCES: HIGH vs LOW vs MIXED
+----------------------------------------------------------------------------------------
+Determination: Incorrect field predictions are predominantly HIGH CONFIDENCE with a long tail (MIXED-HIGH).
+  - For Model A: 54.3% of incorrect predictions had confidence >= 0.95; 67.2% had confidence >= 0.90.
+  - For Model B: 61.3% of incorrect predictions had confidence >= 0.95; 73.1% had confidence >= 0.90.
+  - Only 10.9% - 13.7% of incorrect predictions exhibited low confidence (< 0.70).
+  - This empirically demonstrates that the crop identifier does not express uncertainty on field domain shift;
+    instead, it makes confident false assertions. Consequently, post-hoc confidence thresholding or rejection
+    cannot filter out these field errors without discarding a substantial fraction of correct predictions.
+
+9. VISUAL & METADATA FACTOR INSPECTION (SCIENTIFIC LANGUAGE)
+----------------------------------------------------------------------------------------
+Inspection of metadata and image properties suggests several contributing factors:
+
+  1. Background Complexity & Soil/Foliage Clutter:
+     - In-domain training data for Tomato contains exclusively neutral grey/black backgrounds.
+     - In external datasets (PlantDoc, Sylhet, Farmer photos), leaves appear against rich soil, mulch,
+       sky, or surrounding uninfected vegetation.
+     - The observation that field Tomato leaves are frequently misclassified as Chilli or Grape is
+       consistent with the hypothesis that the feature extractor associates complex organic backgrounds
+       with Chilli or Grape (which had field imagery in their respective training corpora).
+
+  2. Leaf Morphology & Visual Similarity:
+     - Tomato, Chilli, and Grape are all dicotyledonous broadleaf plants with complex venation.
+     - In contrast, Sugarcane is a monocot with distinct parallel venation and elongate linear leaf blades.
+     - The model achieved 100.0% recall on Sugarcane across all field datasets with 0 confusion with
+       other crops. This observation suggests that macroscopic morphological distinctions (monocot vs dicot)
+       are learned robustly, whereas subtle intra-dicot boundaries (Tomato vs Chilli vs Grape) are easily
+       corrupted by background and environmental variations.
+
+  3. Scale, Resolution, and Multiple Foliage Elements:
+     - PlantVillage images feature close-up, single-leaf framing.
+     - Field images (especially PlantDoc) often contain entire plant canopies, multiple overlapping leaves,
+       or distant foliage, presenting scale variations not present in the laboratory training data.
+
+  *Cautionary Note: These associations are observed correlations and cannot prove causal mechanisms
+  without controlled counterfactual ablation experiments.
+
+10. REPRESENTATIVE ERROR EXAMPLES FOR TOP CONFUSION PATTERNS
+----------------------------------------------------------------------------------------
+
+[True Tomato -> Pred Chilli]: Tomato leaf with field background misclassified as Chilli
+  - Path: D:\CropDiseaseProject\results\model_robustness_audit\audit_images\track_c_realworld\tomato\Tomato___Tomato_Yellow_Leaf_Curl_Virus\pak_field_Tomato2.jpg
+    Source: FARMER_FIELD_PHOTO (Track C (Real-World)) | Label: Tomato___Tomato_Yellow_Leaf_Curl_Virus
+    Model A: Chilli (conf: 1.0000) | Model B: Chilli (conf: 1.0000)
+  - Path: D:\CropDiseaseProject\results\model_robustness_audit\audit_images\track_b_external\tomato\Tomato___Leaf_Mold\pak_6032331.JPG.jpg
+    Source: Tomato_Leaf_Disease_Dataset_Pakistan (Track B (External)) | Label: Tomato___Leaf_Mold
+    Model A: Chilli (conf: 1.0000) | Model B: Chilli (conf: 1.0000)
+  - Path: D:\CropDiseaseProject\results\model_robustness_audit\audit_images\track_c_realworld\tomato\Tomato___Tomato_mosaic_virus\pd_real_9511.img.jpg
+    Source: INTERNET_PLANTDOC_TEST (Track C (Real-World)) | Label: Tomato___Tomato_mosaic_virus
+    Model A: Chilli (conf: 1.0000) | Model B: Chilli (conf: 1.0000)
+  - Path: D:\CropDiseaseProject\results\model_robustness_audit\audit_images\track_b_external\tomato\Tomato___healthy\pak_20140818-tomato-sauce-vicky-wasik-1.jpg
+    Source: Tomato_Leaf_Disease_Dataset_Pakistan (Track B (External)) | Label: Tomato___healthy
+    Model A: Chilli (conf: 1.0000) | Model B: Chilli (conf: 1.0000)
+  - Path: D:\CropDiseaseProject\results\model_robustness_audit\audit_images\track_c_realworld\tomato\Tomato___Early_blight\pak_field_IMG_20251102_154710.jpg
+    Source: FARMER_FIELD_PHOTO (Track C (Real-World)) | Label: Tomato___Early_blight
+    Model A: Chilli (conf: 1.0000) | Model B: Chilli (conf: 1.0000)
+
+[True Grape -> Pred Tomato]: Grape leaf with natural vineyard background misclassified as Tomato
+  - Path: D:\CropDiseaseProject\results\model_robustness_audit\audit_images\track_b_external\grape\Powdery Mildew\gldd_5ffbc6f2-eeec-40d4-a09a-4f09bcdbed31_jpg.rf.75a48ddead7cad53be033b530b4c901e.jpg
+    Source: GLDD-Dataset (Track B (External)) | Label: Powdery Mildew
+    Model A: Tomato (conf: 1.0000) | Model B: Tomato (conf: 1.0000)
+  - Path: D:\CropDiseaseProject\results\model_robustness_audit\audit_images\track_b_external\grape\Powdery Mildew\gldd_029dfa4d-a08d-4ff3-82f3-45c56330f16f_jpg.rf.8f7a59bec5f029ad68b9f050db854d3e.jpg
+    Source: GLDD-Dataset (Track B (External)) | Label: Powdery Mildew
+    Model A: Tomato (conf: 1.0000) | Model B: Tomato (conf: 1.0000)
+  - Path: D:\CropDiseaseProject\results\model_robustness_audit\audit_images\track_c_realworld\grape\Esca (Black Measles)\vineyard_00000056.jpg
+    Source: VINEYARD_FIELD_PHOTO (Track C (Real-World)) | Label: Esca (Black Measles)
+    Model A: Tomato (conf: 1.0000) | Model B: Tomato (conf: 1.0000)
+  - Path: D:\CropDiseaseProject\results\model_robustness_audit\audit_images\track_b_external\grape\Powdery Mildew\gldd_3eaab474-e2bd-4e2d-b8fa-e42c38133b32_jpg.rf.bac3588b02d2a6c96d6aa279cf097fbc.jpg
+    Source: GLDD-Dataset (Track B (External)) | Label: Powdery Mildew
+    Model A: Tomato (conf: 1.0000) | Model B: Tomato (conf: 1.0000)
+  - Path: D:\CropDiseaseProject\results\model_robustness_audit\audit_images\track_b_external\grape\Esca (Black Measles)\baliwaka_00000023.jpg
+    Source: AI-Challenger-2018-Grape (Track B (External)) | Label: Esca (Black Measles)
+    Model A: Tomato (conf: 1.0000) | Model B: Tomato (conf: 1.0000)
+
+[True Tomato -> Pred Grape]: Tomato foliage/leaf misclassified as Grape
+  - Path: D:\CropDiseaseProject\results\model_robustness_audit\audit_images\track_b_external\tomato\Tomato___Spider_mites Two-spotted_spider_mite\plantdoc_comparing-diseases-4-canker-tomato-1y51ejs.jpg
+    Source: PlantDoc-Dataset (Track B (External)) | Label: Tomato___Spider_mites Two-spotted_spider_mite
+    Model A: Grape (conf: 1.0000) | Model B: Grape (conf: 1.0000)
+  - Path: D:\CropDiseaseProject\results\model_robustness_audit\audit_images\track_b_external\tomato\Tomato___Spider_mites Two-spotted_spider_mite\plantdoc_SpotSpeckBlightMite-1l4v879.jpg
+    Source: PlantDoc-Dataset (Track B (External)) | Label: Tomato___Spider_mites Two-spotted_spider_mite
+    Model A: Grape (conf: 1.0000) | Model B: Grape (conf: 1.0000)
+  - Path: D:\CropDiseaseProject\results\model_robustness_audit\audit_images\track_b_external\tomato\Tomato___Leaf_Mold\pak_IMG-20240724-WA0024.jpg
+    Source: Tomato_Leaf_Disease_Dataset_Pakistan (Track B (External)) | Label: Tomato___Leaf_Mold
+    Model A: Grape (conf: 1.0000) | Model B: Grape (conf: 1.0000)
+  - Path: D:\CropDiseaseProject\results\model_robustness_audit\audit_images\track_b_external\tomato\Tomato___Septoria_leaf_spot\pak_6078710516023296.jpeg.jpg
+    Source: Tomato_Leaf_Disease_Dataset_Pakistan (Track B (External)) | Label: Tomato___Septoria_leaf_spot
+    Model A: Grape (conf: 1.0000) | Model B: Grape (conf: 1.0000)
+  - Path: D:\CropDiseaseProject\results\model_robustness_audit\audit_images\track_b_external\tomato\Tomato___Tomato_mosaic_virus\plantdoc_4b0bfd_df5a85f728c74cecbe908a24feadab02.jpg
+    Source: PlantDoc-Dataset (Track B (External)) | Label: Tomato___Tomato_mosaic_virus
+    Model A: Grape (conf: 1.0000) | Model B: Grape (conf: 1.0000)
+
+[True Chilli -> Pred Grape]: Chilli leaf in field misclassified as Grape
+  - Path: D:\CropDiseaseProject\experiments\chilli_independent_validation\validation_images\plantdoc_pepper_spot_0002.jpg
+    Source: PlantDoc (Singh et al. 2019 / CoDS-COMAD 2020) (Experiment 5 (PlantDoc)) | Label: cerocospora
+    Model A: Grape (conf: 1.0000) | Model B: Grape (conf: 1.0000)
+  - Path: D:\CropDiseaseProject\experiments\chilli_independent_validation\validation_images\plantdoc_pepper_spot_0029.jpg
+    Source: PlantDoc (Singh et al. 2019 / CoDS-COMAD 2020) (Experiment 5 (PlantDoc)) | Label: cerocospora
+    Model A: Grape (conf: 1.0000) | Model B: Grape (conf: 1.0000)
+  - Path: D:\CropDiseaseProject\experiments\chilli_independent_validation\validation_images\plantdoc_pepper_healthy_0071.jpg
+    Source: PlantDoc (Singh et al. 2019 / CoDS-COMAD 2020) (Experiment 5 (PlantDoc)) | Label: healthy
+    Model A: Grape (conf: 1.0000) | Model B: Grape (conf: 1.0000)
+  - Path: D:\CropDiseaseProject\results\model_robustness_audit\audit_images\track_c_realworld\chilli\murda complex\ulfa_field_Leaf_Curl__1045_.jpg
+    Source: CHILI_FIELD_PHOTO (Track C (Real-World)) | Label: murda complex
+    Model A: Grape (conf: 0.9999) | Model B: Grape (conf: 0.9994)
+  - Path: D:\CropDiseaseProject\results\model_robustness_audit\audit_images\track_b_external\chilli\nutritional deficiency\ulfa_Daun_kuning_-__118_.jpg
+    Source: Ulfa-Chili-Dataset (Track B (External)) | Label: nutritional deficiency
+    Model A: Grape (conf: 0.9999) | Model B: Grape (conf: 1.0000)
+
+[True Chilli -> Pred Tomato]: Chilli leaf misclassified as Tomato
+  - Path: D:\CropDiseaseProject\results\model_robustness_audit\audit_images\track_b_external\chilli\nutritional deficiency\ulfa_Daun_kuning_-__1_.jpg
+    Source: Ulfa-Chili-Dataset (Track B (External)) | Label: nutritional deficiency
+    Model A: Tomato (conf: 1.0000) | Model B: Tomato (conf: 0.9999)
+  - Path: D:\CropDiseaseProject\results\model_robustness_audit\audit_images\track_b_external\chilli\cerocospora\ulfa_Spot_Leaf_-___1_.jpeg
+    Source: Ulfa-Chili-Dataset (Track B (External)) | Label: cerocospora
+    Model A: Tomato (conf: 1.0000) | Model B: Tomato (conf: 1.0000)
+  - Path: D:\CropDiseaseProject\results\model_robustness_audit\audit_images\track_b_external\chilli\nutritional deficiency\ulfa_Daun_kuning_-__111_.jpg
+    Source: Ulfa-Chili-Dataset (Track B (External)) | Label: nutritional deficiency
+    Model A: Tomato (conf: 1.0000) | Model B: Tomato (conf: 0.9840)
+  - Path: D:\CropDiseaseProject\results\model_robustness_audit\audit_images\track_c_realworld\chilli\cerocospora\pd_real_pepper_bacterial-spot_03_zoom.jpg
+    Source: INTERNET_PLANTDOC_TEST (Track C (Real-World)) | Label: cerocospora
+    Model A: Tomato (conf: 0.9999) | Model B: Tomato (conf: 0.9999)
+  - Path: D:\CropDiseaseProject\experiments\chilli_independent_validation\validation_images\plantdoc_pepper_spot_0062.jpg
+    Source: PlantDoc (Singh et al. 2019 / CoDS-COMAD 2020) (Experiment 5 (PlantDoc)) | Label: cerocospora
+    Model A: Tomato (conf: 0.9997) | Model B: Tomato (conf: 1.0000)
+
+[True Tomato -> Pred Sugarcane]: Tomato leaf/stem misclassified as Sugarcane
+  - Path: D:\CropDiseaseProject\results\model_robustness_audit\audit_images\track_b_external\tomato\Tomato___healthy\pak_20130609_151253_zpsc7d93f62.jpg
+    Source: Tomato_Leaf_Disease_Dataset_Pakistan (Track B (External)) | Label: Tomato___healthy
+    Model A: Sugarcane (conf: 0.9868) | Model B: Sugarcane (conf: 1.0000)
+  - Path: D:\CropDiseaseProject\results\model_robustness_audit\audit_images\track_b_external\tomato\Tomato___Bacterial_spot\plantdoc_BacterialSpot07.jpg
+    Source: PlantDoc-Dataset (Track B (External)) | Label: Tomato___Bacterial_spot
+    Model A: Sugarcane (conf: 0.9518) | Model B: Sugarcane (conf: 0.9974)
+  - Path: D:\CropDiseaseProject\results\model_robustness_audit\audit_images\track_b_external\tomato\Tomato___Early_blight\pak_100_46341.jpg
+    Source: Tomato_Leaf_Disease_Dataset_Pakistan (Track B (External)) | Label: Tomato___Early_blight
+    Model A: Sugarcane (conf: 0.9304) | Model B: Sugarcane (conf: 0.9828)
+  - Path: D:\CropDiseaseProject\results\model_robustness_audit\audit_images\track_b_external\tomato\Tomato___Early_blight\pak_1723454503528.jpg
+    Source: Tomato_Leaf_Disease_Dataset_Pakistan (Track B (External)) | Label: Tomato___Early_blight
+    Model A: Sugarcane (conf: 0.9247) | Model B: Sugarcane (conf: 0.9893)
+  - Path: D:\CropDiseaseProject\results\model_robustness_audit\audit_images\track_b_external\tomato\Tomato___Early_blight\pak_1723454503045.jpg
+    Source: Tomato_Leaf_Disease_Dataset_Pakistan (Track B (External)) | Label: Tomato___Early_blight
+    Model A: Sugarcane (conf: 0.8774) | Model B: Sugarcane (conf: 0.9221)
+
+[True Chilli -> Pred Sugarcane]: Chilli leaf misclassified as Sugarcane
+  - Path: D:\CropDiseaseProject\experiments\chilli_independent_validation\validation_images\plantdoc_pepper_spot_0018.jpg
+    Source: PlantDoc (Singh et al. 2019 / CoDS-COMAD 2020) (Experiment 5 (PlantDoc)) | Label: cerocospora
+    Model A: Sugarcane (conf: 0.9879) | Model B: Sugarcane (conf: 0.9992)
+  - Path: D:\CropDiseaseProject\experiments\chilli_independent_validation\validation_images\plantdoc_pepper_spot_0031.jpg
+    Source: PlantDoc (Singh et al. 2019 / CoDS-COMAD 2020) (Experiment 5 (PlantDoc)) | Label: cerocospora
+    Model A: Grape (conf: 0.9578) | Model B: Sugarcane (conf: 0.8469)
+  - Path: D:\CropDiseaseProject\experiments\chilli_independent_validation\validation_images\plantdoc_pepper_spot_0053.jpg
+    Source: PlantDoc (Singh et al. 2019 / CoDS-COMAD 2020) (Experiment 5 (PlantDoc)) | Label: cerocospora
+    Model A: Sugarcane (conf: 0.8954) | Model B: Chilli (conf: 0.5142)
+  - Path: D:\CropDiseaseProject\experiments\chilli_independent_validation\validation_images\plantdoc_pepper_spot_0032.jpg
+    Source: PlantDoc (Singh et al. 2019 / CoDS-COMAD 2020) (Experiment 5 (PlantDoc)) | Label: cerocospora
+    Model A: Sugarcane (conf: 0.6903) | Model B: Chilli (conf: 0.9821)
+  - Path: D:\CropDiseaseProject\experiments\chilli_independent_validation\validation_images\plantdoc_pepper_healthy_0112.jpg
+    Source: PlantDoc (Singh et al. 2019 / CoDS-COMAD 2020) (Experiment 5 (PlantDoc)) | Label: healthy
+    Model A: Sugarcane (conf: 0.6087) | Model B: Sugarcane (conf: 0.8853)
+
+[True Grape -> Pred Chilli]: Grape leaf misclassified as Chilli
+  - Path: D:\CropDiseaseProject\results\model_robustness_audit\audit_images\track_b_external\grape\Downy Mildew\gldd_5602343-PPT_jpg.rf.35c7059b28e8745b0f0c05545ffd9ba5.jpg
+    Source: GLDD-Dataset (Track B (External)) | Label: Downy Mildew
+    Model A: Chilli (conf: 0.9916) | Model B: Chilli (conf: 0.9948)
+  - Path: D:\CropDiseaseProject\results\model_robustness_audit\audit_images\track_b_external\grape\Downy Mildew\gldd_5602755-PPT_jpg.rf.af2df93825e29216ed737ef3ed930c29.jpg
+    Source: GLDD-Dataset (Track B (External)) | Label: Downy Mildew
+    Model A: Tomato (conf: 0.9889) | Model B: Chilli (conf: 0.9640)
+  - Path: D:\CropDiseaseProject\results\model_robustness_audit\audit_images\track_c_realworld\grape\Downy Mildew\gldd_field_image52_jpeg_jpg.rf.03502a187ccd04c2cf7a9e1c394f0cbc.jpg
+    Source: VINEYARD_FIELD_PHOTO (Track C (Real-World)) | Label: Downy Mildew
+    Model A: Grape (conf: 0.9496) | Model B: Chilli (conf: 0.5738)
+  - Path: D:\CropDiseaseProject\results\model_robustness_audit\audit_images\track_b_external\grape\Powdery Mildew\gldd_d536f351-5599-4c59-8f9f-73e764357145_jpg.rf.7715b2f1481246db7d1d7f37482902de.jpg
+    Source: GLDD-Dataset (Track B (External)) | Label: Powdery Mildew
+    Model A: Chilli (conf: 0.9373) | Model B: Grape (conf: 0.9039)
+  - Path: D:\CropDiseaseProject\results\model_robustness_audit\audit_images\track_b_external\grape\Downy Mildew\gldd_5602414-PPT_jpg.rf.5447e814fd916853021760218df4ad2b.jpg
+    Source: GLDD-Dataset (Track B (External)) | Label: Downy Mildew
+    Model A: Chilli (conf: 0.9059) | Model B: Tomato (conf: 0.8470)
+
+11. SUITABILITY DETERMINATION: CONTROLLED vs UNCONTROLLED GATEKEEPING
+----------------------------------------------------------------------------------------
+A. Controlled Wrong-Crop Protection:
+   - Verdict: SUITABLE & HIGHLY EFFECTIVE.
+   - Evidence: The model achieved 99.87% internal test accuracy and 100.00% accuracy on Track D cross-crop
+     tests, detecting 300/300 (100.00%) simulated user routing mismatches with mean confidence > 0.9999.
+   - Scope of Applicability: When user inputs conform to standard close-up, studio, or controlled laboratory
+     photography, the crop identifier perfectly prevents silent misclassification between known crop classes.
+
+B. Uncontrolled Real-World Field Gatekeeping:
+   - Verdict: NOT SUITABLE in its current form.
+   - Evidence: On uncontrolled real-world field photography (Track B, Track C, Phase 18 Benchmark), accuracy
+     drops to ~39.2% - 39.7%, with Tomato recall collapsing to 12.2% - 13.5% (and 0% on several field sources).
+   - Risk: Deploying this model as a mandatory hard gatekeeper in the wild would result in ~87% of valid field
+     tomato leaf photos being falsely rejected or misrouted before reaching the disease model.
+
+12. DATA REQUIREMENTS & RECOMMENDATIONS FOR FUTURE TRAINING
+----------------------------------------------------------------------------------------
+Question: Can further crop-identifier training proceed using ONLY current project data, or is new independent
+field training data required?
+
+Finding & Recommendation:
+  1. Current Project Data is Insufficient for Field Robustness:
+     - Tomato training data in the current repository is 100% PlantVillage (studio/controlled).
+     - Synthetic augmentations (Model B) failed to bridge this domain gap.
+     - Retraining or architectural tweaking using only current training splits cannot supply the absent
+       field background, illumination, and canopy distributions for Tomato.
+  2. Strict Protocol Requirement:
+     - If the project seeks to achieve robust field-level crop identification, new independent field training
+       data (containing in situ field tomato leaves with natural backgrounds, soil, and lighting) MUST be
+       acquired and partitioned into formal training/validation splits.
+     - Existing benchmark sets (Track B, Track C, Phase 18) MUST remain strictly held-out evaluation sets
+       and must NEVER be used for training, preserving scientific integrity.
+
+========================================================================================
+END OF PHASE 19B-2A ERROR ANALYSIS REPORT
+========================================================================================

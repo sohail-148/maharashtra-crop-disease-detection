@@ -1,17 +1,30 @@
 # Crop Disease Detection Project — Master Handoff Package
 
-**Document Version:** 1.9  
+**Document Version:** 2.0  
 **Project Workspace:** `D:\CropDiseaseProject`  
 **Git Repository:** `https://github.com/sohail-148/maharashtra-crop-disease-detection` (Branch: `main`)  
-**Status as of Handoff:** Completed Phases 1–8 (Model Training & Verification), Phase 9 (Comparative / Cross-Dataset Evaluation), Phase 10 (In-Depth Error Analysis), Phase 15 (Standalone Grad-CAM Explainability Analysis on 10 Prioritized Cases), Phase 16 (Comprehensive 4-Track Model Robustness Audit across 2,556 Inferences), the complete Chilli Research Cycle (Experiments 1–5), Phase 18, Phase 19A, and Phase 19B-1:
+**Status as of Handoff:** Completed Phases 1–8 (Model Training & Verification), Phase 9 (Comparative / Cross-Dataset Evaluation), Phase 10 (In-Depth Error Analysis), Phase 15 (Standalone Grad-CAM Explainability Analysis on 10 Prioritized Cases), Phase 16 (Comprehensive 4-Track Model Robustness Audit across 2,556 Inferences), the complete Chilli Research Cycle (Experiments 1–5), Phase 18, Phase 19A, Phase 19B-1, Phase 19B-2, and Phase 19B-2A:
 - **Chilli Experiments 1–3:** Candidates A, B, and C evaluated on COLD; Candidate B achieved **73.45% accuracy**, **72.31% Weighted F1**, and **68.62% Macro F1** on the official test split as the leading in-domain research candidate.
 - **Chilli Experiment 4:** Candidate D trained with mixed-domain data (COLD 2024 + Ulfa 2023 field data, total $n=2,152$) achieved **68.62% official test Accuracy**, **67.90% official test Weighted F1**, and **64.13% official test Macro F1**; on external/field benchmarks Candidate D achieved **92.50% on Track B External** (+40.00% over Candidate B), **81.44% on Track C Real-World** (+26.80% over Candidate B), and **76.62% on Track C High-Quality** (+32.46% over Candidate B).
 - **Chilli Experiment 5:** Independent field-source validation using an unseen PlantDoc subset ($n=115$: 62 Cercospora, 53 Healthy; Murda Complex, Nutritional Deficiency, and Powdery Mildew strictly unrepresented). Candidate D achieved **45.22% Accuracy**, **56.14% Weighted F1**, and **56.26% represented-class Macro F1** (+10.12% Weighted F1 over Baseline, +6.39% over Candidate B).
 - **Phase 18 (Completed in Commit `23f26ea`):** Clean real-world multi-crop benchmark ($n=1,172$) executed across Tomato, Grape, Sugarcane, and Chilli; Candidate D integrated into Flask for Chilli inference ($71.08\%$ real-world accuracy across $332$ images vs $50.60\%$ Baseline); runtime Grad-CAM visual attention integrated into the Flask web UI; production baselines for Tomato, Grape, and Sugarcane retained.
 - **Phase 19A (Completed in Commit `bb3df48`):** End-to-end demonstration and software verification of the Flask application completed across all 18 dimensions (startup, home page, `/api/status`, all 4 model routes with Chilli -> Candidate D, 4-crop predictions, runtime Grad-CAM, WEBP upload, server-side base64 camera pipeline, invalid/corrupt input error handling, deletion + file cleanup, protected model/dataset integrity).
-- **Phase 19B-1 (Completed):** Offline confidence calibration (Temperature Scaling fit strictly on validation splits) and validation-selected rejection analysis completed across all 4 production baselines and Candidate D. Proved that temperature scaling improves in-domain calibration (reducing ECE and NLL), but does not separate correct vs incorrect real-world predictions; validation-selected confidence thresholds fail to adequately reject wrong-crop leaves (up to 73.3% false pass) or non-leaf objects (up to 60% false pass), proving that raw or calibrated softmax confidence alone is insufficient as an OOD safeguard and establishing the empirical necessity of Phase 19B-2.
+- **Phase 19B-1 (Completed in Commit `1660011`):** Offline confidence calibration (Temperature Scaling fit strictly on validation splits) and validation-selected rejection analysis completed across all 4 production baselines and Candidate D. Proved that temperature scaling improves in-domain calibration (reducing ECE and NLL), but does not separate correct vs incorrect real-world predictions; validation-selected confidence thresholds fail to adequately reject wrong-crop leaves (up to 73.3% false pass) or non-leaf objects (up to 60% false pass), proving that raw or calibrated softmax confidence alone is insufficient as an OOD safeguard.
+- **Phase 19B-2 (Completed):** Dedicated Stage 2 Crop Species Identifier (MobileNetV2 4-class: Tomato, Grape, Chilli, Sugarcane) trained strictly on `splits/*/train.csv` ($n=22,110$) without modifying production disease models. Evaluated across validation ($n=4,739$), internal test ($n=4,741$), Track D ($n=100$), Track B ($n=632$), Track C ($n=425$), and Phase 18 Benchmark ($n=1,172$). Achieved **99.87% internal test accuracy**, **100.00% Track D cross-crop accuracy**, and detected **100.00% (300/300)** of simulated user-crop mismatches.
+- **Phase 19B-2A (Completed):** Crop Identifier Field Error Analysis across all 1,172 Phase 18 benchmark images and 4,741 internal test images:
+  1. Crop identifier internal test accuracy: **99.87%**.
+  2. Track D cross-crop accuracy: **100.00%**.
+  3. Simulated user-crop mismatch detection: **300/300 = 100.00%**.
+  4. Track B field/external performance: **approximately 36%** (36.23% Model A / 35.60% Model B).
+  5. Track C real-world performance: **approximately 40%** (40.71% Model A / 39.29% Model B).
+  6. Phase 18 field benchmark: **approximately 39%** (39.68% Model A / 39.16% Model B).
+  7. The crop identifier is therefore demonstrated effective for the evaluated controlled cross-crop mismatch task, but is **NOT validated as a mandatory unrestricted field gatekeeper**.
+  8. Tomato field images were frequently predicted as Chilli/Grape (recall collapsed to 12.2%–13.5% in field data), and Grape field images frequently as Tomato (57.5%–63.9% confusion with Tomato); Sugarcane achieved **100.00% recall with 0 errors** across all field datasets.
+  9. Model A vs Model B augmentation produced only marginal field changes (39.68% vs 39.16%, with 57.0% error agreement).
+  10. The observed field errors are consistent with sensitivity to domain-specific visual characteristics; we do NOT state that background shortcut learning or any other single mechanism is proven causal.
+  11. New independent field training data would be required to improve field crop-identification generalization without contaminating the existing held-out field benchmarks.
 
-Next active research phase is Phase 19B-2 (Dedicated Stage 2 Crop Species Identifier).
+Next active research phase is Phase 19B-3 (Non-Leaf Negative Dataset Sourcing & Curation).
 
 ---
 
@@ -450,13 +463,40 @@ Phase 19 addresses the critical operational limitations exposed during the Phase
   * The empirical findings directly justify proceeding to **Phase 19B-2: Dedicated Stage 2 Crop Species Identifier**.
   * *Scientific Guardrail:* Findings reflect observed empirical differences; we do not claim calibration proves causality or solves OOD, nor that gatekeepers are the only possible solution.
 
-##### Phase 19B-2: Dedicated Stage 2 Crop Species Identifier (NEXT 🔜)
-- **Role:** Build a lightweight MobileNetV2 4-class crop species identifier (Tomato, Grape, Chilli, Sugarcane) to validate user crop selection before disease inference is engaged.
-- **Data Strategy:** Train strictly on `splits/*/train.csv` ($n=22,110$: Tomato $10,170$, Grape $4,341$, Chilli $1,352$, Sugarcane $6,247$). Preserve all test splits and external benchmarks for evaluation. Apply heavy background/color augmentations to prevent Tomato PlantVillage background shortcut learning.
-- **Target:** Eliminate the Track D failure mode where disease models produce $>90\%$ confident diagnoses on wrong-crop inputs.
+##### Phase 19B-2: Dedicated Stage 2 Crop Species Identifier (COMPLETED ✅)
+- **Role:** Build and evaluate a separate lightweight MobileNetV2 4-class crop species identifier (Tomato, Grape, Chilli, Sugarcane) as a front-end validation gatekeeper.
+- **Data Strategy:** Trained strictly on `splits/*/train.csv` ($n=22,110$: Tomato $10,170$, Grape $4,341$, Chilli $1,352$, Sugarcane $6,247$). Validation on `splits/*/val.csv` ($n=4,739$). All test splits, Track D, Track B, Track C, and Phase 18 Benchmark preserved strictly for evaluation.
+- **Models Trained:** Model A (Baseline, standard preprocessing) and Model B (Augmented with geometric and photometric perturbations).
+- **Core Results:**
+  * Internal Test Accuracy: **99.87%** (Macro F1: $0.9978$).
+  * Track D Cross-Crop Accuracy: **100.00%** (Macro F1: $1.0000$).
+  * Simulated User-Crop Mismatch Detection: **300 / 300 (100.00%)** of simulated user-crop mismatches detected and prevented.
+  * Track B External Accuracy: **36.23%** (Model A) / **35.60%** (Model B).
+  * Track C Real-World Accuracy: **40.71%** (Model A) / **39.29%** (Model B).
+  * Phase 18 Benchmark Accuracy: **39.68%** (Model A) / **39.16%** (Model B).
+- **Artifacts:** Deliverables preserved in `results/phase19b_2_crop_identifier/` and `experiments/phase19b_2_crop_identifier/`.
+
+##### Phase 19B-2A: Crop Identifier Field Error Analysis (COMPLETED ✅)
+- **Role:** Comprehensive empirical error analysis across all 1,172 Phase 18 benchmark images and 4,741 internal test images to analyze the domain shift between controlled and field evaluations.
+- **Key Findings:**
+  1. Internal test accuracy: **99.87%**.
+  2. Track D cross-crop accuracy: **100.00%**.
+  3. Simulated user-crop mismatch detection: **300/300 = 100.00%**.
+  4. Track B field/external performance: **approximately 36%** (36.23% Model A / 35.60% Model B).
+  5. Track C real-world performance: **approximately 40%** (40.71% Model A / 39.29% Model B).
+  6. Phase 18 field benchmark: **approximately 39%** (39.68% Model A / 39.16% Model B).
+  7. The crop identifier is therefore demonstrated effective for the evaluated controlled cross-crop mismatch task, but is **NOT validated as a mandatory unrestricted field gatekeeper**.
+  8. Tomato field images were frequently predicted as Chilli/Grape (recall collapsed to 12.2%–13.5% in field data; 0.0% on three independent field sources), and Grape field images frequently as Tomato (57.5%–63.9% confusion with Tomato); Sugarcane achieved **100.00% recall with 0 errors** across all field datasets.
+  9. Model A vs Model B augmentation produced only marginal field changes (39.68% vs 39.16%, with 57.0% identical error agreement).
+  10. The observed field errors are consistent with sensitivity to domain-specific visual characteristics; we do NOT state that background shortcut learning or any other single mechanism is proven causal.
+  11. New independent field training data would be required to improve field crop-identification generalization without contaminating the existing held-out field benchmarks.
+- **Artifacts:** Deliverables preserved in `results/phase19b_2a_error_analysis/` (`field_confusion_matrix.csv`, `source_confusion_analysis.csv`, `confidence_analysis.csv`, `model_a_vs_b_errors.csv`, `representative_errors.csv`, `phase19b_2a_report.txt`).
+
+##### Phase 19B-3: Non-Leaf Negative Dataset Sourcing & Curation (NEXT 🔜)
+- **Role:** Sourcing and curation of an audited agricultural non-leaf negative dataset ($n \approx 1,000$–$2,000$: soil, hands, sky, farm tools, background weeds) for Stage 1 Leaf vs. Non-Leaf filtering.
+- **Rules:** Zero data leakage against held-out benchmark sets; strict provenance logging.
 
 ##### Subsequent Phase 19B Research Roadmap:
-- **Phase 19B-3:** Sourcing and curation of an audited agricultural non-leaf negative dataset ($n \approx 1,000$–$2,000$: soil, hands, sky, farm tools, background weeds).
 - **Phase 19B-4:** Stage 1 Leaf vs. Non-Leaf Binary Gatekeeper training and evaluation.
 - **Phase 19B-5:** Sourcing missing field classes (Chilli Powdery Mildew, Grape Bacterial Leaf Spot, 9 Sugarcane classes) and Tomato/Grape field training data.
 
@@ -552,14 +592,21 @@ D:\CropDiseaseProject/
 │   └── chilli_independent_validation/<-- Chilli Experiment 5 (PlantDoc Validation)
 │       ├── source_provenance.csv      <-- Full provenance records for 115 PlantDoc images
 │       ├── source_manifest.csv        <-- Manifest with labels and SHA-256 hashes
-│       ├── overlap_report.txt         <-- Zero-leakage audit report
-│       ├── evaluation_metrics.csv     <-- Summary metrics (Baseline, Cand B, Cand D)
-│       ├── class_metrics.csv          <-- Per-class metrics (with unrepresented disclosures)
-│       ├── confusion_matrix.csv       <-- 5x5 contingency tables
-│       ├── comparison.csv             <-- Comparison across models
-│       ├── validation_report.txt      <-- Comprehensive validation report
-│       ├── confusion_matrices.png     <-- Visualized confusion matrices
-│       └── validation_images/         <-- 115 curated validation images
+│   ├── chilli_independent_validation/<-- Chilli Experiment 5 (PlantDoc Validation)
+│   │   ├── source_provenance.csv      <-- Full provenance records for 115 PlantDoc images
+│   │   ├── source_manifest.csv        <-- Manifest with labels and SHA-256 hashes
+│   │   ├── overlap_report.txt         <-- Zero-leakage audit report
+│   │   ├── evaluation_metrics.csv     <-- Summary metrics (Baseline, Cand B, Cand D)
+│   │   ├── class_metrics.csv          <-- Per-class metrics (with unrepresented disclosures)
+│   │   ├── confusion_matrix.csv       <-- 5x5 contingency tables
+│   │   ├── comparison.csv             <-- Comparison across models
+│   │   ├── validation_report.txt      <-- Comprehensive validation report
+│   │   ├── confusion_matrices.png     <-- Visualized confusion matrices
+│   │   └── validation_images/         <-- 115 curated validation images
+│   │
+│   └── phase19b_2_crop_identifier/    <-- Phase 19B-2 Crop Identifier Models (Offline Research)
+│       ├── model_a_baseline/          <-- Model A (unaugmented, 22,110 samples)
+│       └── model_b_augmented/         <-- Model B (augmented, 44,220 samples)
 │
 ├── results/                           <-- Evaluation Result Suites & Analysis Outputs
 │   ├── tomato/                        <-- Baseline metrics, report, confusion matrix, history
@@ -571,16 +618,37 @@ D:\CropDiseaseProject/
 │   ├── gradcam/                       <-- Phase 15 diagnostic case directories & consolidated report
 │   ├── model_robustness_audit/        <-- Phase 16 4-Track Audit deliverables (13 reports + 5 charts)
 │   ├── final_realworld_benchmark/     <-- Phase 18 clean multi-crop benchmark (1,172 samples)
-│   └── phase19b_1_calibration/        <-- Phase 19B-1 temperature scaling & rejection deliverables
-│       ├── calibration_summary.csv    <-- Master calibration summary
-│       ├── temperature_scaling_results.csv
-│       ├── threshold_sweep_validation.csv
-│       ├── threshold_sweep_heldout.csv
-│       ├── ece_results.csv
-│       ├── brier_results.csv
-│       ├── reliability_data.csv
-│       ├── rejection_analysis.csv
-│       └── phase19b_1_report.txt      <-- Consolidated technical report
+│   ├── phase19b_1_calibration/        <-- Phase 19B-1 temperature scaling & rejection deliverables
+│   │   ├── calibration_summary.csv    <-- Master calibration summary
+│   │   ├── temperature_scaling_results.csv
+│   │   ├── threshold_sweep_validation.csv
+│   │   ├── threshold_sweep_heldout.csv
+│   │   ├── ece_results.csv
+│   │   ├── brier_results.csv
+│   │   ├── reliability_data.csv
+│   │   ├── rejection_analysis.csv
+│   │   └── phase19b_1_report.txt      <-- Consolidated technical report
+│   │
+│   ├── phase19b_2_crop_identifier/    <-- Phase 19B-2 Crop Species Identifier evaluation suite
+│   │   ├── training_summary.csv
+│   │   ├── crop_identifier_comparison.csv
+│   │   ├── validation_metrics.csv
+│   │   ├── internal_test_metrics.csv
+│   │   ├── cross_crop_metrics.csv
+│   │   ├── field_benchmark_metrics.csv
+│   │   ├── per_class_metrics.csv
+│   │   ├── confusion_matrix.csv
+│   │   ├── per_sample_predictions.csv
+│   │   ├── mismatch_detection_results.csv
+│   │   └── phase19b_2_report.txt
+│   │
+│   └── phase19b_2a_error_analysis/    <-- Phase 19B-2A Crop Identifier Field Error Analysis suite
+│       ├── field_confusion_matrix.csv
+│       ├── source_confusion_analysis.csv
+│       ├── confidence_analysis.csv
+│       ├── model_a_vs_b_errors.csv
+│       ├── representative_errors.csv
+│       └── phase19b_2a_report.txt
 │
 ├── splits/                            <-- Stratified Train/Val/Test CSVs (UNTOUCHED)
 │   ├── tomato/

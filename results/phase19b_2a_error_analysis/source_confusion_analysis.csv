@@ -1,0 +1,33 @@
+model_name,source_track,source_dataset,true_crop,sample_count,correct_count,accuracy_pct,error_count,error_pct,most_common_incorrect_crop,most_common_incorrect_count,most_common_incorrect_pct,all_predictions_breakdown
+Model A (Baseline),Experiment 5 (PlantDoc),PlantDoc (Singh et al. 2019 / CoDS-COMAD 2020),Chilli,115,63,54.78260869565217,52,45.21739130434783,Grape,37,32.17391304347826,Tomato: 10; Grape: 37; Chilli: 63; Sugarcane: 5
+Model A (Baseline),Track B (External),AI-Challenger-2018-Grape,Grape,90,15,16.666666666666664,75,83.33333333333334,Tomato,75,83.33333333333334,Tomato: 75; Grape: 15; Chilli: 0; Sugarcane: 0
+Model A (Baseline),Track B (External),GLDD-Dataset,Grape,60,24,40.0,36,60.0,Tomato,29,48.333333333333336,Tomato: 29; Grape: 24; Chilli: 7; Sugarcane: 0
+Model A (Baseline),Track B (External),PlantDoc-Dataset,Grape,30,30,100.0,0,0.0,None,0,0.0,Tomato: 0; Grape: 30; Chilli: 0; Sugarcane: 0
+Model A (Baseline),Track B (External),PlantDoc-Dataset,Tomato,62,6,9.67741935483871,56,90.32258064516128,Grape,26,41.935483870967744,Tomato: 6; Grape: 26; Chilli: 26; Sugarcane: 4
+Model A (Baseline),Track B (External),Sabid-Sugarcane-Dataset,Sugarcane,60,60,100.0,0,0.0,None,0,0.0,Tomato: 0; Grape: 0; Chilli: 0; Sugarcane: 60
+Model A (Baseline),Track B (External),Sylhet-Tomato-Dataset,Tomato,30,2,6.666666666666667,28,93.33333333333333,Chilli,23,76.66666666666667,Tomato: 2; Grape: 5; Chilli: 23; Sugarcane: 0
+Model A (Baseline),Track B (External),Tomato_Leaf_Disease_Dataset_Pakistan,Tomato,180,12,6.666666666666667,168,93.33333333333333,Chilli,97,53.888888888888886,Tomato: 12; Grape: 66; Chilli: 97; Sugarcane: 5
+Model A (Baseline),Track B (External),Ulfa-Chili-Dataset,Chilli,120,80,66.66666666666666,40,33.33333333333333,Grape,30,25.0,Tomato: 10; Grape: 30; Chilli: 80; Sugarcane: 0
+Model A (Baseline),Track C (Real-World),CHILI_FIELD_PHOTO,Chilli,80,45,56.25,35,43.75,Grape,28,35.0,Tomato: 7; Grape: 28; Chilli: 45; Sugarcane: 0
+Model A (Baseline),Track C (Real-World),FARMER_FIELD_PHOTO,Tomato,120,19,15.833333333333332,101,84.16666666666667,Chilli,66,55.00000000000001,Tomato: 19; Grape: 34; Chilli: 66; Sugarcane: 1
+Model A (Baseline),Track C (Real-World),INTERNET_PLANTDOC_TEST,Chilli,17,9,52.94117647058824,8,47.05882352941176,Tomato,4,23.52941176470588,Tomato: 4; Grape: 4; Chilli: 9; Sugarcane: 0
+Model A (Baseline),Track C (Real-World),INTERNET_PLANTDOC_TEST,Grape,20,20,100.0,0,0.0,None,0,0.0,Tomato: 0; Grape: 20; Chilli: 0; Sugarcane: 0
+Model A (Baseline),Track C (Real-World),INTERNET_PLANTDOC_TEST,Tomato,68,17,25.0,51,75.0,Chilli,29,42.64705882352941,Tomato: 17; Grape: 20; Chilli: 29; Sugarcane: 2
+Model A (Baseline),Track C (Real-World),SUGARCANE_FIELD_PHOTO,Sugarcane,40,40,100.0,0,0.0,None,0,0.0,Tomato: 0; Grape: 0; Chilli: 0; Sugarcane: 40
+Model A (Baseline),Track C (Real-World),VINEYARD_FIELD_PHOTO,Grape,80,23,28.749999999999996,57,71.25,Tomato,57,71.25,Tomato: 57; Grape: 23; Chilli: 0; Sugarcane: 0
+Model B (Augmented),Experiment 5 (PlantDoc),PlantDoc (Singh et al. 2019 / CoDS-COMAD 2020),Chilli,115,67,58.26086956521739,48,41.73913043478261,Grape,33,28.695652173913043,Tomato: 10; Grape: 33; Chilli: 67; Sugarcane: 5
+Model B (Augmented),Track B (External),AI-Challenger-2018-Grape,Grape,90,8,8.88888888888889,82,91.11111111111111,Tomato,82,91.11111111111111,Tomato: 82; Grape: 8; Chilli: 0; Sugarcane: 0
+Model B (Augmented),Track B (External),GLDD-Dataset,Grape,60,25,41.66666666666667,35,58.333333333333336,Tomato,31,51.66666666666667,Tomato: 31; Grape: 25; Chilli: 4; Sugarcane: 0
+Model B (Augmented),Track B (External),PlantDoc-Dataset,Grape,30,30,100.0,0,0.0,None,0,0.0,Tomato: 0; Grape: 30; Chilli: 0; Sugarcane: 0
+Model B (Augmented),Track B (External),PlantDoc-Dataset,Tomato,62,10,16.129032258064516,52,83.87096774193549,Chilli,24,38.70967741935484,Tomato: 10; Grape: 23; Chilli: 24; Sugarcane: 5
+Model B (Augmented),Track B (External),Sabid-Sugarcane-Dataset,Sugarcane,60,60,100.0,0,0.0,None,0,0.0,Tomato: 0; Grape: 0; Chilli: 0; Sugarcane: 60
+Model B (Augmented),Track B (External),Sylhet-Tomato-Dataset,Tomato,30,0,0.0,30,100.0,Chilli,23,76.66666666666667,Tomato: 0; Grape: 7; Chilli: 23; Sugarcane: 0
+Model B (Augmented),Track B (External),Tomato_Leaf_Disease_Dataset_Pakistan,Tomato,180,17,9.444444444444445,163,90.55555555555556,Chilli,88,48.888888888888886,Tomato: 17; Grape: 71; Chilli: 88; Sugarcane: 4
+Model B (Augmented),Track B (External),Ulfa-Chili-Dataset,Chilli,120,75,62.5,45,37.5,Grape,41,34.166666666666664,Tomato: 4; Grape: 41; Chilli: 75; Sugarcane: 0
+Model B (Augmented),Track C (Real-World),CHILI_FIELD_PHOTO,Chilli,80,50,62.5,30,37.5,Grape,28,35.0,Tomato: 2; Grape: 28; Chilli: 50; Sugarcane: 0
+Model B (Augmented),Track C (Real-World),FARMER_FIELD_PHOTO,Tomato,120,18,15.0,102,85.0,Chilli,62,51.66666666666667,Tomato: 18; Grape: 40; Chilli: 62; Sugarcane: 0
+Model B (Augmented),Track C (Real-World),INTERNET_PLANTDOC_TEST,Chilli,17,9,52.94117647058824,8,47.05882352941176,Tomato,4,23.52941176470588,Tomato: 4; Grape: 4; Chilli: 9; Sugarcane: 0
+Model B (Augmented),Track C (Real-World),INTERNET_PLANTDOC_TEST,Grape,20,20,100.0,0,0.0,None,0,0.0,Tomato: 0; Grape: 20; Chilli: 0; Sugarcane: 0
+Model B (Augmented),Track C (Real-World),INTERNET_PLANTDOC_TEST,Tomato,68,17,25.0,51,75.0,Chilli,29,42.64705882352941,Tomato: 17; Grape: 20; Chilli: 29; Sugarcane: 2
+Model B (Augmented),Track C (Real-World),SUGARCANE_FIELD_PHOTO,Sugarcane,40,40,100.0,0,0.0,None,0,0.0,Tomato: 0; Grape: 0; Chilli: 0; Sugarcane: 40
+Model B (Augmented),Track C (Real-World),VINEYARD_FIELD_PHOTO,Grape,80,13,16.25,67,83.75,Tomato,66,82.5,Tomato: 66; Grape: 13; Chilli: 1; Sugarcane: 0
