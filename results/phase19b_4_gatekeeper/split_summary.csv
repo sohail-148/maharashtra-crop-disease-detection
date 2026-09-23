@@ -1,0 +1,4 @@
+split,total_samples,positive_leaf_count,negative_nonleaf_count,positive_pct,negative_pct
+train,1120,560,560,50.0,50.0
+val,238,120,118,50.42,49.58
+test,248,123,125,49.6,50.4

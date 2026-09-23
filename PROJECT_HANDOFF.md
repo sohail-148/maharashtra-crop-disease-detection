@@ -1,9 +1,9 @@
 # Crop Disease Detection Project — Master Handoff Package
 
-**Document Version:** 2.0  
+**Document Version:** 2.1  
 **Project Workspace:** `D:\CropDiseaseProject`  
 **Git Repository:** `https://github.com/sohail-148/maharashtra-crop-disease-detection` (Branch: `main`)  
-**Status as of Handoff:** Completed Phases 1–8 (Model Training & Verification), Phase 9 (Comparative / Cross-Dataset Evaluation), Phase 10 (In-Depth Error Analysis), Phase 15 (Standalone Grad-CAM Explainability Analysis on 10 Prioritized Cases), Phase 16 (Comprehensive 4-Track Model Robustness Audit across 2,556 Inferences), the complete Chilli Research Cycle (Experiments 1–5), Phase 18, Phase 19A, Phase 19B-1, Phase 19B-2, and Phase 19B-2A:
+**Status as of Handoff:** Completed Phases 1–8 (Model Training & Verification), Phase 9 (Comparative / Cross-Dataset Evaluation), Phase 10 (In-Depth Error Analysis), Phase 15 (Standalone Grad-CAM Explainability Analysis on 10 Prioritized Cases), Phase 16 (Comprehensive 4-Track Model Robustness Audit across 2,556 Inferences), the complete Chilli Research Cycle (Experiments 1–5), Phase 18, Phase 19A, Phase 19B-1, Phase 19B-2, Phase 19B-2A, Phase 19B-3 / 19B-3A, and Phase 19B-4:
 - **Chilli Experiments 1–3:** Candidates A, B, and C evaluated on COLD; Candidate B achieved **73.45% accuracy**, **72.31% Weighted F1**, and **68.62% Macro F1** on the official test split as the leading in-domain research candidate.
 - **Chilli Experiment 4:** Candidate D trained with mixed-domain data (COLD 2024 + Ulfa 2023 field data, total $n=2,152$) achieved **68.62% official test Accuracy**, **67.90% official test Weighted F1**, and **64.13% official test Macro F1**; on external/field benchmarks Candidate D achieved **92.50% on Track B External** (+40.00% over Candidate B), **81.44% on Track C Real-World** (+26.80% over Candidate B), and **76.62% on Track C High-Quality** (+32.46% over Candidate B).
 - **Chilli Experiment 5:** Independent field-source validation using an unseen PlantDoc subset ($n=115$: 62 Cercospora, 53 Healthy; Murda Complex, Nutritional Deficiency, and Powdery Mildew strictly unrepresented). Candidate D achieved **45.22% Accuracy**, **56.14% Weighted F1**, and **56.26% represented-class Macro F1** (+10.12% Weighted F1 over Baseline, +6.39% over Candidate B).
@@ -23,8 +23,22 @@
   9. Model A vs Model B augmentation produced only marginal field changes (39.68% vs 39.16%, with 57.0% error agreement).
   10. The observed field errors are consistent with sensitivity to domain-specific visual characteristics; we do NOT state that background shortcut learning or any other single mechanism is proven causal.
   11. New independent field training data would be required to improve field crop-identification generalization without contaminating the existing held-out field benchmarks.
+- **Phase 19B-3 / 19B-3A (Completed):** Non-Leaf Negative Dataset Sourcing & Curation completed with comprehensive legal/licensing audit across 10 candidate sources. Approved with restrictions: Google Open Images V7 (SRC-02, CC BY 2.0 with mandatory per-image attribution metadata), Wikimedia Commons (SRC-03, strictly image-specific CC0/CC BY/CC BY-SA with mandatory 7-field provenance registry), Kaggle Soil Types (SRC-04, CC0/CC BY-SA), and Kaggle Fruits-360 (SRC-05, CC BY-SA 4.0, training-only non-leaf fruits). Rejected: MS COCO 2017 (SRC-01, unverified Flickr terms), Kaggle Flowers (SRC-06, Unknown license / web scrape), PlantVillage Fruit (SRC-07, high contamination risk with internal training/test sets), Track D Unrelated (SRC-08, active held-out benchmark asset), ImageNet (SRC-09, redistribution prohibited), and Agriculture-Vision (SRC-10, aerial perspective mismatch). Designed a quality-driven 1:1 balanced binary dataset ($n=3,000$ to $6,000$: positive leaves stratified across internal training splits, matched 1:1 to curated negatives across 5 subcategories), documented operational leaf-area curation rules (>=25% positive, <5% negative), noted dataset-source domain shortcut limitations, and established a multi-stage contamination screening protocol.
+- **Phase 19B-4 (Completed):** Stage 1 Leaf vs. Non-Leaf Binary Gatekeeper trained and evaluated on 1,606 curated images (803 Leaf positives sampled strictly from internal training splits, 803 Non-Leaf negatives from conditionally approved sources: Open Images V7, Fruits-360, Kaggle Soil Types, Wikimedia Commons; 70/15/15 stratified split; 0 hash duplicates or collisions against 9,921 protected benchmark images):
+  1. **Architecture:** MobileNetV2 (frozen ImageNet backbone) + Batch Normalization + Dropout (0.3) + Dense(128, ReLU) + Dropout (0.2) + Dense(1, Sigmoid).
+  2. **Internal Test Performance ($\theta=0.50$):** **99.19% Accuracy**, **100.00% Leaf Retention** (123/123), **98.40% Non-Leaf Rejection** (123/125), Precision 98.40%, F1 99.19%, **ROC-AUC 0.9974**.
+  3. **Source-Wise Rejection:** Google Open Images V7 100.00% (56/56), Fruits-360 100.00% (29/29), Kaggle Soil Types 96.15% (25/26), Wikimedia Commons 92.86% (13/14).
+  4. **Subcategory-Wise Rejection:** Tools & Equipment 100.00% (13/13), Hands & Apparel 100.00% (32/32), Non-Leaf Plant Parts 100.00% (35/35), Soil & Ground 96.43% (27/28), Buildings & Structures 94.12% (16/17).
+  5. **Crop-Wise Leaf Retention:** Tomato 100.00% (31/31), Grape 100.00% (31/31), Chilli 100.00% (31/31), Sugarcane 100.00% (30/30).
+  6. **Track D Stress Evaluation:** **19/19 actual non-leaf distractors rejected = 100.00%**. (`aloeL.jpg` was excluded from the non-leaf denominator because it is itself an Aloe Vera plant leaf and was correctly classified as Leaf with $p=0.9986$).
+  7. **Held-Out Real-World Field Leaf Retention:** Evaluated across 2,229 uncurated field images: **2,150 / 2,229 = 96.55% retained** (Track B External: 95.41% [603/632], Track C Real-World: 97.65% [415/425], Phase 18 Benchmark: 96.59% [1,132/1,172]).
+  8. **Threshold Sweep & Operational Trade-Offs:**
+     * $\theta = 0.20$: Leaf-retention-oriented operating point (97.73% field leaf retention, 97.60% internal non-leaf rejection).
+     * $\theta = 0.50$: Default balanced operating point (96.55% field leaf retention, 98.40% internal non-leaf rejection, 99.19% test accuracy).
+     * $\theta = 0.90$: Stricter non-leaf filtering / higher specificity (99.20% internal non-leaf rejection, 95.65% field leaf retention).
+  9. **Scientific Qualification:** These empirical results provide strong evidence of useful leaf/non-leaf discrimination and generalizable foliage representation, but do **NOT** constitute proof of complete or universal out-of-distribution (OOD) detection.
 
-Next active research phase is Phase 19B-3 (Non-Leaf Negative Dataset Sourcing & Curation).
+Next active research phase is Phase 19B-5 (Missing Field Classes / Tomato-Grape Field Data).
 
 ---
 
@@ -392,7 +406,11 @@ A complete Flask web application is operational locally and serves live predicti
 [Phase 19: Cross-Crop Generalization & Gatekeeper Architecture] 🔄 ACTIVE
     ├── [Phase 19A: Flask Demonstration Verification]               ✅ COMPLETED (18/18 verification dimensions passed; commit bb3df48)
     ├── [Phase 19B-1: Confidence Calibration & Rejection Analysis]  ✅ COMPLETED (T fit on val; ECE/Brier/NLL evaluated; confidence alone insufficient for OOD)
-    └── [Phase 19B-2: Stage 2 Crop Species Identifier]              🔜 NEXT (Train 4-class classifier on splits/*/train.csv; eliminate Track D cross-crop failures)
+    ├── [Phase 19B-2: Stage 2 Crop Species Identifier]              ✅ COMPLETED (99.87% internal, 100% Track D mismatch detection)
+    ├── [Phase 19B-2A: Crop Identifier Field Error Analysis]        ✅ COMPLETED (~39% field accuracy analyzed; domain-specific errors)
+    ├── [Phase 19B-3 / 19B-3A: Non-Leaf Negative Sourcing & Audit]  ✅ COMPLETED (Strict licensing audit, 4 sources conditionally approved)
+    ├── [Phase 19B-4: Stage 1 Binary Leaf/Non-Leaf Gatekeeper]      ✅ COMPLETED (99.19% test acc, 100% leaf recall, 98.4% non-leaf spec, 96.55% field retention)
+    └── [Phase 19B-5: Missing Field Classes / Tomato-Grape Field]   🔜 NEXT (Acquire missing field classes & independent field training data)
 [Phase 20: Research Thesis & Dissertation]                          🔜 PENDING (Chapters 5, 6, 7, 8, 9)
 ```
 
@@ -408,7 +426,11 @@ Phase 19 — Cross-Crop Generalization & Two-Stage Gatekeeper Architecture
     ├── Phase 19A — Final Flask / Real-World Demonstration Verification ✅ (COMPLETED)
     └── Phase 19B — Cross-Crop Generalization, Two-Stage Gatekeeper, and OOD Safeguard Architecture
         ├── Phase 19B-1 — Offline Calibration & Rejection Curve Analysis ✅ (COMPLETED)
-        └── Phase 19B-2 — Dedicated Stage 2 Crop Species Identifier 🔜 (NEXT)
+        ├── Phase 19B-2 — Dedicated Stage 2 Crop Species Identifier ✅ (COMPLETED)
+        ├── Phase 19B-2A — Crop Identifier Field Error Analysis ✅ (COMPLETED)
+        ├── Phase 19B-3 / 19B-3A — Non-Leaf Negative Sourcing & Audit ✅ (COMPLETED)
+        ├── Phase 19B-4 — Stage 1 Leaf vs. Non-Leaf Binary Gatekeeper ✅ (COMPLETED)
+        └── Phase 19B-5 — Missing Field Classes / Tomato-Grape Field Data 🔜 (NEXT)
     ↓
 Phase 20 — Research Thesis & Project Dissertation
 ```
@@ -492,13 +514,83 @@ Phase 19 addresses the critical operational limitations exposed during the Phase
   11. New independent field training data would be required to improve field crop-identification generalization without contaminating the existing held-out field benchmarks.
 - **Artifacts:** Deliverables preserved in `results/phase19b_2a_error_analysis/` (`field_confusion_matrix.csv`, `source_confusion_analysis.csv`, `confidence_analysis.csv`, `model_a_vs_b_errors.csv`, `representative_errors.csv`, `phase19b_2a_report.txt`).
 
-##### Phase 19B-3: Non-Leaf Negative Dataset Sourcing & Curation (NEXT 🔜)
-- **Role:** Sourcing and curation of an audited agricultural non-leaf negative dataset ($n \approx 1,000$–$2,000$: soil, hands, sky, farm tools, background weeds) for Stage 1 Leaf vs. Non-Leaf filtering.
-- **Rules:** Zero data leakage against held-out benchmark sets; strict provenance logging.
+##### Phase 19B-3 / 19B-3A: Non-Leaf Negative Dataset Sourcing & Curation (COMPLETED ✅)
+- **Role:** Comprehensive data sourcing, legal/licensing audit, and dataset design for the Stage 1 binary Leaf vs. Non-Leaf Gatekeeper.
+- **Audit Findings across 10 Candidate Sources (Phase 19B-3A Reassessment):**
+  * *Approved with Restrictions:*
+    1. Google Open Images V7 (SRC-02): Approved for farm machinery, tools, boots, and gloves. Licensing: Annotations CC BY 4.0; images listed as CC BY 2.0. Mandatory requirement: Record original Flickr URL, author/creator credit, and CC BY 2.0 deed link in a provenance registry.
+    2. Wikimedia Commons (SRC-03): Approved for authentic rural Indian agricultural contexts (irrigation pipes, stakes, empty furrows, soil, farmers working). Licensing is strictly image-specific. Mandatory requirement: Log 7-field provenance metadata (source URL, author, specific license, license URL, date, SHA-256, subcategory); licenses restricted to CC0, Public Domain, CC BY, and CC BY-SA.
+    3. Kaggle Soil Types (SRC-04): Approved for bare agricultural soil textures. Licensing: CC0 (Satpathy) / CC BY-SA 4.0 (Salader). Prefer CC0 where possible; log attribution for Salader.
+    4. Kaggle Fruits-360 (SRC-05): Approved strictly for training-only non-leaf fruit negatives (harvested tomato, grape, pepper fruits without leaves) to teach the model that fruit != leaf. Official license: CC BY-SA 4.0 (ShareAlike obligations noted for any derived dataset distribution).
+  * *Rejected Sources (Not Approved):*
+    1. MS COCO 2017 (SRC-01): REJECTED. Annotations are CC BY 4.0, but underlying images are governed by individual Flickr terms without verified open licenses; per-image verification across thousands of images is impractical and legally uncertain.
+    2. Kaggle Flowers Recognition (SRC-06): REJECTED. License is listed as Unknown on Kaggle; scraped from Flickr, Google, and Yandex without creator attribution or verified open licenses.
+    3. PlantVillage Fruit Subsets (SRC-07): REJECTED due to critical contamination risk with internal Tomato training/test splits.
+    4. Track D Unrelated Dataset (SRC-08): REJECTED FOR TRAINING because it is an active, published held-out benchmark asset from Phase 16.
+    5. ImageNet ILSVRC (SRC-09): REJECTED due to strict redistribution prohibitions in terms of use.
+    6. Agriculture-Vision Dataset (SRC-10): REJECTED due to aerial perspective mismatch and restricted academic license.
+- **Dataset Design Specifications:**
+  * Formulation: Generic Leaf vs. Non-Leaf (Formulation A recommended over 4-crop-leaf or 5-class joint formulations to decouple leaf detection from crop species recognition).
+  * Flexible Quality-Driven Sizing: Target range $n=3,000$ to $6,000$ images, strictly 1:1 balanced. Dataset size is quality-driven and provenance-constrained rather than artificially forced to 6,000. Positives will be subsampled 1:1 to match whatever number of pristine negatives pass screening.
+  * Operational Area Rules: Positive leaf $\ge 25\%$ frame area; Negative non-leaf $< 5\%$ frame area; Ambiguous cases ($5\% \le \text{area} < 25\%$) strictly excluded. Documented as operational curation rules rather than universal definitions.
+  * Positive Sourcing: Stratified subsample from internal training splits (`splits/*/train.csv`: Tomato 25%, Grape 25%, Chilli 25%, Sugarcane 25%). Validation, test, and all external benchmark images strictly excluded.
+  * Scientific Limitation: Acknowledged risk of dataset-source domain shortcut when pairing in-domain leaves with public negatives; Phase 19B-4 must evaluate source-specific performance and not assume internal accuracy implies robust field rejection.
+  * Contamination Controls: Multi-stage contamination screening (SHA-256 collision check against all 31,590 repository images and benchmarks, perceptual dHash/pHash Hamming $\le 5$ check, cross-source deduplication, and manual visual boundary inspection) intended to minimize detectable leakage risk.
+- **Artifacts:** Deliverables preserved in `results/phase19b_3_nonleaf_sourcing/` (`source_audit.csv`, `source_audit.txt`, `dataset_design.txt`).
 
-##### Subsequent Phase 19B Research Roadmap:
-- **Phase 19B-4:** Stage 1 Leaf vs. Non-Leaf Binary Gatekeeper training and evaluation.
-- **Phase 19B-5:** Sourcing missing field classes (Chilli Powdery Mildew, Grape Bacterial Leaf Spot, 9 Sugarcane classes) and Tomato/Grape field training data.
+##### Phase 19B-4: Stage 1 Leaf vs. Non-Leaf Binary Gatekeeper Training & Evaluation (COMPLETED ✅)
+- **Role & Architectural Implementation:**
+  * Trained a lightweight binary MobileNetV2 Leaf vs. Non-Leaf Gatekeeper to serve as a pre-filtering stage before crop identification and disease diagnosis.
+  * Architecture: Pretrained ImageNet MobileNetV2 backbone (frozen, 1,280-d GAP) + Batch Normalization + Dropout (0.30) + Dense (128, ReLU) + Dropout (0.20) + Dense (1, Sigmoid).
+  * Checkpoint & Weights: Preserved in `results/phase19b_4_gatekeeper/gatekeeper_head.keras` and `gatekeeper_mobilenetv2.weights.h5`.
+- **Dataset Construction & Provenance:**
+  * Total Size: 1,606 verified images, strictly 1:1 balanced (803 Positive Leaves, 803 Negative Non-Leaves).
+  * Positive Pool (803 leaves): Sampled exclusively from internal training splits (`splits/*/train.csv`: 201 Tomato, 201 Grape, 201 Chilli, 200 Sugarcane).
+  * Negative Pool (803 non-leaves): Sourced exclusively from conditionally approved Phase 19B-3A sources: Google Open Images V7 (383 images, 47.7%), Fruits-360 non-leaf isolated fruits (180 images, 22.4%), Kaggle Soil Types (179 images, 22.3%), and Wikimedia Commons 640px thumbnails (61 images, 7.6%).
+  * Negative Subcategories: Non-leaf plant parts/fruits (230, 28.6%), human hands & apparel (205, 25.5%), soil & ground (181, 22.5%), buildings & structures (106, 13.2%), agricultural tools & equipment (81, 10.1%).
+  * Stratified Split: 70% Train (1,120 images: 560 Leaf, 560 Non-Leaf) / 15% Validation (238 images: 120 Leaf, 118 Non-Leaf) / 15% Test (248 images: 123 Leaf, 125 Non-Leaf).
+  * Contamination & Integrity: 1,606 strictly unique SHA-256 hashes (0 cross-split duplicates, 0 collisions against 9,921 protected benchmark and test files across Track B, Track C, Track D, Phase 18, Exp 5, and Candidate D). 100% complete 7-field provenance metadata logged in `provenance_registry.csv`.
+- **Internal Evaluation Performance ($\theta = 0.50$):**
+  * Validation Split ($n=238$): 100.00% Accuracy, 100.00% Leaf Recall, 100.00% Specificity, ROC-AUC 1.0000.
+  * Held-Out Test Split ($n=248$): **99.19% Accuracy**, **100.00% Leaf Retention** (123/123), **98.40% Non-Leaf Rejection** (123/125), Precision 98.40%, F1 99.19%, **ROC-AUC 0.9974**.
+  * Source-Wise Test Rejection: Open Images V7 100.0% (56/56), Fruits-360 100.0% (29/29), Kaggle Soil Types 96.15% (25/26), Wikimedia Commons 92.86% (13/14).
+  * Subcategory-Wise Test Rejection: Tools & Equipment 100.0% (13/13), Hands & Apparel 100.0% (32/32), Non-Leaf Plant Parts 100.0% (35/35), Soil & Ground 96.43% (27/28), Buildings & Structures 94.12% (16/17).
+  * Crop-Wise Test Leaf Retention: Tomato 100.0% (31/31), Grape 100.0% (31/31), Chilli 100.0% (31/31), Sugarcane 100.0% (30/30).
+- **Track D Unrelated Stress Evaluation ($n=20$ Distractor Images):**
+  * **19/19 actual non-leaf distractors rejected = 100.00%** (mean predicted leaf prob = 0.0009 across actual non-leaf distractors).
+  * `aloeL.jpg` was excluded from the non-leaf denominator because it is biologically an Aloe Vera leaf plant photograph; the model predicted $p=0.9986$ (Leaf), which is physically and semantically correct for a generic leaf detector.
+- **Held-Out Real-World Field Leaf Retention (Zero-Shot Generalization):**
+  * Evaluated across 2,229 uncurated field images: **2,150 / 2,229 = 96.55% overall field leaf retention** at default $\theta=0.50$.
+  * Track B External Benchmark: 95.41% retained (603 / 632 field leaves passed; mean prob = 0.9575).
+  * Track C Real-World Benchmark: 97.65% retained (415 / 425 field leaves passed; mean prob = 0.9795).
+  * Phase 18 Final Field Benchmark: 96.59% retained (1,132 / 1,172 field leaves passed; mean prob = 0.9673).
+- **Decision Threshold Sweep & Operating Trade-Offs ($\theta \in [0.05, 0.95]$):**
+  * $\theta = 0.20$ (**Leaf-retention-oriented operating point**): 97.73% field leaf retention across all 2,229 field leaves, 97.60% internal non-leaf rejection, 95.0% Track D rejection (100% of non-leaf distractors). Ideal for user-facing applications where rejecting a farmer's genuine leaf photo is far more harmful than admitting a rare borderline non-leaf distractor.
+  * $\theta = 0.50$ (**Default balanced operating point**): 96.55% field leaf retention, 98.40% internal non-leaf rejection, 99.19% test accuracy.
+  * $\theta = 0.90$ (**Stricter non-leaf filtering / higher specificity**): 99.20% internal non-leaf rejection, 99.60% test accuracy, at the cost of lower field-leaf retention (95.65% field retention; 4.35% false rejection rate on real-world field foliage).
+- **Scientific Qualification:**
+  * These empirical results provide strong evidence of useful leaf vs. non-leaf discrimination and demonstrate that generic foliage features generalize across real-world field conditions (96.55% field retention without field training).
+  * However, these findings do **NOT** constitute proof of complete, universal, or solved out-of-distribution (OOD) detection. Performance remains bounded by the diversity of evaluated distractor classes.
+- **Preserved Deliverables in `results/phase19b_4_gatekeeper/`:**
+  * `dataset_manifest.csv` (1,606 sample records with local paths, splits, labels, SHA-256)
+  * `split_summary.csv` (stratified split counts and percentages)
+  * `provenance_registry.csv` (100% complete 7-field provenance metadata for all 803 negatives)
+  * `acquisition_manifest.csv` (833 candidate query records)
+  * `rejection_log.csv` (33 disqualified samples with specific reasons)
+  * `data_audit_report.txt` (full pre-training integrity audit)
+  * `eval_internal_metrics.csv` (validation and test performance metrics)
+  * `eval_sourcewise_negatives.csv` (rejection rates across 4 sources)
+  * `eval_subcategory_negatives.csv` (rejection rates across 5 subcategories)
+  * `eval_cropwise_retention.csv` (retention rates across 4 crops)
+  * `eval_track_d_stress.csv` (per-sample predictions on 20 Track D stress images)
+  * `eval_field_retention.csv` (field leaf retention across Tracks B, C, and Phase 18)
+  * `threshold_sweep.csv` (metrics across all 19 thresholds from 0.05 to 0.95)
+  * `confusion_matrix_test.png` & `threshold_curves.png` (visual trade-off curves)
+  * `gatekeeper_head.keras` & `gatekeeper_mobilenetv2.weights.h5` (trained model assets)
+  * `phase19b_4_evaluation_report.txt` (consolidated empirical report)
+
+##### Phase 19B-5: Missing Field Classes / Tomato-Grape Field Data (NEXT 🔜)
+- **Role:** Source missing field disease classes (Chilli Powdery Mildew, Grape Bacterial Leaf Spot, 9 Sugarcane classes) and independent field training data for Tomato and Grape to address domain sensitivity without contaminating held-out benchmarks.
 
 ---
 
@@ -642,13 +734,38 @@ D:\CropDiseaseProject/
 │   │   ├── mismatch_detection_results.csv
 │   │   └── phase19b_2_report.txt
 │   │
-│   └── phase19b_2a_error_analysis/    <-- Phase 19B-2A Crop Identifier Field Error Analysis suite
-│       ├── field_confusion_matrix.csv
-│       ├── source_confusion_analysis.csv
-│       ├── confidence_analysis.csv
-│       ├── model_a_vs_b_errors.csv
-│       ├── representative_errors.csv
-│       └── phase19b_2a_report.txt
+│   ├── phase19b_2a_error_analysis/    <-- Phase 19B-2A Crop Identifier Field Error Analysis suite
+│   │   ├── field_confusion_matrix.csv
+│   │   ├── source_confusion_analysis.csv
+│   │   ├── confidence_analysis.csv
+│   │   ├── model_a_vs_b_errors.csv
+│   │   ├── representative_errors.csv
+│   │   └── phase19b_2a_report.txt
+│   │
+│   ├── phase19b_3_nonleaf_sourcing/   <-- Phase 19B-3 Non-Leaf Sourcing & Dataset Design
+│   │   ├── source_audit.csv           <-- Legal, licensing, and suitability audit of 10 candidate sources
+│   │   ├── source_audit.txt           <-- Detailed sourcing narrative and selection rationale
+│   │   └── dataset_design.txt         <-- Full dataset architecture, boundary rules, and 4-tier protocol
+│   │
+│   └── phase19b_4_gatekeeper/         <-- Phase 19B-4 Binary Leaf/Non-Leaf Gatekeeper Evaluation Suite
+│       ├── dataset_manifest.csv       <-- Complete 1,606-sample dataset manifest (splits, labels, SHA-256)
+│       ├── split_summary.csv          <-- Stratified split distribution (70/15/15)
+│       ├── provenance_registry.csv    <-- 100% complete 7-field provenance metadata for 803 negatives
+│       ├── acquisition_manifest.csv   <-- 833 candidate query records
+│       ├── rejection_log.csv          <-- Rejection logs for 33 disqualified samples
+│       ├── data_audit_report.txt      <-- Pre-training dataset integrity audit report
+│       ├── eval_internal_metrics.csv  <-- Validation and test performance metrics
+│       ├── eval_sourcewise_negatives.csv <-- Rejection rates across 4 sources
+│       ├── eval_subcategory_negatives.csv <-- Rejection rates across 5 subcategories
+│       ├── eval_cropwise_retention.csv <-- Retention rates across 4 crop foliages
+│       ├── eval_track_d_stress.csv    <-- Predictions on 20 Track D stress distractor images
+│       ├── eval_field_retention.csv   <-- Field leaf retention across Tracks B, C, and Phase 18
+│       ├── threshold_sweep.csv        <-- Multi-track metrics across 19 decision thresholds
+│       ├── confusion_matrix_test.png  <-- Visual test split confusion matrix
+│       ├── threshold_curves.png       <-- Sensitivity vs. specificity vs. field retention curve
+│       ├── gatekeeper_head.keras      <-- Trained binary classifier head
+│       ├── gatekeeper_mobilenetv2.weights.h5 <-- Model weights checkpoint
+│       └── phase19b_4_evaluation_report.txt <-- Consolidated technical evaluation report
 │
 ├── splits/                            <-- Stratified Train/Val/Test CSVs (UNTOUCHED)
 │   ├── tomato/

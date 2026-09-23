@@ -1,0 +1,21 @@
+file_name,pred_prob_leaf,classified_as,correctly_rejected
+aloeL.jpg,0.9986,LEAF (FP),False
+baboon.jpg,0.0002,NON-LEAF (TN),True
+basketball1.png,0.0,NON-LEAF (TN),True
+board.jpg,0.0,NON-LEAF (TN),True
+building.jpg,0.0,NON-LEAF (TN),True
+butterfly.jpg,0.0094,NON-LEAF (TN),True
+cards.png,0.0006,NON-LEAF (TN),True
+chessboard.png,0.0012,NON-LEAF (TN),True
+detect_blob.png,0.0,NON-LEAF (TN),True
+fruits.jpg,0.0073,NON-LEAF (TN),True
+graf1.png,0.0004,NON-LEAF (TN),True
+home.jpg,0.0,NON-LEAF (TN),True
+left01.jpg,0.0,NON-LEAF (TN),True
+messi5.jpg,0.0005,NON-LEAF (TN),True
+notes.png,0.0,NON-LEAF (TN),True
+right01.jpg,0.0,NON-LEAF (TN),True
+rubberwhale1.png,0.0,NON-LEAF (TN),True
+smarties.png,0.0001,NON-LEAF (TN),True
+starry_night.jpg,0.0004,NON-LEAF (TN),True
+sudoku.png,0.0008,NON-LEAF (TN),True

@@ -1,0 +1,50 @@
+================================================================================
+PHASE 19B-4: MOBILENETV2 BINARY GATEKEEPER COMPREHENSIVE EVALUATION
+================================================================================
+Evaluation Date: 2026-09-23 11:55:06
+Model: Pretrained MobileNetV2 (ImageNet) + Binary Classification Head
+Training Dataset: 1,606 Images (1,120 Train / 238 Val / 248 Test)
+
+1. INTERNAL TEST PERFORMANCE (threshold = 0.50)
+   Accuracy:            99.19%
+   Leaf Retention (TPR): 100.00% (123/123)
+   Non-Leaf Rejection:  98.40% (123/125)
+   Precision:           98.40%
+   F1-Score:            99.19%
+   AUC-ROC:             99.74%
+
+2. SOURCE-WISE NEGATIVE REJECTION (Test Split)
+   - [SRC-02] Google Open Images V7: 100.0% correctly rejected (56/56), mean prob=0.0053
+   - [SRC-03] Wikimedia Commons: 92.86% correctly rejected (13/14), mean prob=0.0637
+   - [SRC-04] Kaggle Soil Types: 96.15% correctly rejected (25/26), mean prob=0.0425
+   - [SRC-05] Fruits-360: 100.0% correctly rejected (29/29), mean prob=0.0000
+
+3. SUBCATEGORY-WISE NEGATIVE REJECTION (Test Split)
+   - agri_tools_equipment: 100.0% correctly rejected (13/13), mean prob=0.0002
+   - buildings_structures: 94.12% correctly rejected (16/17), mean prob=0.0513
+   - human_hands_apparel: 100.0% correctly rejected (32/32), mean prob=0.0003
+   - plant_parts_nonleaf: 100.0% correctly rejected (35/35), mean prob=0.0082
+   - soil_ground: 96.43% correctly rejected (27/28), mean prob=0.0402
+
+4. CROP-WISE LEAF RETENTION (Test Split Positives)
+   - Chilli: 100.0% retained as leaf (31/31), mean prob=0.9999
+   - Grape: 100.0% retained as leaf (31/31), mean prob=0.9998
+   - Sugarcane: 100.0% retained as leaf (30/30), mean prob=0.9990
+   - Tomato: 100.0% retained as leaf (31/31), mean prob=0.9999
+
+5. TRACK D UNRELATED STRESS EVALUATION (20 Distractor Images)
+   - Correctly Rejected Non-Leaf: 19/20 (95.0%)
+   - Mean leaf prob on Track D distractors: 0.0510
+
+6. HELD-OUT REAL-WORLD FIELD LEAF RETENTION (Zero-shot Domain Generalization)
+   - Track B External Benchmark: 95.41% retained (603/632 field leaves passed)
+   - Track C Real-World Benchmark: 97.65% retained (415/425 field leaves passed)
+   - Phase 18 Final Field Benchmark: 96.59% retained (1132/1172 field leaves passed)
+
+7. THRESHOLD ANALYSIS & RECOMMENDATION
+   - Peak Internal Test Accuracy Threshold: th=0.9 (Acc: 99.6%, Spec: 99.2%, Sens: 100.0%)
+   - Recommended Operating Threshold for Minimal Field Foliage Loss: th=0.95
+     * Average Real-World Field Leaf Retention: 95.33%
+     * Internal Non-Leaf Rejection Rate:        99.2%
+     * Track D Stress Non-Leaf Rejection:       95.0%
+================================================================================

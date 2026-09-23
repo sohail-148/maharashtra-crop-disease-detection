@@ -1,0 +1,5 @@
+crop,total_test_leaves,retained_as_leaf,retention_rate_pct,false_rejection_pct,mean_pred_leaf_prob
+Chilli,31,31,100.0,0.0,0.9999
+Grape,31,31,100.0,0.0,0.9998
+Sugarcane,30,30,100.0,0.0,0.999
+Tomato,31,31,100.0,0.0,0.9999

@@ -1,0 +1,77 @@
+================================================================================
+PHASE 19B-4: GATEKEEPER DATASET AUDIT & CURATION REPORT
+================================================================================
+Audit Date: 2026-09-23 11:40:13
+Target Role: Stage 1 Binary Gatekeeper (Leaf vs Non-Leaf)
+Total Dataset Size: 1,606 images
+Class Balance: 803:803 (1:1 exactly)
+
+1. ACCEPTED NEGATIVE COUNTS
+   By Source:
+     - [SRC-02] Google Open Images V7: 383 images (47.7%)
+     - [SRC-03] Wikimedia Commons: 61 images (7.6%)
+     - [SRC-04] Kaggle Soil Types: 179 images (22.3%)
+     - [SRC-05] Fruits-360: 180 images (22.4%)
+   By Negative Subcategory:
+     - agri_tools_equipment: 81 images (10.1%)
+     - buildings_structures: 106 images (13.2%)
+     - human_hands_apparel: 205 images (25.5%)
+     - plant_parts_nonleaf: 230 images (28.6%)
+     - soil_ground: 181 images (22.5%)
+
+2. REJECTED CANDIDATES BY REASON
+     - network download / 404 error: 29
+     - unverifiable provenance / license: 3
+     - cross-source / internal duplicate: 1
+   Total rejected candidates: 33
+
+3. POSITIVE LEAF COUNTS (BY CROP)
+     - Chilli: 201 images (25.0%)
+     - Grape: 201 images (25.0%)
+     - Sugarcane: 200 images (24.9%)
+     - Tomato: 201 images (25.0%)
+   Total Positive Leaf Pool: 803 images
+
+4. CLASS BALANCE
+     - Positive (Leaf):     803 (50.00%)
+     - Negative (Non-Leaf): 803 (50.00%)
+     - Balance Ratio: 1.00 : 1.00 (Strictly balanced)
+
+5. TRAIN / VALIDATION / TEST SPLIT (70% / 15% / 15%)
+     - TRAIN: 1,120 images (69.7%)
+     - VAL: 238 images (14.8%)
+     - TEST: 248 images (15.4%)
+
+6. PROVENANCE COMPLETENESS (NEGATIVE POOL)
+     - source_url: 100.0%
+     - creator: 100.0%
+     - license: 100.0%
+     - license_url: 100.0%
+     - download_date: 100.0%
+     - sha256: 100.0%
+     - subcategory: 100.0%
+
+7. CONTAMINATION & LEAKAGE SCREENING RESULTS
+   (Checked against 31,590-sample master SHA-256 hash collision registry)
+     - Project Training Split: 0 collisions -> STRICTLY ISOLATED / ZERO CONTAMINATION
+     - Track B External Benchmark: 0 collisions -> STRICTLY ISOLATED / ZERO CONTAMINATION
+     - Track C Real-World Benchmark: 0 collisions -> STRICTLY ISOLATED / ZERO CONTAMINATION
+     - Track D Unrelated Evaluation: 0 collisions -> STRICTLY ISOLATED / ZERO CONTAMINATION
+     - Phase 18 Field Benchmark: 0 collisions -> STRICTLY ISOLATED / ZERO CONTAMINATION
+     - Experiment 5 PlantDoc: 0 collisions -> STRICTLY ISOLATED / ZERO CONTAMINATION
+     - Candidate D Chilli Field: 0 collisions -> STRICTLY ISOLATED / ZERO CONTAMINATION
+
+8. UNDERREPRESENTATION ANALYSIS
+     - Minimum subcategory size: 81 (agri_tools_equipment)
+     - Maximum subcategory size: 230 (plant_parts_nonleaf)
+     - Subcategory ratio: 2.84x (well within normal 1-3x operational range; NO severe underrepresentation)
+
+9. GUARDRAIL ENFORCEMENT & COMPLIANCE
+     - MS COCO: EXCLUDED (unverifiable Flickr per-image terms)
+     - Flowers Recognition: EXCLUDED (unknown Kaggle licensing)
+     - PlantVillage Fruit: EXCLUDED (overlap risk with project crop data)
+     - ImageNet / Agri-Vision: EXCLUDED
+     - Track D Unrelated: EXCLUDED from training/tuning
+     - Candidate D / Track B / Track C / Phase 18 / Exp 5: STRICTLY HELD OUT
+     - Model Training Status: HALTED BEFORE TRAINING (Awaiting user approval)
+================================================================================

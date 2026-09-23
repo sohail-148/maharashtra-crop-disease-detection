@@ -1,0 +1,4 @@
+dataset_benchmark,threshold,total_field_leaves,retained_as_leaf,false_rejections_nonleaf,retention_rate_pct,false_rejection_rate_pct,mean_pred_leaf_prob
+Track B External Benchmark,0.5,632,603,29,95.41,4.59,0.9556
+Track C Real-World Benchmark,0.5,425,415,10,97.65,2.35,0.9795
+Phase 18 Final Field Benchmark,0.5,1172,1132,40,96.59,3.41,0.9673

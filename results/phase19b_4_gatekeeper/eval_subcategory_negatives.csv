@@ -1,0 +1,6 @@
+negative_subcategory,total_test_samples,correctly_rejected_nonleaf,rejection_rate_pct,false_positive_pct,mean_pred_leaf_prob
+agri_tools_equipment,13,13,100.0,0.0,0.0002
+buildings_structures,17,16,94.12,5.88,0.0513
+human_hands_apparel,32,32,100.0,0.0,0.0003
+plant_parts_nonleaf,35,35,100.0,0.0,0.0082
+soil_ground,28,27,96.43,3.57,0.0402

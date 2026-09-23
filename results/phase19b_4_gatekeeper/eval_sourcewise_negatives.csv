@@ -1,0 +1,5 @@
+source_id,source_name,total_test_samples,correctly_rejected_nonleaf,rejection_rate_pct,false_positive_pct,mean_pred_leaf_prob
+SRC-02,Google Open Images V7,56,56,100.0,0.0,0.0053
+SRC-03,Wikimedia Commons,14,13,92.86,7.14,0.0637
+SRC-04,Kaggle Soil Types,26,25,96.15,3.85,0.0425
+SRC-05,Fruits-360,29,29,100.0,0.0,0.0
