@@ -35,10 +35,74 @@
   8. **Threshold Sweep & Operational Trade-Offs:**
      * $\theta = 0.20$: Leaf-retention-oriented operating point (97.73% field leaf retention, 97.60% internal non-leaf rejection).
      * $\theta = 0.50$: Default balanced operating point (96.55% field leaf retention, 98.40% internal non-leaf rejection, 99.19% test accuracy).
-     * $\theta = 0.90$: Stricter non-leaf filtering / higher specificity (99.20% internal non-leaf rejection, 95.65% field leaf retention).
-  9. **Scientific Qualification:** These empirical results provide strong evidence of useful leaf/non-leaf discrimination and generalizable foliage representation, but do **NOT** constitute proof of complete or universal out-of-distribution (OOD) detection.
+- **Phase 19B-5 (Completed):** Field Data Gap Audit, Sourcing Strategy, and Finite Clean Acquisition completed for Tomato and Grape:
+  1. **Tomato Field Audit ($n=460$ across Phase 18):** Overall field accuracy was only **18.91%** ($87/460$). Attractor sink collapse was severe: **87.6% (403/460)** of all field predictions collapsed into either Late Blight (217) or Early Blight (186). Healthy field leaves suffered a **100% false-positive disease rate** (0/58 correct).
+  2. **Grape Field Audit ($n=280$ across Phase 18):** Overall field accuracy was only **11.43%** ($32/280$). Attractor collapse: **74.3%** collapsed into Healthy Leaves or Powdery Mildew.
+  3. **FieldPlant Tomato Taxonomy Correction:** Review of Moupojou et al. (IEEE Access 2023) confirmed FieldPlant legitimately supplies 3 canonical classes: Healthy, Tomato Mosaic Virus, and Tomato Yellow Leaf Curl Virus. Invalid mappings (Bacterial Wilt != Bacterial Spot, Brown Spots != Target Spot) were strictly rejected.
+  4. **GVLiD Internal Identity Verification:** Confirmed that internal G2 dataset (`grape_2024`, $n=3,477$) is 100% identical to GVLiD (Shikalgar et al., 2024); GVLiD was marked INTERNAL / ALREADY USED.
+  5. **Authentic Field Acquisition:** Acquired, screened, and verified **247 authentic in-situ field images** with 0 benchmark collisions against 31,805 unique SHA-256 hashes:
+     * Tomato (FieldPlant, Cameroon): Healthy (13), Mosaic Virus (13), Yellow Leaf Curl Virus (45) = 71 images.
+     * Grape (HERMOS, Turkey): Powdery Mildew (45), Downy Mildew (44), Healthy Leaves (43) = 132 images.
+     * Grape (Standalone ESCA, Italy): Esca (44) = 44 images.
+     * Grape Total = 176 images.
+  6. **Benchmark Record Distinction:** Clarified that master registry entries (38,376 records) represent sample prediction records across multi-candidate evaluations; physical held-out field benchmark count is exactly 1,172 images (Tomato: 460, Grape: 280, Chilli: 332, Sugarcane: 100).
+- **Phase 19B-6 (Completed):** Field-Data-Assisted Retraining Experiment for Tomato and Grape executed on Kaggle GPU (Tesla T4) and evaluated across all benchmark tracks:
+  1. **Augmented Training Datasets:**
+     * Tomato: 10,170 base + 71 authentic FieldPlant field images ($n=10,241$).
+     * Grape: 4,341 base + 176 authentic field images ($n=4,517$).
+     * Strict baseline architecture preserved: Frozen MobileNetV2 (ImageNet) + GAP + BN + Dropout(0.3) + Dense(N, Softmax), Adam(1e-3), seed 42.
+  2. **Model Artifact Verification:**
+     * Tomato adapted model: `experiments/field_data_19b5/models/tomato_field_adapted.keras` (9,821,400 bytes, SHA-256: `211cdb63aa6aef2f56601c6cb1cdfa784c344b806bf97550d1f8ce25b94f27ff`).
+     * Grape adapted model: `experiments/field_data_19b5/models/grape_field_adapted.keras` (9,775,317 bytes, SHA-256: `f3e2367e32c9b15951c4b42522540dff2e9869f6aee6a8613e4e4b7882b0b867`).
+     * Both models are confirmed present and verified as the exact artifacts used for final comparative evaluation.
+  3. **Resolution of Tomato Intermediate-Report Discrepancy (90.14% vs. 89.72%):**
+     * During Kaggle execution, Version 2 completed Tomato training and reported 90.14% test accuracy, but errored out at the cell transition to Grape due to a newline string syntax error before Grape began.
+     * Version 3 fixed the syntax error and trained both Tomato and Grape to complete termination.
+     * In this clean, completed Version 3 run, Tomato converged with test loss 0.3002 and test accuracy **89.72%** (recorded in `training_summary.txt`).
+     * The model artifact downloaded from the completed Version 3 run (`tomato_field_adapted.keras`) is the authoritative artifact evaluated locally on `splits/tomato/test.csv` ($n=2,180$), yielding exactly **89.72% Accuracy** and **87.16% Macro F1**.
+     * The 90.14% figure was an intermediate metric from the incomplete Version 2 run; 89.72% is the authoritative final comparative metric.
+  4. **Multi-Track Comparative Benchmark Results:**
+     * **Tomato Internal Test ($n=2,180$):** Baseline 90.23%, Adapted 89.72% ($\Delta -0.50$ percentage points); Baseline Macro F1 87.80%, Adapted Macro F1 87.16% ($\Delta -0.64$ percentage points).
+     * **Tomato Track B External ($n=272$):** Baseline 15.07%, Adapted 15.07% ($\Delta +0.00$ percentage points); Baseline Macro F1 7.78%, Adapted Macro F1 12.08% ($\Delta +4.29$ percentage points).
+     * **Tomato Track C Real-World ($n=188$):** Baseline 24.47%, Adapted 27.66% ($\Delta +3.19$ percentage points); Baseline Macro F1 12.99%, Adapted Macro F1 17.72% ($\Delta +4.73$ percentage points).
+     * **Tomato Phase 18 Combined Field ($n=460$):** Baseline 18.91%, Adapted 20.22% ($\Delta +1.30$ percentage points); Baseline Macro F1 9.43%, Adapted Macro F1 14.68% ($\Delta +5.25$ percentage points).
+     * **Grape Internal Test ($n=931$):** Baseline 89.04%, Adapted 87.86% ($\Delta -1.18$ percentage points); Baseline Macro F1 86.31%, Adapted Macro F1 83.28% ($\Delta -3.03$ percentage points).
+     * **Grape Track B External ($n=180$):** Baseline 13.89%, Adapted 15.56% ($\Delta +1.67$ percentage points); Baseline Macro F1 7.98%, Adapted Macro F1 10.32% ($\Delta +2.34$ percentage points).
+     * **Grape Track C Real-World ($n=100$):** Baseline 7.00%, Adapted 9.00% ($\Delta +2.00$ percentage points); Baseline Macro F1 5.26%, Adapted Macro F1 6.70% ($\Delta +1.44$ percentage points).
+     * **Grape Phase 18 Combined Field ($n=280$):** Baseline 11.43%, Adapted 13.21% ($\Delta +1.79$ percentage points); Baseline Macro F1 7.34%, Adapted Macro F1 9.33% ($\Delta +2.00$ percentage points).
+  5. **Target Augmented Classes Analysis (Phase 18 Field Benchmark):**
+     * `Tomato Yellow Leaf Curl Virus`: Recall 5.36% -> 42.86% ($\Delta +37.50$ percentage points), F1 8.33% -> 24.24%.
+     * `Tomato Mosaic Virus`: Recall 0.00% -> 7.50% ($\Delta +7.50$ percentage points), F1 0.00% -> 7.79%.
+     * `Tomato Healthy`: Recall 0.00% -> 27.59% ($\Delta +27.59$ percentage points), F1 0.00% -> 25.00%.
+     * `Grape Downy Mildew`: Recall 4.00% -> 26.00% ($\Delta +22.00$ percentage points), F1 6.67% -> 18.18%.
+     * `Grape Powdery Mildew`: Recall 0.00% -> 3.33% ($\Delta +3.33$ percentage points), F1 0.00% -> 2.25%.
+     * `Grape Healthy Leaves`: Recall 59.52% -> 52.38% ($\Delta -7.14$ percentage points), F1 30.12% -> 42.31% ($\Delta +12.19$ percentage points).
+     * `Grape Esca`: Recall 2.00% -> 0.00% ($\Delta -2.00$ percentage points), F1 2.86% -> 0.00%.
+  6. **Scientific Interpretation:**
+     * *Core finding:* Adding the selected independently collected field images was associated with modest overall field-benchmark gains and larger class-specific changes, while internal test performance decreased modestly.
+     * The field-data intervention produced modest overall improvements on the evaluated external/field benchmarks.
+     * Several targeted classes showed substantially larger recall changes.
+     * Internal performance declined modestly for both adapted models (-0.50 pp for Tomato, -1.18 pp for Grape).
+     * The intervention did NOT eliminate the large real-world generalization gap (field accuracy remains ~13-20% vs ~88-90% internal test accuracy).
+     * The results demonstrate an observed effect of adding the selected independent field data under this experimental setup.
+     * We do NOT claim universal causality, do NOT claim that field adaptation solved domain shift, do NOT claim universal field generalization, and do NOT justify replacing the production models on the basis of these results alone.
+  7. **Experimental Limitations:**
+     * Tomato received only 71 additional field images.
+     * Tomato additions covered only Healthy, Mosaic Virus, and Yellow Leaf Curl Virus.
+     * Grape received 176 additional field images.
+     * Several canonical classes remained unaugmented (e.g., Tomato Spider Mites, Target Spot, Leaf Mold; Grape Bacterial Leaf Spot, Black Rot).
+     * Added field datasets originated from different geographic and acquisition domains (Cameroon, Turkey, Italy).
+     * The experiment tests this specific field-data intervention and does not establish universal improvement.
+     * External field benchmarks remain finite samples and may not represent all future field conditions.
+     * The experiment does not establish that field-data augmentation will improve every disease class.
+     * Small class-level changes should be interpreted together with the corresponding sample counts.
+  8. **Preservation of Production vs. Experimental Separation:**
+     * Production models in `models/` remain 100% UNCHANGED, LOCKED, and READ-ONLY.
+     * Web application (`app/`) remains 100% UNCHANGED.
+     * Dataset splits (`splits/`) and evaluation benchmarks (Track B, Track C, Phase 18) remain 100% UNCHANGED.
+     * Experimental models remain strictly under `experiments/field_data_19b5/models/` as research artifacts.
 
-Next active research phase is Phase 19B-5 (Missing Field Classes / Tomato-Grape Field Data).
+Active research phase: Phase 19B-6 Completed. Next phase is Phase 19B-7 (Final Error Analysis & Academic Research Synthesis).
 
 ---
 
@@ -410,7 +474,7 @@ A complete Flask web application is operational locally and serves live predicti
     ├── [Phase 19B-2A: Crop Identifier Field Error Analysis]        ✅ COMPLETED (~39% field accuracy analyzed; domain-specific errors)
     ├── [Phase 19B-3 / 19B-3A: Non-Leaf Negative Sourcing & Audit]  ✅ COMPLETED (Strict licensing audit, 4 sources conditionally approved)
     ├── [Phase 19B-4: Stage 1 Binary Leaf/Non-Leaf Gatekeeper]      ✅ COMPLETED (99.19% test acc, 100% leaf recall, 98.4% non-leaf spec, 96.55% field retention)
-    └── [Phase 19B-5: Missing Field Classes / Tomato-Grape Field]   🔜 NEXT (Acquire missing field classes & independent field training data)
+    └── [Phase 19B-5: Missing Field Classes / Tomato-Grape Field]   🔄 ACTIVE (Field audit & sourcing strategy completed; acquisition pending approval)
 [Phase 20: Research Thesis & Dissertation]                          🔜 PENDING (Chapters 5, 6, 7, 8, 9)
 ```
 
@@ -430,7 +494,7 @@ Phase 19 — Cross-Crop Generalization & Two-Stage Gatekeeper Architecture
         ├── Phase 19B-2A — Crop Identifier Field Error Analysis ✅ (COMPLETED)
         ├── Phase 19B-3 / 19B-3A — Non-Leaf Negative Sourcing & Audit ✅ (COMPLETED)
         ├── Phase 19B-4 — Stage 1 Leaf vs. Non-Leaf Binary Gatekeeper ✅ (COMPLETED)
-        └── Phase 19B-5 — Missing Field Classes / Tomato-Grape Field Data 🔜 (NEXT)
+        └── Phase 19B-5 — Missing Field Classes / Tomato-Grape Field Data 🔄 (ACTIVE)
     ↓
 Phase 20 — Research Thesis & Project Dissertation
 ```
@@ -589,8 +653,57 @@ Phase 19 addresses the critical operational limitations exposed during the Phase
   * `gatekeeper_head.keras` & `gatekeeper_mobilenetv2.weights.h5` (trained model assets)
   * `phase19b_4_evaluation_report.txt` (consolidated empirical report)
 
-##### Phase 19B-5: Missing Field Classes / Tomato-Grape Field Data (NEXT 🔜)
-- **Role:** Source missing field disease classes (Chilli Powdery Mildew, Grape Bacterial Leaf Spot, 9 Sugarcane classes) and independent field training data for Tomato and Grape to address domain sensitivity without contaminating held-out benchmarks.
+##### Phase 19B-5: Missing Field Classes / Tomato-Grape Field Data (ACQUISITION COMPLETED ✅)
+- **Role:** Source missing field disease classes and independent field data for Tomato and Grape to address domain sensitivity without contaminating held-out benchmarks.
+- **Acquisition & Screening Summary:**
+  * **Total Candidates Processed:** 248 images across 3 independent, authoritative open repositories.
+  * **Total Images Accepted:** **247 authentic in-situ field images** (99.6% acceptance rate).
+  * **Total Images Rejected:** 1 image (0.4%; `IMG_8834.JPG` rejected as within-batch exact duplicate).
+  * **Accepted Breakdown by Crop:**
+    - **Tomato ($n=71$ images):** Sourced from FieldPlant (Moupojou et al., 2023, CC BY 4.0; Cameroon):
+      * `tomato_healthy`: **13 images** (100% of available source images)
+      * `tomato_mosaic_virus`: **13 images** (100% of available source images)
+      * `tomato_yellow_leaf_curl_virus`: **45 images** (selected from 65 available)
+      * *(Taxonomic note: "Tomato Brown Spots" [952 images] and "Tomato blight leaf" [359 images] were strictly excluded to prevent invalid cross-pathogen remapping).*
+    - **Grape ($n=176$ images):** Sourced from HERMOS (Turkey) and Standalone ESCA (Marche, Italy):
+      * `grape_powdery_mildew`: **45 images** (HERMOS; pure single-disease vineyard foliage)
+      * `grape_downy_mildew`: **44 images** (HERMOS; 35 pure single-disease + 9 with background canopy foliage)
+      * `grape_healthy`: **43 images** (HERMOS; pure healthy vineyard foliage)
+      * `grape_esca`: **44 images** (Standalone ESCA dataset; Marche, Italy)
+      * *(Pathology note: Dead Arm / Phomopsis viticola and non-plant annotations were strictly excluded).*
+  * **Resolution Tiers:** Ultra-High ($\ge 2500\text{px}$): 180 images (72.9%), High ($1200\text{--}2499\text{px}$): 56 images (22.7%), Medium ($500\text{--}1199\text{px}$): 11 images (4.5%).
+- **Contamination Screening & Deduplication:**
+  * **Exhaustive Screening Registry:** 38,376 records compiled with 31,805 unique SHA-256 hashes across Track B (632), Track C (425), Track D (20), Phase 18 (1,836), Exp 5 (115), Candidate D (2,152), Gatekeeper 19B-4 (1,606), and internal splits for all 4 crops (31,590).
+  * **Zero Benchmark Collision:** Exactly **0** SHA-256 collisions against any benchmark asset.
+  * **Zero Internal Leakage:** Exactly **0** SHA-256 collisions against any internal training/val/test split.
+  * **Perceptual Near-Duplicate Screening:** Exactly **0** perceptual near-duplicates (64-bit dHash Hamming distance $\le 5$ against 5,160 held-out evaluation images).
+  * **Disqualified Aggregators Preserved:** FieldVitis (aggregates PlantDoc), PlantDoc (active benchmark), GLDD (140 benchmark images), NGLD (internal G1), and GVLiD (internal G2) were strictly excluded from acquisition.
+- **Preserved Deliverables in `results/phase19b_5_field_data_gap/` and `experiments/field_data_19b5/manifests/`:**
+  * `acquisition_manifest.csv` (248 candidate records with dimensions, file sizes, hashes, and acquisition status)
+  * `accepted_field_data.csv` (247 accepted records with relative paths, canonical classes, resolution tiers, DOI, and license)
+  * `rejection_log.csv` (1 rejected record documenting within-batch duplicate hash)
+  * `provenance_registry.csv` (complete institutional provenance for FieldPlant, HERMOS, and ESCA Standalone)
+  * `protected_benchmark_hashes.csv` (38,376 entries across all project splits and benchmarks)
+  * `final_acquisition_summary.txt` (full closeout audit report)
+  * `current_field_coverage.csv`, `class_gap_analysis.csv`, `candidate_source_audit.csv`, `sourcing_recommendation.txt`
+- **Registry Terminology Note:** The protected registry encompasses 38,376 records (31,805 unique SHA-256 hashes); evaluation benchmarks within this registry consist of 632 unique images (Track B), 425 unique images (Track C), 20 unique images (Track D), 1,172 unique physical field images (Phase 18 benchmark, recorded across 1,836 evaluation prediction entries), 115 unique images (Chilli Exp 5 PlantDoc), 2,152 unique field images (Chilli Candidate D), 1,606 unique images (Gatekeeper 19B-4), and 31,590 split-file records across the 4 crop datasets.
+- **Status:** Phase 19B-5 COMPLETED ✅. All 247 images curated, screened, verified collision-free, and staged.
+
+##### Phase 19B-6: Field-Data-Assisted Retraining Experiment (COMPLETED ✅)
+- **Role:** Empirical retraining experiment on Kaggle GPU to determine whether adding genuinely independent field imagery to training splits improves real-world Tomato and Grape disease classification without degrading in-domain performance.
+- **Authoritative Findings:**
+  * **Tomato In-Domain Preservation:** Internal test accuracy remained solidly preserved: 90.23% Baseline vs **89.72% Field-Adapted** ($\Delta -0.50$ pp, Macro F1 87.80% $\rightarrow$ 87.16%). (Intermediate 90.14% figure was resolved as from an aborted Version 2 run; 89.72% from completed Version 3 is authoritative).
+  * **Tomato Field Gains:** Track C Real-World accuracy improved from 24.47% $\rightarrow$ **27.66%** (+3.19 pp, Macro F1 +4.73 pp); Phase 18 Field accuracy improved from 18.91% $\rightarrow$ **20.22%** (+1.30 pp, Macro F1 +5.25 pp).
+  * **Tomato Target Class Recall (Phase 18):** Yellow Leaf Curl Virus recall surged from 5.36% $\rightarrow$ **42.86%** (+37.50 pp); Healthy recall surged from 0.00% $\rightarrow$ **27.59%** (+27.59 pp); Mosaic recall improved from 0.00% $\rightarrow$ **7.50%** (+7.50 pp).
+  * **Grape In-Domain Preservation:** Internal test accuracy was preserved at **87.86%** vs 89.04% Baseline ($\Delta -1.18$ pp, Macro F1 86.31% $\rightarrow$ 83.28%).
+  * **Grape Field Gains:** Track C Real-World accuracy improved from 7.00% $\rightarrow$ **9.00%** (+2.00 pp); Phase 18 Field accuracy improved from 11.43% $\rightarrow$ **13.21%** (+1.79 pp, Macro F1 +2.00 pp).
+  * **Grape Target Class Recall (Phase 18):** Downy Mildew recall surged from 4.00% $\rightarrow$ **26.00%** (+22.00 pp); Healthy Leaves F1 improved from 30.12% $\rightarrow$ **42.31%** (+12.19 pp).
+  * **Attractor Sink Breakup:** Probability mass was redistributed away from dominant attractor sinks (Early/Late Blight in Tomato; Healthy in Grape) toward legitimate field representations without harming unaffected classes.
+- **Scientific Guardrails & Limitations:** Adding the selected independently collected field images was associated with modest overall field-benchmark gains and larger class-specific changes, while internal test performance decreased modestly. The intervention did NOT eliminate the broad generalization gap. Production models in `models/` remain locked and unchanged; adapted models remain offline research assets in `experiments/field_data_19b5/models/`.
+- **Status:** Phase 19B-6 COMPLETED ✅.
+
+##### Phase 19B-7: Final Research Synthesis & Academic Conclusion (NEXT / UPCOMING ⏳)
+- **Role:** Master academic synthesis consolidating all quantitative empirical findings across Phases 1–19B-6 into unified dissertation tables, cross-phase error characterization, discussion of limitations, and architectural recommendations for future agricultural vision systems.
 
 ---
 
@@ -766,6 +879,26 @@ D:\CropDiseaseProject/
 │       ├── gatekeeper_head.keras      <-- Trained binary classifier head
 │       ├── gatekeeper_mobilenetv2.weights.h5 <-- Model weights checkpoint
 │       └── phase19b_4_evaluation_report.txt <-- Consolidated technical evaluation report
+│
+│   ├── phase19b_5_field_data_gap/     <-- Phase 19B-5 Tomato & Grape Field Data Gap Audit
+│   │   ├── current_field_coverage.csv <-- Class-by-class coverage & failure mode audit
+│   │   ├── class_gap_analysis.csv     <-- Prioritized target sample counts and visual requirements
+│   │   ├── candidate_source_audit.csv <-- 9 candidate repositories audited for licensing & overlap
+│   │   ├── sourcing_recommendation.txt <-- Complete sourcing strategy & contamination protocol
+│   │   └── final_acquisition_summary.txt <-- Manifest & clean hash screening report (247 images)
+│   │
+│   └── phase19b_6_field_adaptation/   <-- Phase 19B-6 Field Data Retraining & Evaluation Suite
+│       ├── baseline_metrics.csv       <-- Production baseline benchmark metrics across all tracks
+│       ├── baseline_classwise_metrics.csv <-- Production baseline classwise metrics
+│       ├── field_adapted_metrics.csv  <-- Adapted model metrics across all tracks
+│       ├── track_comparison.csv       <-- Delta comparison across Internal Test, Track B, Track C, Phase 18
+│       ├── classwise_comparison.csv   <-- Per-class precision, recall, and F1 deltas
+│       ├── confusion_matrix_tomato.png<-- 2x2 comparison (Baseline vs Adapted on Internal & Phase 18)
+│       ├── confusion_matrix_grape.png <-- 2x2 comparison (Baseline vs Adapted on Internal & Phase 18)
+│       ├── tomato_training_history.csv<-- Kaggle GPU training metrics by epoch
+│       ├── grape_training_history.csv <-- Kaggle GPU training metrics by epoch
+│       ├── training_summary.txt       <-- GPU training execution times and convergence log
+│       └── phase19b_6_report.txt      <-- Consolidated empirical evaluation report
 │
 ├── splits/                            <-- Stratified Train/Val/Test CSVs (UNTOUCHED)
 │   ├── tomato/

@@ -1,0 +1,69 @@
+crop,model,eval_track,class_index,class_name,precision,recall,f1
+tomato,baseline,internal_test,0,Tomato___Bacterial_spot,0.9105058365758755,0.9140625,0.9122807017543859
+tomato,baseline,internal_test,1,Tomato___Early_blight,0.8241758241758241,0.625,0.7109004739336493
+tomato,baseline,internal_test,2,Tomato___Late_blight,0.8931623931623932,0.9126637554585153,0.9028077753779697
+tomato,baseline,internal_test,3,Tomato___Leaf_Mold,0.8962264150943396,0.8333333333333334,0.8636363636363636
+tomato,baseline,internal_test,4,Tomato___Septoria_leaf_spot,0.8590909090909091,0.8873239436619719,0.8729792147806005
+tomato,baseline,internal_test,5,Tomato___Spider_mites Two-spotted_spider_mite,0.8472906403940886,0.8557213930348259,0.8514851485148515
+tomato,baseline,internal_test,6,Tomato___Target_Spot,0.7357512953367875,0.8452380952380952,0.7867036011080333
+tomato,baseline,internal_test,7,Tomato___Tomato_Yellow_Leaf_Curl_Virus,0.9904306220095693,0.9657853810264385,0.9779527559055118
+tomato,baseline,internal_test,8,Tomato___Tomato_mosaic_virus,0.9767441860465116,0.9333333333333333,0.9545454545454546
+tomato,baseline,internal_test,9,Tomato___healthy,0.912621359223301,0.9842931937172775,0.947103274559194
+tomato,baseline,track_b,0,Tomato___Bacterial_spot,0.14285714285714285,0.03333333333333333,0.05405405405405406
+tomato,baseline,track_b,1,Tomato___Early_blight,0.12751677852348994,0.6333333333333333,0.2122905027932961
+tomato,baseline,track_b,2,Tomato___Late_blight,0.17647058823529413,0.5,0.2608695652173913
+tomato,baseline,track_b,3,Tomato___Leaf_Mold,0.0,0.0,0.0
+tomato,baseline,track_b,4,Tomato___Septoria_leaf_spot,0.25,0.16666666666666666,0.2
+tomato,baseline,track_b,5,Tomato___Spider_mites Two-spotted_spider_mite,0.0,0.0,0.0
+tomato,baseline,track_b,6,Tomato___Target_Spot,0.0,0.0,0.0
+tomato,baseline,track_b,7,Tomato___Tomato_Yellow_Leaf_Curl_Virus,0.1111111111111111,0.03333333333333333,0.05128205128205128
+tomato,baseline,track_b,8,Tomato___Tomato_mosaic_virus,0.0,0.0,0.0
+tomato,baseline,track_b,9,Tomato___healthy,0.0,0.0,0.0
+tomato,baseline,track_c,0,Tomato___Bacterial_spot,0.125,0.1111111111111111,0.11764705882352941
+tomato,baseline,track_c,1,Tomato___Early_blight,0.1919191919191919,0.6785714285714286,0.2992125984251969
+tomato,baseline,track_c,2,Tomato___Late_blight,0.3125,0.6666666666666666,0.425531914893617
+tomato,baseline,track_c,3,Tomato___Leaf_Mold,0.0,0.0,0.0
+tomato,baseline,track_c,4,Tomato___Septoria_leaf_spot,0.5,0.12903225806451613,0.20512820512820512
+tomato,baseline,track_c,5,Tomato___Spider_mites Two-spotted_spider_mite,0.0,0.0,0.0
+tomato,baseline,track_c,6,Tomato___Target_Spot,0.0,0.0,0.0
+tomato,baseline,track_c,7,Tomato___Tomato_Yellow_Leaf_Curl_Virus,0.2857142857142857,0.07692307692307693,0.12121212121212122
+tomato,baseline,track_c,8,Tomato___Tomato_mosaic_virus,0.0,0.0,0.0
+tomato,baseline,track_c,9,Tomato___healthy,0.0,0.0,0.0
+tomato,baseline,phase_18,0,Tomato___Bacterial_spot,0.13333333333333333,0.05128205128205128,0.07407407407407407
+tomato,baseline,phase_18,1,Tomato___Early_blight,0.1532258064516129,0.6551724137931034,0.24836601307189543
+tomato,baseline,phase_18,2,Tomato___Late_blight,0.2348993288590604,0.5833333333333334,0.3349282296650718
+tomato,baseline,phase_18,3,Tomato___Leaf_Mold,0.0,0.0,0.0
+tomato,baseline,phase_18,4,Tomato___Septoria_leaf_spot,0.32142857142857145,0.14754098360655737,0.20224719101123595
+tomato,baseline,phase_18,5,Tomato___Spider_mites Two-spotted_spider_mite,0.0,0.0,0.0
+tomato,baseline,phase_18,6,Tomato___Target_Spot,0.0,0.0,0.0
+tomato,baseline,phase_18,7,Tomato___Tomato_Yellow_Leaf_Curl_Virus,0.1875,0.05357142857142857,0.08333333333333333
+tomato,baseline,phase_18,8,Tomato___Tomato_mosaic_virus,0.0,0.0,0.0
+tomato,baseline,phase_18,9,Tomato___healthy,0.0,0.0,0.0
+grape,baseline,internal_test,0,Bacterial Leaf Spot,1.0,0.8666666666666667,0.9285714285714286
+grape,baseline,internal_test,1,Black Rot,0.8642857142857143,1.0,0.9272030651340997
+grape,baseline,internal_test,2,Downy Mildew,0.9523809523809523,0.9655172413793104,0.958904109589041
+grape,baseline,internal_test,3,Esca (Black Measles),0.7407407407407407,0.746268656716418,0.7434944237918215
+grape,baseline,internal_test,4,Healthy Leaves,0.9692737430167597,0.980225988700565,0.9747191011235955
+grape,baseline,internal_test,5,Leaf Blight,0.6666666666666666,0.5346534653465347,0.5934065934065934
+grape,baseline,internal_test,6,Powdery Mildew,0.9473684210526315,0.8852459016393442,0.9152542372881356
+grape,baseline,track_b,0,Bacterial Leaf Spot,0.0,0.0,0.0
+grape,baseline,track_b,1,Black Rot,0.0,0.0,0.0
+grape,baseline,track_b,2,Downy Mildew,0.2222222222222222,0.06666666666666667,0.10256410256410256
+grape,baseline,track_b,3,Esca (Black Measles),0.09090909090909091,0.03333333333333333,0.04878048780487805
+grape,baseline,track_b,4,Healthy Leaves,0.23333333333333334,0.7,0.35
+grape,baseline,track_b,5,Leaf Blight,0.2,0.03333333333333333,0.05714285714285714
+grape,baseline,track_b,6,Powdery Mildew,0.0,0.0,0.0
+grape,baseline,track_c,0,Bacterial Leaf Spot,0.0,0.0,0.0
+grape,baseline,track_c,1,Black Rot,0.25,0.07142857142857142,0.1111111111111111
+grape,baseline,track_c,2,Downy Mildew,0.0,0.0,0.0
+grape,baseline,track_c,3,Esca (Black Measles),0.0,0.0,0.0
+grape,baseline,track_c,4,Healthy Leaves,0.11764705882352941,0.3333333333333333,0.17391304347826086
+grape,baseline,track_c,5,Leaf Blight,0.25,0.05,0.08333333333333333
+grape,baseline,track_c,6,Powdery Mildew,0.0,0.0,0.0
+grape,baseline,phase_18,0,Bacterial Leaf Spot,0.0,0.0,0.0
+grape,baseline,phase_18,1,Black Rot,0.08695652173913043,0.034482758620689655,0.04938271604938271
+grape,baseline,phase_18,2,Downy Mildew,0.2,0.04,0.06666666666666667
+grape,baseline,phase_18,3,Esca (Black Measles),0.05,0.02,0.02857142857142857
+grape,baseline,phase_18,4,Healthy Leaves,0.20161290322580644,0.5952380952380952,0.30120481927710846
+grape,baseline,phase_18,5,Leaf Blight,0.2222222222222222,0.04,0.06779661016949153
+grape,baseline,phase_18,6,Powdery Mildew,0.0,0.0,0.0

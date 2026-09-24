@@ -1,0 +1,139 @@
+================================================================================
+PHASE 19B-5: TOMATO & GRAPE FIELD DATA GAP AUDIT & SOURCING SHORTLIST
+================================================================================
+Document Version: 3.0 (Rigorous Independent Source Audit & Identity Verification)
+Date: 2026-09-23
+Scope: Acquisition Planning & Gap Analysis Only
+Guardrails: ZERO model retraining, ZERO Flask changes, ZERO dataset downloads yet.
+
+1. EXECUTIVE SUMMARY & RESOLUTION OF AUDIT ISSUES
+--------------------------------------------------------------------------------
+Phase 19B-5 investigates the severe domain generalization failure observed on the 
+Phase 18 clean multi-crop field benchmark (n=1,172):
+  * Tomato Field Accuracy: 18.91% (87/460 correct; 87.6% collapse into Blights)
+  * Grape Field Accuracy:  12.14% (34/280 correct; 74.3% collapse into Healthy/Powdery)
+
+This revision resolves two critical factual issues identified during technical review:
+
+A. FIELDPLANT TOMATO TAXONOMY CORRECTION:
+   - The original FieldPlant publication (Moupojou et al., IEEE Access 2023) provides
+     exactly 6 tomato categories:
+       1. Tomato Bacterial Wilt
+       2. Tomato Blight Leaf
+       3. Tomato Brown Spots
+       4. Tomato Healthy
+       5. Tomato Leaf Mosaic Virus
+       6. Tomato Leaf Yellow Virus
+   - FieldPlant does NOT directly provide:
+       * Spider Mites
+       * Target Spot
+       * Leaf Mold
+       * Septoria Leaf Spot
+       * Late Blight
+   - Previous claims that FieldPlant supplies all 10 canonical classes are WITHDRAWN.
+   - Biological mappings are strictly rejected:
+       * 'Tomato Bacterial Wilt' (Ralstonia solanacearum) is biologically and symptomatically
+         distinct from 'Bacterial Spot' (Xanthomonas perforans/euvesicatoria).
+       * 'Tomato Brown Spots' is not verified as Target Spot (Corynespora cassiicola).
+       * 'Tomato Blight Leaf' is generic and cannot be mapped to Early vs. Late Blight.
+   - Strictly Legitimate FieldPlant Classes for Project Supplementation:
+       1. Tomato Healthy (directly targets the 100% false-positive rate on healthy field foliage)
+       2. Tomato Leaf Mosaic Virus (directly targets 0.0% field benchmark accuracy)
+       3. Tomato Leaf Yellow Virus [TYLCV] (directly targets 7.1% field benchmark accuracy)
+
+B. CRITICAL GVLiD IDENTITY VERIFICATION:
+   - Local inspection of directory 'grape_2024' (Internal Dataset G2, n=3,477) confirms:
+       * Total image count: exactly 3,477 files across 4 folders
+       * Image dimensions: exactly 1080 x 1080 pixels
+       * Classes: Black rot (808), esca (888), healthy (1109), leaf blight (672)
+       * Filename prefixes: 'black rot001.jpg', 'esca001.jpg', 'healthy001.jpg', 'leaf blight001.jpg'
+       * Split presence: already actively partitioned inside splits/grape_unified/train.csv
+   - This local structure is 100% IDENTICAL to GVLiD (Shikalgar et al., 2024, Mendeley Data).
+   - Finding: GVLiD IS ALREADY OUR INTERNAL G2 DATASET!
+   - Action: GVLiD is marked as INTERNAL / ALREADY USED and removed from external acquisition.
+
+C. GRAPE SOURCE AUDIT & HERMOS INCLUSION:
+   - HERMOS (Özacar et al., 2024; Mendeley Data: 10.17632/j4xs3kh3fd.2; CC BY 4.0; n=914)
+     is added as the primary external field candidate for Grape.
+   - Captured in authentic commercial vineyards in Gediz River Basin, West Anatolia, Turkey.
+   - Directly supplies: Powdery Mildew (0 in Track C, 3.3% acc), Downy Mildew (4.0% acc), Healthy.
+   - Supplementary candidates retained: standalone ESCA-dataset (n=800) and Merlot Downy Mildew (n=99).
+   - Targeted source for Grape Bacterial Leaf Spot (0 in all benchmarks): iNaturalist (CC-BY).
+   - Excluded: FieldVitis (aggregates PlantDoc), PlantDoc (benchmark), GLDD (deferred, 140 in benchmarks),
+     NGLD (internal G1), and Burmese Grape (botanical mismatch).
+
+2. FIELD BENCHMARK COVERAGE & TARGET SIZING
+--------------------------------------------------------------------------------
+A. TOMATO BENCHMARK AUDIT (n=460):
+  * Bacterial Spot        : 39 field samples | 5.1% acc  | Target: +45 (requires separate field source)
+  * Early Blight          : 58 field samples | 48.3% acc | Target: +30 (attractor calibration)
+  * Late Blight           : 60 field samples | 73.3% acc | Target: +30 (attractor calibration)
+  * Leaf Mold             : 56 field samples | 0.0% acc  | Target: +40 (requires separate field source)
+  * Septoria Leaf Spot    : 61 field samples | 14.8% acc | Target: +40 (requires separate field source)
+  * Spider Mites          :  2 field samples | 0.0% acc  | Target: +45 [CRITICAL NEAR-ZERO]
+  * Target Spot           : 30 field samples | 0.0% acc  | Target: +40 [CRITICAL 0 IN TRACK C]
+  * Yellow Leaf Curl Virus: 56 field samples | 7.1% acc  | Target: +40 [SUPPLIED BY FIELDPLANT]
+  * Mosaic Virus          : 40 field samples | 0.0% acc  | Target: +40 [SUPPLIED BY FIELDPLANT]
+  * Healthy               : 58 field samples | 0.0% acc  | Target: +50 [SUPPLIED BY FIELDPLANT; 100% FP]
+
+B. GRAPE BENCHMARK AUDIT (n=280):
+  * Bacterial Leaf Spot   :  0 field samples | 0.0% acc  | Target: +50 [ABSOLUTE ZERO; iNaturalist target]
+  * Black Rot             : 58 field samples | 0.0% acc  | Target: +30 (internal G2 already present)
+  * Downy Mildew          : 50 field samples | 4.0% acc  | Target: +45 [SUPPLIED BY HERMOS & MERLOT]
+  * Esca (Black Measles)  : 50 field samples | 2.0% acc  | Target: +45 [SUPPLIED BY ESCA-DATASET]
+  * Healthy Leaves        : 42 field samples | 66.7% acc | Target: +40 [SUPPLIED BY HERMOS & ESCA]
+  * Leaf Blight           : 50 field samples | 4.0% acc  | Target: +30 (internal G2 already present)
+  * Powdery Mildew        : 30 field samples | 3.3% acc  | Target: +45 [CRITICAL 0 IN TRACK C; HERMOS]
+
+3. CORRECTED ACQUISITION SHORTLIST
+--------------------------------------------------------------------------------
+A. TOMATO ACQUISITION SHORTLIST:
+   1. Primary Source: FieldPlant (Moupojou et al., 2023, CC BY 4.0)
+      - Authoritative Repositories: Roboflow (plant-disease-detection/fieldplant) or
+        Kaggle author upload (emmanuelmoupojou/fieldplant).
+      - Legitimate Target Classes:
+          * Tomato Healthy (+50 images)
+          * Tomato Leaf Mosaic Virus (+40 images)
+          * Tomato Leaf Yellow Virus [TYLCV] (+40 images)
+      - Target Slice: ~130-150 high-quality in-situ plantation images.
+      - Classes excluded from FieldPlant: Bacterial Spot, Target Spot, Spider Mites,
+        Leaf Mold, Septoria, Early Blight, Late Blight.
+
+B. GRAPE ACQUISITION SHORTLIST:
+   1. Primary External Source: HERMOS (Özacar et al., 2024, CC BY 4.0, Mendeley Data: 10.17632/j4xs3kh3fd.2)
+      - In-situ vineyard photography from Gediz River Basin, West Anatolia, Turkey.
+      - Legitimate Target Classes:
+          * Powdery Mildew (+45 images) - addresses 0 in Track C, 3.3% field accuracy.
+          * Downy Mildew (+45 images) - addresses 4.0% field accuracy.
+          * Healthy Leaves (+40 images) - provides outdoor vineyard canopy calibration.
+      - Target Slice: ~130-150 images.
+   2. Supplementary Source for Esca: ESCA-dataset Standalone (Alessandrini et al., 2021, CC BY 4.0, Mendeley: 10.17632/89cnxc58kj.1)
+      - In-situ Italian vineyard photography.
+      - Target Class: Esca (+45 images).
+   3. Supplementary Source for Downy Mildew: Merlot In-Situ Dataset (Phénix et al., 2022, CC BY 4.0, Mendeley: 10.17632/x9m2d33by8.1)
+      - In-situ Bordeaux vineyard foliage.
+      - Target Class: Downy Mildew (+30-40 images).
+   4. Targeted Source for Bacterial Leaf Spot: iNaturalist / GBIF (CC-BY only)
+      - Targeted exclusively for Xanthomonas on Vitis vinifera (target: +40-50 images).
+      - Requires mandatory visual phytopathology verification prior to acceptance.
+
+4. MULTI-STAGE SCREENING & CONTAMINATION GUARDRAILS
+--------------------------------------------------------------------------------
+Before any image from the shortlisted candidates is downloaded or admitted:
+  1. Exact SHA-256 Screening:
+     Screen every candidate against all 9,921 protected benchmark images:
+     - Internal Train/Val/Test (31,590 files)
+     - Track B External (632 files)
+     - Track C Real-World (425 files)
+     - Track D Stress (100 files)
+     - Phase 18 Multi-Crop Benchmark (1,172 files)
+     - Chilli Exp 5 PlantDoc (115 files)
+     - Candidate D Field Set (448 files)
+     - Phase 19B-4 Negative Registry (803 files)
+     Any exact SHA collision results in immediate disqualification.
+  2. Perceptual Difference Hash Screening:
+     Compute 64-bit dHash; any candidate with Hamming distance <= 5 against any benchmark
+     image is flagged for visual inspection to detect crops, rescalings, or compression variants.
+  3. Strict Prohibition of Unverified Zero-Overlap Claims:
+     Zero overlap must never be asserted without empirical image-level hash checks.
+================================================================================

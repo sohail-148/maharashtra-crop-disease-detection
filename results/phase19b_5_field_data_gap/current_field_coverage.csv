@@ -1,0 +1,18 @@
+crop,canonical_disease_class,internal_train_count,internal_val_count,internal_test_count,internal_total_count,track_b_field_count,track_c_field_count,phase_18_field_count,other_heldout_field_count,field_representation_status,observed_field_accuracy_pct,primary_field_failure_mode
+Tomato,Bacterial Spot,1191,255,256,1702,30,9,39,0,MODERATELY_UNDERREPRESENTED,5.13,"5.1% field accuracy; 18 misclassified as Early Blight, 9 as Late Blight, 8 as Septoria"
+Tomato,Early Blight,560,120,120,800,30,28,58,0,ADEQUATELY_REPRESENTED,48.28,Major attractor sink (186 total field predictions); 26 misclassified as Late Blight
+Tomato,Late Blight,1069,229,229,1527,30,30,60,0,ADEQUATELY_REPRESENTED,73.33,Dominant universal attractor sink (217 total field predictions); 16 misclassified as Early Blight
+Tomato,Leaf Mold,533,114,114,761,30,26,56,0,ADEQUATELY_REPRESENTED,0.0,"0% field accuracy; 22 misclassified as Late Blight, 21 as Early Blight, 7 as Septoria"
+Tomato,Septoria Leaf Spot,992,212,213,1417,30,31,61,0,ADEQUATELY_REPRESENTED,14.75,"14.8% field accuracy; 33 misclassified as Early Blight, 12 as Late Blight"
+Tomato,Spider Mites,939,201,201,1341,2,0,2,0,SEVERELY_UNDERREPRESENTED (Critical Near-Zero),0.0,"0% field accuracy; only 2 field samples exist in benchmark, misclassified as Early and Late Blight"
+Tomato,Target Spot,786,169,168,1123,30,0,30,0,HEAVILY_IMBALANCED (Missing Track C),0.0,"0% field accuracy; 23 misclassified as Early Blight, 7 as Late Blight; 0 samples in Track C"
+Tomato,Yellow Leaf Curl Virus,3000,643,643,4286,30,26,56,0,ADEQUATELY_REPRESENTED,7.14,"7.1% field accuracy; 39 misclassified as Late Blight, 10 as Early Blight"
+Tomato,Mosaic Virus,209,45,45,299,30,10,40,0,MODERATELY_UNDERREPRESENTED,0.0,"0% field accuracy; 25 misclassified as Late Blight, 13 as Early Blight"
+Tomato,Healthy,891,191,191,1273,30,28,58,0,ADEQUATELY_REPRESENTED,0.0,100% False-Positive Disease Rate; confused with Late Blight (32) and Early Blight (23) due to outdoor soil/sun glints
+Grape,Bacterial Leaf Spot,70,15,15,100,0,0,0,0,ZERO_FIELD_EXAMPLES (100% Missing),0.0,CRITICAL GAP: Completely absent from field benchmarks (0 samples); internal data lab-only (Niphad G1)
+Grape,Black Rot,566,121,121,808,30,28,58,0,ADEQUATELY_REPRESENTED,0.0,"0% field accuracy (0/58); 30 misclassified as Healthy Leaves, 24 as Powdery Mildew"
+Grape,Downy Mildew,676,145,145,966,30,20,50,0,ADEQUATELY_REPRESENTED,4.0,"4.0% field accuracy (2/50); 14 misclassified as Healthy, 13 as Black Rot, 8 as Esca, 8 as Powdery Mildew"
+Grape,Esca (Black Measles),621,133,134,888,30,20,50,0,ADEQUATELY_REPRESENTED,2.0,"2.0% field accuracy (1/50); 32 misclassified as Healthy Leaves, 10 as Powdery Mildew"
+Grape,Healthy Leaves,1654,355,354,2363,30,12,42,0,MODERATELY_UNDERREPRESENTED,66.67,Major false attractor sink (131 total field predictions); diseased field leaves over-predicted as Healthy
+Grape,Leaf Blight,470,101,101,672,30,20,50,0,ADEQUATELY_REPRESENTED,4.0,"4.0% field accuracy (2/50); 33 misclassified as Powdery Mildew, 6 as Healthy Leaves"
+Grape,Powdery Mildew,284,61,61,406,30,0,30,0,HEAVILY_IMBALANCED (Missing Track C),3.33,3.3% field accuracy (1/30); 21 misclassified as Healthy Leaves; also acts as false sink (77 field predictions)

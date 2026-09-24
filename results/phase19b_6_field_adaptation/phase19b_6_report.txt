@@ -1,0 +1,259 @@
+================================================================================
+PHASE 19B-6: FIELD-DATA-ASSISTED RETRAINING EXPERIMENT REPORT
+================================================================================
+Project: Maharashtra Crop Disease Detection & Robustness Architecture
+Phase: Phase 19B-6 (Empirical Evaluation of Field Data Augmentation)
+Hardware Platform: Kaggle GPU (Tesla T4)
+Execution Mode: Remote Kaggle GPU Retraining + Local Multi-Track Evaluation
+Random Seed: 42 (Exact reproducibility)
+Baseline Models:
+  - Tomato: models/tomato/tomato_baseline.keras
+  - Grape:  models/grape_unified/grape_unified_baseline.keras
+Field-Adapted Experimental Models:
+  - Tomato: experiments/field_data_19b5/models/tomato_field_adapted.keras
+  - Grape:  experiments/field_data_19b5/models/grape_field_adapted.keras
+
+--------------------------------------------------------------------------------
+1. EXACT MODEL ARTIFACT VERIFICATION
+--------------------------------------------------------------------------------
+Tomato Field-Adapted Model:
+  - Path:     D:\CropDiseaseProject\experiments\field_data_19b5\models\tomato_field_adapted.keras
+  - Exists:   True
+  - Size:     9,821,400 bytes
+  - SHA-256:  211cdb63aa6aef2f56601c6cb1cdfa784c344b806bf97550d1f8ce25b94f27ff
+  - Role:     Authoritative artifact used to generate all final comparative Tomato evaluation metrics.
+
+Grape Field-Adapted Model:
+  - Path:     D:\CropDiseaseProject\experiments\field_data_19b5\models\grape_field_adapted.keras
+  - Exists:   True
+  - Size:     9,775,317 bytes
+  - SHA-256:  f3e2367e32c9b15951c4b42522540dff2e9869f6aee6a8613e4e4b7882b0b867
+  - Role:     Authoritative artifact used to generate all final comparative Grape evaluation metrics.
+
+Baseline Models (Protected & Locked):
+  - Tomato:   D:\CropDiseaseProject\models\tomato\tomato_baseline.keras (9,819,056 bytes)
+  - Grape:    D:\CropDiseaseProject\models\grape_unified\grape_unified_baseline.keras (9,772,973 bytes)
+  - Status:   STRICTLY READ-ONLY AND UNTOUCHED.
+
+--------------------------------------------------------------------------------
+2. RESOLUTION OF TOMATO INTERMEDIATE-REPORT DISCREPANCY (90.14% vs. 89.72%)
+--------------------------------------------------------------------------------
+During the execution of Phase 19B-6 on Kaggle GPU:
+1. Version 2 Run:
+   - Tomato trained on 10,241 samples (10,170 base + 71 field) and completed evaluation on the
+     internal test set with test loss 0.2983 and test accuracy 90.14%.
+   - However, at the cell transition to Grape training, execution halted due to a Python string
+     syntax error in a print header ("\n" within triple quotes). Grape did not execute.
+2. Version 3 Run (Completed End-to-End):
+   - The cell syntax was fixed, and Version 3 ran both Tomato and Grape to complete termination.
+   - Tomato was retrained in this clean run with seed 42 and data augmentation shuffle, achieving
+     test loss 0.3002 and test accuracy 89.72% (as recorded in training_summary.txt).
+   - Grape was trained in the same run, achieving test loss 0.3198 and test accuracy 87.86%.
+3. Conclusion:
+   - The model artifact downloaded from the completed Version 3 run (tomato_field_adapted.keras,
+     SHA-256: 211cdb63aa6aef2f56601c6cb1cdfa784c344b806bf97550d1f8ce25b94f27ff) is the authoritative
+     artifact evaluated across all local benchmark tracks.
+   - Evaluated on local splits/tomato/test.csv (n=2,180), it yields exactly 89.72% Accuracy and
+     87.16% Macro F1.
+   - The 90.14% figure was an intermediate metric from the incomplete Version 2 run.
+   - The authoritative final comparative result is 89.72%.
+
+--------------------------------------------------------------------------------
+3. FINAL MULTI-TRACK COMPARATIVE BENCHMARK METRICS
+--------------------------------------------------------------------------------
+Tomato Benchmark Tracks (Baseline vs. Field-Adapted):
+  - Internal Test (n=2,180):
+      Baseline Accuracy:      90.23%
+      Field-Adapted Accuracy: 89.72%
+      Delta Accuracy:         -0.50 percentage points
+      Baseline Macro F1:      87.80%
+      Field-Adapted Macro F1: 87.16%
+      Delta Macro F1:         -0.64 percentage points
+
+  - Track B External (n=272):
+      Baseline Accuracy:      15.07%
+      Field-Adapted Accuracy: 15.07%
+      Delta Accuracy:         +0.00 percentage points
+      Baseline Macro F1:       7.78%
+      Field-Adapted Macro F1: 12.08%
+      Delta Macro F1:         +4.29 percentage points
+
+  - Track C Real-World (n=188):
+      Baseline Accuracy:      24.47%
+      Field-Adapted Accuracy: 27.66%
+      Delta Accuracy:         +3.19 percentage points
+      Baseline Macro F1:      12.99%
+      Field-Adapted Macro F1: 17.72%
+      Delta Macro F1:         +4.73 percentage points
+
+  - Phase 18 Combined Field Benchmark (n=460):
+      Baseline Accuracy:      18.91%
+      Field-Adapted Accuracy: 20.22%
+      Delta Accuracy:         +1.30 percentage points
+      Baseline Macro F1:       9.43%
+      Field-Adapted Macro F1: 14.68%
+      Delta Macro F1:         +5.25 percentage points
+
+Grape Benchmark Tracks (Baseline vs. Field-Adapted):
+  - Internal Test (n=931):
+      Baseline Accuracy:      89.04%
+      Field-Adapted Accuracy: 87.86%
+      Delta Accuracy:         -1.18 percentage points
+      Baseline Macro F1:      86.31%
+      Field-Adapted Macro F1: 83.28%
+      Delta Macro F1:         -3.03 percentage points
+
+  - Track B External (n=180):
+      Baseline Accuracy:      13.89%
+      Field-Adapted Accuracy: 15.56%
+      Delta Accuracy:         +1.67 percentage points
+      Baseline Macro F1:       7.98%
+      Field-Adapted Macro F1: 10.32%
+      Delta Macro F1:         +2.34 percentage points
+
+  - Track C Real-World (n=100):
+      Baseline Accuracy:       7.00%
+      Field-Adapted Accuracy:  9.00%
+      Delta Accuracy:         +2.00 percentage points
+      Baseline Macro F1:       5.26%
+      Field-Adapted Macro F1:  6.70%
+      Delta Macro F1:         +1.44 percentage points
+
+  - Phase 18 Combined Field Benchmark (n=280):
+      Baseline Accuracy:      11.43%
+      Field-Adapted Accuracy: 13.21%
+      Delta Accuracy:         +1.79 percentage points
+      Baseline Macro F1:       7.34%
+      Field-Adapted Macro F1:  9.33%
+      Delta Macro F1:         +2.00 percentage points
+
+--------------------------------------------------------------------------------
+4. TARGET AUGMENTED CLASSES ANALYSIS (PHASE 18 FIELD BENCHMARK)
+--------------------------------------------------------------------------------
+Tomato Target Classes:
+  - Tomato___Tomato_Yellow_Leaf_Curl_Virus:
+      Baseline Recall:         5.36% (3/56)
+      Field-Adapted Recall:   42.86% (24/56)
+      Delta Recall:          +37.50 percentage points
+      Baseline F1:             8.33%
+      Field-Adapted F1:       24.24%
+      Delta F1:              +15.91 percentage points
+
+  - Tomato___Tomato_mosaic_virus:
+      Baseline Recall:         0.00% (0/40)
+      Field-Adapted Recall:    7.50% (3/40)
+      Delta Recall:           +7.50 percentage points
+      Baseline F1:             0.00%
+      Field-Adapted F1:        7.79%
+      Delta F1:               +7.79 percentage points
+
+  - Tomato___healthy:
+      Baseline Recall:         0.00% (0/58)
+      Field-Adapted Recall:   27.59% (16/58)
+      Delta Recall:          +27.59 percentage points
+      Baseline F1:             0.00%
+      Field-Adapted F1:       25.00%
+      Delta F1:              +25.00 percentage points
+
+Grape Target Classes:
+  - Downy Mildew:
+      Baseline Recall:         4.00% (2/50)
+      Field-Adapted Recall:   26.00% (13/50)
+      Delta Recall:          +22.00 percentage points
+      Baseline F1:             6.67%
+      Field-Adapted F1:       18.18%
+      Delta F1:              +11.52 percentage points
+
+  - Powdery Mildew:
+      Baseline Recall:         0.00% (0/30)
+      Field-Adapted Recall:    3.33% (1/30)
+      Delta Recall:           +3.33 percentage points
+      Baseline F1:             0.00%
+      Field-Adapted F1:        2.25%
+      Delta F1:               +2.25 percentage points
+
+  - Healthy Leaves:
+      Baseline Recall:        59.52% (25/42)
+      Field-Adapted Recall:   52.38% (22/42)
+      Delta Recall:           -7.14 percentage points
+      Baseline F1:            30.12%
+      Field-Adapted F1:       42.31%
+      Delta F1:              +12.19 percentage points
+
+  - Esca (Black Measles):
+      Baseline Recall:         2.00% (1/50)
+      Field-Adapted Recall:    0.00% (0/50)
+      Delta Recall:           -2.00 percentage points
+      Baseline F1:             2.86%
+      Field-Adapted F1:        0.00%
+      Delta F1:               -2.86 percentage points
+
+--------------------------------------------------------------------------------
+5. UNAFFECTED CLASSES INTEGRITY (PHASE 18 FIELD BENCHMARK)
+--------------------------------------------------------------------------------
+Crop     Class Name                          Base Rec   Adapt Rec  Delta Rec  Base F1    Adapt F1   Delta F1  
+tomato   Tomato___Bacterial_spot                5.13%      5.13%     +0.00%      7.41%      6.78%     -0.63%
+tomato   Tomato___Early_blight                 65.52%     29.31%    -36.21%     24.84%     19.88%     -4.95%
+tomato   Tomato___Late_blight                  58.33%     33.33%    -25.00%     33.49%     39.22%     +5.72%
+tomato   Tomato___Leaf_Mold                     0.00%      0.00%     +0.00%      0.00%      0.00%     +0.00%
+tomato   Tomato___Septoria_leaf_spot           14.75%     18.03%     +3.28%     20.22%     23.91%     +3.69%
+tomato   Tomato___Spider_mites                  0.00%      0.00%     +0.00%      0.00%      0.00%     +0.00%
+tomato   Tomato___Target_Spot                   0.00%      0.00%     +0.00%      0.00%      0.00%     +0.00%
+grape    Bacterial Leaf Spot                    0.00%      0.00%     +0.00%      0.00%      0.00%     +0.00%
+grape    Black Rot                              3.45%      1.72%     -1.72%      4.94%      2.60%     -2.34%
+grape    Leaf Blight                            4.00%      0.00%     -4.00%      6.78%      0.00%     -6.78%
+
+Key Dynamic:
+In the baseline models, unrepresented or out-of-domain samples collapsed heavily into dominant attractor sinks
+(Early Blight / Late Blight in Tomato; Healthy Leaves / Powdery Mildew in Grape). The addition of authentic field data
+provided alternative probability basins, reducing overprediction of attractor sinks and restoring legitimate discrimination
+for newly represented visual features, while preserving unaffected classes like Septoria and Bacterial Spot.
+
+--------------------------------------------------------------------------------
+6. SCIENTIFIC INTERPRETATION & DEFENSE
+--------------------------------------------------------------------------------
+- Adding the selected independently collected field images was associated with modest overall
+  field-benchmark gains and larger class-specific changes, while internal test performance decreased modestly.
+- The field-data intervention produced modest overall improvements on the evaluated external/field benchmarks
+  (+1.30 pp on Tomato Phase 18, +1.79 pp on Grape Phase 18; +4.29 to +5.25 pp Macro F1).
+- Several targeted classes showed substantially larger recall changes (Tomato Yellow Leaf Curl Virus +37.50 pp,
+  Tomato Healthy +27.59 pp, Grape Downy Mildew +22.00 pp).
+- Internal performance declined modestly for both adapted models (-0.50 pp for Tomato, -1.18 pp for Grape).
+- The intervention did NOT eliminate the large real-world generalization gap (field accuracy remains ~13-20%
+  compared to ~88-90% internal test accuracy).
+- The results demonstrate an observed effect of adding the selected independent field data under this experimental setup.
+- We do NOT claim universal causality.
+- We do NOT claim that field adaptation solved domain shift.
+- We do NOT claim universal field generalization.
+- We do NOT justify replacing the production models on the basis of these results alone.
+
+--------------------------------------------------------------------------------
+7. EXPERIMENTAL LIMITATIONS
+--------------------------------------------------------------------------------
+1. Finite Addition Volume: Tomato received only 71 additional field images; Grape received 176 images.
+2. Incomplete Class Coverage: The Tomato additions covered only Healthy, Mosaic Virus, and Yellow Leaf Curl Virus.
+   Grape additions covered Powdery Mildew, Downy Mildew, Healthy Leaves, and Esca.
+3. Persistent Unaugmented Classes: Several canonical classes remained completely unaugmented (e.g., Tomato Spider Mites,
+   Target Spot, Leaf Mold, Bacterial Spot; Grape Bacterial Leaf Spot, Black Rot).
+4. Geographic & Acquisition Disparity: Added field imagery originated from Cameroon (FieldPlant), Turkey (HERMOS),
+   and Italy (Standalone ESCA), which introduce distinct regional visual characteristics differing from Maharashtra fields.
+5. Setup Specificity: The experiment tests this specific field-data intervention and does not establish universal improvement.
+6. Finite Evaluation Benchmarks: The external field benchmarks remain finite samples (n=460 Tomato, n=280 Grape) and may
+   not represent all future agricultural field conditions.
+7. Heterogeneous Class-Level Response: The experiment demonstrates that field-data augmentation does not improve every
+   disease class uniformly (e.g. Esca recall dropped from 2.0% to 0.0%, Early Blight recall dropped due to sink redistribution).
+8. Sample Size Dependency: Small class-level changes must be interpreted together with corresponding sample counts.
+9. Asymmetric In-Domain Trade-Off: Adding external out-of-domain imagery slightly reduces in-domain feature alignment
+   on lab-curated imagery (-0.50% to -1.18% test accuracy).
+
+--------------------------------------------------------------------------------
+8. PRESERVATION OF PRODUCTION / EXPERIMENTAL SEPARATION
+--------------------------------------------------------------------------------
+- Production baseline models in models/ remain 100% UNCHANGED, LOCKED, and READ-ONLY.
+- Flask web application (app/) remains 100% UNCHANGED.
+- Stratified dataset splits (splits/) remain 100% UNTOUCHED.
+- External benchmarks (Track B, Track C, Phase 18, PlantDoc / Exp 5) remain 100% UNCHANGED.
+- Chilli Candidate D and production baselines remain UNTOUCHED.
+- Experimental field-adapted models reside strictly in experiments/field_data_19b5/models/
+  as offline research assets.
+================================================================================

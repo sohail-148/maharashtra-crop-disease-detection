@@ -1,0 +1,2 @@
+image_id,source_dataset,source_class,candidate_file,rejection_reason,collision_target,details
+HERMOS-GRP-0157,"HERMOS (Özacar et al., 2024)",downy mildew,IMG_8834.JPG,EXACT_DUPLICATE_WITHIN_BATCH,8cd058b9a4b644ca8ec10c206615d5d6b3d4d6d085e5398e398d316fd21297ea,Identical file already accepted in this batch

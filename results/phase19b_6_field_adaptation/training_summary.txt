@@ -1,0 +1,19 @@
+================================================================================
+PHASE 19B-6: KAGGLE GPU FIELD-ADAPTED RETRAINING SUMMARY
+================================================================================
+Tomato Model:
+  Train Samples:      10241
+  Val Samples:        2179
+  Test Samples:       2180
+  Training Time:      496.1s
+  Final Test Loss:    0.3002
+  Final Test Accuracy:89.72%
+
+Grape Model:
+  Train Samples:      4517
+  Val Samples:        931
+  Test Samples:       931
+  Training Time:      410.5s
+  Final Test Loss:    0.3198
+  Final Test Accuracy:87.86%
+================================================================================

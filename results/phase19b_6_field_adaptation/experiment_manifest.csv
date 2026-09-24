@@ -1,0 +1,3 @@
+experiment_id,crop,model_name,base_train_count,field_added_count,total_train_count,val_count,test_count,track_b_count,track_c_count,phase_18_count,field_classes_augmented,target_source,training_platform
+EXP-19B6-TOMATO,tomato,tomato_field_adapted,10170,71,10241,2179,2180,272,188,460,"Tomato___healthy (13), Tomato___Tomato_mosaic_virus (13), Tomato___Tomato_Yellow_Leaf_Curl_Virus (45)","FieldPlant (Moupojou et al., 2023; CC BY 4.0; Cameroon)",Kaggle GPU
+EXP-19B6-GRAPE,grape,grape_field_adapted,4341,176,4517,931,931,180,100,280,"Powdery Mildew (45), Downy Mildew (44), Healthy Leaves (43), Esca (Black Measles) (44)","HERMOS (Özacar et al., 2024; Turkey) + Standalone ESCA (Alessandrini et al., 2021; Italy)",Kaggle GPU
