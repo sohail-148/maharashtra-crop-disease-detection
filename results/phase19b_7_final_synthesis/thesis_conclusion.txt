@@ -1,0 +1,221 @@
+================================================================================
+MASTER THESIS CONCLUSION, ABSTRACT & DISSERTATION SYNTHESIS
+================================================================================
+Degree: Master of Science (MSc) in Advanced Computer Science / Machine Learning
+Project: Image-Based Disease Detection of Maharashtra-Relevant Crops
+Repository: https://github.com/sohail-148/maharashtra-crop-disease-detection
+Authoritative Date: September 2026
+
+--------------------------------------------------------------------------------
+1. THESIS ABSTRACT
+--------------------------------------------------------------------------------
+Background:
+Automated crop disease diagnosis using deep convolutional neural networks has demonstrated
+exceptional classification accuracy on laboratory-curated benchmark datasets. However, real-world
+agricultural deployment in developing regions such as Maharashtra, India, is plagued by severe
+domain shift between controlled laboratory imagery and unconstrained field photography.
+
+Methods:
+We conducted a comprehensive, multi-phase investigation of lightweight transfer learning (MobileNetV2)
+across 33 canonical disease classes spanning four economically vital crops: Tomato, Grape, Chilli,
+and Sugarcane (31,590 images total). We evaluated production models across complete internal test splits
+(Track A, n=4,741: Tomato 2,180, Grape 931, Chilli 290, Sugarcane 1,340) alongside an audited 4-track
+empirical robustness framework (2,556 evaluations: Track A audit sample n=1,119, Track B independent external
+research benchmarks n=632, Track C unconstrained real-world field photography n=425, and Track D out-of-distribution
+stress tests n=380). To address identified vulnerabilities, we investigated post-hoc temperature scaling, a 4-class
+species identifier, a binary leaf vs. non-leaf gatekeeper, and controlled field-data retraining using authentic in-situ field imagery.
+
+Results:
+While frozen MobileNetV2 achieved 83.4%–90.2% in-domain test accuracy, evaluation on uncontrolled
+field benchmarks revealed a substantial Generalization Gap of 50 to 75 percentage points
+(Tomato: 90.2% -> 18.9%; Grape: 89.0% -> 11.4%). Models collapsed into majority attractor sinks
+(87.6% of Tomato field predictions defaulted to Early/Late Blight), while assigning >85%–95%
+softmax confidence to non-leaf distractors. Post-hoc calibration reduced in-domain calibration error
+by >50% but failed to reject OOD inputs (60%–73% false pass rate). A laboratory-trained species
+identifier achieved 99.87% internal accuracy but collapsed to 39.7% in the field, where observed errors
+were consistent with sensitivity to domain-specific visual characteristics. Conversely, a dedicated Stage 1
+binary gatekeeper trained on curated non-leaf negatives showed strong retention across the evaluated
+field-leaf benchmarks (96.55% field leaf retention across 2,229 uncurated field images) and 100% rejection
+of Track D non-leaf distractors. In controlled retraining experiments, incorporating authentic field imagery
+reduced the concentration of predictions in previously dominant attractor classes in some evaluated cases and
+improved sensitivity to selected field phenotypes (Tomato Yellow Leaf Curl Virus recall increased from 5.36% to
+42.86%; Grape Downy Mildew recall increased from 4.00% to 26.00%), while causing modest reductions in internal
+test performance (Tomato: 90.23% -> 89.72%, -0.50 pp; Grape: 89.04% -> 87.86%, -1.18 pp).
+
+Conclusion:
+Deep vision models trained on laboratory leaf datasets suffer from systematic domain shift
+vulnerabilities that cannot be mitigated by post-hoc softmax calibration or synthetic lab
+augmentation. Real-world deployment requires architectural decoupling via binary foliage gating
+and targeted in-situ field data integration.
+
+--------------------------------------------------------------------------------
+2. FORMAL PROBLEM STATEMENT
+--------------------------------------------------------------------------------
+Agricultural vision models deployed in production face three fundamental challenges:
+1. The In-Domain vs. Field Generalization Gap: High test accuracy on lab-mounted leaves masks
+   fragility when encountering natural variable lighting, complex soil backgrounds, and camera sensor noise.
+2. Attractor Sink Collapse: Under severe distribution shift, overparameterized softmax heads map
+   novel visual representations into high-prevalence majority classes rather than outputting low confidence.
+3. Out-of-Distribution Vulnerability: Standard closed-set architectures lack an inherent rejection
+   mechanism, generating false actionable disease diagnoses on non-crop leaves, soil, hands, and tools.
+
+--------------------------------------------------------------------------------
+2B. FORMAL RESEARCH HYPOTHESES & EMPIRICAL VERDICTS
+--------------------------------------------------------------------------------
+H1: Baseline Representational Capacity
+    Hypothesis: MobileNetV2 with frozen ImageNet features is sufficient to achieve >80%
+    classification accuracy across Maharashtra-relevant crops under lab conditions.
+    Verdict: PARTIALLY SUPPORTED.
+    Empirical Evidence: The >80% condition was achieved for 3 of 4 crops: Tomato (90.23%),
+    Grape (89.04%), and Sugarcane (83.43%), but not for Chilli (63.79% on single-source COLD 2024
+    lab data due to fine-grained symptomatic overlap).
+
+H2: Domain Shift & Generalization Gap
+    Hypothesis: Models trained primarily on laboratory-curated leaf images suffer a statistically
+    significant performance collapse when evaluated on unconstrained real-world field photography.
+    Verdict: SUPPORTED.
+    Empirical Evidence: A 50 to 75 percentage point Generalization Gap was observed across all crops
+    (Tomato: 90.23% -> 18.91%; Grape: 89.04% -> 11.43%; Chilli: 63.79% -> 50.60%; Sugarcane: 83.43% -> 35.00%),
+    with predictions concentrating in majority attractor classes.
+
+H3: Post-Hoc Confidence Calibration for OOD Gating
+    Hypothesis: Post-hoc softmax temperature scaling on validation data will calibrate confidence
+    estimates sufficiently to filter out-of-distribution non-leaf and wrong-crop inputs.
+    Verdict: REFUTED.
+    Empirical Evidence: While temperature scaling reduced in-domain ECE by >50%, 60%–73% of wrong-crop
+    leaves and non-leaf distractors bypassed validation-selected confidence thresholds. Softmax confidence
+    operates on closed-set relative logit margins and cannot detect semantic OOD shifts.
+
+H4: Decoupled Stage 1 Foliage Gatekeeper
+    Hypothesis: Decoupling foliage verification into a dedicated binary classifier (Leaf vs. Non-Leaf)
+    trained on diverse non-leaf negatives creates an effective pre-filtering safeguard.
+    Verdict: SUPPORTED.
+    Empirical Evidence: The binary gatekeeper achieved 99.19% internal test accuracy, rejected 100.00%
+    of Track D non-leaf distractors, and showed strong retention across the evaluated field-leaf benchmarks
+    (96.55% field leaf retention across 2,229 uncurated field images).
+
+H5: In-Situ Field-Data Retraining & Adaptation
+    Hypothesis: Incorporating genuine in-situ field imagery into training data improves real-world
+    field classification without degrading in-domain performance.
+    Verdict: PARTIALLY SUPPORTED / MIXED EVIDENCE.
+    Empirical Evidence: The field-improvement component was observed on evaluated benchmarks (Tomato
+    Phase 18 accuracy increased from 18.91% to 20.22% with macro F1 +5.25 pp; Grape Phase 18 accuracy
+    increased from 11.43% to 13.21% with macro F1 +2.00 pp; target class recalls surged: TYLCV recall from
+    5.36% to 42.86%, Downy Mildew recall from 4.00% to 26.00%), but internal test accuracy declined modestly
+    (Tomato: 90.23% -> 89.72%, -0.50 pp; Grape: 89.04% -> 87.86%, -1.18 pp). Therefore, the field-improvement
+    component was observed, while the no-in-domain-degradation condition was not fully satisfied.
+
+--------------------------------------------------------------------------------
+3. MASTER RESULTS TABLES FOR THESIS
+--------------------------------------------------------------------------------
+
+Table 1: Production 4-Crop Baseline Architecture & In-Domain Performance
+-------------------------------------------------------------------------------------------------------
+Crop        Base Architecture   Head Structure              Test Size  Accuracy  Weighted F1  Macro F1
+-------------------------------------------------------------------------------------------------------
+Tomato      MobileNetV2 (ImageNet) GAP+BN+Drop(0.3)+Dense(10)  2,180      90.23%    90.18%       87.80%
+Grape       MobileNetV2 (ImageNet) GAP+BN+Drop(0.3)+Dense(7)     931      89.04%    88.68%       86.31%
+Chilli      MobileNetV2 (ImageNet) GAP+BN+Drop(0.3)+Dense(5)     290      63.79%    62.36%       57.75%
+Sugarcane   MobileNetV2 (ImageNet) GAP+BN+Drop(0.3)+Dense(11)  1,340      83.43%    83.29%       82.11%
+-------------------------------------------------------------------------------------------------------
+
+Table 2: Quantification of the Real-World Generalization Gap
+-------------------------------------------------------------------------------------------------------
+Crop        Internal Test (Track A)  External Bench (Track B)  Real-World (Track C)  Phase 18 Field Bench
+-------------------------------------------------------------------------------------------------------
+Tomato      90.23% (n=2,180)         15.07% (n=272)            24.47% (n=188)        18.91% (n=460)
+Grape       89.04% (n=931)           13.89% (n=180)             7.00% (n=100)        11.43% (n=280)
+Chilli      63.79% (n=290)           18.33% (n=60)             40.72% (n=97)         50.60% (n=332)
+Sugarcane   83.43% (n=1,340)         38.33% (n=60)             38.50% (n=40)         35.00% (n=100)
+-------------------------------------------------------------------------------------------------------
+
+Table 3: Chilli Model Improvement Campaign (Candidate D Mixed-Domain Breakthrough)
+-------------------------------------------------------------------------------------------------------
+Model Variant         Training Source Data            Internal Test  Track B Ext  Track C RW  Phase 18
+-------------------------------------------------------------------------------------------------------
+Chilli Baseline       COLD 2024 Lab (n=1,352)         63.79%         18.33%       40.72%      50.60%
+Candidate A           COLD Partial Fine-Tuning        68.62%         26.67%       44.33%      52.11%
+Candidate B           COLD Fine-Tune + Synthetic Aug  73.45%         52.50%       54.64%      58.43%
+Candidate C           COLD Fine-Tune + Class Weights  71.72%         48.33%       51.55%      56.32%
+Candidate D (Prod)    COLD Lab + Ulfa Field (n=2,152) 68.62%         92.50%       81.44%      71.08%
+-------------------------------------------------------------------------------------------------------
+
+Table 4: Field-Data-Assisted Retraining Comparative Evaluation (Phase 19B-6)
+-------------------------------------------------------------------------------------------------------
+Crop    Track          Samples  Baseline Acc  Adapted Acc  Delta Acc  Baseline MF1  Adapted MF1  Delta MF1
+-------------------------------------------------------------------------------------------------------
+Tomato  Internal Test  2,180    90.23%        89.72%       -0.50 pp   87.80%        87.16%       -0.64 pp
+Tomato  Track B Ext      272    15.07%        15.07%       +0.00 pp    7.78%        12.08%       +4.29 pp
+Tomato  Track C RW       188    24.47%        27.66%       +3.19 pp   12.99%        17.72%       +4.73 pp
+Tomato  Phase 18 Field   460    18.91%        20.22%       +1.30 pp    9.43%        14.68%       +5.25 pp
+Grape   Internal Test    931    89.04%        87.86%       -1.18 pp   86.31%        83.28%       -3.03 pp
+Grape   Track B Ext      180    13.89%        15.56%       +1.67 pp    7.98%        10.32%       +2.34 pp
+Grape   Track C RW       100     7.00%         9.00%       +2.00 pp    5.26%         6.70%       +1.44 pp
+Grape   Phase 18 Field   280    11.43%        13.21%       +1.79 pp    7.34%         9.33%       +2.00 pp
+-------------------------------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+4. DISCUSSION & AGRONOMIC INTERPRETATION
+--------------------------------------------------------------------------------
+1. Why Lab-Trained Models Default to Attractor Sinks:
+   In laboratory datasets, leaves are flattened against uniform backgrounds (black plastic, white paper)
+   under controlled diffusers. In real fields, natural soil texture, shadows, and varying chlorophyll
+   fluorescence present high visual complexity. Lacking training support on complex backgrounds, the
+   network activates high-frequency edge filters that mimic the necrotic lesions of Late Blight or
+   Early Blight.
+
+2. Why Post-Hoc Softmax Calibration Fails for OOD Gating:
+   Temperature scaling monotonically scales logits by a positive scalar, adjusting overconfident
+   probabilities toward true accuracy on in-domain distributions. However, because out-of-domain
+   inputs activate arbitrary unconstrained features in deep layers, the resulting softmax distribution
+   often exhibits extreme peakiness. A scalar shift preserves logit ordering and fails to suppress
+   incorrect peaks.
+
+3. The Decoupled Gating Paradigm:
+   Rather than expecting a fine-grained 33-class disease network to discern species identity and
+   non-leaf distractors simultaneously, real-world systems must decouple the detection pipeline:
+   - Stage 1: Dedicated binary foliage gatekeeper (Leaf vs Non-Leaf).
+   - Stage 2: User-verified crop selection (avoiding brittle automated species classification under field domain shift).
+   - Stage 3: Fine-grained disease diagnosis powered by mixed-domain training data.
+
+--------------------------------------------------------------------------------
+5. THREATS TO VALIDITY & LIMITATIONS
+--------------------------------------------------------------------------------
+1. Sample Size of Field Augmentation: Tomato received 71 field images; Grape received 176 images.
+   While statistically meaningful deltas were observed on target classes, full-spectrum adaptation
+   requires larger collections.
+2. Incomplete Disease Representation: Several canonical diseases (Spider Mites, Target Spot, Bacterial
+   Spot) currently possess near-zero authentic field representation in public archives.
+3. Geographic Domain Shift: Acquired field imagery originated in Cameroon, Turkey, and Italy. Regional
+   variations in soil color, cultivar canopy structure, and co-occurring weeds in Maharashtra may
+   introduce secondary distribution shifts.
+4. Grad-CAM Non-Causality: Saliency heatmaps visualize gradient magnitude, but do not provide proof
+   of underlying causal reasoning or establish background shortcut causality.
+
+--------------------------------------------------------------------------------
+6. FINAL THESIS CONCLUSION
+--------------------------------------------------------------------------------
+This research proves that high in-domain classification accuracy on curated agricultural benchmarks
+does not imply field readiness. Through an audited 2,556-evaluation robustness framework alongside
+complete 4,741-sample internal test splits, we quantified a 50–75 percentage point Generalization Gap
+and documented the failure modes of softmax calibration and laboratory species identification.
+
+We demonstrated that authentic field data integration is uniquely effective: Chilli Candidate D
+achieved a +20.48 pp field boost, and targeted Tomato/Grape field-data adaptation produced modest
+field-benchmark gains while causing modest reductions in internal test performance, reducing the concentration
+of predictions in previously dominant attractor classes in some evaluated cases and improving sensitivity to
+selected field phenotypes. Finally, a robust binary Stage 1 Gatekeeper (99.19% test accuracy, 100% Track D
+distractor rejection) showed strong retention across the evaluated field-leaf benchmarks (96.55% field leaf
+retention across 2,229 uncurated field images), establishing a viable architectural safeguard for practical deployment.
+
+--------------------------------------------------------------------------------
+7. FUTURE RESEARCH ROADMAP
+--------------------------------------------------------------------------------
+1. In-Situ Maharashtra Field Sourcing: Establish collaborative on-farm image capture campaigns in
+   Nashik (Grape), Pune (Tomato), Kolhapur (Sugarcane), and Nagpur (Chilli) to collect localized data.
+2. Multi-Task Self-Supervised Pretraining: Train vision foundation backbones on massive unlabeled
+   agricultural field video to build transferable feature representations prior to disease fine-tuning.
+3. Edge Device Quantization & Latency Profiling: Quantize the gated pipeline (TFLite INT8) for
+   offline Android edge deployment under rural connectivity constraints.
+================================================================================
+

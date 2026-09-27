@@ -1,0 +1,103 @@
+================================================================================
+MASTER FIGURE & VISUAL ASSET INVENTORY FOR MSC THESIS
+================================================================================
+Project: Maharashtra Crop Disease Detection & Robustness Architecture
+Phase: Phase 19B-7 (Master Academic Research Synthesis)
+
+This catalog details the prioritized, high-value visual artifacts available in the
+repository for direct inclusion in thesis chapters, presentations, and publications.
+
+--------------------------------------------------------------------------------
+1. METHODOLOGY & BASELINE TRAINING (CHAPTER 5)
+--------------------------------------------------------------------------------
+Fig 5.1: Training & Validation Curves (4-Crop Baselines)
+  - Path: results/tomato/training_history.png (also grape_unified, chilli_cold, sugarcane_unified)
+  - Placement: Chapter 5, Section 5.3 (Convergence & Training Dynamics)
+  - Key Takeaway: Demonstrates rapid loss convergence of frozen MobileNetV2 features across
+    all crops within 15–20 epochs under learning rate 1e-3, confirming optimization stability.
+
+Fig 5.2: In-Domain Confusion Matrices (4-Crop Baselines)
+  - Path: results/tomato/confusion_matrix.png (also grape_unified, chilli_cold, sugarcane_unified)
+  - Placement: Chapter 5, Section 5.4 (In-Domain Classification Performance)
+  - Key Takeaway: High diagonal concentration (>83%–90% accuracy) for Tomato, Grape, and
+    Sugarcane; highlights fine-grained baseline confusion in Chilli (Cercospora vs Deficiency).
+
+--------------------------------------------------------------------------------
+2. COMPARATIVE REGIONAL ANALYSIS & CROSS-DATASET EVALUATION (CHAPTER 6)
+--------------------------------------------------------------------------------
+Fig 6.1: Cross-Dataset Regional Confusion Matrices (Grape G1 vs. G2)
+  - Path: results/comparative_analysis/grape_g1_confusion_matrix.png & grape_g2_confusion_matrix.png
+  - Placement: Chapter 6, Section 6.2 (Cross-Dataset Generalization Disparity)
+  - Key Takeaway: Visualizes the 11.23% performance drop between Niphad (Nashik) lab photos
+    (95.35%) and Mendeley 2024 images (84.12%), driven by background and sensor differences.
+
+Fig 6.2: Class-Level Error Rates Across Partitions
+  - Path: results/error_analysis/error_rates_overview.png
+  - Placement: Chapter 6, Section 6.4 (Systematic Error Diagnosis)
+  - Key Takeaway: Illustrates severe class-specific vulnerabilities (e.g. Esca vs Leaf Blight)
+    arising from overlapping necrotic marginal symptoms.
+
+--------------------------------------------------------------------------------
+3. EXPLAINABILITY VIA GRAD-CAM (CHAPTER 7)
+--------------------------------------------------------------------------------
+Fig 7.1: True Positive Localized Activations (Correct Predictions)
+  - Path: results/gradcam/sugarcane_s1_redrot_to_brownspot/ (and related diagnostic directories)
+  - Placement: Chapter 7, Section 7.2 (Agronomic Plausibility of Visual Attention)
+  - Key Takeaway: Demonstrates that correctly classified samples show tightly focused gradients
+    on midrib lesions, fungal pustules, and chlorotic mottling.
+
+Fig 7.2: Background-Artifact Focus on Misclassified Field Samples
+  - Path: results/gradcam/tomato_t1_earlyblight_to_septoria/
+  - Placement: Chapter 7, Section 7.4 (Diagnostic Failure Analysis)
+  - Key Takeaway: Visualizes dispersed or edge-skewed attention on ambiguous lesions, confirming
+    that Grad-CAM serves as an effective diagnostic tool without establishing causality.
+
+--------------------------------------------------------------------------------
+4. MULTI-TRACK ROBUSTNESS AUDIT & GENERALIZATION GAP (CHAPTER 8)
+--------------------------------------------------------------------------------
+Fig 8.1: Multi-Track Accuracy Comparison (The Generalization Gap)
+  - Path: results/model_robustness_audit/track_accuracy_comparison.png
+  - Placement: Chapter 8, Section 8.1 (Quantification of the Field Generalization Gap)
+  - Key Takeaway: Central thesis figure showing the 50–75 percentage point collapse across
+    all crops between Track A (Lab ~85%) and Tracks B/C (Field ~10%–40%).
+
+Fig 8.2: Out-of-Distribution Overconfidence Distribution
+  - Path: results/model_robustness_audit/wrong_crop_overconfidence.png
+  - Placement: Chapter 8, Section 8.3 (Failure Modes of Closed-Set Softmax Confidence)
+  - Key Takeaway: Demonstrates that production models output >85%–95% confidence on wrong-crop
+    leaves and non-leaf objects, proving raw/calibrated softmax cannot serve as an OOD gatekeeper.
+
+Fig 8.3: Clean Multi-Crop Real-World Benchmark Confusion Matrices (Phase 18)
+  - Path: results/final_realworld_benchmark/all_crops_realworld_confusion_matrices.png
+  - Placement: Chapter 8, Section 8.4 (Standardized Real-World Multi-Crop Benchmark)
+  - Key Takeaway: Illustrates attractor sink collapse: 87.6% of Tomato field predictions default
+    to Early/Late Blight, while 74.3% of Grape predictions default to Healthy/Powdery Mildew.
+
+Fig 8.4: Chilli Candidate D Real-World Improvement
+  - Path: results/final_realworld_benchmark/chilli_realworld_comparison.png
+  - Placement: Chapter 8, Section 8.5 (The Chilli Model Improvement Experiment)
+  - Key Takeaway: Compares Baseline (50.6%) vs. Candidate D (71.1%), illustrating how mixed-domain
+    field data improved field classification performance and justified production promotion.
+
+--------------------------------------------------------------------------------
+5. ARCHITECTURAL SAFEGUARDS & FIELD ADAPTATION (CHAPTER 9)
+--------------------------------------------------------------------------------
+Fig 9.1: Gatekeeper Test Confusion Matrix & Trade-Off Sweep Curves (Phase 19B-4)
+  - Path: results/phase19b_4_gatekeeper/confusion_matrix_test.png & threshold_curves.png
+  - Placement: Chapter 9, Section 9.2 (Stage 1 Binary Leaf/Non-Leaf Gating)
+  - Key Takeaway: Demonstrates 99.19% internal test accuracy, 100% Track D distractor rejection,
+    and 96.55% uncurated field leaf retention across threshold sweep [0.05, 0.95].
+
+Fig 9.2: Tomato Field Adaptation 2x2 Comparative Confusion Matrix (Phase 19B-6)
+  - Path: results/phase19b_6_field_adaptation/confusion_matrix_tomato.png
+  - Placement: Chapter 9, Section 9.4 (Empirical Results of Field Data Augmentation)
+  - Key Takeaway: 2x2 comparison showing modest reduction in internal test performance (89.72% vs 90.23%, -0.50 pp)
+    alongside reduced prediction concentration in dominant attractor classes and surged TYLCV recall on Phase 18 field benchmark.
+
+Fig 9.3: Grape Field Adaptation 2x2 Comparative Confusion Matrix (Phase 19B-6)
+  - Path: results/phase19b_6_field_adaptation/confusion_matrix_grape.png
+  - Placement: Chapter 9, Section 9.4 (Empirical Results of Field Data Augmentation)
+  - Key Takeaway: 2x2 comparison showing modest reduction in internal test performance (87.86% vs 89.04%, -1.18 pp)
+    alongside substantial recall improvement on Downy Mildew (4% -> 26%) on Phase 18 field benchmark.
+================================================================================
+

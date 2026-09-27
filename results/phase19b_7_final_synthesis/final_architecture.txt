@@ -1,0 +1,145 @@
+================================================================================
+FINAL PRODUCTION ARCHITECTURE & RESEARCH COMPONENT SPECIFICATION
+================================================================================
+Project: Maharashtra Crop Disease Detection & Robustness Architecture
+Phase: Phase 19B-7 (Master Academic Research Synthesis)
+Status: Formally Documented and Audited
+
+This document defines the exact operational boundary between active production
+software components, validated offline research assets, and closed experimental
+directions within the repository.
+
+--------------------------------------------------------------------------------
+1. CATEGORY A: PRODUCTION / INTEGRATED SYSTEM (FLASK APPLICATION)
+--------------------------------------------------------------------------------
+The active web application (app/) represents a complete, self-contained deployment
+layer verified across 18 operational dimensions in Phase 19A.
+
+A. Core Architectural Modules:
+   - Web Server & Routes (app/routes.py):
+     Serves mobile-first responsive HTML5/CSS3 templates; handles image uploads (JPEG, PNG,
+     WEBP) and browser camera integration (MediaDevices getUserMedia API); manages image
+     resizing, security checks, and cleanup.
+   - Inference Service Layer (app/predictor.py):
+     The sole abstraction layer communicating with TensorFlow/Keras. Enforces an explicit
+     crop selection contract where agricultural users select the target crop, routing
+     the request directly to the appropriate dedicated model.
+   - Explainability Engine (app/gradcam.py):
+     Executes tf.GradientTape backpropagation on the final convolutional layer of the
+     active MobileNetV2 model to generate Grad-CAM heatmaps overlaid onto the original image,
+     providing real-time visual interpretability.
+   - Database Persistence (app/database.py):
+     Logs transaction timestamps, crop identity, predicted disease class, confidence score,
+     Grad-CAM image URI, and agronomic management advice to instance/predictions.db (SQLite).
+
+B. Active Production Models:
+   1. Tomato Disease Model:
+      - Path: models/tomato/tomato_baseline.keras (9,819,056 bytes)
+      - Scope: 10 canonical classes (14,529 PlantVillage images)
+      - Performance: 90.23% in-domain test accuracy, 90.18% Weighted F1
+      - Role: Primary production default.
+   2. Grape Unified Disease Model:
+      - Path: models/grape_unified/grape_unified_baseline.keras (9,772,973 bytes)
+      - Scope: 7 canonical classes (6,203 Niphad + Grape 2024 images)
+      - Performance: 89.04% in-domain test accuracy, 88.68% Weighted F1
+      - Role: Primary production default.
+   3. Chilli Disease Model (Candidate D):
+      - Path: experiments/chilli_field_experiment/candidate_d/model.keras (21,833,656 bytes)
+      - Scope: 5 canonical classes (2,152 mixed-domain COLD 2024 + Ulfa field images)
+      - Performance: 68.62% in-domain test accuracy; 71.08% Phase 18 field benchmark accuracy
+      - Role: Promoted to active serving in Phase 18 due to definitive field superiority
+        (+20.48 pp over baseline). Alternate baseline preserved in models/chilli_cold/.
+   4. Sugarcane Unified Disease Model:
+      - Path: models/sugarcane_unified/sugarcane_unified_baseline.keras (9,842,674 bytes)
+      - Scope: 11 canonical classes (8,926 Maharashtra S1 + Large S2 images)
+      - Performance: 83.43% in-domain test accuracy, 83.29% Weighted F1
+      - Role: Primary production default.
+
+--------------------------------------------------------------------------------
+2. CATEGORY B: VALIDATED BUT NOT INTEGRATED RESEARCH ASSETS
+--------------------------------------------------------------------------------
+These components have been empirically developed, evaluated, and documented, but
+remain strictly offline research artifacts.
+
+A. Stage 1 Binary Leaf vs. Non-Leaf Gatekeeper:
+   - Checkpoint: results/phase19b_4_gatekeeper/gatekeeper_head.keras
+   - Weights:    results/phase19b_4_gatekeeper/gatekeeper_mobilenetv2.weights.h5
+   - Purpose:    Pre-filter non-leaf distractors (soil, hands, tools, buildings).
+   - Empirical Performance: 99.19% test accuracy; 100.00% Track D non-leaf distractor rejection;
+     showed strong retention across the evaluated field-leaf benchmarks (96.55% zero-shot real-world
+     field leaf retention across 2,229 uncurated field images).
+   - Status:     Validated offline research component.
+   - Rationale for Non-Integration: The production Flask web app relies on explicit user intent
+     (farmer uploading a leaf photograph). While the Gatekeeper demonstrated high efficacy,
+     integrating it introduces an additional inference hop (~80ms) and a potential 3.45% false
+     rejection risk on uncurated field photos. It is documented as a viable architectural
+     safeguard for future automated pipelines, but left decoupled from the core web service.
+
+B. Tomato Field-Adapted Model:
+   - Checkpoint: experiments/field_data_19b5/models/tomato_field_adapted.keras (9,821,400 bytes)
+   - SHA-256:    211cdb63aa6aef2f56601c6cb1cdfa784c344b806bf97550d1f8ce25b94f27ff
+   - Purpose:    Address Tomato prediction concentration in dominant attractor classes using 71 authentic FieldPlant images.
+   - Empirical Performance: Internal test accuracy 89.72%; Track C accuracy 27.66% (+3.19 pp);
+     Phase 18 accuracy 20.22% (+1.30 pp, Macro F1 +5.25 pp); TYLCV recall surged from 5.36% to 42.86%.
+   - Rationale for Non-Integration: While field discrimination and macro F1 substantially improved
+     on target augmented classes, overall field benchmark accuracy remains ~20%, and internal
+     accuracy experienced a minor trade-off (-0.50 pp). Replacing a locked production model
+     requires full-spectrum field coverage across all 10 classes, rather than a 3-class slice.
+
+C. Grape Field-Adapted Model:
+   - Checkpoint: experiments/field_data_19b5/models/grape_field_adapted.keras (9,775,317 bytes)
+   - SHA-256:    f3e2367e32c9b15951c4b42522540dff2e9869f6aee6a8613e4e4b7882b0b867
+   - Purpose:    Address Grape prediction concentration in dominant attractor classes using 176 authentic HERMOS/ESCA field images.
+   - Empirical Performance: Internal test accuracy 87.86%; Track C accuracy 9.00% (+2.00 pp);
+     Phase 18 accuracy 13.21% (+1.79 pp, Macro F1 +2.00 pp); Downy Mildew recall surged from 4.00% to 26.00%.
+   - Rationale for Non-Integration: The model achieved notable gains on Downy Mildew and Healthy
+     Leaves, but overall field accuracy remains ~13%, and internal test accuracy dropped by 1.18 pp.
+     It remains preserved as an offline experimental artifact demonstrating targeted adaptation.
+
+--------------------------------------------------------------------------------
+3. CATEGORY C: CLOSED RESEARCH EXPERIMENTS (DO NOT DEPLOY)
+--------------------------------------------------------------------------------
+These directions were rigorously investigated and formally closed due to empirical failure
+or unsuitability for production deployment:
+
+A. Stage 2 Crop Species Identifier (Model A & Model B):
+   - Path: experiments/phase19b_2_crop_identifier/
+   - Rationale for Closure: Achieved 99.87% internal accuracy on lab data, but collapsed to ~39%
+     on real-world field benchmarks (Tomato field recall dropped to 12.2%). The observed field
+     errors were consistent with sensitivity to domain-specific visual characteristics. Deploying
+     it as a mandatory gatekeeper would falsely reject over 60% of legitimate field leaf images.
+     Formally disqualified.
+
+B. Softmax Confidence Calibration (Temperature Scaling) for OOD Gating:
+   - Path: results/phase19b_1_calibration/
+   - Rationale for Closure: Successfully reduced in-domain ECE, but failed to separate out-of-domain
+     inputs (up to 73.3% of wrong-crop leaves and 60% of non-leaf objects passed validation-selected
+     thresholds). Softmax confidence cannot detect semantic OOD shifts. Formally closed.
+
+C. Single-Domain Fine-Tuning on Lab Data (Chilli Candidates A, B, C):
+   - Path: experiments/chilli_improvement/
+   - Rationale for Closure: Heavy geometric augmentations and partial fine-tuning improved in-domain
+     accuracy (63.8% -> 73.5%), but failed to generalize to real-world field data (~45%–52% Track B).
+     Superseeded completely by mixed-domain training (Candidate D). Formally archived.
+
+--------------------------------------------------------------------------------
+4. ARCHITECTURAL SUMMARY MATRIX
+--------------------------------------------------------------------------------
+Component                      Status         Integrated in Flask?  Deployment Decision
+--------------------------------------------------------------------------------
+Flask UI & Routes              Active         Yes                   Primary Interface
+app/predictor.py (Service)     Active         Yes                   Production Routing
+app/gradcam.py (Explainability)Active         Yes                   Runtime Visual Focus
+SQLite DB (predictions.db)     Active         Yes                   Inference Audit Log
+Tomato Baseline Model          Production     Yes                   Production Locked
+Grape Unified Baseline Model   Production     Yes                   Production Locked
+Chilli Candidate D Model       Production     Yes                   Promoted in Phase 18
+Sugarcane Unified Baseline     Production     Yes                   Production Locked
+Leaf/Non-Leaf Gatekeeper       Experimental   No                    Validated Offline Component
+Tomato Field-Adapted Model     Experimental   No                    Offline Research Asset
+Grape Field-Adapted Model      Experimental   No                    Offline Research Asset
+Crop Species Identifier        Experimental   No                    DISQUALIFIED (Field Collapse)
+Calibration OOD Gating         Experimental   No                    DISQUALIFIED (High False Pass)
+Chilli Candidates A, B, C      Experimental   No                    ARCHIVED (Superseeded by Cand D)
+================================================================================
+
