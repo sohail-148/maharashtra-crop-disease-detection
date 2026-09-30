@@ -413,8 +413,8 @@ button {
   text-align: center;
   padding: 18px 20px 16px;
   margin-bottom: 16px;
-  background: linear-gradient(135deg, rgba(21, 66, 40, 0.04) 0%, rgba(45, 106, 79, 0.08) 100%);
-  border: 1px solid #d8e5db;
+  background: #DFF5E7;
+  border: 1px solid #c7ebd4;
   border-radius: var(--radius-lg);
 }
 
