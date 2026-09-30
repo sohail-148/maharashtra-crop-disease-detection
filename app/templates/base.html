@@ -3,12 +3,17 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>{% block title %}Crop Disease Detection{% endblock %}</title>
+  <title>{% block title %}Image-Based Disease Detection of Maharashtra-Relevant Crops{% endblock %}</title>
 
   <!-- Favicon -->
   <link rel="icon" href="{{ url_for('static', filename='img/favicon.svg') }}" type="image/svg+xml" />
 
-  <!-- Main stylesheet -->
+  <!-- Google Fonts: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Main Stylesheet -->
   <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}" />
 
   {% block extra_head %}{% endblock %}
@@ -16,54 +21,68 @@
 <body>
 
   <!-- ================================================================ -->
-  <!-- Navigation                                                        -->
+  <!-- Navigation Header                                                 -->
   <!-- ================================================================ -->
-  <nav class="navbar" role="navigation" aria-label="Main navigation">
-    <div class="nav-inner">
-      <a class="nav-brand" href="{{ url_for('main.index') }}">
-        <span class="nav-icon" aria-hidden="true">🌿</span>
-        <span>Crop Disease Detection</span>
-      </a>
+  <header class="site-header">
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
+      <div class="nav-inner">
+        <a class="nav-brand" href="{{ url_for('main.index') }}" aria-label="Crop Disease AI Dashboard Home">
+          <div class="nav-brand-badge-icon" aria-hidden="true">🌱</div>
+          <div class="nav-brand-text">
+            <span class="nav-brand-title">CropDisease<span class="text-accent">AI</span></span>
+            <span class="nav-brand-sub">Maharashtra AgriVision Platform</span>
+          </div>
+        </a>
 
-      <button class="nav-toggle" id="navToggle"
-              aria-expanded="false" aria-controls="navLinks"
-              aria-label="Toggle navigation menu">
-        <span></span><span></span><span></span>
-      </button>
+        <button class="nav-toggle" id="navToggle"
+                aria-expanded="false" aria-controls="navLinks"
+                aria-label="Toggle navigation menu">
+          <span></span><span></span><span></span>
+        </button>
 
-      <ul class="nav-links" id="navLinks" role="list">
-        <li>
-          <a href="{{ url_for('main.index') }}"
-             class="nav-link {% if request.endpoint == 'main.index' %}active{% endif %}">
-            Analyse
-          </a>
-        </li>
-        <li>
-          <a href="{{ url_for('main.history') }}"
-             class="nav-link {% if request.endpoint == 'main.history' %}active{% endif %}">
-            History
-          </a>
-        </li>
-        <li>
-          <a href="{{ url_for('main.about') }}"
-             class="nav-link {% if request.endpoint == 'main.about' %}active{% endif %}">
-            About
-          </a>
-        </li>
-      </ul>
-    </div>
-  </nav>
+        <ul class="nav-links" id="navLinks" role="list">
+          <li>
+            <a href="{{ url_for('main.index') }}"
+               class="nav-link {% if request.endpoint == 'main.index' %}active{% endif %}">
+              <span class="nav-link-icon" aria-hidden="true">🔬</span>
+              <span>Analyse</span>
+            </a>
+          </li>
+          <li>
+            <a href="{{ url_for('main.history') }}"
+               class="nav-link {% if request.endpoint == 'main.history' %}active{% endif %}">
+              <span class="nav-link-icon" aria-hidden="true">📋</span>
+              <span>History</span>
+            </a>
+          </li>
+          <li>
+            <a href="{{ url_for('main.about') }}"
+               class="nav-link {% if request.endpoint == 'main.about' %}active{% endif %}">
+              <span class="nav-link-icon" aria-hidden="true">ℹ️</span>
+              <span>About</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
 
   <!-- ================================================================ -->
-  <!-- Flash messages                                                    -->
+  <!-- Flash Notifications                                               -->
   <!-- ================================================================ -->
   {% with messages = get_flashed_messages(with_categories=true) %}
     {% if messages %}
       <div class="flash-container" role="alert" aria-live="polite">
         {% for category, message in messages %}
           <div class="flash flash--{{ category }}">
-            <span>{{ message }}</span>
-            <button class="flash-close" aria-label="Dismiss">&times;</button>
+            <span class="flash-icon" aria-hidden="true">
+              {% if category == 'error' or category == 'danger' %}⚠️
+              {% elif category == 'success' %}✓
+              {% elif category == 'warning' %}⏳
+              {% else %}ℹ️{% endif %}
+            </span>
+            <span class="flash-message">{{ message }}</span>
+            <button class="flash-close" aria-label="Dismiss notification">&times;</button>
           </div>
         {% endfor %}
       </div>
@@ -71,25 +90,45 @@
   {% endwith %}
 
   <!-- ================================================================ -->
-  <!-- Main content                                                      -->
+  <!-- Main Content                                                      -->
   <!-- ================================================================ -->
   <main class="main-content" id="main" tabindex="-1">
     {% block content %}{% endblock %}
   </main>
 
   <!-- ================================================================ -->
-  <!-- Footer                                                            -->
+  <!-- Global Footer                                                     -->
   <!-- ================================================================ -->
   <footer class="footer" role="contentinfo">
     <div class="footer-inner">
-      <p>Maharashtra Crop Disease Detection &mdash; MobileNetV2 Transfer Learning</p>
-      <p class="footer-sub">
-        Crops: Tomato &bull; Grape &bull; Chilli &bull; Sugarcane
-      </p>
+      <div class="footer-primary">
+        <div class="footer-brand">
+          <span class="footer-logo" aria-hidden="true">🌿</span>
+          <div>
+            <h3 class="footer-title">Image-Based Disease Detection of Maharashtra-Relevant Crops</h3>
+            <p class="footer-subtitle">A Deep Learning Web Application with Real-World Robustness Analysis</p>
+          </div>
+        </div>
+        <div class="footer-tags">
+          <span class="badge badge--dark">MobileNetV2</span>
+          <span class="badge badge--dark">4 Crops</span>
+          <span class="badge badge--dark">33 Pathologies</span>
+          <span class="badge badge--dark">Grad-CAM XAI</span>
+          <span class="badge badge--dark">Flask 3.1</span>
+        </div>
+      </div>
+      <div class="footer-secondary">
+        <p class="footer-meta">
+          Regional Crops: <strong>Tomato</strong> &bull; <strong>Grape</strong> &bull; <strong>Chilli</strong> &bull; <strong>Sugarcane</strong>
+        </p>
+        <p class="footer-copy">
+          Research Project by Sohail Shaikh &bull; MSc Research Prototype &bull; Designed for Agri-Tech Computer Vision in Maharashtra
+        </p>
+      </div>
     </div>
   </footer>
 
-  <!-- Main JS -->
+  <!-- Global Scripts -->
   <script src="{{ url_for('static', filename='js/main.js') }}"></script>
   {% block extra_scripts %}{% endblock %}
 </body>

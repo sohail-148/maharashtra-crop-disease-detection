@@ -1,138 +1,231 @@
 {% extends "base.html" %}
 
-{% block title %}Analyse Leaf — Crop Disease Detection{% endblock %}
+{% block title %}AI-Powered Crop Disease Analysis — Maharashtra AgriVision{% endblock %}
 
 {% block content %}
-<div class="page-hero">
-  <h1 class="page-hero__title">Leaf Disease Analyser</h1>
-  <p class="page-hero__sub">
-    Select a crop, then upload or capture a leaf image to identify the disease.
-  </p>
-</div>
-
 <div class="container">
+
+  <!-- ============================================================ -->
+  <!-- Hero Section                                                 -->
+  <!-- ============================================================ -->
+  <section class="hero-section" aria-labelledby="hero-title">
+    <div class="hero-badge">
+      <span class="hero-badge__dot" aria-hidden="true"></span>
+      <span>Maharashtra Agricultural AI Diagnostics</span>
+    </div>
+    <h1 id="hero-title" class="hero-title">AI-Powered Crop Disease Analysis</h1>
+    <p class="hero-subtitle">
+      Upload a leaf image and let the model analyze visual disease patterns.
+    </p>
+
+    <!-- Statistics / Highlights Badges -->
+    <div class="hero-stats" role="list" aria-label="System Capabilities">
+      <div class="stat-pill" role="listitem">
+        <span class="stat-pill__icon" aria-hidden="true">🌿</span>
+        <span class="stat-pill__value">4 Crops</span>
+      </div>
+      <div class="stat-pill" role="listitem">
+        <span class="stat-pill__icon" aria-hidden="true">🔬</span>
+        <span class="stat-pill__value">33 Disease Classes</span>
+      </div>
+      <div class="stat-pill" role="listitem">
+        <span class="stat-pill__icon" aria-hidden="true">⚡</span>
+        <span class="stat-pill__value">MobileNetV2</span>
+      </div>
+      <div class="stat-pill" role="listitem">
+        <span class="stat-pill__icon" aria-hidden="true">🔍</span>
+        <span class="stat-pill__value">Grad-CAM XAI</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- Analysis Workflow Form                                       -->
+  <!-- ============================================================ -->
   <form id="analyseForm"
         action="{{ url_for('main.predict') }}"
         method="POST"
         enctype="multipart/form-data"
         novalidate>
 
-    <!-- ============================================================ -->
-    <!-- Step 1 — Crop selection                                       -->
-    <!-- ============================================================ -->
-    <section class="card" aria-labelledby="step1-heading">
+    <!-- ---------------------------------------------------------- -->
+    <!-- Step 1 — Select Target Crop                                 -->
+    <!-- ---------------------------------------------------------- -->
+    <section class="card flow-card" aria-labelledby="step1-heading">
       <div class="card__header">
-        <span class="step-badge" aria-hidden="true">1</span>
-        <h2 id="step1-heading" class="card__title">Select Crop</h2>
+        <div class="step-indicator" aria-hidden="true">1</div>
+        <div>
+          <h2 id="step1-heading" class="card__title">Select Target Crop</h2>
+          <p class="card__subtitle">Choose the crop species matching your leaf sample</p>
+        </div>
       </div>
       <div class="card__body">
         <div class="crop-grid" role="radiogroup" aria-label="Select crop">
           {% for exp_id, info in crops.items() %}
           <label class="crop-card {% if not model_status[exp_id] %}crop-card--pending{% endif %}"
                  for="crop_{{ exp_id }}"
-                 title="{{ 'Model ready' if model_status[exp_id] else 'Model training in progress' }}">
+                 title="{{ 'Model ready for analysis' if model_status[exp_id] else 'Model training pending' }}">
             <input type="radio" id="crop_{{ exp_id }}"
                    name="experiment" value="{{ exp_id }}"
                    class="crop-card__input"
                    {% if loop.first %}checked{% endif %}
                    required />
-            <span class="crop-card__icon" aria-hidden="true">
-              {{ crop_icons[exp_id] }}
-            </span>
-            <span class="crop-card__name">{{ info.crop }}</span>
-            <span class="crop-card__exp">{{ info.display_code }}</span>
-            {% if not model_status[exp_id] %}
-            <span class="crop-card__badge">Training&hellip;</span>
-            {% else %}
-            <span class="crop-card__badge crop-card__badge--ready">Ready</span>
-            {% endif %}
+
+            <!-- Subtle Real Crop/Fruit Accent Photography -->
+            <div class="crop-card__bg-photo" aria-hidden="true"
+                 style="background-image: url('{{ url_for('static', filename='img/crops/' ~ exp_id|lower ~ '.png') }}');"></div>
+
+            <div class="crop-card__check-icon" aria-hidden="true">✓</div>
+
+            <div class="crop-card__icon-wrapper" aria-hidden="true">
+              <span class="crop-card__icon">{{ crop_icons[exp_id] }}</span>
+            </div>
+
+            <div class="crop-card__content">
+              <h3 class="crop-card__name">{{ info.crop }}</h3>
+              <p class="crop-card__classes">{{ info.display_code }}</p>
+            </div>
+
+            <div class="crop-card__footer">
+              {% if model_status[exp_id] %}
+              <span class="status-chip status-chip--ready">
+                <span class="status-chip__dot" aria-hidden="true"></span>
+                Ready
+              </span>
+              {% else %}
+              <span class="status-chip status-chip--pending">
+                <span class="status-chip__dot" aria-hidden="true"></span>
+                Training&hellip;
+              </span>
+              {% endif %}
+            </div>
           </label>
           {% endfor %}
         </div>
       </div>
     </section>
 
-    <!-- ============================================================ -->
-    <!-- Step 2 — Image input                                          -->
-    <!-- ============================================================ -->
-    <section class="card" aria-labelledby="step2-heading">
+    <!-- ---------------------------------------------------------- -->
+    <!-- Step 2 — Upload or Capture Foliage Image                    -->
+    <!-- ---------------------------------------------------------- -->
+    <section class="card flow-card" aria-labelledby="step2-heading">
       <div class="card__header">
-        <span class="step-badge" aria-hidden="true">2</span>
-        <h2 id="step2-heading" class="card__title">Provide Leaf Image</h2>
+        <div class="step-indicator" aria-hidden="true">2</div>
+        <div>
+          <h2 id="step2-heading" class="card__title">Provide Leaf Image</h2>
+          <p class="card__subtitle">Upload a focused photograph of the affected foliage or use live camera</p>
+        </div>
       </div>
       <div class="card__body">
 
-        <!-- Tab switcher -->
-        <div class="tab-bar" role="tablist" aria-label="Image input method">
-          <button type="button" class="tab tab--active" role="tab"
-                  id="tab-upload" aria-selected="true" aria-controls="panel-upload">
-            📁&nbsp; Upload File
-          </button>
-          <button type="button" class="tab" role="tab"
-                  id="tab-camera" aria-selected="false" aria-controls="panel-camera">
-            📷&nbsp; Use Camera
-          </button>
+        <!-- Input Tab Switcher -->
+        <div class="tab-bar-container">
+          <div class="tab-bar" role="tablist" aria-label="Image input method">
+            <button type="button" class="tab tab--active" role="tab"
+                    id="tab-upload" aria-selected="true" aria-controls="panel-upload">
+              <svg class="tab-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+              <span>Upload Image File</span>
+            </button>
+            <button type="button" class="tab" role="tab"
+                    id="tab-camera" aria-selected="false" aria-controls="panel-camera">
+              <svg class="tab-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
+              <span>Live Camera Capture</span>
+            </button>
+          </div>
         </div>
 
-        <!-- Upload panel -->
+        <!-- Panel 1: File Upload / Drag-and-Drop Dropzone -->
         <div id="panel-upload" role="tabpanel" aria-labelledby="tab-upload"
              class="tab-panel tab-panel--active">
           <div class="dropzone" id="dropzone"
                role="button" tabindex="0"
-               aria-label="Drop image here or click to browse">
+               aria-label="Drop image here or click to browse files">
             <input type="file" id="fileInput" name="image"
                    accept=".jpg,.jpeg,.png,.bmp,.webp"
                    class="dropzone__input" aria-hidden="true" />
+
+            <!-- Idle / Prompt State -->
             <div class="dropzone__prompt" id="dropzonePrompt">
-              <span class="dropzone__icon" aria-hidden="true">🖼️</span>
-              <p class="dropzone__text">Drag &amp; drop a leaf image here</p>
-              <p class="dropzone__subtext">or click to browse</p>
-              <p class="dropzone__formats">JPG &bull; PNG &bull; BMP &bull; WEBP &bull; max 10 MB</p>
+              <div class="dropzone__icon-circle" aria-hidden="true">
+                <svg class="dropzone__svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                  <polyline points="17 8 12 3 7 8"/>
+                  <line x1="12" y1="3" x2="12" y2="15"/>
+                </svg>
+              </div>
+              <p class="dropzone__primary-text">
+                <span class="text-strong">Drag and drop your leaf image here</span>, or
+                <span class="dropzone__browse-btn">Browse Files</span>
+              </p>
+              <p class="dropzone__subtext">
+                Supported formats: <strong>JPG, PNG, BMP, WEBP</strong> (Max 10 MB)
+              </p>
+              <div class="dropzone__guidance">
+                <span class="guidance-tag">🌿 Focused on leaf surface</span>
+                <span class="guidance-tag">💡 Natural illumination</span>
+              </div>
             </div>
-            <!-- Preview shown after selection -->
+
+            <!-- Preview State (Shown when image selected) -->
             <div class="dropzone__preview" id="dropzonePreview" hidden>
-              <img id="previewImg" src="" alt="Selected leaf image preview" />
-              <button type="button" class="preview-remove"
-                      id="removeImage" aria-label="Remove selected image">
-                &times;
-              </button>
+              <div class="preview-status-badge">
+                <span class="status-indicator-dot" aria-hidden="true"></span>
+                <span>Image ready for analysis</span>
+              </div>
+              <div class="preview-frame">
+                <img id="previewImg" src="" alt="Selected leaf image preview" />
+                <button type="button" class="preview-remove"
+                        id="removeImage" aria-label="Remove selected image" title="Remove selected image">
+                  &times;
+                </button>
+              </div>
               <p id="previewFilename" class="preview-filename"></p>
             </div>
           </div>
         </div>
 
-        <!-- Camera panel -->
+        <!-- Panel 2: Live Mobile / Webcam Capture -->
         <div id="panel-camera" role="tabpanel" aria-labelledby="tab-camera"
              class="tab-panel" hidden>
           <div class="camera-wrapper">
-            <video id="cameraFeed" class="camera-feed"
-                   autoplay playsinline muted
-                   aria-label="Live camera feed"></video>
-            <canvas id="cameraCanvas" class="camera-canvas" hidden
-                    aria-hidden="true"></canvas>
+            <div class="camera-feed-container">
+              <video id="cameraFeed" class="camera-feed"
+                     autoplay playsinline muted
+                     aria-label="Live camera viewfinder"></video>
+              <canvas id="cameraCanvas" class="camera-canvas" hidden
+                      aria-hidden="true"></canvas>
 
-            <!-- Camera capture preview -->
-            <div class="camera-capture-preview" id="capturePreview" hidden>
-              <img id="capturedImg" src="" alt="Captured leaf image preview" />
-              <button type="button" class="btn btn--secondary btn--sm"
-                      id="retakeBtn">Retake</button>
+              <!-- Captured Frame Preview -->
+              <div class="camera-capture-preview" id="capturePreview" hidden>
+                <img id="capturedImg" src="" alt="Captured leaf image preview" />
+                <div class="capture-overlay-badge">
+                  <span class="status-indicator-dot" aria-hidden="true"></span>
+                  Captured Leaf Frame
+                </div>
+              </div>
             </div>
 
             <div class="camera-controls">
-              <button type="button" class="btn btn--primary" id="startCameraBtn">
-                Start Camera
+              <button type="button" class="btn btn--outline" id="startCameraBtn">
+                <span aria-hidden="true">📷</span>
+                <span>Start Camera</span>
               </button>
-              <button type="button" class="btn btn--success" id="captureBtn"
+              <button type="button" class="btn btn--primary" id="captureBtn"
                       disabled aria-disabled="true">
-                Capture
+                <span aria-hidden="true">📸</span>
+                <span>Capture Photo</span>
+              </button>
+              <button type="button" class="btn btn--secondary" id="retakeBtn" hidden>
+                <span aria-hidden="true">🔄</span>
+                <span>Retake</span>
               </button>
             </div>
 
             <p class="camera-hint" id="cameraHint">
-              Camera requires browser permission. Works in Chrome, Firefox, Safari.
+              Camera access requires browser permission. Optimized for mobile smartphone rear cameras.
             </p>
 
-            <!-- Hidden input receives base64 capture -->
+            <!-- Hidden input stores base64 JPEG from camera -->
             <input type="hidden" name="camera_image" id="cameraImageData" />
           </div>
         </div>
@@ -140,14 +233,20 @@
       </div><!-- /.card__body -->
     </section>
 
-    <!-- ============================================================ -->
-    <!-- Step 3 — Submit                                               -->
-    <!-- ============================================================ -->
-    <div class="submit-row">
-      <button type="submit" class="btn btn--analyse" id="analyseBtn">
-        <span class="btn__icon" aria-hidden="true">🔬</span>
-        Analyse Leaf
-      </button>
+    <!-- ---------------------------------------------------------- -->
+    <!-- Step 3 — Submit Action                                      -->
+    <!-- ---------------------------------------------------------- -->
+    <div class="submit-action-card">
+      <div class="submit-info">
+        <span class="submit-info-icon" aria-hidden="true">⚡</span>
+        <span>Neural network inference runs locally in sub-second latency with Grad-CAM attention overlay.</span>
+      </div>
+      <div class="submit-btn-wrap">
+        <button type="submit" class="btn btn--analyse" id="analyseBtn">
+          <span class="btn__icon" aria-hidden="true">🔬</span>
+          <span class="btn__text">Analyse Leaf Disease</span>
+        </button>
+      </div>
     </div>
 
   </form><!-- /#analyseForm -->

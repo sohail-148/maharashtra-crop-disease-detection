@@ -1,131 +1,234 @@
 {% extends "base.html" %}
 
-{% block title %}Prediction History — Crop Disease Detection{% endblock %}
+{% block title %}Prediction History ({{ total }} Records) — Crop Disease AI{% endblock %}
 
 {% block content %}
 <div class="container">
 
-  <div class="page-header">
-    <h1 class="page-header__title">Prediction History</h1>
-    <p class="page-header__sub">
-      {{ total }} record{{ 's' if total != 1 else '' }} stored
-    </p>
-  </div>
+  <!-- ============================================================ -->
+  <!-- Page Header                                                   -->
+  <!-- ============================================================ -->
+  <header class="page-header page-header--history">
+    <div class="page-header__left">
+      <h1 class="page-header__title">Prediction History</h1>
+      <p class="page-header__sub">
+        Comprehensive audit log of neural network diagnoses and foliar attributions
+      </p>
+    </div>
+    <div class="page-header__right">
+      <div class="record-counter-badge">
+        <span class="record-counter-badge__count">{{ total }}</span>
+        <span class="record-counter-badge__label">Total Records</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============================================================ -->
+  <!-- Summary Stat Cards (4 Compact Metric Cards)                  -->
+  <!-- ============================================================ -->
+  <section class="summary-cards-grid" aria-label="History Overview Summary">
+    <div class="card summary-stat-card">
+      <div class="summary-stat-card__icon" aria-hidden="true">📊</div>
+      <div class="summary-stat-card__content">
+        <span class="summary-stat-card__value">{{ total }}</span>
+        <span class="summary-stat-card__label">Logged Inferences</span>
+      </div>
+    </div>
+
+    <div class="card summary-stat-card">
+      <div class="summary-stat-card__icon" aria-hidden="true">🌿</div>
+      <div class="summary-stat-card__content">
+        <span class="summary-stat-card__value">4 Crops</span>
+        <span class="summary-stat-card__label">Tomato &bull; Grape &bull; Chilli &bull; Cane</span>
+      </div>
+    </div>
+
+    <div class="card summary-stat-card">
+      <div class="summary-stat-card__icon" aria-hidden="true">⚡</div>
+      <div class="summary-stat-card__content">
+        <span class="summary-stat-card__value">MobileNetV2</span>
+        <span class="summary-stat-card__label">Transfer Learning Core</span>
+      </div>
+    </div>
+
+    <div class="card summary-stat-card">
+      <div class="summary-stat-card__icon" aria-hidden="true">🛡️</div>
+      <div class="summary-stat-card__content">
+        <span class="summary-stat-card__value">SQLite3</span>
+        <span class="summary-stat-card__label">Audit Trail Storage</span>
+      </div>
+    </div>
+  </section>
 
   {% if rows %}
+  <!-- ============================================================ -->
+  <!-- Prediction Records Table                                     -->
+  <!-- ============================================================ -->
+  <section class="card table-card" aria-labelledby="history-table-heading">
+    <div class="card__header">
+      <h2 id="history-table-heading" class="card__title">Inference Audit Trail</h2>
+      <span class="card__meta">Showing page {{ page }} of {{ total_pages }}</span>
+    </div>
+
+    <div class="table-wrapper">
+      <table class="history-table" aria-label="Recorded Crop Disease Predictions">
+        <thead>
+          <tr>
+            <th scope="col" class="col-id">#ID</th>
+            <th scope="col" class="col-time">Date &amp; Time</th>
+            <th scope="col" class="col-crop">Crop</th>
+            <th scope="col" class="col-model">Specialist Key</th>
+            <th scope="col" class="col-disease">Diagnosed Condition</th>
+            <th scope="col" class="col-conf">Confidence</th>
+            <th scope="col" class="col-thumb">Specimen</th>
+            <th scope="col" class="col-actions"><span class="sr-only">Actions</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for row in rows %}
+          <tr class="history-row {% if row['is_placeholder'] %}history-row--placeholder{% endif %}">
+
+            <!-- ID -->
+            <td class="cell-id">
+              <span class="id-badge">#{{ row['id'] }}</span>
+            </td>
+
+            <!-- Timestamp -->
+            <td class="cell-time">
+              <time datetime="{{ row['created_at'] }}" class="timestamp">
+                {{ row['created_at'] | replace('T', ' ') }}
+              </time>
+            </td>
+
+            <!-- Crop -->
+            <td class="cell-crop">
+              <span class="crop-badge-compact">
+                <span class="crop-badge-compact__icon" aria-hidden="true">
+                  {{ crop_icons.get(row['experiment'], '🌿') }}
+                </span>
+                <span class="crop-badge-compact__name">{{ row['crop'] }}</span>
+              </span>
+            </td>
+
+            <!-- Model Key -->
+            <td class="cell-model">
+              <span class="exp-badge">{{ row['experiment'] }}</span>
+            </td>
+
+            <!-- Predicted Condition -->
+            <td class="cell-disease">
+              {% if row['is_placeholder'] %}
+                <span class="tag tag--pending">
+                  <span class="tag-dot" aria-hidden="true"></span>
+                  Model Pending
+                </span>
+              {% else %}
+                <span class="disease-name">{{ row['disease'] }}</span>
+              {% endif %}
+            </td>
+
+            <!-- Confidence -->
+            <td class="cell-conf">
+              {% if row['is_placeholder'] %}
+                <span class="conf-pill conf-pill--na">N/A</span>
+              {% else %}
+                {% set conf_val = row['confidence'] %}
+                <span class="conf-pill {% if conf_val >= 0.8 %}conf-pill--high{% elif conf_val >= 0.5 %}conf-pill--medium{% else %}conf-pill--low{% endif %}">
+                  <span class="conf-pill__dot" aria-hidden="true"></span>
+                  {{ "%.1f%%" | format(conf_val * 100) }}
+                </span>
+              {% endif %}
+            </td>
+
+            <!-- Specimen Thumbnail -->
+            <td class="cell-thumb">
+              {% if row['image_path'] %}
+              <a href="{{ url_for('static', filename=row['image_path']) }}"
+                 target="_blank" rel="noopener"
+                 class="thumb-link"
+                 title="View full-size specimen for prediction #{{ row['id'] }}"
+                 aria-label="View uploaded image for prediction {{ row['id'] }}">
+                <img src="{{ url_for('static', filename=row['image_path']) }}"
+                     alt="Specimen thumbnail for prediction {{ row['id'] }}"
+                     class="history-thumb__img"
+                     loading="lazy" />
+              </a>
+              {% else %}
+              <span class="no-thumb">—</span>
+              {% endif %}
+            </td>
+
+            <!-- Actions (Individual Delete ONLY) -->
+            <td class="cell-actions">
+              <form method="POST"
+                    action="{{ url_for('main.delete_prediction', pred_id=row['id']) }}"
+                    onsubmit="return confirm('Delete prediction record #{{ row['id'] }}?')">
+                <button type="submit"
+                        class="btn-icon-danger"
+                        title="Delete record #{{ row['id'] }}"
+                        aria-label="Delete prediction {{ row['id'] }}">
+                  <span aria-hidden="true">🗑️</span>
+                </button>
+              </form>
+            </td>
+
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div><!-- /.table-wrapper -->
+  </section>
 
   <!-- ============================================================ -->
-  <!-- History table                                                  -->
-  <!-- ============================================================ -->
-  <div class="table-wrapper">
-    <table class="history-table" aria-label="Prediction history">
-      <thead>
-        <tr>
-          <th scope="col">#</th>
-          <th scope="col">Date / Time</th>
-          <th scope="col">Crop</th>
-          <th scope="col">Model</th>
-          <th scope="col">Predicted Disease</th>
-          <th scope="col">Confidence</th>
-          <th scope="col">Image</th>
-          <th scope="col"><span class="sr-only">Actions</span></th>
-        </tr>
-      </thead>
-      <tbody>
-        {% for row in rows %}
-        <tr class="{% if row['is_placeholder'] %}history-row--placeholder{% endif %}">
-          <td class="history-id">{{ row['id'] }}</td>
-          <td class="history-date">
-            <time datetime="{{ row['created_at'] }}">
-              {{ row['created_at'] | replace('T', ' ') }}
-            </time>
-          </td>
-          <td>{{ row['crop'] }}</td>
-          <td>
-            <span class="exp-badge">{{ row['experiment'] }}</span>
-          </td>
-          <td>
-            {% if row['is_placeholder'] %}
-            <span class="tag tag--pending">Pending model</span>
-            {% else %}
-            {{ row['disease'] }}
-            {% endif %}
-          </td>
-          <td class="history-conf">
-            {% if row['is_placeholder'] %}
-            <span class="conf-na">N/A</span>
-            {% else %}
-            {{ "%.1f%%" | format(row['confidence'] * 100) }}
-            {% endif %}
-          </td>
-          <td class="history-thumb">
-            {% if row['image_path'] %}
-            <a href="{{ url_for('static', filename=row['image_path']) }}"
-               target="_blank" rel="noopener"
-               aria-label="View uploaded image for prediction {{ row['id'] }}">
-              <img src="{{ url_for('static', filename=row['image_path']) }}"
-                   alt="Thumbnail for prediction {{ row['id'] }}"
-                   class="history-thumb__img"
-                   loading="lazy" />
-            </a>
-            {% else %}
-            <span class="no-image">—</span>
-            {% endif %}
-          </td>
-          <td class="history-actions">
-            <form method="POST"
-                  action="{{ url_for('main.delete_prediction', pred_id=row['id']) }}"
-                  onsubmit="return confirm('Delete prediction #{{ row['id'] }}?')">
-              <button type="submit"
-                      class="btn btn--danger btn--xs"
-                      aria-label="Delete prediction {{ row['id'] }}">
-                Delete
-              </button>
-            </form>
-          </td>
-        </tr>
-        {% endfor %}
-      </tbody>
-    </table>
-  </div><!-- /.table-wrapper -->
-
-  <!-- ============================================================ -->
-  <!-- Pagination                                                     -->
+  <!-- Modern Pagination Controls                                    -->
   <!-- ============================================================ -->
   {% if total_pages > 1 %}
-  <nav class="pagination" aria-label="History pagination">
-    {% if page > 1 %}
-    <a href="{{ url_for('main.history', page=page-1) }}"
-       class="pagination__link" aria-label="Previous page">
-      &larr; Previous
-    </a>
-    {% endif %}
+  <nav class="pagination-bar" aria-label="History pages navigation">
+    <div class="pagination-inner">
+      {% if page > 1 %}
+      <a href="{{ url_for('main.history', page=page-1) }}"
+         class="btn btn--outline btn--sm pagination__btn"
+         aria-label="Navigate to previous page">
+        &larr; Previous
+      </a>
+      {% else %}
+      <span class="btn btn--outline btn--sm pagination__btn disabled" aria-disabled="true">
+        &larr; Previous
+      </span>
+      {% endif %}
 
-    <span class="pagination__info">
-      Page {{ page }} of {{ total_pages }}
-    </span>
+      <span class="pagination__status">
+        Page <strong>{{ page }}</strong> of <strong>{{ total_pages }}</strong>
+      </span>
 
-    {% if page < total_pages %}
-    <a href="{{ url_for('main.history', page=page+1) }}"
-       class="pagination__link" aria-label="Next page">
-      Next &rarr;
-    </a>
-    {% endif %}
+      {% if page < total_pages %}
+      <a href="{{ url_for('main.history', page=page+1) }}"
+         class="btn btn--outline btn--sm pagination__btn"
+         aria-label="Navigate to next page">
+        Next &rarr;
+      </a>
+      {% else %}
+      <span class="btn btn--outline btn--sm pagination__btn disabled" aria-disabled="true">
+        Next &rarr;
+      </span>
+      {% endif %}
+    </div>
   </nav>
   {% endif %}
 
   {% else %}
-  <!-- Empty state -->
-  <div class="empty-state" role="status">
-    <span class="empty-state__icon" aria-hidden="true">📭</span>
-    <h2 class="empty-state__title">No predictions yet</h2>
+  <!-- Empty State Display -->
+  <section class="card empty-state-card" role="status">
+    <div class="empty-state__icon" aria-hidden="true">📭</div>
+    <h2 class="empty-state__title">No Prediction Records Found</h2>
     <p class="empty-state__text">
-      Upload a leaf image on the Analyse page to get started.
+      No foliar disease evaluations have been logged yet. Upload or capture a leaf photograph on the Analyser page to start the audit trail.
     </p>
-    <a href="{{ url_for('main.index') }}" class="btn btn--primary">
-      Go to Analyser
+    <a href="{{ url_for('main.index') }}" class="btn btn--primary btn--lg">
+      <span aria-hidden="true">🔬</span>
+      <span>Go to Disease Analyser</span>
     </a>
-  </div>
+  </section>
   {% endif %}
 
 </div><!-- /.container -->

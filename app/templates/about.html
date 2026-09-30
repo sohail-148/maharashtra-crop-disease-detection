@@ -1,80 +1,220 @@
 {% extends "base.html" %}
 
-{% block title %}About — Crop Disease Detection{% endblock %}
+{% block title %}About — Image-Based Disease Detection of Maharashtra-Relevant Crops{% endblock %}
 
 {% block content %}
-<div class="container container--narrow">
+<div class="container container--about">
 
-  <div class="page-header">
-    <h1 class="page-header__title">About This Project</h1>
+  <!-- ============================================================ -->
+  <!-- Project Overview Header                                       -->
+  <!-- ============================================================ -->
+  <header class="about-hero-card">
+    <div class="hero-badge">
+      <span class="hero-badge__dot" aria-hidden="true"></span>
+      <span>MSc Research Project Overview</span>
+    </div>
+    <h1 class="about-hero-title">Image-Based Disease Detection of Maharashtra-Relevant Crops</h1>
+    <p class="about-hero-subtitle">
+      A Deep Learning Web Application with Real-World Robustness Analysis
+    </p>
+    <div class="about-hero-meta">
+      <span class="meta-tag">🌿 Maharashtra Agro-Climatic Focus</span>
+      <span class="meta-tag">⚡ Edge-Ready Lightweight CNN</span>
+      <span class="meta-tag">🔍 Explainable AI Architecture</span>
+    </div>
+  </header>
+
+  <!-- ============================================================ -->
+  <!-- Research Prototype Advisory Notice                            -->
+  <!-- ============================================================ -->
+  <div class="notice-card" role="region" aria-label="Research Prototype Notice">
+    <div class="notice-card__icon" aria-hidden="true">🛡️</div>
+    <div class="notice-card__content">
+      <h2 class="notice-card__title">Academic Research Prototype</h2>
+      <p class="notice-card__text">
+        This application is an academic research platform engineered to evaluate transfer learning, real-world domain generalization gaps, and out-of-distribution robustness across agricultural vision benchmarks. While models achieve high diagnostic accuracy on validated corpora, automated outputs should be verified in consultation with qualified agricultural extension officers before applying on-field chemical or cultural treatments.
+      </p>
+    </div>
   </div>
 
-  <div class="prose">
-    <h2>Image-Based Disease Detection of Maharashtra-Relevant Crops</h2>
-    <p>
-      This web application is the deployment layer of a research project that
-      uses <strong>MobileNetV2 transfer learning</strong> to classify leaf
-      diseases across four Maharashtra-relevant crops.
-    </p>
+  <!-- ============================================================ -->
+  <!-- Core Features Grid (4 Feature Cards)                          -->
+  <!-- ============================================================ -->
+  <section class="features-section" aria-labelledby="features-heading">
+    <div class="section-header">
+      <span class="section-tag" aria-hidden="true">ARCHITECTURAL HIGHLIGHTS</span>
+      <h2 id="features-heading" class="section-title">Core System Capabilities</h2>
+    </div>
 
-    <h3>Crops Covered (4 Unified Production Models)</h3>
-    <ul>
-      <li><strong>Tomato</strong> — 10 disease classes (PlantVillage dataset: 14,529 images)</li>
-      <li><strong>Grape</strong> — 7 canonical disease classes (Unified Niphad + Mendeley 2024 datasets: 6,203 images)</li>
-      <li><strong>Chilli</strong> — 5 disease classes (COLD 2024 dataset: 1,932 images)</li>
-      <li><strong>Sugarcane</strong> — 11 canonical disease classes (Unified Maharashtra + Large datasets: 8,926 images)</li>
-    </ul>
+    <div class="features-grid">
+      <!-- Feature 1: 4 Crop Models -->
+      <div class="card feature-card">
+        <div class="feature-card__icon-wrapper" aria-hidden="true">🌿</div>
+        <h3 class="feature-card__title">4 Crop Specialists</h3>
+        <p class="feature-card__text">
+          Targeted production classifiers for <strong>Tomato</strong>, <strong>Grape</strong>, <strong>Chilli</strong>, and <strong>Sugarcane</strong>—four cash crops forming the backbone of agricultural production in Western Maharashtra, Vidarbha, and Marathwada.
+        </p>
+      </div>
 
-    <h3>Technology</h3>
-    <ul>
-      <li><strong>Model:</strong> MobileNetV2 pretrained on ImageNet, frozen base with a lightweight classification head</li>
-      <li><strong>Training:</strong> TensorFlow 2.18 / Keras 3.15, 70/15/15 stratified split</li>
-      <li><strong>Backend:</strong> Flask 3.1</li>
-      <li><strong>Database:</strong> SQLite (prediction history)</li>
-      <li><strong>Explainability:</strong> Grad-CAM (Phase 12 — coming)</li>
-    </ul>
+      <!-- Feature 2: 33 Disease Classes -->
+      <div class="card feature-card">
+        <div class="feature-card__icon-wrapper" aria-hidden="true">🔬</div>
+        <h3 class="feature-card__title">33 Pathological Classes</h3>
+        <p class="feature-card__text">
+          Comprehensive diagnostic taxonomy identifying fungal blights, viral complexes (e.g. TYLCV, Chilli Murda), rusts, smuts, vascular rots, and asymptomatic healthy leaves across <strong>31,590</strong> verified images.
+        </p>
+      </div>
 
-    <h3>Model Status</h3>
-    <table class="about-status-table" aria-label="Model training status">
-      <thead>
-        <tr>
-          <th>Crop Key</th>
-          <th>Crop</th>
-          <th>Classes</th>
-          <th>Status</th>
-        </tr>
-      </thead>
-      <tbody>
-        {% for exp_id, info in crops.items() %}
-        <tr>
-          <td><span class="exp-badge">{{ exp_id }}</span></td>
-          <td>{{ info.crop }}</td>
-          <td>{{ info.classes | length }}</td>
-          <td>
-            {% if model_status[exp_id] %}
-            <span class="tag tag--ready">✓ Ready</span>
-            {% else %}
-            <span class="tag tag--pending">⏳ Training pending</span>
-            {% endif %}
-          </td>
-        </tr>
-        {% endfor %}
-      </tbody>
-    </table>
+      <!-- Feature 3: MobileNetV2 Architecture -->
+      <div class="card feature-card">
+        <div class="feature-card__icon-wrapper" aria-hidden="true">⚡</div>
+        <h3 class="feature-card__title">MobileNetV2 Backbone</h3>
+        <p class="feature-card__text">
+          Lightweight inverted residual bottleneck architecture ($<3.0\text{M}$ parameters) initialized with ImageNet weights. Optimized for sub-second inference latency on standard mobile and edge devices.
+        </p>
+      </div>
 
-    <h3>Dataset Total</h3>
-    <p>
-      31,590 verified images across 4 unified crop models and 33 canonical disease/health classes.
-    </p>
+      <!-- Feature 4: Grad-CAM Explainable AI -->
+      <div class="card feature-card">
+        <div class="feature-card__icon-wrapper" aria-hidden="true">🧠</div>
+        <h3 class="feature-card__title">Grad-CAM Explainable AI</h3>
+        <p class="feature-card__text">
+          Runtime Gradient-Weighted Class Activation Mapping (Grad-CAM) computes gradient flows to highlight the specific anatomical foliar lesions driving diagnostic classification, establishing model interpretability.
+        </p>
+      </div>
+    </div>
+  </section>
 
-    <h3>Research Context</h3>
-    <p>
-      The project investigates how effectively a lightweight MobileNetV2
-      framework classifies diseases across multiple Maharashtra-relevant crop
-      datasets, with class-level evaluation and error analysis to understand
-      per-disease performance.
-    </p>
-  </div>
+  <!-- ============================================================ -->
+  <!-- Model Registry & Dataset Specifications                       -->
+  <!-- ============================================================ -->
+  <section class="card dataset-card" aria-labelledby="models-heading">
+    <div class="card__header">
+      <span class="step-indicator" aria-hidden="true">📋</span>
+      <div>
+        <h2 id="models-heading" class="card__title">Crop Model Registry &amp; Training Corpora</h2>
+        <p class="card__subtitle">Summary of unified datasets, classes, and operational readiness</p>
+      </div>
+    </div>
+    <div class="card__body">
+      <div class="table-wrapper">
+        <table class="about-status-table" aria-label="Crop Model Registry Specifications">
+          <thead>
+            <tr>
+              <th scope="col">Model Key</th>
+              <th scope="col">Target Crop</th>
+              <th scope="col">Canonical Classes</th>
+              <th scope="col">Dataset Sourcing</th>
+              <th scope="col">Image Volume</th>
+              <th scope="col">Operational Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><span class="exp-badge">TOMATO</span></td>
+              <td><strong>Tomato</strong></td>
+              <td>10 Classes</td>
+              <td>PlantVillage Tomato Subset</td>
+              <td>14,529 images</td>
+              <td>
+                <span class="status-chip status-chip--ready">
+                  <span class="status-chip__dot" aria-hidden="true"></span>
+                  Ready
+                </span>
+              </td>
+            </tr>
+            <tr>
+              <td><span class="exp-badge">GRAPE</span></td>
+              <td><strong>Grape</strong></td>
+              <td>7 Classes</td>
+              <td>Unified Niphad + Mendeley 2024</td>
+              <td>6,203 images</td>
+              <td>
+                <span class="status-chip status-chip--ready">
+                  <span class="status-chip__dot" aria-hidden="true"></span>
+                  Ready
+                </span>
+              </td>
+            </tr>
+            <tr>
+              <td><span class="exp-badge">CHILLI</span></td>
+              <td><strong>Chilli</strong></td>
+              <td>5 Classes</td>
+              <td>COLD 2024 Krishna Basin</td>
+              <td>1,932 images</td>
+              <td>
+                <span class="status-chip status-chip--ready">
+                  <span class="status-chip__dot" aria-hidden="true"></span>
+                  Ready
+                </span>
+              </td>
+            </tr>
+            <tr>
+              <td><span class="exp-badge">SUGARCANE</span></td>
+              <td><strong>Sugarcane</strong></td>
+              <td>11 Classes</td>
+              <td>Unified Maharashtra Regional + Large</td>
+              <td>8,926 images</td>
+              <td>
+                <span class="status-chip status-chip--ready">
+                  <span class="status-chip__dot" aria-hidden="true"></span>
+                  Ready
+                </span>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- Technology Stack Grid                                         -->
+  <!-- ============================================================ -->
+  <section class="card tech-card" aria-labelledby="tech-heading">
+    <div class="card__header">
+      <span class="step-indicator" aria-hidden="true">⚙️</span>
+      <div>
+        <h2 id="tech-heading" class="card__title">Technology &amp; Engineering Stack</h2>
+        <p class="card__subtitle">Core computational libraries, frameworks, and deployment engines</p>
+      </div>
+    </div>
+    <div class="card__body">
+      <div class="tech-grid">
+        <div class="tech-item">
+          <div class="tech-item__icon" aria-hidden="true">🤖</div>
+          <div class="tech-item__details">
+            <h3 class="tech-item__name">Deep Learning &amp; Transfer Learning</h3>
+            <p class="tech-item__desc">TensorFlow 2.18 / Keras 3.x, MobileNetV2, ImageNet pretrained weights, stratified 70/15/15 train-val-test split.</p>
+          </div>
+        </div>
+
+        <div class="tech-item">
+          <div class="tech-item__icon" aria-hidden="true">🔍</div>
+          <div class="tech-item__details">
+            <h3 class="tech-item__name">Explainable AI (XAI)</h3>
+            <p class="tech-item__desc">Grad-CAM visual attribution computed via runtime tf.GradientTape backpropagation with Jet colormap overlay.</p>
+          </div>
+        </div>
+
+        <div class="tech-item">
+          <div class="tech-item__icon" aria-hidden="true">🌐</div>
+          <div class="tech-item__details">
+            <h3 class="tech-item__name">Web Application Backend</h3>
+            <p class="tech-item__desc">Flask 3.1 WSGI framework, RESTful prediction endpoints, structured error handlers, and lazy model caching.</p>
+          </div>
+        </div>
+
+        <div class="tech-item">
+          <div class="tech-item__icon" aria-hidden="true">💾</div>
+          <div class="tech-item__details">
+            <h3 class="tech-item__name">Data Pipeline &amp; Audit Storage</h3>
+            <p class="tech-item__desc">SQLite3 relational database for persistent inference history, Pillow (PIL 10.x) EXIF-aware image ingestion, and NumPy.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
 </div><!-- /.container -->
 {% endblock %}

@@ -1,20 +1,20 @@
 {% extends "base.html" %}
 
-{% block title %}Result — {{ result.crop }} — Crop Disease Detection{% endblock %}
+{% block title %}Analysis Result — {{ result.crop }} — Crop Disease AI{% endblock %}
 
 {% block content %}
 <div class="container">
 
   <!-- ============================================================ -->
-  <!-- Status banners                                                 -->
+  <!-- Status Banners                                                -->
   <!-- ============================================================ -->
   {% if result.is_placeholder %}
   <div class="banner banner--warning" role="alert">
     <span class="banner__icon" aria-hidden="true">⏳</span>
-    <div>
-      <strong>Model training in progress</strong>
-      <p>{{ result.message }}</p>
-      <p>This is a placeholder result. No real prediction was made.</p>
+    <div class="banner__content">
+      <h3 class="banner__title">Model Training In Progress</h3>
+      <p class="banner__text">{{ result.message }}</p>
+      <p class="banner__subtext">This is a simulated placeholder response. Real neural network evaluation will occur once the training weights are loaded.</p>
     </div>
   </div>
   {% endif %}
@@ -22,179 +22,267 @@
   {% if result.is_error %}
   <div class="banner banner--danger" role="alert">
     <span class="banner__icon" aria-hidden="true">⚠️</span>
-    <div>
-      <strong>Image Analysis Error</strong>
-      <p>{{ result.message }}</p>
+    <div class="banner__content">
+      <h3 class="banner__title">Image Processing Notice</h3>
+      <p class="banner__text">{{ result.message }}</p>
     </div>
   </div>
   {% endif %}
 
   <!-- ============================================================ -->
-  <!-- Result card                                                    -->
+  <!-- Page Header / Breadcrumb                                      -->
   <!-- ============================================================ -->
-  <div class="result-layout">
-
-    <!-- Left: uploaded image -->
-    <div class="result-image-col">
-      <div class="result-image-frame">
-        <img src="{{ url_for('static', filename=image_url) }}"
-             alt="Analysed leaf image"
-             class="result-image" />
-      </div>
-      <p class="result-image-caption">Uploaded image</p>
+  <header class="page-header page-header--result">
+    <div class="page-header__meta">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="{{ url_for('main.index') }}">Analyse</a>
+        <span class="breadcrumb-separator" aria-hidden="true">/</span>
+        <span aria-current="page">Diagnostic Result</span>
+      </nav>
+      <span class="status-chip status-chip--ready">
+        <span class="status-chip__dot" aria-hidden="true"></span>
+        Inference Complete
+      </span>
     </div>
+    <h1 class="page-header__title">Analysis Result</h1>
+  </header>
 
-    <!-- Right: prediction details -->
-    <div class="result-details-col">
+  <!-- ============================================================ -->
+  <!-- Focal Point: Primary Diagnosis & Confidence Card             -->
+  <!-- ============================================================ -->
+  <section class="card result-hero-card" aria-labelledby="diagnosis-heading">
+    <div class="result-hero-grid">
 
-      <div class="result-card">
-        <div class="result-card__row">
-          <span class="result-card__label">Crop</span>
-          <span class="result-card__value result-card__value--crop">
-            {{ result.crop }}
+      <!-- Left: Disease Identification -->
+      <div class="result-hero-primary">
+        <div class="result-hero-badges">
+          <span class="crop-tag">
+            <span class="crop-tag__icon" aria-hidden="true">{{ crop_icons.get(result.experiment, '🌿') }}</span>
+            <span>{{ result.crop }}</span>
+          </span>
+          <span class="model-tag">
+            <span>Model: {{ result.crop }} Specialist ({{ result.experiment }})</span>
           </span>
         </div>
 
-        <div class="result-card__row">
-          <span class="result-card__label">Model</span>
-          <span class="result-card__value">{{ result.crop }} Model ({{ result.experiment }})</span>
-        </div>
-
-        <div class="result-card__row">
-          <span class="result-card__label">Predicted Disease</span>
-          <span class="result-card__value result-card__value--disease
-                       {% if result.is_placeholder or result.is_error %}result-card__value--placeholder{% endif %}">
+        <div class="result-hero-disease">
+          <span class="result-hero-label" id="diagnosis-heading">Predicted Condition</span>
+          <h2 class="result-hero-title {% if result.is_placeholder or result.is_error %}result-hero-title--placeholder{% endif %}">
             {% if result.is_placeholder or result.is_error %}
-              —
+              — Prediction Unavailable —
             {% else %}
               {{ result.disease }}
             {% endif %}
-          </span>
+          </h2>
         </div>
-
-        <div class="result-card__row">
-          <span class="result-card__label">Confidence</span>
-          <div class="result-card__value">
-            {% if result.is_placeholder or result.is_error %}
-              <span class="confidence-na">N/A</span>
-            {% else %}
-              <span class="confidence-pct">{{ result.confidence_pct() }}</span>
-              <div class="confidence-bar" role="progressbar"
-                   aria-valuenow="{{ (result.confidence * 100) | int }}"
-                   aria-valuemin="0" aria-valuemax="100"
-                   aria-label="Confidence {{ result.confidence_pct() }}">
-                <div class="confidence-bar__fill
-                            {% if result.confidence >= 0.8 %}confidence-bar__fill--high
-                            {% elif result.confidence >= 0.5 %}confidence-bar__fill--medium
-                            {% else %}confidence-bar__fill--low{% endif %}"
-                     style="width: {{ (result.confidence * 100) | round(1) }}%"></div>
-              </div>
-            {% endif %}
-          </div>
-        </div>
-      </div><!-- /.result-card -->
-
-      <!-- Per-class probabilities (real model only) -->
-      {% if result.all_probs and not result.is_placeholder %}
-      <details class="probs-details">
-        <summary class="probs-summary">All class probabilities</summary>
-        <table class="probs-table" aria-label="All class probabilities">
-          <thead>
-            <tr>
-              <th scope="col">Class</th>
-              <th scope="col">Probability</th>
-            </tr>
-          </thead>
-          <tbody>
-            {% for cls, prob in result.all_probs %}
-            <tr {% if cls == result.disease %}class="probs-table__row--top"{% endif %}>
-              <td>{{ cls }}</td>
-              <td>
-                <div class="probs-bar-row">
-                  <div class="probs-bar">
-                    <div class="probs-bar__fill"
-                         style="width: {{ (prob * 100) | round(1) }}%"></div>
-                  </div>
-                  <span class="probs-pct">{{ "%.1f%%" | format(prob * 100) }}</span>
-                </div>
-              </td>
-            </tr>
-            {% endfor %}
-          </tbody>
-        </table>
-      </details>
-      {% endif %}
-
-      <!-- Grad-CAM Visual Explanation Section -->
-      {% if result.is_placeholder %}
-      <div class="gradcam-card gradcam-card--pending" aria-label="Grad-CAM section pending">
-        <div class="gradcam-header">
-          <span class="gradcam-header__icon" aria-hidden="true">🔍</span>
-          <h3 class="gradcam-header__title">Model Attention Explanation</h3>
-        </div>
-        <p class="gradcam-text gradcam-text--muted">
-          Visual explanation will be available once model training is complete.
-        </p>
       </div>
-      {% elif result.gradcam_path %}
-      <div class="gradcam-card" aria-label="Grad-CAM visual explanation">
-        <div class="gradcam-header">
-          <span class="gradcam-header__icon" aria-hidden="true">🔍</span>
+
+      <!-- Right: Confidence Level Metric & Progress Bar -->
+      <div class="result-hero-confidence">
+        <div class="confidence-header">
+          <span class="result-hero-label">Model Confidence</span>
+          {% if not (result.is_placeholder or result.is_error) %}
+            {% if result.confidence >= 0.8 %}
+              <span class="conf-tier conf-tier--high">✓ High Confidence</span>
+            {% elif result.confidence >= 0.5 %}
+              <span class="conf-tier conf-tier--medium">⚠️ Moderate Confidence</span>
+            {% else %}
+              <span class="conf-tier conf-tier--low">⚠️ Low Confidence (Caution)</span>
+            {% endif %}
+          {% endif %}
+        </div>
+
+        <div class="confidence-metric-row">
+          {% if result.is_placeholder or result.is_error %}
+            <span class="confidence-pct confidence-pct--na">N/A</span>
+          {% else %}
+            <span class="confidence-pct">{{ result.confidence_pct() }}</span>
+          {% endif %}
+        </div>
+
+        {% if not (result.is_placeholder or result.is_error) %}
+        <div class="confidence-bar-container">
+          <div class="confidence-bar" role="progressbar"
+               aria-valuenow="{{ (result.confidence * 100) | int }}"
+               aria-valuemin="0" aria-valuemax="100"
+               aria-label="Confidence score {{ result.confidence_pct() }}">
+            <div class="confidence-bar__fill
+                        {% if result.confidence >= 0.8 %}confidence-bar__fill--high
+                        {% elif result.confidence >= 0.5 %}confidence-bar__fill--medium
+                        {% else %}confidence-bar__fill--low{% endif %}"
+                 style="width: {{ (result.confidence * 100) | round(1) }}%"></div>
+          </div>
+        </div>
+        {% endif %}
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- Visual Comparison: Specimen Image vs Grad-CAM Attention      -->
+  <!-- ============================================================ -->
+  <section class="visual-comparison-section" aria-labelledby="visual-comparison-heading">
+    <h2 id="visual-comparison-heading" class="sr-only">Visual Saliency & Specimen Comparison</h2>
+
+    <div class="visual-comparison-grid">
+
+      <!-- Column 1: Uploaded Foliage Specimen -->
+      <div class="card visual-card">
+        <div class="visual-card__header">
+          <span class="visual-card__icon" aria-hidden="true">📷</span>
           <div>
-            <h3 class="gradcam-header__title">Model Attention (Grad-CAM)</h3>
-            <span class="gradcam-badge">Visual Feature Attribution</span>
+            <h3 class="visual-card__title">Uploaded Foliage Specimen</h3>
+            <span class="visual-card__meta">Standardized 224&times;224 RGB Ingestion</span>
           </div>
         </div>
-        <div class="gradcam-visual-wrapper">
-          <div class="gradcam-frame">
-            <img src="{{ url_for('static', filename=result.gradcam_path) }}"
-                 alt="Grad-CAM visual attention heatmap for {{ result.disease }}"
-                 class="gradcam-image" />
+        <div class="visual-card__media">
+          <div class="visual-frame">
+            <img src="{{ url_for('static', filename=image_url) }}"
+                 alt="Uploaded leaf image for {{ result.crop }}"
+                 class="visual-img" />
           </div>
         </div>
-        <div class="gradcam-info">
-          <p class="gradcam-text">
-            The heatmap highlights leaf regions that most heavily influenced the model's prediction of <strong>{{ result.disease }}</strong>. Warmer colors indicate higher model attention.
-          </p>
+        <div class="visual-card__footer">
+          <p class="visual-caption">Original crop foliage image submitted for automated pathological screening.</p>
+        </div>
+      </div>
+
+      <!-- Column 2: Grad-CAM Explainable AI Visualization -->
+      <div class="card visual-card visual-card--xai">
+        <div class="visual-card__header">
+          <span class="visual-card__icon" aria-hidden="true">🧠</span>
+          <div>
+            <h3 class="visual-card__title">Grad-CAM Saliency Attribution</h3>
+            <span class="badge badge--xai">Explainable AI (XAI)</span>
+          </div>
+        </div>
+
+        <div class="visual-card__media">
+          {% if result.is_placeholder %}
+            <div class="visual-frame visual-frame--placeholder">
+              <span class="placeholder-icon" aria-hidden="true">⏳</span>
+              <p class="placeholder-text">Saliency map will generate once trained model weights are active.</p>
+            </div>
+          {% elif result.gradcam_path %}
+            <div class="visual-frame">
+              <img src="{{ url_for('static', filename=result.gradcam_path) }}"
+                   alt="Grad-CAM visual attention heatmap for {{ result.disease }}"
+                   class="visual-img" />
+            </div>
+            <!-- Heatmap color legend -->
+            <div class="heatmap-legend" aria-label="Grad-CAM Heatmap Color Spectrum">
+              <span class="legend-label">Low Attention</span>
+              <div class="legend-bar" aria-hidden="true"></div>
+              <span class="legend-label">Peak Focus</span>
+            </div>
+          {% else %}
+            <div class="visual-frame visual-frame--placeholder">
+              <span class="placeholder-icon" aria-hidden="true">ℹ️</span>
+              <p class="placeholder-text">Saliency heatmap is not available for this prediction.</p>
+            </div>
+          {% endif %}
+        </div>
+
+        <div class="visual-card__footer">
+          {% if result.gradcam_path and not result.is_placeholder %}
+            <p class="gradcam-text">
+              The heatmap highlights leaf regions that most heavily influenced the model's prediction of <strong>{{ result.disease }}</strong>. Warmer colors indicate higher model attention.
+            </p>
+          {% else %}
+            <p class="gradcam-text gradcam-text--muted">
+              Visual feature attribution map is currently unavailable for this prediction.
+            </p>
+          {% endif %}
           <p class="gradcam-disclaimer">
             This is an algorithmic explainability visualization of model focus, not an independent biological diagnosis.
           </p>
         </div>
       </div>
-      {% else %}
-      <div class="gradcam-card gradcam-card--unavailable" aria-label="Grad-CAM section unavailable">
-        <div class="gradcam-header">
-          <span class="gradcam-header__icon" aria-hidden="true">ℹ️</span>
-          <h3 class="gradcam-header__title">Model Attention (Grad-CAM)</h3>
-        </div>
-        <p class="gradcam-text gradcam-text--muted">
-          Visual explanation is unavailable for this prediction.
-        </p>
+
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- Class Probability Distribution                                -->
+  <!-- ============================================================ -->
+  {% if result.all_probs and not result.is_placeholder %}
+  <section class="card probs-card" aria-labelledby="probs-heading">
+    <div class="card__header">
+      <span class="step-indicator" aria-hidden="true">📊</span>
+      <div>
+        <h2 id="probs-heading" class="card__title">All Class Probabilities</h2>
+        <p class="card__subtitle">Full softmax probability distribution across {{ result.crop }} diagnostic classes</p>
       </div>
-      {% endif %}
-
-    </div><!-- /.result-details-col -->
-  </div><!-- /.result-layout -->
+    </div>
+    <div class="card__body">
+      <div class="table-wrapper">
+        <table class="probs-table" aria-label="Complete softmax probability distribution">
+          <thead>
+            <tr>
+              <th scope="col" class="th-rank">#</th>
+              <th scope="col" class="th-class">Pathological Condition</th>
+              <th scope="col" class="th-dist">Probability Distribution</th>
+              <th scope="col" class="th-score">Score</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for cls, prob in result.all_probs %}
+            <tr class="{% if cls == result.disease %}probs-table__row--top{% endif %}">
+              <td class="td-rank">{{ loop.index }}</td>
+              <td class="td-class">
+                <span class="class-label">{{ cls }}</span>
+                {% if cls == result.disease %}
+                  <span class="top-match-badge" aria-label="Top match">Top Prediction</span>
+                {% endif %}
+              </td>
+              <td class="td-dist">
+                <div class="probs-meter">
+                  <div class="probs-meter__fill {% if cls == result.disease %}probs-meter__fill--top{% endif %}"
+                       style="width: {{ (prob * 100) | round(1) }}%"></div>
+                </div>
+              </td>
+              <td class="td-score">
+                <span class="probs-pct-text {% if cls == result.disease %}probs-pct-text--top{% endif %}">
+                  {{ "%.1f%%" | format(prob * 100) }}
+                </span>
+              </td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+  {% endif %}
 
   <!-- ============================================================ -->
-  <!-- Actions                                                        -->
+  <!-- Bottom Actions Toolbar                                        -->
   <!-- ============================================================ -->
-  <div class="result-actions">
-    <a href="{{ url_for('main.index') }}" class="btn btn--primary">
-      ← Analyse Another
-    </a>
-    <a href="{{ url_for('main.history') }}" class="btn btn--secondary">
-      View History
-    </a>
+  <div class="result-actions-card">
+    <div class="result-actions-primary">
+      <a href="{{ url_for('main.index') }}" class="btn btn--primary btn--lg">
+        <span aria-hidden="true">🔬</span>
+        <span>Analyse Another Leaf</span>
+      </a>
+      <a href="{{ url_for('main.history') }}" class="btn btn--outline btn--lg">
+        <span aria-hidden="true">📋</span>
+        <span>View Prediction History</span>
+      </a>
+    </div>
+
     {% if prediction_id %}
-    <form method="POST"
-          action="{{ url_for('main.delete_prediction', pred_id=prediction_id) }}"
-          class="inline-form"
-          onsubmit="return confirm('Delete this prediction?')">
-      <button type="submit" class="btn btn--danger btn--sm">
-        Delete This Record
-      </button>
-    </form>
+    <div class="result-actions-danger">
+      <form method="POST"
+            action="{{ url_for('main.delete_prediction', pred_id=prediction_id) }}"
+            class="inline-form"
+            onsubmit="return confirm('Are you sure you want to delete prediction #{{ prediction_id }} from audit history?')">
+        <button type="submit" class="btn btn--danger-ghost btn--sm">
+          <span aria-hidden="true">🗑️</span>
+          <span>Delete This Record</span>
+        </button>
+      </form>
+    </div>
     {% endif %}
   </div>
 

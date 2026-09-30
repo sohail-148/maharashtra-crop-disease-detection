@@ -1,16 +1,22 @@
 {% extends "base.html" %}
 
-{% block title %}{{ code }} — Crop Disease Detection{% endblock %}
+{% block title %}{{ code }} — Error — Crop Disease AI{% endblock %}
 
 {% block content %}
 <div class="container container--narrow">
-  <div class="error-page">
-    <span class="error-page__code" aria-hidden="true">{{ code }}</span>
-    <h1 class="error-page__title">{{ title }}</h1>
-    <p class="error-page__desc">{{ description }}</p>
-    <a href="{{ url_for('main.index') }}" class="btn btn--primary">
-      ← Back to Analyser
-    </a>
-  </div>
+  <section class="card error-card" role="region" aria-labelledby="error-title">
+    <div class="error-badge-icon" aria-hidden="true">{{ code }}</div>
+    <h1 id="error-title" class="error-title">{{ title }}</h1>
+    <p class="error-desc">{{ description }}</p>
+    <div class="error-actions">
+      <a href="{{ url_for('main.index') }}" class="btn btn--primary btn--lg">
+        <span aria-hidden="true">←</span>
+        <span>Return to Disease Analyser</span>
+      </a>
+      <a href="{{ url_for('main.history') }}" class="btn btn--outline btn--lg">
+        <span>View Prediction History</span>
+      </a>
+    </div>
+  </section>
 </div>
 {% endblock %}
